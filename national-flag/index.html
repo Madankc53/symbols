@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>National Flag of Nepal: The Only Non-Rectangular Flag in the World</title>
+<meta name="description" content="The flag of Nepal is the world's only non-quadrilateral national flag — twin crimson pennants bearing the sun and moon. Geometry, history, meaning, law and FAQs.">
+<link rel="canonical" href="https://nationalflag.thenepal.io/">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="National Flag of Nepal: The Only Non-Rectangular Flag in the World">
+<meta property="og:description" content="Geometry, construction, history, symbolism, law and FAQs about Nepal's unique double-pennant flag.">
+<meta property="og:url" content="https://nationalflag.thenepal.io/">
+<meta property="og:image" content="https://nationalflag.thenepal.io/assets/flag-hero.jpg">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="National Flag of Nepal — Complete Guide">
+<meta name="twitter:description" content="The world's only non-rectangular national flag, explained: geometry, history, symbolism and law.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600;6..72,700&family=Spectral:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"National Flag of Nepal: The Only Non-Rectangular Flag in the World","about":"Flag of Nepal","author":{"@type":"Organization","name":"The Nepal"},"publisher":{"@type":"Organization","name":"The Nepal"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+ {"@type":"ListItem","position":1,"name":"Home","item":"https://thenepal.io/"},
+ {"@type":"ListItem","position":2,"name":"National Symbols","item":"https://thenepal.io/national-symbols/"},
+ {"@type":"ListItem","position":3,"name":"National Flag of Nepal","item":"https://nationalflag.thenepal.io/"}
+]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+ {"@type":"Question","name":"Why is Nepal's flag not rectangular?","acceptedAnswer":{"@type":"Answer","text":"Nepal's flag is made of two stacked pennants (triangular banners), a shape inherited from historic Hindu pennant traditions, making it the only national flag in the world that is not a quadrilateral."}},
+ {"@type":"Question","name":"What do the sun and moon on the flag mean?","acceptedAnswer":{"@type":"Answer","text":"The moon symbolises the cool, shaded Himalayan climate and the hope that Nepal will last as long as the moon exists, while the sun represents the fierce heat of the lowlands and similar permanence."}},
+ {"@type":"Question","name":"When was the current flag adopted?","acceptedAnswer":{"@type":"Answer","text":"The current form of the flag was formally adopted in 1962 alongside Nepal's constitution, standardising its geometric construction."}}
+]}
+</script>
+
+<style>
+:root{
+  --bg:#F4EEE0;
+  --crimson:#A9273A;
+  --crimson-deep:#7E1626;
+  --indigo:#16335C;
+  --indigo-deep:#0E2240;
+  --gold:#D9A441;
+  --ink:#221B17;
+  --ink-soft:#5C5247;
+  --paper:#EAE1CC;
+  --line:#D8CBA8;
+  --white:#FFFCF5;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:'Spectral',Georgia,serif;line-height:1.65;-webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4{font-family:'Newsreader',serif;font-weight:600;color:var(--indigo-deep);line-height:1.1;margin:0 0 .5em;}
+a{color:var(--crimson);}
+.mono{font-family:'JetBrains Mono',monospace;}
+.eyebrow{font-family:'Inter',sans-serif;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--crimson-deep);font-weight:700;}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px;}
+section{padding:64px 0;}
+section.alt{background:var(--paper);}
+
+/* sticky pennant progress */
+#progress{position:fixed;top:0;left:0;height:3px;background:var(--gold);width:0%;z-index:999;transition:width .1s linear;}
+
+header.site{position:sticky;top:0;z-index:50;background:rgba(244,238,224,.93);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);}
+.nav-row{display:flex;align-items:center;justify-content:space-between;padding:14px 28px;max-width:1180px;margin:0 auto;}
+.brand{font-family:'Newsreader',serif;font-weight:700;font-size:1.05rem;color:var(--indigo-deep);text-decoration:none;display:flex;align-items:center;gap:10px;}
+.breadcrumbs{font-family:'Inter',sans-serif;font-size:.76rem;color:var(--ink-soft);}
+.breadcrumbs a{color:var(--ink-soft);text-decoration:none;}
+.breadcrumbs a:hover{color:var(--crimson);}
+.nav-links{display:flex;gap:18px;font-family:'Inter',sans-serif;font-size:.78rem;}
+.nav-links a{color:var(--ink-soft);text-decoration:none;}
+.nav-links a:hover{color:var(--crimson);}
+
+/* HERO — pennant-shaped split */
+.hero{position:relative;padding:0;background:var(--indigo-deep);overflow:hidden;color:var(--white);}
+.hero-inner{max-width:1180px;margin:0 auto;padding:88px 28px 0;display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;}
+.hero .eyebrow{color:var(--gold);}
+.hero h1{font-size:clamp(2.2rem,4.2vw,3.3rem);color:var(--white);}
+.hero p.lede{font-size:1.12rem;color:#E7DFC9;max-width:54ch;}
+.hero-stat{font-family:'JetBrains Mono',monospace;color:var(--gold);}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px;}
+.btn{font-family:'Inter',sans-serif;font-weight:600;font-size:.85rem;padding:13px 22px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;border:1.5px solid transparent;cursor:pointer;}
+.btn-primary{background:var(--crimson);color:var(--white);}
+.btn-primary:hover{background:#8E2030;}
+.btn-outline{border-color:var(--gold);color:var(--gold);background:transparent;}
+.btn-outline:hover{background:var(--gold);color:var(--indigo-deep);}
+
+.flag-rig{position:relative;display:flex;justify-content:center;align-items:flex-end;padding-top:30px;}
+.flag-rig .flag-photo{width:100%;max-width:380px;height:auto;filter:drop-shadow(0 18px 30px rgba(0,0,0,.35));}
+
+.hero-bottom{margin-top:50px;border-top:1px solid rgba(255,255,255,.14);}
+.hero-facts{max-width:1180px;margin:0 auto;padding:22px 28px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+.hf{font-family:'Inter',sans-serif;font-size:.82rem;color:#CFC6AE;}
+.hf strong{display:block;color:var(--white);font-family:'JetBrains Mono',monospace;font-size:1.05rem;margin-bottom:2px;}
+
+/* quick facts */
+table.quickfacts{width:100%;border-collapse:collapse;font-family:'Inter',sans-serif;font-size:.92rem;}
+table.quickfacts tr{border-bottom:1px solid var(--line);}
+table.quickfacts td{padding:12px 6px;vertical-align:top;}
+table.quickfacts td:first-child{width:36%;color:var(--ink-soft);font-weight:600;}
+table.quickfacts tr:last-child{border-bottom:none;}
+
+/* toc */
+.toc-layout{display:grid;grid-template-columns:240px 1fr;gap:48px;align-items:start;}
+.toc-side{position:sticky;top:88px;}
+.toc-side h3{font-size:1rem;margin-bottom:14px;}
+.toc-side ol{list-style:none;margin:0;padding:0;border-left:2px solid var(--line);}
+.toc-side li{font-family:'Inter',sans-serif;font-size:.85rem;margin-bottom:2px;}
+.toc-side li a{text-decoration:none;color:var(--ink-soft);display:block;padding:7px 0 7px 14px;border-left:2px solid transparent;margin-left:-2px;}
+.toc-side li a:hover{color:var(--crimson);border-left-color:var(--crimson);}
+
+.lead-block p{max-width:74ch;}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:40px;}
+
+/* geometry / construction */
+.geo-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;}
+.geo-steps{list-style:none;margin:0;padding:0;counter-reset:geo;}
+.geo-steps li{counter-increment:geo;display:flex;gap:14px;padding:13px 0;border-bottom:1px solid var(--line);font-family:'Inter',sans-serif;font-size:.9rem;}
+.geo-steps li::before{content:counter(geo);flex:0 0 auto;width:24px;height:24px;border-radius:50%;background:var(--indigo);color:var(--white);font-size:.72rem;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;}
+.geo-steps li:last-child{border-bottom:none;}
+
+/* color swatches */
+.swatches{display:flex;gap:14px;flex-wrap:wrap;}
+.swatch{flex:1;min-width:130px;border-radius:4px;overflow:hidden;border:1px solid var(--line);}
+.swatch .chip{height:64px;}
+.swatch .label{background:var(--white);padding:10px 12px;font-family:'JetBrains Mono',monospace;font-size:.76rem;color:var(--ink-soft);}
+
+/* symbol cards */
+.symbol-cards{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+.symbol-card{background:var(--white);border:1px solid var(--line);padding:22px;}
+.symbol-card .eyebrow{display:block;margin-bottom:8px;}
+
+/* timeline */
+.timeline{position:relative;margin-top:30px;padding-left:28px;border-left:2px solid var(--line);}
+.t-item{position:relative;padding-bottom:34px;}
+.t-item:last-child{padding-bottom:0;}
+.t-item::before{content:'';position:absolute;left:-34px;top:3px;width:12px;height:12px;border-radius:50%;background:var(--crimson);border:2px solid var(--indigo-deep);}
+.t-item .eyebrow{display:block;margin-bottom:4px;}
+
+/* comparison */
+table.compare{width:100%;border-collapse:collapse;font-family:'Inter',sans-serif;font-size:.9rem;}
+table.compare th,table.compare td{padding:12px;border:1px solid var(--line);text-align:left;}
+table.compare th{background:var(--paper);}
+table.compare td:first-child{font-weight:600;color:var(--ink-soft);}
+
+/* protocol kicker list */
+.kicker-list{margin:0;padding:0;list-style:none;}
+.kicker-list li{display:flex;gap:12px;padding:14px 0;border-bottom:1px solid var(--line);font-family:'Inter',sans-serif;font-size:.93rem;}
+.kicker-list li:last-child{border-bottom:none;}
+.kicker-list .tag{flex:0 0 auto;width:26px;height:26px;border-radius:50%;background:var(--indigo);color:#fff;display:flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:700;}
+
+/* facts strip */
+.facts-strip{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;}
+.fs-item{background:var(--white);border-left:4px solid var(--gold);padding:14px 16px;font-family:'Inter',sans-serif;font-size:.9rem;}
+
+/* faq */
+.faq-item{border-bottom:1px solid var(--line);}
+.faq-q{width:100%;text-align:left;background:none;border:none;padding:18px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;font-family:'Inter',sans-serif;font-weight:600;font-size:.97rem;color:var(--ink);}
+.faq-q .plus{font-size:1.3rem;color:var(--crimson-deep);transition:transform .2s ease;flex:0 0 auto;}
+.faq-item.open .plus{transform:rotate(45deg);}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .25s ease;}
+.faq-a p{margin:0 0 18px;color:var(--ink-soft);max-width:70ch;}
+
+/* related symbols + internal network */
+.symbol-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+.network-card{background:var(--white);border:1px solid var(--line);padding:18px;text-decoration:none;color:var(--ink);display:block;}
+.network-card .ic{font-size:1.4rem;display:block;margin-bottom:8px;}
+.network-card b{font-family:'Inter',sans-serif;font-size:.86rem;display:block;}
+.network-card span{font-family:'Inter',sans-serif;font-size:.76rem;color:var(--ink-soft);}
+
+/* author */
+.author-box{display:flex;gap:18px;align-items:flex-start;background:var(--white);border:1px solid var(--line);padding:22px;}
+.author-avatar{width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--crimson));flex:0 0 auto;}
+.author-box h4{margin:0 0 4px;}
+.author-box p{margin:0 0 8px;color:var(--ink-soft);font-size:.92rem;}
+.author-links a{font-family:'Inter',sans-serif;font-size:.82rem;margin-right:12px;text-decoration:none;}
+
+.ref-list{columns:2;gap:40px;font-family:'Inter',sans-serif;font-size:.86rem;color:var(--ink-soft);}
+.ref-list li{margin-bottom:10px;break-inside:avoid;}
+
+footer.site{background:var(--indigo-deep);color:#D8CFB6;padding:44px 0 28px;}
+footer.site a{color:#D8CFB6;text-decoration:none;}
+footer.site a:hover{color:var(--gold);}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px;font-family:'Inter',sans-serif;font-size:.86rem;}
+.foot-grid h5{font-family:'Inter',sans-serif;font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin:0 0 12px;}
+.foot-grid ul{list-style:none;padding:0;margin:0;}
+.foot-grid li{margin-bottom:8px;}
+.foot-bottom{margin-top:30px;padding-top:18px;border-top:1px solid rgba(255,255,255,.14);font-size:.78rem;opacity:.75;}
+
+#top-btn{position:fixed;right:22px;bottom:22px;width:44px;height:44px;border-radius:50%;background:var(--crimson);color:#fff;border:none;display:none;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 6px 18px rgba(0,0,0,.3);z-index:60;}
+
+@media(max-width:980px){
+  .hero-inner{grid-template-columns:1fr;padding-top:48px;}
+  .hero-facts{grid-template-columns:repeat(2,1fr);}
+  .toc-layout{grid-template-columns:1fr;}
+  .toc-side{position:static;}
+  .two-col,.geo-grid,.symbol-cards{grid-template-columns:1fr;}
+  .facts-strip{grid-template-columns:1fr;}
+  .symbol-grid{grid-template-columns:1fr 1fr;}
+  .foot-grid{grid-template-columns:1fr 1fr;}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto;}*{transition:none !important;}}
+</style>
+</head>
+<body>
+
+<div id="progress"></div>
+
+<header class="site">
+  <div class="nav-row">
+    <a href="#top" class="brand">🇳🇵 The Nepal</a>
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="https://thenepal.io/">Home</a> / <a href="https://thenepal.io/national-symbols/">National Symbols</a> / <span>National Flag</span>
+    </nav>
+    <nav class="nav-links">
+      <a href="https://nationalanimal.thenepal.io/">Animal</a>
+      <a href="https://natinalbird.thenepal.io/">Bird</a>
+      <a href="https://nationalfruit.thenepal.io/">Fruit</a>
+      <a href="https://nationalfood.thenepal.io/">Food</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <span class="eyebrow">National Symbol &middot; ध्वजा</span>
+      <h1>The Only National Flag on Earth That Isn't a Rectangle</h1>
+      <p class="lede">Nepal's flag is built from two stacked crimson pennants, crowned with a moon and a sun. It is the single non-quadrilateral national flag in use anywhere in the world — a geometric fact, not a metaphor, fixed by formula in Nepal's constitution.</p>
+      <div class="cta-row">
+        <a href="#geometry" class="btn btn-primary">See the Geometry</a>
+        <a href="#" class="btn btn-outline" id="fact-sheet-btn">Download Fact Sheet</a>
+      </div>
+    </div>
+    <div class="flag-rig">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiH3mz0ZGB0t9c_sIewgfcnidzpN7tlXzhA2Itd1NSAsRrC34Ml4k9ybNgvEruDdss7h_L6u9Nza8kyZV1H50mmnqGuHh5jkAH6_mS4yhZAOIQaMza5Q8Suk60aT_ow_sCntmI-vipPwC_SLm-bxAdC0GkWdc0XEy36zfsx-Q2C6KgHDVTU55STOBvlpdj_/s578/National-Flag-Of-Nepal-removebg-preview.png" alt="National Flag of Nepal — double pennant with sun and moon" class="flag-photo">
+    </div>
+  </div>
+  <div class="hero-bottom">
+    <div class="hero-facts">
+      <div class="hf"><strong>1</strong>non-rectangular national flag worldwide</div>
+      <div class="hf"><strong>4:3</strong>approx. height-to-width proportion</div>
+      <div class="hf"><strong>1962</strong>year current form was codified</div>
+      <div class="hf"><strong>2</strong>pennants &middot; sun &amp; moon</div>
+    </div>
+  </div>
+</section>
+
+<!-- QUICK FACTS -->
+<section id="quick-facts">
+  <div class="wrap">
+    <div class="eyebrow">At a Glance</div>
+    <h2>Quick Facts</h2>
+    <table class="quickfacts">
+      <tr><td>National Flag</td><td>Two stacked crimson pennants with a blue border, moon and sun</td></tr>
+      <tr><td>Nepali Name</td><td>नेपालको राष्ट्रिय ध्वजा</td></tr>
+      <tr><td>Shape</td><td>Double pennant (non-quadrilateral) — the only one of its kind among national flags</td></tr>
+      <tr><td>Colours</td><td>Crimson red field, deep blue border, white emblems</td></tr>
+      <tr><td>Symbols</td><td>Crescent moon (upper pennant), twelve-rayed sun (lower pennant)</td></tr>
+      <tr><td>Adopted (current form)</td><td>1962, alongside Nepal's constitution</td></tr>
+      <tr><td>Construction Method</td><td>Defined geometrically by compass-and-straightedge formula, not free-form art</td></tr>
+      <tr><td>Symbolism of Red</td><td>The rhododendron, Nepal's national flower, and the bravery of its people</td></tr>
+      <tr><td>Symbolism of Blue Border</td><td>Peace</td></tr>
+      <tr><td>Legal Status</td><td>Defined precisely in the Constitution of Nepal, Schedule 1</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- TOC + content -->
+<section class="alt" id="overview">
+  <div class="wrap toc-layout">
+    <aside class="toc-side">
+      <h3>On this page</h3>
+      <ol>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#geometry">Geometry &amp; Construction</a></li>
+        <li><a href="#colors">Colours</a></li>
+        <li><a href="#symbols">Sun &amp; Moon</a></li>
+        <li><a href="#history">History</a></li>
+        <li><a href="#timeline">Timeline</a></li>
+        <li><a href="#law">Legal Protection &amp; Protocol</a></li>
+        <li><a href="#compare">How It Compares</a></li>
+        <li><a href="#facts">Interesting Facts</a></li>
+        <li><a href="#faqs">FAQs</a></li>
+        <li><a href="#related">Related Symbols</a></li>
+      </ol>
+    </aside>
+
+    <div>
+      <div class="lead-block" style="margin-bottom:56px;">
+        <span class="eyebrow">About Nepal's National Flag</span>
+        <h2>A Flag Defined by a Formula, Not a Free Hand</h2>
+        <p>Most national flags are rectangles filled with stripes, crosses or charges. Nepal's is the lone exception: two pennants, one stacked above the other, descended from a long regional tradition of triangular battle and temple banners. Where most flags can be redrawn loosely and still pass, Nepal's constitution fixes its outline with an explicit geometric construction — meaning that, in principle, no two correctly drawn Nepali flags can disagree on shape.</p>
+        <p>That unusual rigor is part of what makes the flag a genuine outlier in vexillology, the study of flags: it is simultaneously the most mathematically defined and the most visually distinct flag in use by any country today.</p>
+      </div>
+
+      <!-- GEOMETRY -->
+      <div id="geometry" style="margin-bottom:56px;">
+        <span class="eyebrow">Construction</span>
+        <h2>Geometry of the Flag</h2>
+        <div class="geo-grid">
+          <ol class="geo-steps">
+            <li>Draw the left edge (the flagpole side) as a straight vertical line of a chosen length.</li>
+            <li>From its base, mark a point partway up to begin the lower pennant's diagonal.</li>
+            <li>Construct the upper pennant as a triangle, then the lower pennant as a second, slightly larger triangle directly beneath it.</li>
+            <li>Trim the outer points of both pennants using a defined offset, producing the flag's signature folded-looking tips.</li>
+            <li>Inset a blue border of fixed width along the entire outline.</li>
+            <li>Place the moon emblem in the centre of the upper pennant and the sun emblem in the centre of the lower pennant.</li>
+          </ol>
+          <div>
+            <p>This step-by-step compass-and-straightedge method is unique among national flags — most countries specify proportions, not full geometric construction. The approach guarantees the same silhouette regardless of who draws it, which is part of why the shape has stayed unchanged even as the emblems inside it were simplified in 1962.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- COLORS -->
+      <div id="colors" style="margin-bottom:56px;">
+        <span class="eyebrow">Palette</span>
+        <h2>Colours &amp; What They Represent</h2>
+        <div class="swatches">
+          <div class="swatch"><div class="chip" style="background:#A9273A;"></div><div class="label">Crimson — rhododendron &amp; bravery</div></div>
+          <div class="swatch"><div class="chip" style="background:#16335C;"></div><div class="label">Blue border — peace</div></div>
+          <div class="swatch"><div class="chip" style="background:#F4EEE0;border:1px solid var(--line);"></div><div class="label">White emblems — purity</div></div>
+        </div>
+      </div>
+
+      <!-- SYMBOLS -->
+      <div id="symbols" style="margin-bottom:0;">
+        <span class="eyebrow">Emblems</span>
+        <h2>Why the Sun and Moon?</h2>
+        <div class="symbol-cards">
+          <div class="symbol-card"><span class="eyebrow">Moon</span><p style="margin:0;">Set in the upper pennant, the moon stands for Nepal's cool, shaded climate and carries the hope that the nation will endure for as long as the moon exists in the sky.</p></div>
+          <div class="symbol-card"><span class="eyebrow">Sun</span><p style="margin:0;">Set in the lower pennant, the sun stands for the intense heat of the southern lowlands and the same wish for permanence, mirroring the moon's symbolism.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HISTORY -->
+<section id="history">
+  <div class="wrap">
+    <div class="eyebrow">Origins</div>
+    <h2>History of the Flag</h2>
+    <div class="two-col">
+      <div>
+        <p>The double-pennant shape predates the modern Nepali state, drawing on a regional tradition in which Hindu rulers and temples flew triangular banners as marks of authority. Over generations, two such pennants belonging to rival branches of a ruling house are said to have been combined into a single flag — a literal stitching-together of lineages into one symbol.</p>
+      </div>
+      <div>
+        <p>Early versions of the flag carried more ornate, human-faced depictions of the sun and moon. These were simplified into the plain crescent and sun rays used today when the flag's current geometric form was formally standardised in 1962, bringing the design in line with the new constitution.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="alt" id="timeline">
+  <div class="wrap">
+    <div class="eyebrow">Through History</div>
+    <h2>Timeline</h2>
+    <div class="timeline">
+      <div class="t-item"><span class="eyebrow">Pre-Unification Era</span><p style="margin:0;">Triangular pennants are flown by regional rulers and temples across the hills, the visual ancestor of today's flag.</p></div>
+      <div class="t-item"><span class="eyebrow">Unification Period</span><p style="margin:0;">Pennants associated with allied ruling houses are combined into a single stacked double-pennant banner.</p></div>
+      <div class="t-item"><span class="eyebrow">Early 20th Century</span><p style="margin:0;">The flag carries more elaborate sun and moon faces, used informally without a single fixed geometric standard.</p></div>
+      <div class="t-item"><span class="eyebrow">1962</span><p style="margin:0;">The current constitution formally codifies the flag's precise geometric construction and simplified emblems.</p></div>
+      <div class="t-item"><span class="eyebrow">Present Day</span><p style="margin:0;">The flag remains unchanged in law and continues to be cited internationally as the only non-rectangular national flag.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- LAW / PROTOCOL -->
+<section id="law">
+  <div class="wrap">
+    <div class="eyebrow">Protection &amp; Protocol</div>
+    <h2>Legal Status &amp; Flag Protocol</h2>
+    <ul class="kicker-list">
+      <li><span class="tag">1</span><div><strong>Constitutional definition:</strong> the flag's geometry, colours and emblem placement are specified directly in the Constitution of Nepal.</div></li>
+      <li><span class="tag">2</span><div><strong>Correct construction:</strong> official versions are expected to follow the prescribed compass-and-straightedge method rather than free reproduction.</div></li>
+      <li><span class="tag">3</span><div><strong>Respectful display:</strong> the flag is expected to be flown intact and undamaged, and never allowed to touch the ground.</div></li>
+      <li><span class="tag">4</span><div><strong>National observances:</strong> the flag is prominently displayed on government buildings during national holidays and official ceremonies.</div></li>
+    </ul>
+  </div>
+</section>
+
+<!-- COMPARISON -->
+<section class="alt" id="compare">
+  <div class="wrap">
+    <div class="eyebrow">How It Differs</div>
+    <h2>Nepal's Flag vs. Typical National Flags</h2>
+    <table class="compare">
+      <tr><th>Feature</th><th>Nepal</th><th>Most Countries</th></tr>
+      <tr><td>Overall Shape</td><td>Double pennant (non-rectangular)</td><td>Rectangle</td></tr>
+      <tr><td>Defined By</td><td>Full geometric construction</td><td>Width-to-height ratio only</td></tr>
+      <tr><td>Core Emblems</td><td>Moon and sun</td><td>Stars, crosses, stripes, or charges</td></tr>
+      <tr><td>Historical Root</td><td>Combined ruling-house pennants</td><td>Often derived from European flag traditions</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- FACTS -->
+<section id="facts">
+  <div class="wrap">
+    <div class="eyebrow">Did You Know?</div>
+    <h2>Interesting Facts</h2>
+    <div class="facts-strip">
+      <div class="fs-item">Nepal's flag is the only national flag in the world that is not a quadrilateral.</div>
+      <div class="fs-item">Its outline is fixed by a formal geometric construction method, not a loose proportion.</div>
+      <div class="fs-item">The flag's crimson matches the rhododendron, Nepal's national flower.</div>
+      <div class="fs-item">The blue border represents peace and runs along the entire outline.</div>
+      <div class="fs-item">The current simplified sun and moon emblems were standardised in 1962.</div>
+      <div class="fs-item">Earlier versions of the flag depicted human faces within the sun and moon.</div>
+      <div class="fs-item">The double-pennant shape is believed to descend from two combined ruling-house banners.</div>
+      <div class="fs-item">The flag's near-square aspect ratio is unusually tall compared to most rectangular flags.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="alt" id="faqs">
+  <div class="wrap">
+    <div class="eyebrow">Common Questions</div>
+    <h2>Frequently Asked Questions</h2>
+    <div id="faq-list" style="max-width:80ch;"></div>
+  </div>
+</section>
+
+<!-- RELATED / INTERNAL NETWORK -->
+<section id="related">
+  <div class="wrap">
+    <div class="eyebrow">Explore the Series</div>
+    <h2>More National Symbols of Nepal</h2>
+    <div class="symbol-grid">
+      <a class="network-card" href="https://nationalanimal.thenepal.io/"><span class="ic">🐄</span><b>National Animal</b><span>The sacred cow</span></a>
+      <a class="network-card" href="https://natinalbird.thenepal.io/"><span class="ic">🐦</span><b>National Bird</b><span>The Himalayan Monal</span></a>
+      <a class="network-card" href="https://nationalfruit.thenepal.io/"><span class="ic">🍊</span><b>National Fruit</b><span>Junar, the sweet orange</span></a>
+      <a class="network-card" href="https://nationalfood.thenepal.io/"><span class="ic">🍛</span><b>National Food</b><span>Dal Bhat</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- AUTHOR -->
+<section class="alt">
+  <div class="wrap" style="max-width:760px;">
+    <div class="author-box">
+      <div class="author-avatar"></div>
+      <div>
+        <h4>Written by The Nepal Editorial Team</h4>
+        <p>Documenting Nepal's national symbols, geometry, history and culture for learners, students and travellers. Design and research direction by <a href="https://madankc.com.np" target="_blank" rel="noopener">Madan KC</a>.</p>
+        <div class="author-links">
+          <a href="https://madankc.com.np" target="_blank" rel="noopener">madankc.com.np</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REFERENCES -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Sources</div>
+    <h2>References</h2>
+    <ul class="ref-list">
+      <li>Constitution of Nepal, Schedule 1 — flag construction</li>
+      <li>Government of Nepal — official portals on national symbols</li>
+      <li>Flag Institute &amp; vexillological references</li>
+      <li>Encyclopaedia Britannica</li>
+      <li>Nepal Tourism Board cultural resources</li>
+      <li>Peer-reviewed historical and cultural studies journals</li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h5>The Nepal</h5>
+        <p style="max-width:42ch;opacity:.85;">A reference network documenting Nepal's national symbols, traditions and living culture.</p>
+      </div>
+      <div>
+        <h5>Symbols</h5>
+        <ul>
+          <li><a href="https://nationalanimal.thenepal.io/">Animal</a></li>
+          <li><a href="https://natinalbird.thenepal.io/">Bird</a></li>
+          <li><a href="https://nationalfruit.thenepal.io/">Fruit</a></li>
+          <li><a href="https://nationalfood.thenepal.io/">Food</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>This Page</h5>
+        <ul>
+          <li><a href="#geometry">Geometry</a></li>
+          <li><a href="#history">History</a></li>
+          <li><a href="#faqs">FAQs</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Credits</h5>
+        <ul>
+          <li><a href="https://madankc.com.np" target="_blank" rel="noopener">madankc.com.np</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">© 2026 The Nepal. Educational content; verify against official sources before formal use.</div>
+  </div>
+</footer>
+
+<button id="top-btn" aria-label="Scroll to top">↑</button>
+
+<script>
+const progress = document.getElementById('progress');
+window.addEventListener('scroll', () => {
+  const h = document.documentElement;
+  const pct = (h.scrollTop) / (h.scrollHeight - h.clientHeight) * 100;
+  progress.style.width = pct + '%';
+  document.getElementById('top-btn').style.display = h.scrollTop > 500 ? 'flex' : 'none';
+});
+document.getElementById('top-btn').addEventListener('click', () => window.scrollTo({top:0,behavior:'smooth'}));
+document.getElementById('fact-sheet-btn').addEventListener('click', (e) => { e.preventDefault(); window.print(); });
+
+const faqs = [
+  ["Why is Nepal's flag not rectangular?","It is made of two stacked pennants, a shape inherited from historic Hindu banner traditions, making it the only non-quadrilateral national flag in the world."],
+  ["What do the sun and moon mean?","The moon represents Nepal's cool climate and a wish for the nation to last as long as the moon exists; the sun represents the heat of the lowlands with the same meaning."],
+  ["When was the current flag adopted?","Its current geometric form was codified in 1962 alongside Nepal's constitution."],
+  ["What colours are used in the flag?","Crimson red fills both pennants, bordered in deep blue, with white sun and moon emblems."],
+  ["What does the crimson red represent?","It echoes the rhododendron, Nepal's national flower, and is associated with bravery."],
+  ["What does the blue border represent?","Peace."],
+  ["How is the flag's shape defined legally?","By a precise compass-and-straightedge geometric construction set out in the Constitution of Nepal, not just a width-to-height ratio."],
+  ["Is Nepal's flag the only non-rectangular national flag?","Yes, it is the only national flag in current use that is not a quadrilateral."],
+  ["Did the flag always look the same?","No — earlier versions showed more ornate sun and moon faces, simplified to the current form in 1962."],
+  ["Where does the double-pennant shape come from?","It is believed to descend from two pennants of allied ruling houses combined into one banner."],
+  ["What is Nepal's flag aspect ratio?","Roughly 4:3 height-to-width, taller than most rectangular flags."],
+  ["What is Nepal's national animal?","The cow, sacred in Hindu tradition and central to Nepali farming life."],
+  ["What is Nepal's national bird?","The Himalayan Monal (Danphe), known for its iridescent plumage."]
+];
+const list = document.getElementById('faq-list');
+faqs.forEach((f)=>{
+  const item = document.createElement('div');
+  item.className = 'faq-item';
+  item.innerHTML = `<button class="faq-q" aria-expanded="false"><span>${f[0]}</span><span class="plus">+</span></button><div class="faq-a"><p>${f[1]}</p></div>`;
+  list.appendChild(item);
+});
+list.addEventListener('click', (e)=>{
+  const btn = e.target.closest('.faq-q');
+  if(!btn) return;
+  const item = btn.parentElement;
+  const ans = item.querySelector('.faq-a');
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(o=>{
+    o.classList.remove('open');
+    o.querySelector('.faq-a').style.maxHeight = null;
+    o.querySelector('.faq-q').setAttribute('aria-expanded','false');
+  });
+  if(!isOpen){
+    item.classList.add('open');
+    ans.style.maxHeight = ans.scrollHeight + 'px';
+    btn.setAttribute('aria-expanded','true');
+  }
+});
+</script>
+</body>
+</html>
