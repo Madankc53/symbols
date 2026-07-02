@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deuda & Maruni — National Dance of Nepal | symbols.thenepal.io</title>
+<meta name="description" content="Deuda and Maruni are widely regarded as Nepal's national dances — Deuda, the circular unity dance of the far west, and Maruni, the Magar community's colourful festival dance. History, forms, and FAQs.">
+<link rel="canonical" href="https://symbols.thenepal.io/national-dance/">
+
+<style>
+:root{
+  --cream:#FBF3E6;
+  --paper:#F4E9D8;
+  --maroon:#7E2A2A;
+  --maroon-dark:#5C1E1E;
+  --marigold:#D89B3C;
+  --marigold-deep:#B97C22;
+  --forest:#3D5435;
+  --indigo:#3E4C6D;
+  --indigo-deep:#2B3550;
+  --ink:#2A241D;
+  --ink-soft:#5A4F40;
+  --rule:#D8C6A8;
+  --white:#FFFFFF;
+  --radius:10px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--cream);color:var(--ink);font-family:'Inter',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+h1,h2,h3{font-family:'Fraunces',serif;line-height:1.15;color:var(--maroon-dark);}
+a{color:var(--maroon);text-decoration:none;}
+a:hover{text-decoration:underline;}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--marigold-deep);outline-offset:2px;border-radius:4px;}
+.wrap{max-width:880px;margin:0 auto;padding:0 24px;}
+.eyebrow{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--marigold-deep);}
+img{max-width:100%;display:block;}
+
+.topbar{border-bottom:1px solid var(--rule);background:rgba(251,243,230,.94);position:sticky;top:0;z-index:20;backdrop-filter:blur(6px);}
+.topbar-inner{max-width:880px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;font-size:.85rem;}
+.crumbs a{color:var(--ink-soft);}
+.crumbs span{color:var(--ink-soft);margin:0 6px;}
+.crumbs .current{color:var(--maroon-dark);font-weight:600;}
+.back-hub{display:inline-flex;align-items:center;gap:6px;font-weight:600;color:var(--maroon);white-space:nowrap;}
+
+.hero{padding:56px 0 40px;position:relative;overflow:hidden;
+  background:radial-gradient(ellipse 600px 340px at 85% -10%, rgba(62,76,109,.18) 0%, transparent 60%), var(--cream);}
+.garland{height:5px;background:repeating-linear-gradient(90deg,var(--maroon) 0 30px,var(--marigold) 30px 60px,var(--forest) 60px 90px);}
+.hero h1{font-size:clamp(2.1rem,5vw,3.1rem);font-weight:700;margin:14px 0 14px;}
+.hero h1 em{font-style:normal;color:var(--indigo);}
+.hero-desc{font-size:1.05rem;color:var(--ink-soft);max-width:62ch;margin-bottom:22px;}
+.hero-tags{display:flex;gap:10px;flex-wrap:wrap;}
+.tag{font-size:.78rem;font-weight:600;border:1px solid var(--rule);border-radius:999px;padding:5px 13px;color:var(--ink-soft);background:var(--white);}
+.hero-photo{border-radius:var(--radius);overflow:hidden;margin-top:30px;box-shadow:0 12px 30px rgba(62,76,109,.2);}
+.hero-photo img{width:100%;height:340px;object-fit:cover;}
+.caption{font-size:.8rem;color:var(--ink-soft);margin-top:8px;text-align:center;}
+
+.facts{background:var(--white);border:1px solid var(--rule);border-radius:var(--radius);padding:26px 28px;margin:36px 0;}
+.facts h2{font-size:1.05rem;margin-bottom:14px;}
+.facts-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px 24px;}
+.fact dt{font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--marigold-deep);font-weight:700;margin-bottom:3px;}
+.fact dd{font-size:.92rem;color:var(--ink);}
+
+article section{margin:44px 0;}
+article h2{font-size:1.55rem;margin-bottom:14px;}
+article h3{font-size:1.15rem;margin:20px 0 8px;color:var(--maroon);}
+article p{margin-bottom:14px;color:var(--ink);max-width:70ch;}
+article ul,article ol{margin:0 0 14px 22px;color:var(--ink);}
+article li{margin-bottom:6px;}
+.lede{font-size:1.05rem;color:var(--ink-soft);}
+
+.tiers-wrap{background:var(--white);border:1px solid var(--rule);border-radius:var(--radius);padding:30px 28px;margin:26px 0;}
+.tiers-wrap h3{margin-top:0;}
+.tiers{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:18px;}
+.tier{border-radius:8px;padding:20px 18px;}
+.tier.official{background:var(--paper);border:2px solid var(--marigold-deep);}
+.tier.national{background:var(--paper);border:1px solid var(--rule);}
+.tier .art{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:var(--marigold-deep);margin-bottom:6px;}
+.tier strong{display:block;font-family:'Fraunces',serif;font-size:1.15rem;color:var(--maroon-dark);margin-bottom:6px;}
+.tier p{font-size:.86rem;color:var(--ink-soft);margin-bottom:0;}
+
+.callout{border-left:4px solid var(--marigold-deep);background:var(--paper);border-radius:0 var(--radius) var(--radius) 0;padding:16px 20px;margin:18px 0;font-size:.92rem;color:var(--ink);}
+.callout strong{color:var(--maroon-dark);}
+
+.pronounce{display:flex;gap:0;background:var(--white);border:1px solid var(--rule);border-radius:var(--radius);overflow:hidden;margin:24px 0;flex-wrap:wrap;}
+.pronounce > div{flex:1;padding:18px 22px;min-width:150px;}
+.pronounce > div + div{border-left:1px solid var(--rule);}
+.pronounce .p-label{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--marigold-deep);font-weight:700;margin-bottom:6px;}
+.pronounce .p-value{font-family:'Fraunces',serif;font-size:1.3rem;color:var(--maroon-dark);}
+.pronounce .p-value.nepali{font-size:1.5rem;}
+.pronounce .p-value.say{font-family:'Inter',sans-serif;font-weight:600;font-size:1.05rem;letter-spacing:.02em;}
+
+.dyk{background:linear-gradient(135deg,#fff 0%,var(--paper) 100%);border:1px solid var(--rule);border-radius:var(--radius);padding:24px 26px;margin:26px 0;}
+.dyk h3{margin-top:0;display:flex;align-items:center;gap:8px;}
+.dyk ul{margin:12px 0 0 0;list-style:none;}
+.dyk li{position:relative;padding-left:26px;margin-bottom:10px;font-size:.92rem;}
+.dyk li::before{content:'✦';position:absolute;left:0;color:var(--marigold-deep);}
+
+.source{font-size:.76rem;color:var(--ink-soft);margin-top:-6px;margin-bottom:14px;font-style:italic;}
+
+.final-cta{text-align:center;margin:40px 0 8px;}
+.final-cta a{
+  display:inline-flex;align-items:center;gap:10px;background:var(--maroon);color:var(--white)!important;
+  font-family:'Inter',sans-serif;font-weight:700;font-size:1.02rem;padding:16px 34px;border-radius:999px;
+  text-decoration:none!important;box-shadow:0 10px 26px rgba(126,42,42,.28);transition:transform .15s ease,background .15s ease;
+}
+.final-cta a:hover{background:var(--maroon-dark);transform:translateY(-2px);}
+
+.table-wrap{overflow-x:auto;margin:18px 0;}
+table{width:100%;border-collapse:collapse;font-size:.88rem;background:var(--white);border-radius:var(--radius);overflow:hidden;}
+th,td{padding:10px 14px;text-align:left;border-bottom:1px solid var(--rule);}
+th{background:var(--paper);color:var(--maroon-dark);font-weight:700;font-size:.78rem;text-transform:uppercase;letter-spacing:.04em;}
+
+.faq-item{border-bottom:1px solid var(--rule);padding:16px 0;}
+.faq-item summary{cursor:pointer;font-weight:600;color:var(--maroon-dark);font-size:.98rem;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px;}
+.faq-item summary::-webkit-details-marker{display:none;}
+.faq-item summary::after{content:'+';font-size:1.3rem;color:var(--marigold-deep);flex:0 0 auto;}
+.faq-item[open] summary::after{content:'–';}
+.faq-item p{margin-top:10px;color:var(--ink-soft);font-size:.92rem;}
+
+.related{background:var(--maroon-dark);color:var(--cream);border-radius:var(--radius);padding:32px 30px;margin:48px 0 8px;}
+.related h2{color:var(--cream);font-size:1.3rem;margin-bottom:6px;}
+.related p{color:rgba(251,243,230,.78);font-size:.9rem;margin-bottom:18px;}
+.related-links{display:flex;gap:10px;flex-wrap:wrap;}
+.related-links a{background:rgba(251,243,230,.1);border:1px solid rgba(251,243,230,.25);border-radius:999px;padding:8px 16px;font-size:.85rem;color:var(--cream);}
+.related-links a:hover{background:var(--marigold);color:var(--ink);border-color:var(--marigold);text-decoration:none;}
+
+footer{border-top:1px solid var(--rule);padding:30px 0;margin-top:40px;}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.8rem;color:var(--ink-soft);}
+
+@media(max-width:640px){
+  .hero-photo img{height:220px;}
+  .tiers{grid-template-columns:1fr;}
+  .topbar-inner{font-size:.78rem;}
+}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="https://symbols.thenepal.io/">All Symbols</a>
+      <span aria-hidden="true">/</span>
+      <span class="current">National Dance</span>
+    </nav>
+    <a class="back-hub" href="https://symbols.thenepal.io/">← All national symbols of Nepal</a>
+  </div>
+</div>
+
+<div class="garland" aria-hidden="true"></div>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow">National Dance of Nepal</span>
+    <h1>Deuda & Maruni — <em>Nepal's National Dances</em></h1>
+    <p class="hero-desc"><strong>Deuda and Maruni are the two folk dances most widely regarded as Nepal's national dances.</strong> Deuda is the circular, hand-linked dance of unity and song from Nepal's far-western hills, performed at festivals like Gaura Parva. Maruni, rooted in the Magar community, is the colourful, madal-driven dance of Dashain and Tihar that has spread across the country and its diaspora. Together they represent Nepal's two great dance traditions: the participatory circle dance and the costumed performance dance.</p>
+    <div class="hero-tags">
+      <span class="tag">Deuda: unity dance, far-western Nepal</span>
+      <span class="tag">Maruni: Magar community festival dance</span>
+      <span class="tag">70+ documented dance forms nationwide</span>
+      <span class="tag">Both rooted in Dashain-season tradition</span>
+    </div>
+    <figure class="hero-photo">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgWJL-2CH10iuSIdIYvoC4H76Zi2S-m3ONp5IlKRLAECtd2L2ULEWy-qcLHGvpxcbIx0DQSHBNkpZ8fg6_Rn-gUzmtqrrYNyMFqNB48d4WUXmEbE0VP57nZ9cHzuGTMp-YRQPYgEm4Yyp7v8poY9aILmKoZ8niW1zVRRfrupGRax-hTX264KxwhoNxTeN9c/s320-rw/National_dance_of_nepal_2K_202607020827.webp" alt="Deuda and Maruni, widely regarded as the national dances of Nepal" width="880" height="340" fetchpriority="high" decoding="async">
+    </figure>
+    <p class="caption">Deuda and Maruni — Nepal's two most widely recognised folk dance traditions.</p>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="facts">
+    <h2>Quick Facts</h2>
+    <dl class="facts-grid">
+      <div class="fact"><dt>National dances</dt><dd>Deuda and Maruni</dd></div>
+      <div class="fact"><dt>Deuda's origin</dt><dd>Karnali & Sudurpaschim provinces, far-western Nepal</dd></div>
+      <div class="fact"><dt>Maruni's origin</dt><dd>Magar community, western Nepal, 14th century</dd></div>
+      <div class="fact"><dt>Deuda's occasion</dt><dd>Gaura Parva and communal festivals</dd></div>
+      <div class="fact"><dt>Maruni's occasion</dt><dd>Dashain and Tihar</dd></div>
+      <div class="fact"><dt>Deuda's form</dt><dd>Circular, hands linked, call-and-response song</dd></div>
+      <div class="fact"><dt>Maruni's form</dt><dd>Costumed performance, naumati baja orchestra</dd></div>
+      <div class="fact"><dt>Documented dance forms</dt><dd>70+ across ethnic groups and regions</dd></div>
+    </dl>
+  </div>
+
+  <article>
+    <section>
+      <p class="lede">When people ask what Nepal's national dance is, two names come up again and again: Deuda and Maruni. Deuda is the great participatory dance of the far west — a circle of linked hands and call-and-response song performed at festivals like Gaura Parva. Maruni is the great performance dance of the mid-hills — a costumed, drum-driven tradition rooted in the Magar community and closely tied to Dashain and Tihar. Between them, they capture the two poles of Nepali dance: everyone dancing together, and dancers performing for everyone else.</p>
+    </section>
+
+    <section>
+      <h2>Two Dances, Two Traditions</h2>
+      <p>Deuda and Maruni earn their place as Nepal's national dances for different reasons — one for how widely ordinary people take part in it, the other for how far its performance tradition has travelled.</p>
+      <div class="tiers-wrap">
+        <h3>Nepal's two national dances</h3>
+        <div class="tiers">
+          <div class="tier official">
+            <div class="art">The unity dance</div>
+            <strong>Deuda</strong>
+            <p>Performed across Karnali and Sudurpaschim provinces, Deuda gathers a whole community into a circle, hands or fingers linked, moving and singing dohori-style verses together. It is less a performance than a shared ritual of belonging.</p>
+          </div>
+          <div class="tier national">
+            <div class="art">The performance dance</div>
+            <strong>Maruni</strong>
+            <p>Originating with the Magar community, Maruni is danced by costumed performers — traditionally men in colourful female dress — to the nine-instrument naumati baja orchestra. It has spread from western Nepal to communities across the country and into the diaspora.</p>
+          </div>
+        </div>
+      </div>
+      <p>Beyond these two, dozens of other forms carry deep meaning for their own communities — Sakela among the Rai and Limbu, Ghatu among the Gurung, the Lakhey Naach among Kathmandu's Newars — each central to its own community's identity.</p>
+      <p class="source">Source: Wikipedia (Dance in Nepal, Maruni); Native Nepali Stage; ImNepal.com</p>
+    </section>
+
+    <section>
+      <h2>Where Nepali Dance Comes From</h2>
+      <p>Legend traces Nepali dance to the Himalayas themselves — the abode of Lord Shiva, who is said to have performed the tandava there, giving dance in Nepal an ancient, almost geological origin story. From that root, the tradition split along ethnic and regional lines: Nepal's more than 100 ethnic groups and 124 mother tongues each developed distinct dance forms, shaped by local costume, instrumentation, and the festivals that call for them.</p>
+      <p>Scholars generally sort these into two broad families. Classical dances, like the centuries-old Kartik Naach of Patan or the sacred Charya Nritya of Newar Buddhist priests, follow long-established technique passed down through formal lineages. Folk dances, the much larger category — including both Deuda and Maruni — are tied to specific communities, harvests, and festivals, performed by ordinary people rather than trained specialists, and changing gently from village to village.</p>
+    </section>
+
+    <section>
+      <h2>Deuda: Nepal's Dance of Unity</h2>
+      <p>Deuda belongs to the Khas communities of Nepal's far west and is performed above all during Gaura Parva, a festival honouring Goddess Gaura. Participants form a circle, link hands or hook fingers, and step in rhythm while singing Deuda geet — verses that move through love, folklore, and daily life in a call-and-response pattern between men and women. Unlike costumed performance dances, Deuda needs no stage, no trained performers, and no audience: everyone present is expected to join in, which is precisely the point — the dance is built to fold a whole community into one shared movement.</p>
+      <p>Deuda has travelled with far-western migrants into Kathmandu, where displaced communities now gather at open spaces like Tundikhel to perform it during festival season, keeping the tradition alive far from its home provinces.</p>
+    </section>
+
+    <section>
+      <h2>Maruni: Nepal's Dance of Celebration</h2>
+      <p>Maruni traces back to the Magar community and, by tradition, to the 14th-century court of a sick King Balihang Rana Magar of Palpa. Performers, both men and women, dress in vivid costume and ornaments and dance to the nine-instrument naumati baja ensemble, often shadowed by a clownish figure called the dhatu waray. Long associated with Dashain and Tihar, Maruni is now performed at weddings and cultural events too, and has spread with Nepali communities into Bhutan, Sikkim, Darjeeling and Assam.</p>
+      <div class="dyk">
+        <h3>✦ Did you know?</h3>
+        <ul>
+          <li>In Maruni's older tradition, male dancers played the female roles entirely — a convention now more often replaced by women performers.</li>
+          <li>Deuda is danced without musical instruments in its purest form — the rhythm comes entirely from the singers' own voices.</li>
+          <li>Both dances face a real risk of fading as fewer young performers take them up, which has pushed some communities to actively teach them to the next generation.</li>
+        </ul>
+      </div>
+      <p class="source">Source: Wikipedia (Maruni); ImNepal.com; Native Nepali Stage</p>
+    </section>
+
+    <section>
+      <h2>Notable Dances Across Nepal</h2>
+      <p>With well over 70 documented dance forms, no single table can cover Nepal's dance heritage — but a handful recur again and again in any serious account of it, alongside Deuda and Maruni.</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Dance</th><th>Community / Region</th><th>Known for</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Deuda</td><td>Karnali & Sudurpaschim provinces</td><td>Circular unity dance, no instruments needed</td></tr>
+            <tr><td>Maruni</td><td>Magar, Gurung, Kirati — nationwide</td><td>Nepal's best-known costumed folk dance</td></tr>
+            <tr><td>Lakhey Naach</td><td>Newar — Kathmandu Valley</td><td>Masked demon dance at Indra Jatra</td></tr>
+            <tr><td>Sakela Naach</td><td>Rai, Limbu — eastern Nepal</td><td>Longest group dance, honours nature deities</td></tr>
+            <tr><td>Ghatu Nritya</td><td>Gurung — western Nepal</td><td>Classical trance dance by young unmarried girls</td></tr>
+            <tr><td>Charya Nritya</td><td>Newar Buddhist priests — Kathmandu, Lalitpur</td><td>Sacred classical temple dance</td></tr>
+            <tr><td>Tamang Selo / Damphu</td><td>Tamang — central hills</td><td>Fast-paced dance with the damphu hand drum</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout"><strong>Note:</strong> this is a selection of the most cited dance forms, not an official or exhaustive list — Nepal's dance heritage runs to dozens more forms across its ethnic communities.</div>
+      <p class="source">Source: Wikipedia (Dance in Nepal); OnlineKhabar; Kathmandu Post</p>
+    </section>
+
+    <section>
+      <h2>Frequently Asked Questions</h2>
+      <details class="faq-item">
+        <summary>What is the national dance of Nepal?</summary>
+        <p>Deuda and Maruni are widely regarded as Nepal's national dances. Deuda is the circular, hand-linked unity dance of the far west, and Maruni is the Magar community's costumed festival dance associated with Dashain and Tihar. Worth noting: this rests on popular recognition rather than a formal constitutional designation, unlike Nepal's official national flower, bird, or animal.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What is Deuda dance?</summary>
+        <p>Deuda is a participatory folk dance from Nepal's far-western Karnali and Sudurpaschim provinces. Performers form a circle, link hands, and sing call-and-response verses called Deuda geet, most prominently during the Gaura Parva festival. It requires no instruments and no trained performers — the whole community is meant to join in.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What is Maruni dance?</summary>
+        <p>Maruni is a folk dance originating with the Magar community, traditionally performed during Dashain and Tihar and accompanied by the nine-instrument naumati baja orchestra. It is one of Nepal's oldest and most widely performed dances, also found among Nepali diaspora communities in India, Bhutan and Myanmar.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What is the Lakhey Naach?</summary>
+        <p>The Lakhey Naach is a masked dance performed by the Newar community of Kathmandu during the Indra Jatra festival, featuring a fierce, red-maned demon figure believed to protect children. It's one of Nepal's most recognisable cultural images.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How many traditional dances does Nepal have?</summary>
+        <p>Estimates vary, but researchers and cultural archives have documented well over 70 distinct traditional dance forms across Nepal's many ethnic communities, spanning classical, folk and ritual traditions.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What are the two main types of Nepali dance?</summary>
+        <p>Nepali dance is broadly divided into classical dance, based on long-established technique passed through formal lineages, and folk dance, tied to specific communities, festivals and regions and performed by ordinary people rather than trained specialists.</p>
+      </details>
+    </section>
+  </article>
+
+  <div class="related">
+    <h2>Explore more national symbols</h2>
+    <p>Deuda and Maruni sit alongside Nepal's language, flag, and other cultural landmarks — some official, some simply unmatched in reach.</p>
+    <div class="related-links">
+      <a href="https://symbols.thenepal.io/national-language/">National Language</a>
+      <a href="https://symbols.thenepal.io/national-cave/">Nepal's Great Caves</a>
+      <a href="https://symbols.thenepal.io/national-flag/">National Flag</a>
+      <a href="https://symbols.thenepal.io/">All national symbols of Nepal →</a>
+    </div>
+  </div>
+
+  <div class="final-cta">
+    <a href="https://symbols.thenepal.io/">Explore all National Symbols →</a>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 The Nepal · symbols.thenepal.io</span>
+    <span>Educational content — verify with official Nepali government sources.</span>
+  </div>
+</footer>
+
+</body>
+</html>
