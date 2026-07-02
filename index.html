@@ -146,18 +146,25 @@ a:focus-visible,button:focus-visible,input:focus-visible{
 .search-wrap input:focus{border-color:var(--maroon);width:260px;transition:width .2s ease;}
 .search-wrap .icon{position:absolute;left:12px;top:50%;transform:translateY(-50%);color:var(--ink-soft);font-size:.9rem;}
 .search-wrap .kbd{position:absolute;right:10px;top:50%;transform:translateY(-50%);font-size:.68rem;color:var(--ink-soft);border:1px solid var(--rule);border-radius:4px;padding:1px 6px;pointer-events:none;background:var(--cream);}
-.search-suggest{position:absolute;top:calc(100% + 8px);left:0;right:0;background:var(--white);border:1px solid var(--rule);border-radius:10px;box-shadow:0 12px 32px rgba(92,30,30,.16);overflow:hidden;display:none;z-index:60;}
+.search-suggest{position:absolute;top:calc(100% + 8px);left:0;right:0;background:var(--white);border:1px solid var(--rule);border-radius:10px;box-shadow:0 12px 32px rgba(92,30,30,.16);overflow:hidden;display:none;z-index:60;max-height:420px;overflow-y:auto;}
 .search-suggest.visible{display:block;}
-.search-suggest .ss-label{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);padding:10px 16px 4px;}
+.search-suggest .ss-label{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);padding:10px 16px 4px;position:sticky;top:0;background:var(--white);}
 .search-suggest button{display:flex;align-items:center;gap:10px;width:100%;text-align:left;background:none;border:none;padding:9px 16px;font-size:.86rem;font-family:'Inter',sans-serif;color:var(--ink);cursor:pointer;}
 .search-suggest button:hover{background:var(--paper);}
-.search-suggest button .ss-icon{opacity:.6;font-size:.8rem;}
+.search-suggest button .ss-icon{opacity:.6;font-size:.8rem;flex:0 0 auto;}
+.search-suggest button .ss-meta{margin-left:auto;font-size:.7rem;color:var(--ink-soft);flex:0 0 auto;}
 .popular-searches{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:10px;font-size:.8rem;color:var(--ink-soft);}
 .popular-searches button{border:1px solid var(--rule);background:var(--white);color:var(--ink);border-radius:999px;padding:4px 12px;font-size:.78rem;cursor:pointer;font-family:'Inter',sans-serif;}
 .popular-searches button:hover{background:var(--maroon);color:#fff;border-color:var(--maroon);}
 .subnav-pills{display:flex;gap:8px;overflow-x:auto;padding:10px 32px;max-width:1200px;margin:0 auto;scrollbar-width:none;}
 .pill{flex:0 0 auto;font-size:.875rem;font-weight:600;padding:6px 14px;border-radius:999px;border:1px solid var(--rule);cursor:pointer;background:transparent;color:var(--ink-soft);}
 .pill:hover,.pill.active{background:var(--maroon);border-color:var(--maroon);color:#fff;}
+
+/* search-by chips */
+.search-by-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:12px;}
+.search-by-row .sb-label{font-size:.78rem;color:var(--ink-soft);}
+.sb-chip{border:1px solid var(--rule);background:var(--white);color:var(--ink-soft);border-radius:999px;padding:5px 13px;font-size:.78rem;cursor:pointer;font-family:'Inter',sans-serif;font-weight:600;}
+.sb-chip.active{background:var(--maroon-dark);border-color:var(--maroon-dark);color:#fff;}
 
 /* hero */
 .hero{padding:64px 0 40px;background:radial-gradient(ellipse 700px 400px at 80% -20%, rgba(216,155,60,.2) 0%, transparent 60%),radial-gradient(ellipse 500px 300px at -10% 80%, rgba(126,42,42,.12) 0%, transparent 60%),var(--cream);position:relative;overflow:hidden;}
@@ -324,6 +331,58 @@ a:focus-visible,button:focus-visible,input:focus-visible{
 .challenge-done-msg{display:none;margin-top:16px;background:var(--forest);color:#fff;padding:12px 16px;border-radius:8px;font-size:.88rem;font-weight:600;}
 .challenge-done-msg.show{display:block;}
 
+/* ===== QUIZ SECTION ===== */
+.quiz-section{background:linear-gradient(135deg,var(--maroon-dark) 0%,#4a1818 100%);border-radius:14px;padding:38px;margin:56px 0;color:var(--cream);position:relative;overflow:hidden;}
+.quiz-section::before{content:'';position:absolute;top:-80px;right:-80px;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,rgba(216,155,60,.18),transparent 70%);}
+.quiz-head{position:relative;z-index:1;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:18px;margin-bottom:26px;}
+.quiz-head .eyebrow{color:var(--marigold);}
+.quiz-head h2{color:var(--cream);font-size:1.6rem;margin-top:6px;}
+.quiz-head p{color:rgba(251,243,230,.8);font-size:.92rem;max-width:52ch;margin-top:6px;}
+.quiz-start-btn{background:var(--marigold);color:var(--ink);border:none;border-radius:999px;padding:12px 26px;font-size:.9rem;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;display:inline-flex;align-items:center;gap:8px;}
+.quiz-start-btn:hover{background:#c48a30;}
+.quiz-body{position:relative;z-index:1;}
+.quiz-intro{text-align:center;padding:20px 0 6px;}
+.quiz-intro .quiz-big-emoji{font-size:2.6rem;margin-bottom:10px;}
+.quiz-card{background:rgba(251,243,230,.06);border:1px solid rgba(251,243,230,.16);border-radius:12px;padding:28px 30px;}
+.quiz-progress-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;font-size:.8rem;color:rgba(251,243,230,.75);}
+.quiz-bar{height:8px;border-radius:999px;background:rgba(251,243,230,.16);overflow:hidden;flex:1;margin:0 14px;}
+.quiz-bar-fill{height:100%;width:0%;background:var(--marigold);border-radius:999px;transition:width .3s ease;}
+.quiz-score-pill{background:rgba(251,243,230,.14);border-radius:999px;padding:4px 12px;font-weight:700;color:var(--cream);}
+.quiz-question{font-family:'Fraunces',serif;font-size:1.35rem;color:var(--cream);margin-bottom:20px;line-height:1.35;}
+.quiz-choices{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.quiz-choice{display:flex;align-items:center;gap:12px;text-align:left;background:rgba(251,243,230,.08);border:1.5px solid rgba(251,243,230,.22);color:var(--cream);border-radius:10px;padding:14px 16px;font-size:.92rem;font-family:'Inter',sans-serif;cursor:pointer;}
+.quiz-choice:hover{border-color:var(--marigold);background:rgba(251,243,230,.14);}
+.quiz-choice .qc-letter{width:26px;height:26px;flex:0 0 auto;border-radius:50%;background:rgba(251,243,230,.16);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.78rem;}
+.quiz-choice.correct{border-color:var(--forest);background:rgba(61,84,53,.45);}
+.quiz-choice.correct .qc-letter{background:var(--forest);}
+.quiz-choice.wrong{border-color:#a94442;background:rgba(169,68,66,.4);}
+.quiz-choice.wrong .qc-letter{background:#a94442;}
+.quiz-choice:disabled{cursor:default;}
+.quiz-next-row{display:flex;justify-content:flex-end;margin-top:20px;}
+.quiz-next-btn{background:var(--marigold);color:var(--ink);border:none;border-radius:999px;padding:11px 22px;font-size:.85rem;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;display:none;align-items:center;gap:8px;}
+.quiz-next-btn.show{display:inline-flex;}
+@media(max-width:600px){.quiz-choices{grid-template-columns:1fr;}.quiz-section{padding:26px 20px;}}
+
+/* quiz results / certificate */
+.quiz-result{text-align:center;padding:10px 0;}
+.quiz-result .qr-score{font-family:'Fraunces',serif;font-size:3rem;font-weight:700;color:var(--marigold);}
+.quiz-result .qr-sub{color:rgba(251,243,230,.85);margin:6px 0 24px;font-size:.95rem;}
+.certificate{background:var(--cream);color:var(--ink);border-radius:12px;padding:34px 30px;max-width:520px;margin:0 auto 22px;position:relative;border:3px solid var(--marigold);}
+.certificate::before{content:'';position:absolute;inset:8px;border:1px solid var(--rule);border-radius:8px;pointer-events:none;}
+.certificate .cert-eyebrow{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--marigold-deep);font-weight:700;}
+.certificate h3{font-family:'Fraunces',serif;font-size:1.5rem;color:var(--maroon-dark);margin:10px 0 4px;}
+.certificate .cert-name{font-size:1.15rem;font-weight:700;color:var(--ink);margin:14px 0 4px;font-family:'Fraunces',serif;}
+.certificate .cert-detail{font-size:.85rem;color:var(--ink-soft);}
+.certificate .cert-seal{font-size:2.2rem;margin-top:14px;}
+.quiz-result-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;}
+.quiz-result-actions button{border:none;border-radius:999px;padding:11px 20px;font-size:.85rem;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;}
+.qr-share{background:var(--marigold);color:var(--ink);}
+.qr-share:hover{background:#c48a30;}
+.qr-retry{background:rgba(251,243,230,.12);color:var(--cream);border:1px solid rgba(251,243,230,.3)!important;}
+.qr-name-input{background:rgba(251,243,230,.1);border:1px solid rgba(251,243,230,.3);color:var(--cream);border-radius:8px;padding:9px 12px;font-size:.88rem;font-family:'Inter',sans-serif;width:220px;max-width:100%;}
+.qr-name-input::placeholder{color:rgba(251,243,230,.5);}
+.qr-name-row{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:18px;}
+
 /* ===== Learn Nepal banner ===== */
 .learn-banner{display:flex;align-items:center;gap:24px;background:linear-gradient(135deg,var(--forest),#2a3d24);color:var(--cream);border-radius:12px;padding:26px 32px;margin:52px 0;}
 .learn-banner .lb-icon{font-size:2.2rem;flex:0 0 auto;}
@@ -443,7 +502,7 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
         <p class="hero-desc">The most complete, SEO-optimised reference for every national symbol of Nepal — from the sacred cow to the Himalayan Monal, from the crimson flag to the song that unites a nation.</p>
         <div class="stat-row">
           <div class="stat"><div class="num">23</div><div class="lbl">National Symbols</div></div>
-          <div class="stat"><div class="num">22</div><div class="lbl">Guides Live</div></div>
+          <div class="stat"><div class="num">23</div><div class="lbl">Guides Live</div></div>
           <div class="stat"><div class="num">5</div><div class="lbl">Categories</div></div>
         </div>
         <div class="popular-searches">
@@ -453,6 +512,14 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
           <button type="button" class="pop-search" data-q="everest">Everest</button>
           <button type="button" class="pop-search" data-q="dal bhat">Dal Bhat</button>
           <button type="button" class="pop-search" data-q="emblem">Emblem</button>
+        </div>
+        <div class="search-by-row" role="group" aria-label="Search by field">
+          <span class="sb-label">Search by:</span>
+          <button type="button" class="sb-chip active" data-field="all">All</button>
+          <button type="button" class="sb-chip" data-field="english">English</button>
+          <button type="button" class="sb-chip" data-field="nepali">Nepali</button>
+          <button type="button" class="sb-chip" data-field="scientific">Scientific Name</button>
+          <button type="button" class="sb-chip" data-field="category">Category</button>
         </div>
       </div>
       <img class="hero-flag" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiH3mz0ZGB0t9c_sIewgfcnidzpN7tlXzhA2Itd1NSAsRrC34Ml4k9ybNgvEruDdss7h_L6u9Nza8kyZV1H50mmnqGuHh5jkAH6_mS4yhZAOIQaMza5Q8Suk60aT_ow_sCntmI-vipPwC_SLm-bxAdC0GkWdc0XEy36zfsx-Q2C6KgHDVTU55STOBvlpdj_/w640-h478-rw/National-Flag-Of-Nepal-removebg-preview.png" alt="Flag of Nepal, made of two stacked crimson pennants with a white sun and moon" width="130" height="97" fetchpriority="high" decoding="async">
@@ -589,7 +656,7 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
   <div class="wrap">
     <div class="section-label">
       <span class="eyebrow">Featured Guide</span>
-      <h2>22 of 23 Guides Now Live</h2>
+      <h2>23 of 23 Guides Now Live</h2>
     </div>
     <div class="feature-card">
       <div class="fc-text">
@@ -624,7 +691,7 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
     </div>
     <div class="symbol-grid" data-section="nature">
 
-      <a href="https://symbols.thenepal.io/national-animal/" class="sym-card done" data-cat="nature" data-keywords="cow animal gai sacred" aria-label="National Animal: Cow, read the guide">
+      <a href="https://symbols.thenepal.io/national-animal/" class="sym-card done" data-cat="nature" data-keywords="cow animal gai sacred" data-nepali="गाई (Gai)" data-scientific="Bos taurus" data-category-label="National Animal" aria-label="National Animal: Cow, read the guide">
         <div class="badge">Live</div>
         <div class="card-visual v-animal"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhWUd1n_ywAF4B-ge2sKD4M3Cx63-FNQJAtKQn9D5NBCOp3IWPk7zE7qTcTfhl8fosZmjPprBcr4-E9zg2s9CrLxljtYLwSTaVxVIUhdV5_j-ViLF_ijWZm230WfjyLqS6P9z9MFlVY1prlpN0LiUmgDtbdgvXjj5woWhyLLJlwywPsHt8GgeiYm4SETFM_/w700-h500-rw/National_animal_of_Nepal_202607012252.jpeg" alt="Cow, the national animal of Nepal" loading="lazy" decoding="async"><div class="visual-overlay"></div></div>
         <div class="card-body">
@@ -635,7 +702,7 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
         <span class="card-link">Read Guide <span class="arrow" aria-hidden="true">→</span></span>
       </a>
 
-      <a href="https://symbols.thenepal.io/national-bird/" class="sym-card done" data-cat="nature" data-keywords="bird danphe monal himalayan" aria-label="National Bird: Himalayan Monal, read the guide">
+      <a href="https://symbols.thenepal.io/national-bird/" class="sym-card done" data-cat="nature" data-keywords="bird danphe monal himalayan" data-nepali="डाँफे (Danphe)" data-scientific="Lophophorus impejanus" data-category-label="National Bird" aria-label="National Bird: Himalayan Monal, read the guide">
         <div class="badge">Live</div>
         <div class="card-visual v-bird"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg3T8xPOHYO28g7AWYNvPvINNKKX3flfr91LiztHjbfDnE065sBOLVUiCoWDdsr1vhIXRMVCESwu8-6QWrGjDPTJIj-uwas_MExMElMU39jHY-ISlaBWULJ2JAtK8is4Jbl7wYeIBNVEkqF8USRaPkntqIQp5w9OllboY4n6RbTnVB2mrJoY6zoo3v35lDn/w700-h500-rw/National_bird_of_nepal_2K_202607020755.webp" alt="Himalayan Monal, the national bird of Nepal" loading="lazy" decoding="async"><div class="visual-overlay"></div></div>
         <div class="card-body">
@@ -646,7 +713,7 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
         <span class="card-link">Read Guide <span class="arrow" aria-hidden="true">→</span></span>
       </a>
 
-      <a href="https://symbols.thenepal.io/national-flower/" class="sym-card done" data-cat="nature" data-keywords="flower rhododendron lali gurans" aria-label="National Flower: Rhododendron, read the guide">
+      <a href="https://symbols.thenepal.io/national-flower/" class="sym-card done" data-cat="nature" data-keywords="flower rhododendron lali gurans" data-nepali="लाली गुराँस (Lali Gurans)" data-scientific="Rhododendron arboreum" data-category-label="National Flower" aria-label="National Flower: Rhododendron, read the guide">
         <div class="badge">Live</div>
         <div class="card-visual v-flower"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhis_kg3mAEizJqqZ28LSFgDjDU5vxoJ6Z9axNRKJDI6HI1AT9CRAJzB88amJwa26LP9-cCLSRhSagcO6Giz31yV9aIMSkN3eCN2tJWQVIkTGUKIK9oYBfoz4n00qTv4Gzb3XU7o-JL9onnLq41jGEp1RtMdaDpXNM7rfl_0siPk9Gi49QXcfv4bieQULdF/w700-h500-rw/National-Flower-of-Nepal.jpeg" alt="Rhododendron, the national flower of Nepal, in bloom" loading="lazy" decoding="async"><div class="visual-overlay"></div></div>
         <div class="card-body">
@@ -657,7 +724,7 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
         <span class="card-link">Read Guide <span class="arrow" aria-hidden="true">→</span></span>
       </a>
 
-      <a href="https://symbols.thenepal.io/national-tree/" class="sym-card done" data-cat="nature" data-keywords="tree peepal sacred fig bodhi ficus religiosa" aria-label="National Tree: Peepal, read the guide">
+      <a href="https://symbols.thenepal.io/national-tree/" class="sym-card done" data-cat="nature" data-keywords="tree peepal sacred fig bodhi ficus religiosa" data-nepali="पीपल (Peepal)" data-scientific="Ficus religiosa" data-category-label="National Tree" aria-label="National Tree: Peepal, read the guide">
         <div class="badge">Live</div>
         <div class="card-visual v-tree"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjuDF6dBehze1AJ0X8jR5MiEY5sjBN5nfTBlj63T7VZakc3PpLham3yPcZTNruPiLd6ANCOCuzVlJV79Ep__TS5Sr70hYxpRTffA2CCcw2-162CYf88jmavntKCkZdoTsXqWAHGIcXyX-y2Png-t5vVSniJLJ_ravn3gCyd2jMQOHovEezFwbtLX5Vg7BaD/w700-h500-rw/National_tree_of_nepal_2K_202607020758.webp" alt="Peepal tree, the national tree of Nepal" loading="lazy" decoding="async"><div class="visual-overlay"></div></div>
         <div class="card-body">
@@ -668,7 +735,7 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
         <span class="card-link">Read Guide <span class="arrow" aria-hidden="true">→</span></span>
       </a>
 
-      <a href="https://symbols.thenepal.io/national-fish/" class="sym-card done" data-cat="nature" data-keywords="fish asala mahseer golden" aria-label="National Fish: Asala, read the guide">
+      <a href="https://symbols.thenepal.io/national-fish/" class="sym-card done" data-cat="nature" data-keywords="fish asala mahseer golden" data-nepali="असला (Asala)" data-scientific="Tor putitora" data-category-label="National Fish" aria-label="National Fish: Asala, read the guide">
         <div class="badge">Live</div>
         <div class="card-visual v-fish"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhp-_iodF104D54nGDEhfqtvi2MMCTICev008UFNU9fTiO1VLCRSROJIZum1yaTqzEFN9sPREWXMUEpIw4keSx8xqeaJbheym888CtrJtNkdTIgKwbpPtS4zdlcraiFWo8aEeiR3qwK503yAgaJ0pfBUqwo6Fr6yoUr_s2I0t_fFI2w83vIcXjKt_Z-38_f/w700-h500-rw/national_fish_of_nepal_2K_202607020755.webp" alt="Golden Mahseer, the national fish of Nepal" loading="lazy" decoding="async"><div class="visual-overlay"></div></div>
         <div class="card-body">
@@ -679,7 +746,7 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
         <span class="card-link">Read Guide <span class="arrow" aria-hidden="true">→</span></span>
       </a>
 
-      <a href="https://symbols.thenepal.io/national-butterfly/" class="sym-card done" data-cat="nature" data-keywords="butterfly krishna peacock papilio swallowtail" aria-label="National Butterfly: Krishna Peacock, read the guide">
+      <a href="https://symbols.thenepal.io/national-butterfly/" class="sym-card done" data-cat="nature" data-keywords="butterfly krishna peacock papilio swallowtail" data-nepali="कृष्ण मयूर पुतली" data-scientific="Papilio krishna" data-category-label="National Butterfly" aria-label="National Butterfly: Krishna Peacock, read the guide">
         <div class="badge">Live</div>
         <div class="card-visual v-butterfly"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEio2xt8a-dMCvz_EIR7pSXWoDQ1KI5qrbUiORBtk-qJ7eJ47LsICrx8kkuB3xekARJajJNQhBw6OSyLyibH8JqNQjKOydOTIbRvDuoTqGwF66Cm_aqVVKoLnbn0IS0Zl8ebmglkrjR16y0xUpJwDJDsMDeifSUbTcsByAt26yFdMRwJjLG6cEXN1rei8oN2/w700-h500-rw/National_butterfly_of_nepal_2K_202607020759.webp" alt="Krishna Peacock butterfly, popularly regarded as Nepal's national butterfly" loading="lazy" decoding="async"><div class="visual-overlay"></div></div>
         <div class="card-body">
@@ -699,7 +766,7 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
     </div>
     <div class="symbol-grid" data-section="food">
 
-      <a href="https://nationalfruit.thenepal.io/" class="sym-card external" data-cat="food" data-keywords="fruit junar orange sweet citrus mandarin suntala" aria-label="National Fruit: Mandarin Orange, read the guide on nationalfruit.thenepal.io">
+      <a href="https://nationalfruit.thenepal.io/" class="sym-card external" data-cat="food" data-keywords="fruit junar orange sweet citrus mandarin suntala" data-nepali="जुनार / सुन्तला (Junar)" data-scientific="Citrus reticulata" data-category-label="National Fruit" aria-label="National Fruit: Mandarin Orange, read the guide on nationalfruit.thenepal.io">
         <div class="badge">Live</div>
         <div class="card-visual v-fruit"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhDDzcK1830BCNU6NFh9q_b2xql8YvOLFAzXuhLrbOs2YtWIFnZ72vJEUUxNjtX1BQHtdBxhJivSf2sKa9xqljeEW5CR56TGCQWiMWKkEGK84vnrtLO6qmwkFwYaP2E_1haKo6ea-M9CZY1P1kKsvjvavyjEse2_SwQMOnWqRMsE5J1xxk3W-sHydug7O8s/w700-h500-rw/national%20fruit%20of%20nepal%20mandarin%20orange.webp" alt="Mandarin Orange (Suntala), the national fruit of Nepal" loading="lazy" decoding="async"><div class="visual-overlay"></div></div>
         <div class="card-body">
@@ -710,7 +777,7 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
         <span class="card-link">Read Guide <span class="arrow" aria-hidden="true">↗</span></span>
       </a>
 
-      <a href="https://nationalfood.thenepal.io/" class="sym-card external" data-cat="food" data-keywords="dish dal bhat food meal rice lentil" aria-label="National Dish: Dal Bhat, read the guide on nationalfood.thenepal.io">
+      <a href="https://nationalfood.thenepal.io/" class="sym-card external" data-cat="food" data-keywords="dish dal bhat food meal rice lentil" data-nepali="दाल भात (Dal Bhat)" data-scientific="—" data-category-label="National Dish" aria-label="National Dish: Dal Bhat, read the guide on nationalfood.thenepal.io">
         <div class="badge">Live</div>
         <div class="card-visual v-dish"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhtjY-SeYto2xYHiih4yAoP045AUAHrcGMSPEe5gFTWa3oMnuKMMBFrCTExXcsIkSrPLsVE0L6Xz16KzaclGucIUpt_Qm04zqiubk-KZzfG4IckWDbJH6WFAVFw_uj2S5c8hrJXCB4pskkAOtfPV5rGBdFiMPFJJiHRhuqWz0Fs66To59XGaj--YCYm_6BP/w700-h500-rw/Dal%20Bhat.webp" alt="Dal Bhat thali, the national dish of Nepal" loading="lazy" decoding="async" onerror="this.style.display='none';this.parentElement.innerHTML+='🍛';"><div class="visual-overlay"></div></div>
         <div class="card-body">
@@ -730,7 +797,7 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
     </div>
     <div class="symbol-grid" data-section="culture">
 
-      <a href="https://symbols.thenepal.io/national-flag/" class="sym-card done" data-cat="culture" data-keywords="flag crimson red triangle pennant" aria-label="National Flag, read the guide">
+      <a href="https://symbols.thenepal.io/national-flag/" class="sym-card done" data-cat="culture" data-keywords="flag crimson red triangle pennant" data-nepali="राष्ट्रिय झण्डा" data-scientific="—" data-category-label="National Flag" aria-label="National Flag, read the guide">
         <div class="badge">Live</div>
         <div class="card-visual v-flag"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiH3mz0ZGB0t9c_sIewgfcnidzpN7tlXzhA2Itd1NSAsRrC34Ml4k9ybNgvEruDdss7h_L6u9Nza8kyZV1H50mmnqGuHh5jkAH6_mS4yhZAOIQaMza5Q8Suk60aT_ow_sCntmI-vipPwC_SLm-bxAdC0GkWdc0XEy36zfsx-Q2C6KgHDVTU55STOBvlpdj_/w640-h478-rw/National-Flag-Of-Nepal-removebg-preview.png" alt="Flag of Nepal" loading="lazy" decoding="async"><div class="visual-overlay"></div></div>
         <div class="card-body">
@@ -741,7 +808,7 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
         <span class="card-link">Read Guide <span class="arrow" aria-hidden="true">→</span></span>
       </a>
 
-      <a href="https://symbols.thenepal.io/national-anthem/" class="sym-card done" data-cat="culture" data-keywords="anthem sayaun thunga phool ka song national" aria-label="National Anthem, read the guide">
+      <a href="https://symbols.thenepal.io/national-anthem/" class="sym-card done" data-cat="culture" data-keywords="anthem sayaun thunga phool ka song national" data-nepali="सयौं थुँगा फूलका" data-scientific="—" data-category-label="National Anthem" aria-label="National Anthem, read the guide">
         <div class="badge">Live</div>
         <div class="card-visual v-anthem"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg9dfLp9Rl11FNJwopjLG6OoLFGogA65EnhlUdwn5m8Zbh09Xs6miuuiP3mlYesI_D8CTbqimN9xqI5qA2a-ABgBjXMlFS2sEO0qoFyZSb8lyebZh3MFXH-f7KHLBfJ8xEVtI7pamlkkdzrwmJHHXVK1NSelrOvhfJ5YWFZmmLE6xMa5dmdDm0uoD12yAa8/w700-h500-rw/National_anthem_of_nepal_2K_202607020755.webp" alt="Symbolic imagery for Sayaun Thunga Phulka, the national anthem of Nepal" loading="lazy" decoding="async"><div class="visual-overlay"></div></div>
         <div class="card-body">
@@ -752,7 +819,7 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
         <span class="card-link">Read Guide <span class="arrow" aria-hidden="true">→</span></span>
       </a>
 
-      <a href="https://symbols.thenepal.io/national-language/" class="sym-card done" data-cat="culture" data-keywords="language nepali official script devanagari" aria-label="National Language: Nepali, read the guide">
+      <a href="https://symbols.thenepal.io/national-language/" class="sym-card done" data-cat="culture" data-keywords="language nepali official script devanagari" data-nepali="नेपाली" data-scientific="—" data-category-label="National Language" aria-label="National Language: Nepali, read the guide">
         <div class="badge">Live</div>
         <div class="card-visual v-language"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEip-VMgRQgOR-kFavIesqi24pCQpCwp-mkav83Vae3DZrDowVIvwQom2zSmvj-SPsmbg-pociBxOgBIdERsasqp3dFCESO1ZF9EmIa-4zSQmoSH7pJt4CyZO0cJr-XlLxq4A23U0FpAlP74FHVN3NmGrf3FC5awJA6jjnPQznm3smsjJHtZYjj1-dq8bp4h/w700-h500-rw/National_language_of_nepal_2K_202607020800.webp" alt="Nepali language in Devanagari script" loading="lazy" decoding="async"><div class="visual-overlay"></div></div>
         <div class="card-body">
@@ -763,7 +830,7 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
         <span class="card-link">Read Guide <span class="arrow" aria-hidden="true">→</span></span>
       </a>
 
-      <a href="https://symbols.thenepal.io/national-colour/" class="sym-card done" data-cat="culture" data-keywords="colour color crimson red national" aria-label="National Colour: Crimson Red, read the guide">
+      <a href="https://symbols.thenepal.io/national-colour/" class="sym-card done" data-cat="culture" data-keywords="colour color crimson red national" data-nepali="चिरागी रातो" data-scientific="—" data-category-label="National Colour" aria-label="National Colour: Crimson Red, read the guide">
         <div class="badge">Live</div>
         <div class="card-visual v-color"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgkH0SRU89gKv9XmbI9wzv0TD5SHaXk8tWVp4-iUdQS6UXCPMQh70p2yEVKdrL68dNwSTdd9QIgVCAzltyBEnkB7nOnHNdf9UFDvfZkGp-bs_dxuuFJBR_egHpZ0Wdj7IA66R5SfN2KSHXiSX9vy9PO-BL1TVQzjoOmCprb883E-W0IS-98p1MVd4Z-iDZw/w700-h500-rw/National_color_of_nepal_2K_202607020800.webp" alt="Crimson red, the national colour of Nepal" loading="lazy" decoding="async"><div class="visual-overlay"></div></div>
         <div class="card-body">
@@ -774,7 +841,7 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
         <span class="card-link">Read Guide <span class="arrow" aria-hidden="true">→</span></span>
       </a>
 
-      <a href="https://symbols.thenepal.io/national-dress/" class="sym-card done" data-cat="culture" data-keywords="dress daura suruwal gunyu cholo clothing" aria-label="National Dress, read the guide">
+      <a href="https://symbols.thenepal.io/national-dress/" class="sym-card done" data-cat="culture" data-keywords="dress daura suruwal gunyu cholo clothing" data-nepali="दौरा सुरुवाल / गुन्यू चोलो" data-scientific="—" data-category-label="National Dress" aria-label="National Dress, read the guide">
         <div class="badge">Live</div>
         <div class="card-visual v-dress"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjebRK11xJYQPccdsZpYe1dJBKJgQ7UQK4Pj3B7Gdu-Kx2LPRhNHQQxLfUAsszKdGYHfYIUaVdhfNEVkEuFzzvvFx0eQgMV9PO-MG0l7xa_pPZIo6tsSbA1C9w95OOdNY7kcwzDTqa6ubLtcaTSomJpbq0RovTBygIbvwTK21cR7ImTzIkzxKR9FevxtNm7/w700-h500-rw/National_dress_of_nepal_2K_202607020828.webp" alt="Daura Suruwal with Dhaka topi, the national dress of Nepal" loading="lazy" decoding="async"><div class="visual-overlay"></div></div>
         <div class="card-body">
@@ -785,7 +852,7 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
         <span class="card-link">Read Guide <span class="arrow" aria-hidden="true">→</span></span>
       </a>
 
-      <a href="https://symbols.thenepal.io/national-sport/" class="sym-card done" data-cat="culture" data-keywords="sport game volleyball national" aria-label="National Sport: Volleyball, read the guide">
+      <a href="https://symbols.thenepal.io/national-sport/" class="sym-card done" data-cat="culture" data-keywords="sport game volleyball national" data-nepali="भलिबल" data-scientific="—" data-category-label="National Sport" aria-label="National Sport: Volleyball, read the guide">
         <div class="badge">Live</div>
         <div class="card-visual v-sport"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiqNSbUh5sBF6VbKuxQxLriQcbdDjhpZ2u9Xi5txnZcQt-fRUQKgy63LAh_SmByY4Qv1OlRV3I2r47Pb8B0rtf714SVZKJClyMnLwpvR8iFEy3wI5N3ilJvturbOTbwcPqUGkYXnAI3ysBVR8MHssAajcGdxIwAqb5lJxLPvlOIHqzWrSviduZ1uKZ9cPSi/w700-h500-rw/National_sport_of_nepal_2K_202607020827.webp" alt="Volleyball, the official national sport of Nepal" loading="lazy" decoding="async"><div class="visual-overlay"></div></div>
         <div class="card-body">
@@ -796,7 +863,7 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
         <span class="card-link">Read Guide <span class="arrow" aria-hidden="true">→</span></span>
       </a>
 
-      <a href="https://symbols.thenepal.io/national-calendar/" class="sym-card done" data-cat="culture" data-keywords="calendar bikram sambat bs year" aria-label="National Calendar: Bikram Sambat, read the guide">
+      <a href="https://symbols.thenepal.io/national-calendar/" class="sym-card done" data-cat="culture" data-keywords="calendar bikram sambat bs year" data-nepali="विक्रम सम्वत्" data-scientific="—" data-category-label="National Calendar" aria-label="National Calendar: Bikram Sambat, read the guide">
         <div class="badge">Live</div>
         <div class="card-visual v-calendar"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQFMZCVRL7s3bX-mBAFqxOcneKhbLc4sER2qCGo7RHPMR66nNrXz5WTU70NS3D_7mp4zZaak0337XXPVuClTFgLyTrYzdCgeqdHFaFhBBn7keION8tTQDBsW_LtIgsK1HPi7_voXgxPocYxGCHIvo4EZQ9Jo9s9UbZohWgSf8v9Q02phj5jvfp0bCCtwzc/w700-h500-rw/National_calendar_of_nepal_2K_202607020827.webp" alt="Bikram Sambat, the official calendar of Nepal" loading="lazy" decoding="async"><div class="visual-overlay"></div></div>
         <div class="card-body">
@@ -807,7 +874,7 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
         <span class="card-link">Read Guide <span class="arrow" aria-hidden="true">→</span></span>
       </a>
 
-      <a href="https://symbols.thenepal.io/national-dance/" class="sym-card done" data-cat="culture" data-keywords="dance deuda maruni traditional folk" aria-label="National Dance: Deuda and Maruni, read the guide">
+      <a href="https://symbols.thenepal.io/national-dance/" class="sym-card done" data-cat="culture" data-keywords="dance deuda maruni traditional folk" data-nepali="देउडा / मारुनी" data-scientific="—" data-category-label="National Dance" aria-label="National Dance: Deuda and Maruni, read the guide">
         <div class="badge">Live</div>
         <div class="card-visual v-dance"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgWJL-2CH10iuSIdIYvoC4H76Zi2S-m3ONp5IlKRLAECtd2L2ULEWy-qcLHGvpxcbIx0DQSHBNkpZ8fg6_Rn-gUzmtqrrYNyMFqNB48d4WUXmEbE0VP57nZ9cHzuGTMp-YRQPYgEm4Yyp7v8poY9aILmKoZ8niW1zVRRfrupGRax-hTX264KxwhoNxTeN9c/w700-h500-rw/National_dance_of_nepal_2K_202607020827.webp" alt="Deuda and Maruni, the national dances of Nepal" loading="lazy" decoding="async"><div class="visual-overlay"></div></div>
         <div class="card-body">
@@ -818,7 +885,7 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
         <span class="card-link">Read Guide <span class="arrow" aria-hidden="true">→</span></span>
       </a>
 
-      <a href="https://symbols.thenepal.io/national-emblem/" class="sym-card done" data-cat="culture" data-keywords="emblem coat of arms crest national seal" aria-label="National Emblem, read the guide">
+      <a href="https://symbols.thenepal.io/national-emblem/" class="sym-card done" data-cat="culture" data-keywords="emblem coat of arms crest national seal" data-nepali="राष्ट्रिय चिन्ह" data-scientific="—" data-category-label="National Emblem" aria-label="National Emblem, read the guide">
         <div class="badge">Live</div>
         <div class="card-visual v-emblem"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjzHAOObO7uGMru40-4xFnh6S9CRufNLTshdvMWIjDtklTsUrcw6aktG41y9hlrHWKCY9-iio8nzdy2KtmUwWftau3IbV3nBVDdX_iLyMYKFD5eLhwJy11ETFeCIff29l7_dAhO0LxhdsVPVtDCdZIAtQPSiFjAu-NWVtgj6cCTjAz2NNjs9eiFzGbF7_Cf/w700-h500-rw/Emblem_of_Nepal.webp" alt="The national emblem of Nepal" loading="lazy" decoding="async"><div class="visual-overlay"></div></div>
         <div class="card-body">
@@ -838,7 +905,7 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
     </div>
     <div class="symbol-grid" data-section="geography">
 
-      <a href="https://symbols.thenepal.io/national-monument/" class="sym-card done" data-cat="geography" data-keywords="monument dharahara tower bhimsen kathmandu" aria-label="National Monument: Dharahara Tower, read the guide">
+      <a href="https://symbols.thenepal.io/national-monument/" class="sym-card done" data-cat="geography" data-keywords="monument dharahara tower bhimsen kathmandu" data-nepali="धरहरा" data-scientific="—" data-category-label="National Monument" aria-label="National Monument: Dharahara Tower, read the guide">
         <div class="badge">Live</div>
         <div class="card-visual v-monument"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjR2Vfdhm0TiFAVcD0xv0VY4kOFKl_-Kcyl7Wxdhz2V0t9nhEqRvnrNQPSUzzF1rW7Ai5GGC-DQ4W_IrVdXDXmVOfxGcUNsdzSXNc-VUS5eiKaoDPhziANZW1da2UrZSGko5RJt2fdCwsTo_-OxdlGeaj0eJurayueOdhLobQdG6cqqKb3MD8eEk2JvONHr/w700-h500-rw/National_monument_of_nepal_2K_202607020827.webp" alt="Dharahara tower in Kathmandu, Nepal's national monument" loading="lazy" decoding="async"><div class="visual-overlay"></div></div>
         <div class="card-body">
@@ -849,7 +916,7 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
         <span class="card-link">Read Guide <span class="arrow" aria-hidden="true">→</span></span>
       </a>
 
-      <a href="https://symbols.thenepal.io/national-everest/" class="sym-card done" data-cat="geography" data-keywords="everest sagarmatha himalaya peak highest mountain" aria-label="Highest Peak: Mt Everest, read the guide">
+      <a href="https://symbols.thenepal.io/national-everest/" class="sym-card done" data-cat="geography" data-keywords="everest sagarmatha himalaya peak highest mountain" data-nepali="सगरमाथा" data-scientific="—" data-category-label="Highest Peak" aria-label="Highest Peak: Mt Everest, read the guide">
         <div class="badge">Live</div>
         <div class="card-visual v-peak"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEguOoOl5cYuQ-SqFzngURQMOmn3X24ACa2FhlzY37sevd8ehNj_edY06zmG-InlUOMGoPKpYGzhVzXxDByenvvZy4cP5dcNYkCmGebstva9YFlqCVpmS7L4rl65njZFlDfwYqFHku77lJ65zmtwOUG6f_EGSBmGQKAM9MplX5kD8WdciaAIcz5tgef6-HeB/w700-h500-rw/national_everest_of_nepal_2K_202607020827.webp" alt="Sagarmatha, Mount Everest" loading="lazy" decoding="async"><div class="visual-overlay"></div></div>
         <div class="card-body">
@@ -860,18 +927,18 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
         <span class="card-link">Read Guide <span class="arrow" aria-hidden="true">→</span></span>
       </a>
 
-      <div class="sym-card coming" data-cat="geography" data-keywords="river koshi national water" aria-label="National River: Koshi River, guide coming soon">
-        <div class="badge">Coming Soon</div>
+      <a href="https://symbols.thenepal.io/national-river/" class="sym-card done" data-cat="geography" data-keywords="river koshi national water" data-nepali="कोशी नदी" data-scientific="—" data-category-label="National River" aria-label="National River: Koshi River, read the guide">
+        <div class="badge">Live</div>
         <div class="card-visual v-river">🌊</div>
         <div class="card-body">
           <span class="eyebrow">National River</span>
           <h3>Koshi River</h3>
           <p>The sorrow and the lifeline of eastern Nepal's plains.</p>
         </div>
-        <span class="card-link">Coming Soon</span>
-      </div>
+        <span class="card-link">Read Guide <span class="arrow" aria-hidden="true">→</span></span>
+      </a>
 
-      <a href="https://symbols.thenepal.io/national-cave/" class="sym-card done" data-cat="geography" data-keywords="cave siddha gufa largest natural" aria-label="National Cave: Siddha Gufa, read the guide">
+      <a href="https://symbols.thenepal.io/national-cave/" class="sym-card done" data-cat="geography" data-keywords="cave siddha gufa largest natural" data-nepali="सिद्ध गुफा" data-scientific="—" data-category-label="National Cave" aria-label="National Cave: Siddha Gufa, read the guide">
         <div class="badge">Live</div>
         <div class="card-visual v-cave"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgqRKRh2ydsEIsHtLjLeIYX4mDHDF3ovfefwLefG06A9J_SkT4WqROvNXfWqf2CMPBB0XA9TX1BGkp6-dSFmhfwjJfaDM2IBuoH7_h_OIHBA_lvCI61bxKqs1oDidV1wI3ELURQu6M5PwtmDhxRLACc-zTvTo3W55SJsegdC2ZtYvSn6bzo1QV9KqbYjofc/w700-h500-rw/National_cave_of_nepal_2K_202607020827.webp" alt="Siddha Gufa, Nepal's national cave" loading="lazy" decoding="async"><div class="visual-overlay"></div></div>
         <div class="card-body">
@@ -891,7 +958,7 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
     </div>
     <div class="symbol-grid" data-section="heritage">
 
-      <a href="https://symbols.thenepal.io/national-museum/" class="sym-card done" data-cat="heritage" data-keywords="museum national kathmandu art history" aria-label="National Museum, read the guide">
+      <a href="https://symbols.thenepal.io/national-museum/" class="sym-card done" data-cat="heritage" data-keywords="museum national kathmandu art history" data-nepali="राष्ट्रिय संग्रहालय" data-scientific="—" data-category-label="National Museum" aria-label="National Museum, read the guide">
         <div class="badge">Live</div>
         <div class="card-visual v-museum"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhU3v-9G2IplxP1NNQpdKDt8JVpDLxqeHBk54_cARyKDSESTe0EMpAB8EPsq5dzHtUy7ZMSkLANdhTy-uz0seSFkKDXMLkg_Rxwf4ixoaIMjazCnj1fkbpY1HwCIDHdHffQ_xyIgDSaWOKlOgVapEuIBuZMxlHhD3_NA16lmxTZF0Yl9jFkyszriKzAo3A9/w700-h500-rw/National_museum_of_nepal_2K_202607020826.webp" alt="The National Museum of Nepal in Chhauni, Kathmandu" loading="lazy" decoding="async"><div class="visual-overlay"></div></div>
         <div class="card-body">
@@ -902,7 +969,7 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
         <span class="card-link">Read Guide <span class="arrow" aria-hidden="true">→</span></span>
       </a>
 
-      <a href="https://symbols.thenepal.io/national-currency/" class="sym-card done" data-cat="heritage" data-keywords="currency rupee money npr exchange" aria-label="National Currency: Nepalese Rupee, read the guide">
+      <a href="https://symbols.thenepal.io/national-currency/" class="sym-card done" data-cat="heritage" data-keywords="currency rupee money npr exchange" data-nepali="नेपाली रुपैयाँ" data-scientific="—" data-category-label="National Currency" aria-label="National Currency: Nepalese Rupee, read the guide">
         <div class="badge">Live</div>
         <div class="card-visual v-currency"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjRVxATSeqX_VTiHEYrR1f_7niH4vSP0xTXOAyjNV5danhHR-PEY-Uk8Tuoz4tZUniQPayhas-ztI7PQIR-SRKO_KFzG0qkCvoNXcSsfjC5NT6-UOEnbmXHN1pUcs1BUJVkfeOo5S1pYvSCac7xXN_EUao4Wzg3-w9uAOsVGjZMBVc2Pn8RxQr3GmPq0_mt/w700-h500-rw/National_currency_of_nepal_2K_202607020827.webp" alt="Nepalese Rupee banknotes and coins" loading="lazy" decoding="async"><div class="visual-overlay"></div></div>
         <div class="card-body">
@@ -923,7 +990,7 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
   <div class="wrap">
     <div class="stats-inner">
       <div class="s-stat"><div class="big">23</div><div class="lbl">National Symbols Covered</div></div>
-      <div class="s-stat"><div class="big">22</div><div class="lbl">Guides Published</div></div>
+      <div class="s-stat"><div class="big">23</div><div class="lbl">Guides Published</div></div>
       <div class="s-stat"><div class="big">5</div><div class="lbl">Thematic Categories</div></div>
       <div class="s-stat"><div class="big">∞</div><div class="lbl">Nepal's Cultural Depth</div></div>
     </div>
@@ -947,6 +1014,26 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
     <div class="challenge-grid" id="challenge-grid"></div>
     <div class="challenge-done-msg" id="challenge-done-msg">🎉 You know all 23 national symbols of Nepal! Certified Nepal symbols expert.</div>
     <button class="challenge-reset" id="challenge-reset" type="button">Reset progress</button>
+  </div>
+</div>
+
+<!-- WOW: QUIZ -->
+<div class="wrap">
+  <div class="quiz-section">
+    <div class="quiz-head">
+      <div>
+        <span class="eyebrow">Test Yourself</span>
+        <h2>Nepal National Symbols Quiz</h2>
+        <p>12 questions, multiple choice. Get your score and download a shareable certificate at the end.</p>
+      </div>
+      <button class="quiz-start-btn" id="quiz-start-btn" type="button">Start Quiz <span aria-hidden="true">→</span></button>
+    </div>
+    <div class="quiz-body" id="quiz-body">
+      <div class="quiz-intro">
+        <div class="quiz-big-emoji">🏆</div>
+        <p style="color:rgba(251,243,230,.75);font-size:.9rem;">Press "Start Quiz" to begin — one question at a time, instant feedback, final score and certificate.</p>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -1138,7 +1225,7 @@ document.querySelectorAll('.cat-jump').forEach(card => {
   });
 });
 
-// ===== Search with synonym matching =====
+// ===== Search with synonym matching + field filter =====
 const synonyms = {
   'danphe':'bird himalayan monal',
   'monal':'bird danphe',
@@ -1161,6 +1248,20 @@ function expandQuery(q){
   return q + extra;
 }
 
+let activeField = 'all'; // all | english | nepali | scientific | category
+
+function fieldText(card, field){
+  switch(field){
+    case 'english': return (card.querySelector('h3')?.textContent || '') + ' ' + (card.querySelector('.eyebrow')?.textContent || '');
+    case 'nepali': return card.dataset.nepali || '';
+    case 'scientific': return card.dataset.scientific || '';
+    case 'category': return card.dataset.categoryLabel || card.dataset.cat || '';
+    default: return (card.dataset.keywords || '') + ' ' + (card.querySelector('h3')?.textContent || '') + ' ' +
+      (card.querySelector('p')?.textContent || '') + ' ' + (card.dataset.nepali || '') + ' ' +
+      (card.dataset.scientific || '') + ' ' + (card.dataset.categoryLabel || '');
+  }
+}
+
 const searchInput = document.getElementById('search-input');
 const searchResults = document.getElementById('search-results');
 const searchTerm = document.getElementById('search-term');
@@ -1174,17 +1275,17 @@ function runSearch(rawQ){
     allSection.style.display = '';
     return;
   }
-  const expanded = expandQuery(q);
+  const expanded = activeField === 'all' ? expandQuery(q) : q;
   const terms = expanded.split(/\s+/).filter(Boolean);
   const matches = [...allCards].filter(c => {
-    const kw = (c.dataset.keywords || '') + ' ' + (c.querySelector('h3')?.textContent || '') + ' ' + (c.querySelector('p')?.textContent || '');
-    return terms.some(t => kw.toLowerCase().includes(t));
+    const kw = fieldText(c, activeField).toLowerCase();
+    return terms.some(t => kw.includes(t));
   });
   searchTerm.textContent = rawQ;
   searchGrid.innerHTML = '';
   matches.forEach(c => searchGrid.appendChild(c.cloneNode(true)));
   if(matches.length === 0){
-    searchGrid.innerHTML = '<p style="color:var(--ink-soft);font-size:.9rem;">No symbols found. Try a different term.</p>';
+    searchGrid.innerHTML = '<p style="color:var(--ink-soft);font-size:.9rem;">No symbols found. Try a different term or search field.</p>';
   }
   searchResults.classList.add('visible');
   allSection.style.display = 'none';
@@ -1200,6 +1301,16 @@ document.querySelectorAll('.pop-search').forEach(btn => {
   });
 });
 
+document.querySelectorAll('.sb-chip').forEach(chip => {
+  chip.addEventListener('click', () => {
+    document.querySelectorAll('.sb-chip').forEach(c => c.classList.remove('active'));
+    chip.classList.add('active');
+    activeField = chip.dataset.field;
+    if(searchInput.value.trim()) runSearch(searchInput.value);
+    renderSuggestions(searchInput.value);
+  });
+});
+
 document.addEventListener('keydown', (e) => {
   const tag = (e.target.tagName || '').toLowerCase();
   const typing = tag === 'input' || tag === 'textarea' || e.target.isContentEditable;
@@ -1209,21 +1320,32 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
-// ===== Search suggestions dropdown =====
+// ===== Search suggestions dropdown (now lists ALL 23 symbols by default) =====
 const suggestBox = document.getElementById('search-suggest');
-const defaultSuggestions = ['National Animal','National Bird','National Flower','National Flag','National Currency','National Emblem'];
+
+function allSymbolSuggestions(){
+  return [...allCards].map(c => ({
+    label: c.querySelector('h3')?.textContent.trim() || '',
+    meta: c.dataset.categoryLabel || ''
+  })).filter(s => s.label);
+}
+
 function renderSuggestions(query){
   const q = query.trim().toLowerCase();
   let list;
   if(!q){
-    list = defaultSuggestions;
+    list = allSymbolSuggestions();
   } else {
-    list = [...allCards].map(c => c.querySelector('h3')?.textContent.trim()).filter(Boolean)
-      .filter(t => t.toLowerCase().includes(q)).slice(0,6);
-    if(list.length === 0) list = defaultSuggestions;
+    list = allSymbolSuggestions().filter(s => {
+      const card = [...allCards].find(c => c.querySelector('h3')?.textContent.trim() === s.label);
+      const hay = (card ? fieldText(card, activeField) : s.label).toLowerCase();
+      return hay.includes(q);
+    });
+    if(list.length === 0) list = [];
   }
-  suggestBox.innerHTML = '<div class="ss-label">' + (q ? 'Suggestions' : 'Try searching') + '</div>' +
-    list.map(t => '<button type="button" data-val="'+t.replace(/"/g,'')+'"><span class="ss-icon">🔍</span>'+t+'</button>').join('');
+  const labelText = q ? (list.length ? 'Suggestions' : 'No matches — press Enter to search anyway') : 'All 23 national symbols';
+  suggestBox.innerHTML = '<div class="ss-label">' + labelText + '</div>' +
+    list.map(s => '<button type="button" data-val="'+s.label.replace(/"/g,'')+'"><span class="ss-icon">🔍</span>'+s.label+(s.meta ? '<span class="ss-meta">'+s.meta+'</span>' : '')+'</button>').join('');
   suggestBox.querySelectorAll('button').forEach(b => {
     b.addEventListener('click', () => {
       searchInput.value = b.dataset.val;
@@ -1376,6 +1498,147 @@ document.addEventListener('click', (e) => {
   });
 
   renderProgress();
+})();
+
+// ===== QUIZ =====
+(function(){
+  const QUESTIONS = [
+    {q:"What is the national animal of Nepal?", choices:["Cow","Yak","Elephant","Tiger"], answer:0},
+    {q:"What is the national bird of Nepal, nicknamed the \"strolling rainbow\"?", choices:["Peacock","Himalayan Monal (Danphe)","Parrot","Eagle"], answer:1},
+    {q:"What is the national flower of Nepal?", choices:["Lotus","Marigold","Rhododendron (Lali Gurans)","Sunflower"], answer:2},
+    {q:"Which tree is Nepal's national tree?", choices:["Banyan","Peepal (Sacred Fig)","Sal","Bamboo"], answer:1},
+    {q:"What shape is Nepal's national flag, unlike any other country's?", choices:["Circular","Rectangular","Two stacked pennants (non-rectangular)","Square"], answer:2},
+    {q:"What is widely regarded as Nepal's national dish?", choices:["Momo","Dal Bhat","Sel Roti","Chow Mein"], answer:1},
+    {q:"Which sport was declared Nepal's official national sport in 2017?", choices:["Cricket","Football","Volleyball","Kabaddi"], answer:2},
+    {q:"What is Nepal's official calendar called?", choices:["Gregorian Calendar","Bikram Sambat","Islamic Calendar","Lunar Calendar"], answer:1},
+    {q:"What is the national language of Nepal?", choices:["Hindi","Nepali","Maithili","Newari"], answer:1},
+    {q:"What is Nepal's national colour?", choices:["Blue","Green","Crimson Red","Yellow"], answer:2},
+    {q:"What is the name of Nepal's national monument, rebuilt after the 2015 earthquake?", choices:["Boudhanath Stupa","Dharahara Tower","Swayambhunath","Patan Durbar"], answer:1},
+    {q:"What is the highest peak associated with Nepal?", choices:["K2","Annapurna","Sagarmatha (Mt Everest)","Kanchenjunga"], answer:2}
+  ];
+
+  const startBtn = document.getElementById('quiz-start-btn');
+  const body = document.getElementById('quiz-body');
+  let qIndex = 0;
+  let score = 0;
+  let answered = false;
+
+  function shuffled(arr){ return arr; } // keep order stable/deterministic for simplicity
+
+  function renderIntro(){
+    body.innerHTML = '<div class="quiz-intro"><div class="quiz-big-emoji">🏆</div>' +
+      '<p style="color:rgba(251,243,230,.75);font-size:.9rem;">Press "Start Quiz" to begin — one question at a time, instant feedback, final score and certificate.</p></div>';
+  }
+
+  function renderQuestion(){
+    answered = false;
+    const item = QUESTIONS[qIndex];
+    const letters = ['A','B','C','D'];
+    const pct = Math.round((qIndex / QUESTIONS.length) * 100);
+    body.innerHTML =
+      '<div class="quiz-card">' +
+        '<div class="quiz-progress-row">' +
+          '<span>Question ' + (qIndex+1) + ' / ' + QUESTIONS.length + '</span>' +
+          '<div class="quiz-bar"><div class="quiz-bar-fill" style="width:' + pct + '%"></div></div>' +
+          '<span class="quiz-score-pill">Score: ' + score + '</span>' +
+        '</div>' +
+        '<div class="quiz-question">' + item.q + '</div>' +
+        '<div class="quiz-choices">' +
+          item.choices.map((c, i) => '<button type="button" class="quiz-choice" data-i="'+i+'"><span class="qc-letter">'+letters[i]+'</span><span>'+c+'</span></button>').join('') +
+        '</div>' +
+        '<div class="quiz-next-row"><button type="button" class="quiz-next-btn" id="quiz-next-btn">' + (qIndex === QUESTIONS.length - 1 ? 'See Results' : 'Next Question') + ' <span aria-hidden="true">→</span></button></div>' +
+      '</div>';
+
+    const choiceBtns = body.querySelectorAll('.quiz-choice');
+    choiceBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        if(answered) return;
+        answered = true;
+        const i = parseInt(btn.dataset.i, 10);
+        choiceBtns.forEach(b => b.disabled = true);
+        if(i === item.answer){
+          btn.classList.add('correct');
+          score++;
+        } else {
+          btn.classList.add('wrong');
+          choiceBtns[item.answer].classList.add('correct');
+        }
+        document.getElementById('quiz-next-btn').classList.add('show');
+      });
+    });
+
+    document.getElementById('quiz-next-btn').addEventListener('click', () => {
+      qIndex++;
+      if(qIndex >= QUESTIONS.length){ renderResults(); }
+      else { renderQuestion(); }
+    });
+  }
+
+  function scoreMessage(pct){
+    if(pct === 100) return "Perfect score — a true Nepal symbols expert!";
+    if(pct >= 80) return "Excellent! You know Nepal's symbols very well.";
+    if(pct >= 50) return "Good effort — a solid grasp of Nepal's national symbols.";
+    return "Nice try — explore the guides above and take the quiz again.";
+  }
+
+  function renderResults(){
+    const pct = Math.round((score / QUESTIONS.length) * 100);
+    body.innerHTML =
+      '<div class="quiz-result">' +
+        '<div class="qr-score">' + score + ' / ' + QUESTIONS.length + '</div>' +
+        '<div class="qr-sub">' + scoreMessage(pct) + '</div>' +
+        '<div class="qr-name-row">' +
+          '<input type="text" class="qr-name-input" id="qr-name-input" placeholder="Your name for the certificate" maxlength="40">' +
+        '</div>' +
+        '<div class="certificate" id="certificate">' +
+          '<div class="cert-eyebrow">Certificate of Achievement</div>' +
+          '<h3>Nepal National Symbols Quiz</h3>' +
+          '<div class="cert-name" id="cert-name">Nepal Symbols Explorer</div>' +
+          '<div class="cert-detail">scored ' + score + ' out of ' + QUESTIONS.length + ' (' + pct + '%)</div>' +
+          '<div class="cert-detail">symbols.thenepal.io</div>' +
+          '<div class="cert-seal">🏅</div>' +
+        '</div>' +
+        '<div class="quiz-result-actions">' +
+          '<button type="button" class="qr-share" id="qr-share">Share Result <span aria-hidden="true">↗</span></button>' +
+          '<button type="button" class="qr-retry" id="qr-retry">Retry Quiz</button>' +
+        '</div>' +
+      '</div>';
+
+    const nameInput = document.getElementById('qr-name-input');
+    const certName = document.getElementById('cert-name');
+    nameInput.addEventListener('input', () => {
+      certName.textContent = nameInput.value.trim() || 'Nepal Symbols Explorer';
+    });
+
+    document.getElementById('qr-retry').addEventListener('click', () => {
+      qIndex = 0; score = 0; renderQuestion();
+    });
+
+    document.getElementById('qr-share').addEventListener('click', async () => {
+      const name = nameInput.value.trim() || 'Nepal Symbols Explorer';
+      const shareText = name + ' scored ' + score + '/' + QUESTIONS.length + ' (' + pct + '%) on the Nepal National Symbols Quiz! Try it: https://symbols.thenepal.io/';
+      if(navigator.share){
+        try { await navigator.share({ title: 'Nepal National Symbols Quiz', text: shareText, url: 'https://symbols.thenepal.io/' }); }
+        catch(e){ /* user cancelled share, ignore */ }
+      } else if(navigator.clipboard){
+        try {
+          await navigator.clipboard.writeText(shareText);
+          const btn = document.getElementById('qr-share');
+          const original = btn.innerHTML;
+          btn.innerHTML = 'Copied! ✓';
+          setTimeout(() => { btn.innerHTML = original; }, 1800);
+        } catch(e){ /* clipboard blocked, ignore */ }
+      }
+    });
+  }
+
+  startBtn.addEventListener('click', () => {
+    qIndex = 0; score = 0;
+    renderQuestion();
+    document.getElementById('quiz-body').scrollIntoView({behavior:'smooth', block:'center'});
+  });
+
+  renderIntro();
 })();
 </script>
 </body>
