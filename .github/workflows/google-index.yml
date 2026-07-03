@@ -1,21 +1,20 @@
 name: Google Indexing Automation
 
 on:
-  # This triggers the indexer every night. 
-  # Since Cloudflare Pages handles the build externally, a daily cron job ensures 
-  # Google is updated regularly without over-complicating deployment hooks.
   schedule:
     - cron: '0 0 * * *'
-  # Allows you to trigger the indexing request manually whenever you want from the GitHub Actions tab
   workflow_dispatch:
 
 jobs:
   google-indexing:
     runs-on: ubuntu-latest
     steps:
-      - name: Request Google Indexing
-        uses: robingenz/action-google-indexing@v1.0.0
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Run Google Indexing Script
+        uses: itsmesandip/google-indexing-action@v1
         with:
-          # Replace with your actual domain or URL registered in Search Console
-          siteUrl: 'https://symbols.thenepal.io'
+          # Directly target your live Cloudflare Pages sitemap URL
+          sitemapUrl: 'https://symbols.thenepal.io/sitemap.xml'
           gcpServiceAccountKey: ${{ secrets.GCP_SA_KEY }}
