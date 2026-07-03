@@ -17,7 +17,9 @@ headers = {
     "Authorization": f"Bearer {credentials.token}",
 }
 
-with open("urls.txt", "r", encoding="utf-8") as file:
+SITEMAP = "https://symbols.thenepal.io/sitemap.xml"
+
+xml = requests.get(SITEMAP).text
     urls = [line.strip() for line in file if line.strip()]
 
 for url in urls:
