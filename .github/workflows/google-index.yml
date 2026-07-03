@@ -1,10 +1,8 @@
 name: Google Indexing Automation
 
 on:
-  # Automatically runs every day at midnight to process new pages
   schedule:
     - cron: '0 0 * * *'
-  # Allows you to manually trigger indexing from the GitHub Actions tab anytime
   workflow_dispatch:
 
 jobs:
@@ -12,8 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Request Google Indexing
-        uses: robingenz/action-google-indexing@master
+        # Switched explicitly to the verified stable release version tag
+        uses: robingenz/action-google-indexing@v1.0.2
         with:
-          # Note: We stripped the trailing slash to ensure an exact property name match
           siteUrl: 'https://symbols.thenepal.io'
           gcpServiceAccountKey: ${{ secrets.GCP_SA_KEY }}
