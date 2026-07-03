@@ -1,26 +1,46 @@
 import json
 import requests
+import xml.etree.ElementTree as ET
+
 from google.oauth2 import service_account
 from google.auth.transport.requests import Request
 
-SCOPES = ["https://www.googleapis.com/auth/indexing"]
+SITEMAP = "https://symbols.thenepal.io/sitemap.xml"
+
+SCOPES = [
+    "https://www.googleapis.com/auth/indexing"
+]
 
 credentials = service_account.Credentials.from_service_account_file(
     "credentials.json",
-    scopes=SCOPES,
+    scopes=SCOPES
 )
 
 credentials.refresh(Request())
 
 headers = {
     "Content-Type": "application/json",
-    "Authorization": f"Bearer {credentials.token}",
+    "Authorization": f"Bearer {credentials.token}"
 }
 
-SITEMAP = "https://symbols.thenepal.io/sitemap.xml"
+print("Downloading sitemap...")
 
-xml = requests.get(SITEMAP).text
-    urls = [line.strip() for line in file if line.strip()]
+response = requests.get(SITEMAP)
+response.raise_for_status()
+
+root = ET.fromstring(response.text)
+
+namespace = {
+    "ns": "http://www.sitemaps.org/schemas/sitemap/0.9"
+}
+
+urls = []
+
+for item in root.findall("ns:url", namespace):
+    loc = item.find("ns:loc", namespace).text
+    urls.append(loc)
+
+print(f"Found {len(urls)} URLs")
 
 for url in urls:
     payload = {
@@ -28,13 +48,15 @@ for url in urls:
         "type": "URL_UPDATED"
     }
 
-    response = requests.post(
+    r = requests.post(
         "https://indexing.googleapis.com/v3/urlNotifications:publish",
         headers=headers,
         data=json.dumps(payload)
     )
 
-    print("=" * 60)
-    print("URL:", url)
-    print("Status:", response.status_code)
-    print(response.text)
+    print("--------------------------------")
+    print(url)
+    print(r.status_code)
+    print(r.text)
+
+print("Finished")
