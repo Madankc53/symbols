@@ -1,17 +1,19 @@
-name: Google Indexing Automation
+name: Google Search Console Indexing
 
 on:
-  schedule:
-    - cron: '0 0 * * *'
   workflow_dispatch:
 
 jobs:
-  google-indexing:
+  indexing:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Request Google Indexing
-        # Switched explicitly to the verified stable release version tag
-        uses: robingenz/action-google-indexing@v1.0.2
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Submit URLs for Indexing
+        uses: yaakaii/indexing-action@v1
         with:
-          siteUrl: 'https://symbols.thenepal.io'
+          siteUrl: 'https://symbols.thenepal.io/'
+          sitemapPath: 'sitemap.xml'
           gcpServiceAccountKey: ${{ secrets.GCP_SA_KEY }}
