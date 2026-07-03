@@ -17,5 +17,5 @@ jobs:
         uses: robingenz/action-google-indexing@v1.0.0
         with:
           # Replace with your actual domain or URL registered in Search Console
-          siteUrl: 'https://symbols.thenepal.io/'
+          siteUrl: 'https://symbols.thenepal.io'
           gcpServiceAccountKey: ${{ secrets.GCP_SA_KEY }}
