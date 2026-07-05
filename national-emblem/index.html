@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,8 +15,8 @@
 <meta property="og:url" content="https://symbols.thenepal.io/national-emblem/">
 <meta property="og:site_name" content="symbols.thenepal.io">
 <meta property="og:image" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjzHAOObO7uGMru40-4xFnh6S9CRufNLTshdvMWIjDtklTsUrcw6aktG41y9hlrHWKCY9-iio8nzdy2KtmUwWftau3IbV3nBVDdX_iLyMYKFD5eLhwJy11ETFeCIff29l7_dAhO0LxhdsVPVtDCdZIAtQPSiFjAu-NWVtgj6cCTjAz2NNjs9eiFzGbF7_Cf/s320/Emblem_of_Nepal.webp">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+<meta property="og:image:width" content="320">
+<meta property="og:image:height" content="320">
 <meta property="og:locale" content="en_US">
 
 <!-- Twitter -->
@@ -30,8 +31,10 @@
 <link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/national-emblem/">
 -->
 
+<link rel="preload" as="image" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjzHAOObO7uGMru40-4xFnh6S9CRufNLTshdvMWIjDtklTsUrcw6aktG41y9hlrHWKCY9-iio8nzdy2KtmUwWftau3IbV3nBVDdX_iLyMYKFD5eLhwJy11ETFeCIff29l7_dAhO0LxhdsVPVtDCdZIAtQPSiFjAu-NWVtgj6cCTjAz2NNjs9eiFzGbF7_Cf/s320/Emblem_of_Nepal.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://blogger.googleusercontent.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
@@ -55,6 +58,7 @@
 html{scroll-behavior:smooth;}
 body{background:var(--cream);color:var(--ink);font-family:'Inter',Arial,sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
 h1,h2,h3{font-family:'Fraunces',Georgia,serif;line-height:1.15;color:var(--maroon-dark);}
+h2{scroll-margin-top:118px;}
 a{color:var(--maroon);text-decoration:none;}
 a:hover{text-decoration:underline;}
 a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--marigold-deep);outline-offset:2px;border-radius:4px;}
@@ -66,13 +70,20 @@ img{max-width:100%;display:block;}
 .skip-link:focus{left:0;}
 
 .topbar{border-bottom:1px solid var(--rule);background:rgba(251,243,230,.94);position:sticky;top:0;z-index:20;backdrop-filter:blur(6px);}
-.topbar-inner{max-width:880px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;font-size:.85rem;}
+.topbar-inner{max-width:880px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;font-size:.85rem;flex-wrap:wrap;gap:8px;}
+.crumbs{display:flex;align-items:center;flex-wrap:wrap;}
 .crumbs a{color:var(--ink-soft);}
-.crumbs span{color:var(--ink-soft);margin:0 6px;}
+.crumbs span.sep{color:var(--ink-soft);margin:0 6px;}
 .crumbs .current{color:var(--maroon-dark);font-weight:600;}
 .back-hub{display:inline-flex;align-items:center;gap:6px;font-weight:600;color:var(--maroon);white-space:nowrap;}
 
-.hero{padding:56px 0 40px;position:relative;overflow:hidden;
+.toc{position:sticky;top:49px;z-index:19;background:var(--paper);border-bottom:1px solid var(--rule);overflow-x:auto;white-space:nowrap;scrollbar-width:thin;}
+.toc-inner{max-width:880px;margin:0 auto;padding:10px 24px;display:flex;gap:8px;align-items:center;}
+.toc-label{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--marigold-deep);flex-shrink:0;margin-right:4px;}
+.toc a{flex-shrink:0;font-size:.82rem;font-weight:600;color:var(--maroon-dark);background:var(--white);border:1px solid var(--rule);border-radius:999px;padding:6px 14px;text-decoration:none;}
+.toc a:hover,.toc a:focus-visible{background:var(--marigold);border-color:var(--marigold);color:var(--ink);}
+
+.hero{padding:44px 0 40px;position:relative;overflow:hidden;
   background:radial-gradient(ellipse 600px 340px at 85% -10%, rgba(62,76,109,.18) 0%, transparent 60%), var(--cream);}
 .garland{height:5px;background:repeating-linear-gradient(90deg,var(--maroon) 0 30px,var(--marigold) 30px 60px,var(--forest) 60px 90px);}
 .hero h1{font-size:clamp(2.1rem,5vw,3.1rem);font-weight:700;margin:14px 0 14px;}
@@ -85,7 +96,7 @@ img{max-width:100%;display:block;}
 .caption{font-size:.8rem;color:var(--ink-soft);margin-top:8px;text-align:center;}
 
 .tldr{background:var(--indigo-deep);color:var(--cream);border-radius:var(--radius);padding:22px 26px;margin:36px 0 0;}
-.tldr h2{color:var(--cream);font-size:.98rem;letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px;}
+.tldr h2{color:var(--cream);font-size:.98rem;letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px;scroll-margin-top:0;}
 .tldr p{color:rgba(251,243,230,.92);font-size:.98rem;margin:0;max-width:70ch;}
 
 .facts{background:var(--white);border:1px solid var(--rule);border-radius:var(--radius);padding:26px 28px;margin:24px 0 36px;}
@@ -105,9 +116,10 @@ article li{margin-bottom:6px;}
 .tiers-wrap{background:var(--white);border:1px solid var(--rule);border-radius:var(--radius);padding:30px 28px;margin:26px 0;}
 .tiers-wrap h3{margin-top:0;}
 .tiers{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:18px;}
-.tier{border-radius:8px;padding:20px 18px;}
+.tier{border-radius:8px;padding:20px 18px;cursor:default;transition:box-shadow .15s ease,transform .15s ease;}
 .tier.official{background:var(--paper);border:2px solid var(--marigold-deep);}
 .tier.national{background:var(--paper);border:1px solid var(--rule);}
+.tier:hover,.tier:focus-within{box-shadow:0 6px 18px rgba(126,42,42,.14);transform:translateY(-2px);}
 .tier .art{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:var(--marigold-deep);margin-bottom:6px;}
 .tier strong{display:block;font-family:'Fraunces',Georgia,serif;font-size:1.15rem;color:var(--maroon-dark);margin-bottom:6px;}
 .tier p{font-size:.86rem;color:var(--ink-soft);margin-bottom:0;}
@@ -129,7 +141,31 @@ article li{margin-bottom:6px;}
 .dyk li{position:relative;padding-left:26px;margin-bottom:10px;font-size:.92rem;}
 .dyk li::before{content:'✦';position:absolute;left:0;color:var(--marigold-deep);}
 
+.dyk-mini-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:26px 0;}
+.dyk-mini{background:var(--white);border:1px solid var(--rule);border-left:4px solid var(--marigold-deep);border-radius:0 8px 8px 0;padding:14px 16px;font-size:.86rem;color:var(--ink);}
+.dyk-mini .star{color:var(--marigold-deep);margin-right:4px;}
+
 .source{font-size:.76rem;color:var(--ink-soft);margin-top:-6px;margin-bottom:14px;font-style:italic;}
+
+/* Timeline */
+.timeline{position:relative;margin:28px 0;padding-left:28px;}
+.timeline::before{content:'';position:absolute;left:8px;top:6px;bottom:6px;width:2px;background:var(--rule);}
+.t-item{position:relative;padding-bottom:26px;}
+.t-item:last-child{padding-bottom:0;}
+.t-item::before{content:'';position:absolute;left:-28px;top:2px;width:14px;height:14px;border-radius:50%;background:var(--marigold-deep);border:3px solid var(--cream);box-shadow:0 0 0 2px var(--marigold-deep);}
+.t-year{font-family:'Fraunces',Georgia,serif;font-weight:700;color:var(--maroon-dark);font-size:1.05rem;}
+.t-body{color:var(--ink-soft);font-size:.9rem;margin-top:2px;}
+
+/* Infographic strip (CSS-built, on-page visual summary) */
+.infographic{background:var(--white);border:1px solid var(--rule);border-radius:var(--radius);padding:28px;margin:26px 0;}
+.infographic h3{margin-top:0;}
+.info-flow{display:flex;align-items:stretch;gap:6px;flex-wrap:wrap;margin-top:18px;}
+.info-step{flex:1;min-width:150px;background:var(--paper);border:1px solid var(--rule);border-radius:8px;padding:16px 14px;text-align:center;}
+.info-step .icon{font-size:1.6rem;margin-bottom:8px;}
+.info-step strong{display:block;font-size:.85rem;color:var(--maroon-dark);margin-bottom:4px;}
+.info-step span{font-size:.78rem;color:var(--ink-soft);}
+.info-arrow{align-self:center;font-size:1.4rem;color:var(--marigold-deep);flex:0 0 auto;padding:0 2px;}
+@media(max-width:640px){.info-arrow{transform:rotate(90deg);}}
 
 .final-cta{text-align:center;margin:40px 0 8px;}
 .final-cta a{
@@ -159,9 +195,15 @@ th{background:var(--paper);color:var(--maroon-dark);font-weight:700;font-size:.7
 .author-box .a-bio{font-size:.87rem;color:var(--ink-soft);margin:0;}
 
 .related{background:var(--maroon-dark);color:var(--cream);border-radius:var(--radius);padding:32px 30px;margin:48px 0 8px;}
-.related h2{color:var(--cream);font-size:1.3rem;margin-bottom:6px;}
-.related p{color:rgba(251,243,230,.78);font-size:.9rem;margin-bottom:18px;}
-.related-links{display:flex;gap:10px;flex-wrap:wrap;}
+.related h2{color:var(--cream);font-size:1.3rem;margin-bottom:6px;scroll-margin-top:118px;}
+.related > p{color:rgba(251,243,230,.78);font-size:.9rem;margin-bottom:20px;}
+.see-also-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;}
+.sa-card{background:rgba(251,243,230,.08);border:1px solid rgba(251,243,230,.22);border-radius:8px;padding:14px 16px;display:block;color:var(--cream);text-decoration:none;transition:background .15s ease,border-color .15s ease;}
+.sa-card:hover,.sa-card:focus-visible{background:var(--marigold);border-color:var(--marigold);color:var(--ink);text-decoration:none;}
+.sa-card .sa-icon{font-size:1.3rem;margin-bottom:6px;}
+.sa-card .sa-title{font-weight:700;font-size:.92rem;display:block;margin-bottom:3px;}
+.sa-card .sa-desc{font-size:.78rem;opacity:.85;}
+.related-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px;}
 .related-links a{background:rgba(251,243,230,.1);border:1px solid rgba(251,243,230,.25);border-radius:999px;padding:8px 16px;font-size:.85rem;color:var(--cream);}
 .related-links a:hover{background:var(--marigold);color:var(--ink);border-color:var(--marigold);text-decoration:none;}
 
@@ -174,10 +216,10 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;
   .topbar-inner{font-size:.78rem;}
   .author-box{flex-direction:column;}
 }
-@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;}.tier{transition:none;}}
 </style>
 
-<!-- Article schema -->
+<!-- Article schema (with Speakable) -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -203,7 +245,79 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://symbols.thenepal.io/national-emblem/"
+  },
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [".tldr p", ".hero-desc"]
   }
+}
+</script>
+
+<!-- ImageObject schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ImageObject",
+  "contentUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjzHAOObO7uGMru40-4xFnh6S9CRufNLTshdvMWIjDtklTsUrcw6aktG41y9hlrHWKCY9-iio8nzdy2KtmUwWftau3IbV3nBVDdX_iLyMYKFD5eLhwJy11ETFeCIff29l7_dAhO0LxhdsVPVtDCdZIAtQPSiFjAu-NWVtgj6cCTjAz2NNjs9eiFzGbF7_Cf/s320/Emblem_of_Nepal.webp",
+  "caption": "The national emblem of Nepal, featuring Mount Everest, green hills, the Terai, joined hands and a rhododendron garland, updated 13 June 2020.",
+  "creditText": "Government of Nepal / public domain government emblem",
+  "creator": {
+    "@type": "Organization",
+    "name": "Government of Nepal"
+  },
+  "license": "https://en.wikipedia.org/wiki/Public_domain",
+  "acquireLicensePage": "https://en.wikipedia.org/wiki/Emblem_of_Nepal"
+}
+</script>
+
+<!-- Organization schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "The Nepal",
+  "url": "https://thenepal.io/",
+  "logo": "https://thenepal.io/logo.png",
+  "sameAs": [
+    "https://www.facebook.com/madankc53",
+    "https://twitter.com/kc_madan01"
+  ]
+}
+</script>
+
+<!-- WebSite schema with SearchAction -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Symbols of Nepal",
+  "url": "https://symbols.thenepal.io/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://symbols.thenepal.io/?s={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+<!-- ItemList schema for related symbols -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "National Symbols of Nepal Related to the Emblem",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"National Flag","url":"https://symbols.thenepal.io/national-flag/"},
+    {"@type":"ListItem","position":2,"name":"National Flower","url":"https://symbols.thenepal.io/national-flower/"},
+    {"@type":"ListItem","position":3,"name":"Sagarmatha (Mount Everest)","url":"https://symbols.thenepal.io/national-everest/"},
+    {"@type":"ListItem","position":4,"name":"National Animal","url":"https://symbols.thenepal.io/national-animal/"},
+    {"@type":"ListItem","position":5,"name":"National Bird","url":"https://symbols.thenepal.io/national-bird/"},
+    {"@type":"ListItem","position":6,"name":"National Colour","url":"https://symbols.thenepal.io/national-colour/"},
+    {"@type":"ListItem","position":7,"name":"National Anthem","url":"https://symbols.thenepal.io/national-anthem/"},
+    {"@type":"ListItem","position":8,"name":"National Dress","url":"https://symbols.thenepal.io/national-dress/"},
+    {"@type":"ListItem","position":9,"name":"National Language","url":"https://symbols.thenepal.io/national-language/"},
+    {"@type":"ListItem","position":10,"name":"National Monument","url":"https://symbols.thenepal.io/national-monument/"}
+  ]
 }
 </script>
 
@@ -213,46 +327,20 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is the national emblem of Nepal?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The national emblem of Nepal is the official coat of arms of the Government of Nepal, featuring Mount Everest, green hills, the yellow Terai plains, joined hands symbolising gender equality, a rhododendron garland, a white map silhouette of Nepal, the national flag, and a scroll bearing the national motto in Sanskrit."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "When was the national emblem of Nepal adopted?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The current design was introduced on 30 December 2006 and formally adopted as the official emblem on 28 May 2008, the same day Nepal's monarchy was abolished and the republic was declared. It was last revised on 13 June 2020 to update the political map."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What does the national motto on the emblem mean?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The motto translates as 'Mother and Motherland are greater than Heaven.' It is a line from the Ramayana, spoken by Rama when his brother Lakshmana wishes to remain in Lanka."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Why does the emblem show Mount Everest?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Mount Everest, known in Nepal as Sagarmatha, represents national pride, endurance, and Nepal's identity as home to the world's highest peak."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What did Nepal's emblem look like before 2006?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Nepal's earlier royal coat of arms featured a white cow, a green pheasant, two Gurkha soldiers, Himalayan peaks, crossed flags and khukuris, the footprints of the deity Gorakhnath, and the royal Nepalese crown — symbols tied to the monarchy rather than the republic."
-      }
-    }
+    {"@type":"Question","name":"What is the national emblem of Nepal?","acceptedAnswer":{"@type":"Answer","text":"The national emblem of Nepal is the official coat of arms of the Government of Nepal, featuring Mount Everest, green hills, the yellow Terai plains, joined hands symbolising gender equality, a rhododendron garland, a white map silhouette of Nepal, the national flag, and a scroll bearing the national motto in Sanskrit."}},
+    {"@type":"Question","name":"When was the national emblem of Nepal adopted?","acceptedAnswer":{"@type":"Answer","text":"The current design was introduced on 30 December 2006 and formally adopted as the official emblem on 28 May 2008, the same day Nepal's monarchy was abolished and the republic was declared. It was last revised on 13 June 2020 to update the political map."}},
+    {"@type":"Question","name":"What does the national motto on the emblem mean?","acceptedAnswer":{"@type":"Answer","text":"The motto translates as 'Mother and Motherland are greater than Heaven.' It is a line from the Ramayana, spoken by Rama when his brother Lakshmana wishes to remain in Lanka."}},
+    {"@type":"Question","name":"Why does the emblem show Mount Everest?","acceptedAnswer":{"@type":"Answer","text":"Mount Everest, known in Nepal as Sagarmatha, represents national pride, endurance, and Nepal's identity as home to the world's highest peak."}},
+    {"@type":"Question","name":"What did Nepal's emblem look like before 2006?","acceptedAnswer":{"@type":"Answer","text":"Nepal's earlier royal coat of arms featured a white cow, a green pheasant, two Gurkha soldiers, Himalayan peaks, crossed flags and khukuris, the footprints of the deity Gorakhnath, and the royal Nepalese crown — symbols tied to the monarchy rather than the republic."}},
+    {"@type":"Question","name":"Who designed the current emblem of Nepal?","acceptedAnswer":{"@type":"Answer","text":"The current emblem was designed by a government commission led by Narendra Raj Rajbhandari and introduced by the Cabinet on 30 December 2006."}},
+    {"@type":"Question","name":"Is Nepal's national emblem a coat of arms?","acceptedAnswer":{"@type":"Answer","text":"Yes. It is officially described as Nepal's coat of arms and functions as the Government of Nepal's emblem on official documents and seals."}},
+    {"@type":"Question","name":"Why was Nepal's emblem changed?","acceptedAnswer":{"@type":"Answer","text":"The emblem was redesigned as part of the political reconciliation following Nepal's civil war, removing royal symbols such as the crown ahead of the monarchy's abolition and the declaration of the republic in 2008."}},
+    {"@type":"Question","name":"What flower appears on the emblem of Nepal?","acceptedAnswer":{"@type":"Answer","text":"The rhododendron, known locally as laliguras and recognised as Nepal's national flower, appears as a garland around the emblem."}},
+    {"@type":"Question","name":"What language is the motto on the emblem written in?","acceptedAnswer":{"@type":"Answer","text":"The motto is written in Sanskrit: जननी जन्मभूमिश्च स्वर्गादपी गरीयसी (Jananī Janmabhūmiśca svargādapi garīyasī)."}},
+    {"@type":"Question","name":"What does the joined hands symbol on the emblem represent?","acceptedAnswer":{"@type":"Answer","text":"The joined hands of a man and a woman at the centre of the emblem represent gender equality."}},
+    {"@type":"Question","name":"What changed in the 2020 revision of the emblem?","acceptedAnswer":{"@type":"Answer","text":"The 2020 revision updated the white map silhouette on the emblem to include Kalapani, Lipulekh Pass and Limpiyadhura as claimed Nepali territory, following a territorial dispute with India."}},
+    {"@type":"Question","name":"Does Nepal have a royal emblem today?","acceptedAnswer":{"@type":"Answer","text":"No. The royal coat of arms, which included the royal crown and Gurkha soldier supporters, was retired when the current republican emblem was formally adopted on 28 May 2008, the day the monarchy was abolished."}},
+    {"@type":"Question","name":"Where is Nepal's national emblem used?","acceptedAnswer":{"@type":"Answer","text":"The emblem appears on official government documents, seals, passports, currency, and government buildings as the formal coat of arms of the Government of Nepal."}}
   ]
 }
 </script>
@@ -263,18 +351,9 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "All Symbols",
-      "item": "https://symbols.thenepal.io/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "National Emblem",
-      "item": "https://symbols.thenepal.io/national-emblem/"
-    }
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://thenepal.io/"},
+    {"@type":"ListItem","position":2,"name":"National Symbols","item":"https://symbols.thenepal.io/"},
+    {"@type":"ListItem","position":3,"name":"National Emblem","item":"https://symbols.thenepal.io/national-emblem/"}
   ]
 }
 </script>
@@ -286,13 +365,28 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;
 <div class="topbar">
   <div class="topbar-inner">
     <nav class="crumbs" aria-label="Breadcrumb">
-      <a href="https://symbols.thenepal.io/">All Symbols</a>
-      <span aria-hidden="true">/</span>
-      <span class="current">National Emblem</span>
+      <a href="https://thenepal.io/">Home</a>
+      <span class="sep" aria-hidden="true">→</span>
+      <a href="https://symbols.thenepal.io/">National Symbols</a>
+      <span class="sep" aria-hidden="true">→</span>
+      <span class="current" aria-current="page">National Emblem</span>
     </nav>
     <a class="back-hub" href="https://symbols.thenepal.io/">← All national symbols of Nepal</a>
   </div>
 </div>
+
+<nav class="toc" aria-label="Table of contents">
+  <div class="toc-inner">
+    <span class="toc-label">Jump to</span>
+    <a href="#meaning">Meaning</a>
+    <a href="#elements">Elements</a>
+    <a href="#history">History</a>
+    <a href="#timeline">Timeline</a>
+    <a href="#comparison">Old vs New</a>
+    <a href="#faq">FAQ</a>
+    <a href="#see-also">See Also</a>
+  </div>
+</nav>
 
 <div class="garland" aria-hidden="true"></div>
 
@@ -308,9 +402,9 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;
       <span class="tag">Motto in Sanskrit</span>
     </div>
     <figure class="hero-photo">
-      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjzHAOObO7uGMru40-4xFnh6S9CRufNLTshdvMWIjDtklTsUrcw6aktG41y9hlrHWKCY9-iio8nzdy2KtmUwWftau3IbV3nBVDdX_iLyMYKFD5eLhwJy11ETFeCIff29l7_dAhO0LxhdsVPVtDCdZIAtQPSiFjAu-NWVtgj6cCTjAz2NNjs9eiFzGbF7_Cf/s320/Emblem_of_Nepal.webp" alt="The national emblem of Nepal, featuring Mount Everest, green hills, the Terai, joined hands and a rhododendron garland" width="880" height="340" fetchpriority="high" decoding="async">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjzHAOObO7uGMru40-4xFnh6S9CRufNLTshdvMWIjDtklTsUrcw6aktG41y9hlrHWKCY9-iio8nzdy2KtmUwWftau3IbV3nBVDdX_iLyMYKFD5eLhwJy11ETFeCIff29l7_dAhO0LxhdsVPVtDCdZIAtQPSiFjAu-NWVtgj6cCTjAz2NNjs9eiFzGbF7_Cf/s320/Emblem_of_Nepal.webp" alt="Official national emblem of Nepal showing Mount Everest, green hills, the Terai plains, joined hands, a rhododendron garland, the national flag and a Sanskrit motto scroll" width="880" height="340" fetchpriority="high" decoding="async">
     </figure>
-    <p class="caption">The national emblem of Nepal, updated 13 June 2020.</p>
+    <p class="caption">The national emblem of Nepal, updated 13 June 2020. Public-domain government emblem.</p>
   </div>
 </header>
 
@@ -318,7 +412,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;
 
   <div class="tldr">
     <h2>In short</h2>
-    <p>Nepal's national emblem shows Mount Everest above green hills and the yellow Terai, joined hands for gender equality, a rhododendron garland, a white map of Nepal, the national flag, and a Sanskrit motto meaning "Mother and Motherland are greater than Heaven." It replaced the old royal coat of arms and was formally adopted on 28 May 2008, then revised on 13 June 2020.</p>
+    <p>The National Emblem of Nepal is the official coat of arms of the Government of Nepal. It features Mount Everest, green hills, the Terai plains, joined hands representing gender equality, a rhododendron garland, the national flag, a map of Nepal, and the Sanskrit motto "Mother and Motherland are greater than Heaven." It replaced the royal emblem in 2008 and was updated in 2020.</p>
   </div>
 
   <div class="facts">
@@ -351,22 +445,28 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;
   </div>
 
   <article>
-    <section>
+    <section id="meaning">
+      <h2>Meaning</h2>
       <p class="lede">Nepal's national emblem packs the country's geography, values and history into a single coat of arms. From the snow-capped triangle of <a href="https://symbols.thenepal.io/national-everest/">Mount Everest</a> at its peak to the small red scroll at its base, every element was chosen to say something specific about the nation — and, unusually among Nepal's national symbols, the emblem's meaning and adoption date are a matter of official record rather than popular convention.</p>
     </section>
 
-    <section>
+    <div class="dyk-mini-row">
+      <div class="dyk-mini"><span class="star">⭐</span>Nepal's current emblem has no crown, unlike its royal predecessor.</div>
+      <div class="dyk-mini"><span class="star">⭐</span>The white map silhouette was last updated in 2020.</div>
+    </div>
+
+    <section id="elements">
       <h2>What Each Element Means</h2>
-      <p>Reading from top to bottom, the emblem layers Nepal's landscape, people and principles into one design.</p>
+      <p>Reading from top to bottom, the emblem layers Nepal's landscape, people and principles into one design. Hover or tap each card below for its meaning.</p>
       <div class="tiers-wrap">
         <h3>Geography and people</h3>
         <div class="tiers">
-          <div class="tier official">
+          <div class="tier official" tabindex="0" title="Mount Everest, green hills and the yellow Terai represent Nepal's full geography from mountains to plains.">
             <div class="art">The land</div>
             <strong>Everest, hills & Terai</strong>
             <p>Mount Everest crowns the design, representing national pride and the Himalaya. Green hills below stand for Nepal's middle hill region, and a yellow band represents the fertile Terai plains to the south.</p>
           </div>
-          <div class="tier national">
+          <div class="tier national" tabindex="0" title="Joined hands stand for gender equality; the rhododendron garland stands for Nepal's natural beauty.">
             <div class="art">The people</div>
             <strong>Joined hands & rhododendron</strong>
             <p>A man's and a woman's hands clasp together at the centre, symbolising gender equality, encircled by a garland of <a href="https://symbols.thenepal.io/national-flower/">rhododendron — Nepal's national flower</a> — standing for the country's natural beauty and diversity.</p>
@@ -377,7 +477,20 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;
       <p class="source">Source: Wikipedia (Emblem of Nepal); heraldry-wiki.com</p>
     </section>
 
-    <section>
+    <div class="infographic">
+      <h3>At a glance</h3>
+      <div class="info-flow">
+        <div class="info-step"><div class="icon">🛡️</div><strong>Current Emblem</strong><span>Adopted 2008, revised 2020</span></div>
+        <div class="info-arrow" aria-hidden="true">→</div>
+        <div class="info-step"><div class="icon">🏔️</div><strong>Each Element</strong><span>Everest, hills, Terai, hands, garland</span></div>
+        <div class="info-arrow" aria-hidden="true">→</div>
+        <div class="info-step"><div class="icon">📜</div><strong>Meaning</strong><span>Land, unity, equality, motto</span></div>
+        <div class="info-arrow" aria-hidden="true">→</div>
+        <div class="info-step"><div class="icon">🕰️</div><strong>History</strong><span>Royal arms → republic</span></div>
+      </div>
+    </div>
+
+    <section id="history">
       <h2>From Royal Arms to Republican Emblem</h2>
       <p>Today's emblem is a relatively recent design, replacing a much older royal coat of arms that had represented the Kingdom of Nepal for roughly a century. That earlier achievement, dating to around the turn of the 20th century under King Prithvi Bir Bikram Shah Dev, carried a white cow, a green pheasant, two Gurkha soldiers armed with a khukuri and a rifle, Himalayan peaks, crossed flags and khukuris, the footprints of Gorakhnath — the guardian deity of the Gurkhas — and the royal crown. From 1935 to 1962 it even carried a second, Latin motto: Dulce et decorum est pro patria mori ("How sweet and honourable it is to die for the fatherland"). A revised 1962 version placed a white zebu, a sitting Himalayan monal, a temple, and the Himalayas around a scroll of rhododendron branches.</p>
       <p>Everything changed after Nepal's civil war. As part of the political reconciliation that followed, the Cabinet introduced an entirely new, non-royal emblem on 30 December 2006, designed by a commission led by Narendra Raj Rajbhandari. That design — Everest, hills, Terai, joined hands and rhododendron, with no crown, soldiers or royal cypher — was formally adopted as Nepal's official emblem on 28 May 2008, the same day the monarchy was abolished and the republic declared. In 2020, the emblem's map silhouette was updated to reflect Nepal's revised political boundaries, incorporating Kalapani, Lipulekh Pass and Limpiyadhura as claimed Nepali territory, with the new version taking effect on 13 June 2020.</p>
@@ -392,7 +505,37 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;
       <p class="source">Source: Wikipedia (Emblem of Nepal); heraldry-wiki.com</p>
     </section>
 
-    <section>
+    <section id="timeline">
+      <h2>Emblem Timeline</h2>
+      <div class="timeline">
+        <div class="t-item">
+          <div class="t-year">~1900s</div>
+          <div class="t-body">Royal coat of arms adopted under King Prithvi Bir Bikram Shah Dev — cow, pheasant, Gurkha soldiers, crown.</div>
+        </div>
+        <div class="t-item">
+          <div class="t-year">1935–1962</div>
+          <div class="t-body">Royal arms carry a second, Latin motto alongside the Sanskrit one.</div>
+        </div>
+        <div class="t-item">
+          <div class="t-year">1962</div>
+          <div class="t-body">Arms revised: white zebu, Himalayan monal, temple, and Himalayas around a rhododendron scroll.</div>
+        </div>
+        <div class="t-item">
+          <div class="t-year">30 Dec 2006</div>
+          <div class="t-body">Cabinet introduces the new, non-royal emblem — Everest, hills, Terai, joined hands, rhododendron.</div>
+        </div>
+        <div class="t-item">
+          <div class="t-year">28 May 2008</div>
+          <div class="t-body">Emblem formally adopted as monarchy is abolished and the republic declared.</div>
+        </div>
+        <div class="t-item">
+          <div class="t-year">13 June 2020</div>
+          <div class="t-body">Map silhouette updated to include Kalapani, Lipulekh Pass and Limpiyadhura.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="comparison">
       <h2>Old Arms vs. New Emblem</h2>
       <div class="table-wrap">
         <table>
@@ -413,7 +556,13 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;
       <p class="source">Source: heraldry-wiki.com; Wikipedia (Emblem of Nepal)</p>
     </section>
 
-    <section>
+    <div class="dyk-mini-row">
+      <div class="dyk-mini"><span class="star">⭐</span>The motto comes from the Ramayana, not a Nepali original text.</div>
+      <div class="dyk-mini"><span class="star">⭐</span>Nepal has had four distinct emblem designs since roughly 1900.</div>
+      <div class="dyk-mini"><span class="star">⭐</span>The rhododendron garland links the emblem directly to Nepal's national flower.</div>
+    </div>
+
+    <section id="faq">
       <h2>Frequently Asked Questions</h2>
       <details class="faq-item">
         <summary>What is the national emblem of Nepal?</summary>
@@ -435,6 +584,42 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;
         <summary>What did Nepal's emblem look like before 2006?</summary>
         <p>Nepal's earlier royal coat of arms featured a white cow, a green pheasant, two Gurkha soldiers, Himalayan peaks, crossed flags and khukuris, the footprints of the deity Gorakhnath, and the royal Nepalese crown — symbols tied to the monarchy rather than the republic.</p>
       </details>
+      <details class="faq-item">
+        <summary>Who designed the current emblem of Nepal?</summary>
+        <p>The current emblem was designed by a government commission led by Narendra Raj Rajbhandari and introduced by the Cabinet on 30 December 2006.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Is Nepal's national emblem a coat of arms?</summary>
+        <p>Yes. It is officially described as Nepal's coat of arms and functions as the Government of Nepal's emblem on official documents and seals.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Why was Nepal's emblem changed?</summary>
+        <p>The emblem was redesigned as part of the political reconciliation following Nepal's civil war, removing royal symbols such as the crown ahead of the monarchy's abolition and the declaration of the republic in 2008.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What flower appears on the emblem of Nepal?</summary>
+        <p>The rhododendron, known locally as laliguras and recognised as Nepal's national flower, appears as a garland around the emblem.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What language is the motto written in?</summary>
+        <p>The motto is written in Sanskrit: <span lang="ne">जननी जन्मभूमिश्च स्वर्गादपी गरीयसी</span> (Jananī Janmabhūmiśca svargādapi garīyasī).</p>
+      </details>
+      <details class="faq-item">
+        <summary>What does the joined hands symbol represent?</summary>
+        <p>The joined hands of a man and a woman at the centre of the emblem represent gender equality.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What changed in the 2020 revision?</summary>
+        <p>The 2020 revision updated the white map silhouette to include Kalapani, Lipulekh Pass and Limpiyadhura as claimed Nepali territory, following a territorial dispute with India.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Does Nepal have a royal emblem today?</summary>
+        <p>No. The royal coat of arms, which included the crown and Gurkha soldier supporters, was retired when the current republican emblem was formally adopted on 28 May 2008, the day the monarchy was abolished.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Where is Nepal's national emblem used?</summary>
+        <p>The emblem appears on official government documents, seals, passports, currency, and government buildings as the formal coat of arms of the Government of Nepal.</p>
+      </details>
     </section>
   </article>
 
@@ -444,7 +629,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;
   </div>
 
   <div class="author-box">
-    <img src="https://thenepal.io/images/madan-kc-author.jpg" alt="Madan KC" width="56" height="56" loading="lazy">
+    <img src="https://thenepal.io/images/madan-kc-author.jpg" alt="Portrait photo of Madan KC, founder of The Nepal" width="56" height="56" loading="lazy">
     <div>
       <div class="a-name">Madan KC</div>
       <div class="a-role">Founder, The Nepal</div>
@@ -452,14 +637,22 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;
     </div>
   </div>
 
-  <div class="related">
-    <h2>Explore more national symbols</h2>
-    <p>The emblem draws directly on Nepal's other official symbols — its flag, flower, and mountain — woven into one design.</p>
+  <div class="related" id="see-also">
+    <h2>See Also</h2>
+    <p>The emblem draws directly on Nepal's other official symbols — explore how they connect.</p>
+    <div class="see-also-grid">
+      <a class="sa-card" href="https://symbols.thenepal.io/national-flag/"><div class="sa-icon">🇳🇵</div><span class="sa-title">National Flag</span><span class="sa-desc">The flag sits atop the emblem itself.</span></a>
+      <a class="sa-card" href="https://symbols.thenepal.io/national-flower/"><div class="sa-icon">🌺</div><span class="sa-title">National Flower</span><span class="sa-desc">Rhododendron forms the emblem's garland.</span></a>
+      <a class="sa-card" href="https://symbols.thenepal.io/national-everest/"><div class="sa-icon">🏔️</div><span class="sa-title">Sagarmatha (Everest)</span><span class="sa-desc">The peak crowning the emblem's design.</span></a>
+      <a class="sa-card" href="https://symbols.thenepal.io/national-animal/"><div class="sa-icon">🐆</div><span class="sa-title">National Animal</span><span class="sa-desc">Another official symbol of Nepal.</span></a>
+      <a class="sa-card" href="https://symbols.thenepal.io/national-bird/"><div class="sa-icon">🐦</div><span class="sa-title">National Bird</span><span class="sa-desc">The Himalayan monal, Nepal's national bird.</span></a>
+      <a class="sa-card" href="https://symbols.thenepal.io/national-colour/"><div class="sa-icon">🎨</div><span class="sa-title">National Colour</span><span class="sa-desc">Crimson, shared with the emblem's scroll.</span></a>
+      <a class="sa-card" href="https://symbols.thenepal.io/national-anthem/"><div class="sa-icon">🎵</div><span class="sa-title">National Anthem</span><span class="sa-desc">Nepal's official anthem, Sayaun Thunga Phulka.</span></a>
+      <a class="sa-card" href="https://symbols.thenepal.io/national-dress/"><div class="sa-icon">👘</div><span class="sa-title">National Dress</span><span class="sa-desc">Traditional Nepali dress and dress code.</span></a>
+      <a class="sa-card" href="https://symbols.thenepal.io/national-language/"><div class="sa-icon">🗣️</div><span class="sa-title">National Language</span><span class="sa-desc">Nepali, the official language of Nepal.</span></a>
+      <a class="sa-card" href="https://symbols.thenepal.io/national-monument/"><div class="sa-icon">🏛️</div><span class="sa-title">National Monument</span><span class="sa-desc">A landmark of national significance.</span></a>
+    </div>
     <div class="related-links">
-      <a href="https://symbols.thenepal.io/national-language/">National Language</a>
-      <a href="https://symbols.thenepal.io/national-flag/">National Flag</a>
-      <a href="https://symbols.thenepal.io/national-everest/">Sagarmatha (Mount Everest)</a>
-      <a href="https://symbols.thenepal.io/national-flower/">National Flower</a>
       <a href="https://symbols.thenepal.io/">All national symbols of Nepal →</a>
     </div>
   </div>
