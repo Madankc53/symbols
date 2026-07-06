@@ -168,7 +168,7 @@ img{max-width:100%;display:block;}
 .lang-switch-mobile{display:none;}
 @media(max-width:640px){
   .lang-switch-desktop{display:none;}
-  .lang-switch-mobile{display:block;position:relative;flex-shrink:0;}
+  .lang-switch-mobile{display:inline-flex;position:relative;flex-shrink:0;}
   .lang-switch-mobile summary{
     list-style:none;cursor:pointer;display:flex;align-items:center;gap:6px;
     font-family:'Inter',sans-serif;font-size:.76rem;font-weight:700;color:var(--maroon-dark);
@@ -176,20 +176,25 @@ img{max-width:100%;display:block;}
   }
   .lang-switch-mobile summary::-webkit-details-marker{display:none;}
   .lang-switch-mobile summary .chev{font-size:.66rem;color:var(--marigold-deep);transition:transform .15s ease;}
+  .lang-switch-mobile[open] summary{background:var(--paper);}
   .lang-switch-mobile[open] summary .chev{transform:rotate(180deg);}
   .lang-switch-mobile .lg-mobile-list{
-    position:absolute;right:0;top:calc(100% + 8px);z-index:70;
+    position:fixed;z-index:9999;
     background:var(--white);border:1px solid var(--rule);border-radius:10px;
-    box-shadow:0 12px 28px rgba(92,30,30,.18);min-width:150px;overflow:hidden;
+    box-shadow:0 12px 28px rgba(92,30,30,.22);min-width:150px;
+    max-width:calc(100vw - 24px);overflow:hidden;
   }
   .lang-switch-mobile .lg-mobile-list a{
-    display:flex;align-items:center;gap:8px;
+    display:flex;align-items:center;gap:8px;white-space:nowrap;
     font-family:'Inter',sans-serif;font-size:.85rem;font-weight:600;color:var(--ink);
     padding:11px 14px;text-decoration:none;
   }
   .lang-switch-mobile .lg-mobile-list a.current{background:var(--paper);color:var(--maroon-dark);}
   .lang-switch-mobile .lg-mobile-list a:not(.current):hover{background:var(--paper);}
 }
+/* safety net: stops any stray-width element (like a mispositioned dropdown)
+   from ever pushing the viewport and breaking mobile responsiveness */
+html,body{overflow-x:hidden;max-width:100%;}
 
 /* hero */
 .hero{padding:56px 0 40px;position:relative;overflow:hidden;
@@ -303,11 +308,16 @@ footer .wrap{max-width:1000px;}
 .foot-grid h5{font-family:'Inter',sans-serif;font-size:.72rem;letter-spacing:.08em;color:var(--marigold);margin-bottom:12px;}
 .foot-grid ul{list-style:none;}
 .foot-grid li{margin-bottom:7px;}
-.foot-grid a{color:rgba(237,224,204,.85);text-decoration:none;}
+.foot-grid a{color:rgba(237,224,204,.85);text-decoration:none;word-break:break-word;}
 .foot-grid a:hover{color:var(--cream);text-decoration:underline;}
 .foot-bottom{border-top:1px solid rgba(255,255,255,.14);padding:18px 0;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:.78rem;color:rgba(237,224,204,.65);}
-@media(max-width:800px){.foot-grid{grid-template-columns:1fr 1fr;}.foot-grid>div:first-child{grid-column:1 / -1;}}
-@media(max-width:480px){.foot-grid{grid-template-columns:1fr;}.foot-grid>div:first-child{grid-column:auto;}}
+@media(max-width:800px){.foot-grid{grid-template-columns:1fr 1fr;gap:22px 20px;}.foot-grid>div:first-child{grid-column:1 / -1;}}
+@media(max-width:480px){
+  .foot-top{padding:36px 0 24px;}
+  .foot-grid{grid-template-columns:1fr 1fr;gap:20px 16px;font-size:.82rem;}
+  .foot-grid>div:first-child{grid-column:auto;}
+  .foot-bottom{flex-direction:column;gap:6px;}
+}
 
 @media(max-width:640px){
   .hero-photo img{max-height:300px;}
@@ -618,9 +628,26 @@ footer .wrap{max-width:1000px;}
 
   const langMobile = document.getElementById('langMobile');
   if(langMobile){
-    langMobile.querySelectorAll('a').forEach(a => a.addEventListener('click', () => langMobile.removeAttribute('open')));
+    const list = langMobile.querySelector('.lg-mobile-list');
+    function placeList(){
+      const r = langMobile.getBoundingClientRect();
+      const top = r.bottom + 8;
+      let left = r.right - list.offsetWidth;
+      left = Math.max(12, Math.min(left, window.innerWidth - list.offsetWidth - 12));
+      list.style.top = top + 'px';
+      list.style.left = left + 'px';
+    }
+    langMobile.addEventListener('toggle', () => { if(langMobile.open) placeList(); });
+    window.addEventListener('resize', () => { if(langMobile.open) placeList(); });
+    list.querySelectorAll('a').forEach(a => a.addEventListener('click', () => langMobile.removeAttribute('open')));
     document.addEventListener('click', (e) => {
       if(langMobile.hasAttribute('open') && !langMobile.contains(e.target)) langMobile.removeAttribute('open');
+    });
+    document.addEventListener('keydown', (e) => {
+      if(e.key === 'Escape' && langMobile.hasAttribute('open')){
+        langMobile.removeAttribute('open');
+        langMobile.querySelector('summary').focus();
+      }
     });
   }
 })();
