@@ -194,7 +194,8 @@ img{max-width:100%;display:block;}
 }
 /* safety net: stops any stray-width element (like a mispositioned dropdown)
    from ever pushing the viewport and breaking mobile responsiveness */
-html,body{overflow-x:hidden;max-width:100%;}
+html,body{overflow-x:hidden;max-width:100%;width:100%;}
+.topbar,footer{position:relative;width:100%;}
 
 /* hero */
 .hero{padding:56px 0 40px;position:relative;overflow:hidden;
@@ -299,8 +300,8 @@ th{background:var(--paper);color:var(--maroon-dark);font-weight:700;font-size:.7
 .final-cta a:hover{background:var(--maroon-dark);transform:translateY(-2px);}
 
 /* ===== FULL FOOTER LINK DIRECTORY (all /ne/ symbol pages) ===== */
-footer{border-top:1px solid var(--rule);background:var(--maroon-dark);color:#EDE0CC;margin-top:56px;}
-footer .wrap{max-width:1000px;}
+footer{border-top:1px solid var(--rule);background:var(--maroon-dark);color:#EDE0CC;margin-top:56px;width:100%;box-sizing:border-box;}
+footer .wrap{max-width:1000px;width:100%;box-sizing:border-box;padding-left:24px;padding-right:24px;}
 .foot-top{padding:44px 0 30px;}
 .foot-brand{font-family:'Fraunces','Noto Sans Devanagari',serif;font-size:1.2rem;color:var(--cream);margin-bottom:8px;}
 .foot-desc{font-size:.86rem;color:rgba(237,224,204,.8);max-width:46ch;margin-bottom:6px;}
