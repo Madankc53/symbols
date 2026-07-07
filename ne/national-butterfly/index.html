@@ -211,12 +211,13 @@ img{max-width:100%;height:auto;display:block;}
   .lang-switch-mobile summary .chev{font-size:.66rem;color:var(--marigold-deep);transition:transform .15s ease;}
   .lang-switch-mobile[open] summary .chev{transform:rotate(180deg);}
   .lang-switch-mobile .lg-mobile-list{
-    position:absolute;right:0;top:calc(100% + 8px);z-index:70;
+    /* FIX (dropdown clipped off-screen): the trigger now sits on the LEFT side of the
+       mobile header row (back-hub moved to the right via space-between). Anchoring
+       with right:0 made the menu hang further left, off the edge of the viewport.
+       left:0 makes it extend rightward from the trigger instead, which stays on-screen. */
+    position:absolute;left:0;top:calc(100% + 8px);z-index:70;
     background:var(--white);border:1px solid var(--rule);border-radius:10px;
     box-shadow:0 12px 28px rgba(92,30,30,.18);overflow:hidden;
-    /* FIX (dropdown overflow): fluid width instead of a fixed 150px — on a 320px
-       screen this now scales down safely; on wider screens it settles at ~180px.
-       max-width guards against ever exceeding the viewport (minus wrap padding). */
     width:clamp(140px,45vw,180px);max-width:calc(100vw - 32px);
   }
   .lang-switch-mobile .lg-mobile-list a{
@@ -367,8 +368,11 @@ footer .wrap{max-width:1000px;width:100%;}
    collapses to 1–2 columns. Desktop (above 640px) keeps the original left alignment. */
 @media(max-width:640px){
   .foot-brand,.foot-desc{margin-left:auto;margin-right:auto;text-align:center;}
+  /* FIX (footer layout broke): h5/ul must stay as normal block elements to keep
+     stacking top-to-bottom. inline-block made them lay out side-by-side instead of
+     stacked whenever they both fit on one line — text-align:center on this container
+     already centers the heading text and each <a>'s text without needing that. */
   .foot-grid{text-align:center;}
-  .foot-grid h5,.foot-grid ul{display:inline-block;}
 }
 /* FIX (footer shifting/overlap): stack and center the copyright + disclaimer lines
    instead of leaving them as awkward space-between left/right fragments. */
