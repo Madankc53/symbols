@@ -137,22 +137,50 @@
 }
 *{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
+/* FIX (overflow): global safety net — the page should never be able to scroll sideways
+   regardless of what a single component does. Purely defensive, no visual change. */
+html,body{max-width:100%;overflow-x:hidden;}
 body{background:var(--cream);color:var(--ink);font-family:'Noto Sans Devanagari','Inter',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
 h1,h2,h3{font-family:'Fraunces','Noto Sans Devanagari',serif;line-height:1.2;color:var(--maroon-dark);}
+/* FIX (overflow/typography): long unbroken strings (scientific names, URLs) can force
+   horizontal overflow on narrow screens. overflow-wrap lets them break safely. */
+p,li,dd,dt,td,th,a,span{overflow-wrap:break-word;word-break:break-word;}
 a{color:var(--maroon);text-decoration:none;}
 a:hover{text-decoration:underline;}
 a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--marigold-deep);outline-offset:2px;border-radius:4px;}
-.wrap{max-width:880px;margin:0 auto;padding:0 24px;}
+/* FIX (fixed widths): width:100% plus box-sizing guarantees .wrap can never exceed the
+   viewport at any breakpoint from 320–1920px; padding now scales slightly on tiny screens. */
+.wrap{max-width:880px;width:100%;margin:0 auto;padding:0 clamp(16px,4vw,24px);}
 .eyebrow{font-size:.72rem;letter-spacing:.1em;font-weight:700;color:var(--marigold-deep);}
-img{max-width:100%;display:block;}
+img{max-width:100%;height:auto;display:block;}
 
 .topbar{border-bottom:1px solid var(--rule);background:rgba(251,243,230,.94);position:sticky;top:0;z-index:20;backdrop-filter:blur(6px);}
-.topbar-inner{max-width:880px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;font-size:.85rem;gap:12px;flex-wrap:wrap;}
+/* FIX (header breaking): width:100% + min-width:0 on the flex container lets children
+   shrink/wrap instead of forcing the row wider than the viewport. */
+.topbar-inner{max-width:880px;width:100%;margin:0 auto;padding:12px clamp(16px,4vw,24px);display:flex;align-items:center;justify-content:space-between;font-size:.85rem;gap:10px;flex-wrap:wrap;min-width:0;}
+.crumbs{min-width:0;overflow-wrap:break-word;}
 .crumbs a{color:var(--ink-soft);}
 .crumbs span{color:var(--ink-soft);margin:0 6px;}
 .crumbs .current{color:var(--maroon-dark);font-weight:600;}
-.back-hub{display:inline-flex;align-items:center;gap:6px;font-weight:600;color:var(--maroon);white-space:nowrap;}
-.topbar-right{display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
+/* FIX (header breaking): min-width:0 allows this long link to wrap onto its own line
+   instead of colliding with the language switcher on narrow screens. */
+.back-hub{display:inline-flex;align-items:center;gap:6px;font-weight:600;color:var(--maroon);white-space:normal;min-width:0;}
+.topbar-right{display:flex;align-items:center;gap:14px;flex-wrap:wrap;min-width:0;}
+
+/* FIX (header breaking): below 640px, stack crumbs / language switcher / back link
+   into their own full-width rows so nothing overlaps or gets clipped. Desktop layout
+   (flex row, space-between) is untouched above this breakpoint. */
+@media(max-width:640px){
+  .topbar-inner{flex-direction:column;align-items:stretch;gap:10px;}
+  .topbar-right{width:100%;justify-content:space-between;}
+}
+/* FIX (header breaking): at the very narrowest phones, even lang-switcher + back link
+   side-by-side get tight — drop to a single column so each has full width and 44px
+   of breathing room, with the back link centered underneath. */
+@media(max-width:380px){
+  .topbar-right{flex-direction:column;align-items:stretch;gap:8px;}
+  .back-hub{justify-content:center;text-align:center;font-size:.8rem;}
+}
 
 /* ===== LANGUAGE SWITCHER (reusable — see script comment near the bottom) ===== */
 .lang-switch-desktop{
@@ -168,11 +196,16 @@ img{max-width:100%;display:block;}
 .lang-switch-mobile{display:none;}
 @media(max-width:640px){
   .lang-switch-desktop{display:none;}
-  .lang-switch-mobile{display:block;position:relative;flex-shrink:0;}
+  /* FIX (overflow/spacing): flex-shrink:0 + max-width keeps the trigger itself from
+     ever being squeezed narrower than its content or wider than the viewport allows. */
+  .lang-switch-mobile{display:block;position:relative;flex-shrink:0;max-width:100%;}
   .lang-switch-mobile summary{
-    list-style:none;cursor:pointer;display:flex;align-items:center;gap:6px;
-    font-family:'Inter',sans-serif;font-size:.76rem;font-weight:700;color:var(--maroon-dark);
-    background:var(--white);border:1px solid var(--rule);border-radius:999px;padding:6px 11px;
+    list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;
+    font-family:'Inter',sans-serif;font-size:.8rem;font-weight:700;color:var(--maroon-dark);
+    background:var(--white);border:1px solid var(--rule);border-radius:999px;
+    /* FIX (touch target): min-height:44px meets the accessibility minimum tap size;
+       padding uses clamp so it still looks compact rather than oversized. */
+    min-height:44px;padding:clamp(8px,2vw,10px) clamp(14px,4vw,18px);
   }
   .lang-switch-mobile summary::-webkit-details-marker{display:none;}
   .lang-switch-mobile summary .chev{font-size:.66rem;color:var(--marigold-deep);transition:transform .15s ease;}
@@ -180,12 +213,17 @@ img{max-width:100%;display:block;}
   .lang-switch-mobile .lg-mobile-list{
     position:absolute;right:0;top:calc(100% + 8px);z-index:70;
     background:var(--white);border:1px solid var(--rule);border-radius:10px;
-    box-shadow:0 12px 28px rgba(92,30,30,.18);min-width:150px;overflow:hidden;
+    box-shadow:0 12px 28px rgba(92,30,30,.18);overflow:hidden;
+    /* FIX (dropdown overflow): fluid width instead of a fixed 150px — on a 320px
+       screen this now scales down safely; on wider screens it settles at ~180px.
+       max-width guards against ever exceeding the viewport (minus wrap padding). */
+    width:clamp(140px,45vw,180px);max-width:calc(100vw - 32px);
   }
   .lang-switch-mobile .lg-mobile-list a{
     display:flex;align-items:center;gap:8px;
     font-family:'Inter',sans-serif;font-size:.85rem;font-weight:600;color:var(--ink);
-    padding:11px 14px;text-decoration:none;
+    /* FIX (touch target): 44px minimum tap height for each language option. */
+    min-height:44px;padding:11px 14px;text-decoration:none;
   }
   .lang-switch-mobile .lg-mobile-list a.current{background:var(--paper);color:var(--maroon-dark);}
   .lang-switch-mobile .lg-mobile-list a:not(.current):hover{background:var(--paper);}
@@ -196,9 +234,14 @@ img{max-width:100%;display:block;}
 .garland{height:5px;background:repeating-linear-gradient(90deg,var(--maroon) 0 30px,var(--marigold) 30px 60px,var(--forest) 60px 90px);}
 .hero h1{font-size:clamp(2rem,5vw,2.9rem);font-weight:700;margin:14px 0 14px;}
 .hero h1 em{font-style:normal;color:var(--peacock);}
-.hero-desc{font-size:1.05rem;color:var(--ink-soft);max-width:62ch;margin-bottom:22px;}
-.hero-tags{display:flex;gap:10px;flex-wrap:wrap;}
-.tag{font-size:.78rem;font-weight:600;border:1px solid var(--rule);border-radius:999px;padding:5px 13px;color:var(--ink-soft);background:var(--white);}
+/* FIX (typography): fluid font-size — identical 1.05rem at desktop widths (clamp
+   upper bound), slightly reduced on 320-375px phones for more comfortable line breaks. */
+.hero-desc{font-size:clamp(.95rem,3vw,1.05rem);color:var(--ink-soft);max-width:62ch;margin-bottom:22px;}
+.hero-tags{display:flex;gap:clamp(6px,2vw,10px);flex-wrap:wrap;}
+/* NOTE: no white-space:nowrap here on purpose — the "वैज्ञानिक नाम: Papilio krishna"
+   tag is long enough that forcing it onto one line would overflow a 320px viewport.
+   Letting it wrap internally keeps every pill safely within the container. */
+.tag{font-size:.78rem;font-weight:600;border:1px solid var(--rule);border-radius:999px;padding:5px clamp(10px,3vw,13px);color:var(--ink-soft);background:var(--white);max-width:100%;}
 .hero-photo{border-radius:var(--radius);overflow:hidden;margin-top:30px;box-shadow:0 12px 30px rgba(30,91,82,.22);}
 .hero-photo img{width:100%;height:340px;object-fit:cover;}
 .caption{font-size:.8rem;color:var(--ink-soft);margin-top:8px;text-align:center;}
@@ -206,31 +249,48 @@ img{max-width:100%;display:block;}
 .status-note{display:flex;gap:12px;align-items:flex-start;background:var(--paper);border:1px solid var(--rule);border-radius:var(--radius);padding:16px 20px;margin:28px 0;font-size:.9rem;color:var(--ink);}
 .status-note .mark{font-family:'Fraunces','Noto Sans Devanagari',serif;font-size:1.1rem;color:var(--marigold-deep);flex:0 0 auto;}
 
-.facts{background:var(--white);border:1px solid var(--rule);border-radius:var(--radius);padding:26px 28px;margin:36px 0;}
+/* FIX (spacing/overflow): fluid padding instead of a fixed 26px 28px, so the box
+   doesn't eat into already-tight space on a 320px viewport. */
+.facts{background:var(--white);border:1px solid var(--rule);border-radius:var(--radius);padding:clamp(18px,4vw,26px) clamp(16px,4vw,28px);margin:36px 0;}
 .facts h2{font-size:1.05rem;margin-bottom:14px;}
-.facts-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px 24px;}
+/* FIX (overflow): lowered the minmax floor from 190px to 150px. At exactly 320px
+   viewport width the old 190px minimum left almost no margin for error once padding
+   and gaps were subtracted; 150px keeps a comfortable buffer at every breakpoint. */
+.facts-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px clamp(12px,3vw,24px);}
 .fact dt{font-size:.72rem;letter-spacing:.06em;color:var(--marigold-deep);font-weight:700;margin-bottom:3px;}
 .fact dd{font-size:.92rem;color:var(--ink);}
 
 .pronounce{display:flex;gap:0;background:var(--white);border:1px solid var(--rule);border-radius:var(--radius);overflow:hidden;margin:24px 0;flex-wrap:wrap;}
-.pronounce > div{flex:1;min-width:150px;padding:18px 22px;}
+.pronounce > div{flex:1;min-width:150px;padding:18px clamp(16px,4vw,22px);}
 .pronounce > div + div{border-left:1px solid var(--rule);}
+/* FIX (mobile layout): below 480px the panels stack into a column (three 150px-min
+   items no longer fit side by side); swap the vertical divider for a horizontal one. */
+@media(max-width:480px){
+  .pronounce{flex-direction:column;}
+  .pronounce > div + div{border-left:none;border-top:1px solid var(--rule);}
+}
 .pronounce .p-label{font-size:.68rem;letter-spacing:.1em;color:var(--marigold-deep);font-weight:700;margin-bottom:6px;}
 .pronounce .p-value{font-family:'Fraunces','Noto Sans Devanagari',serif;font-size:1.2rem;color:var(--maroon-dark);}
 .pronounce .p-value.nepali{font-size:1.5rem;}
 .pronounce .p-value.say{font-family:'Inter',sans-serif;font-weight:600;font-size:1rem;letter-spacing:.02em;}
 
-article section{margin:44px 0;}
-article h2{font-size:1.5rem;margin-bottom:14px;}
-article h3{font-size:1.1rem;margin:20px 0 8px;color:var(--maroon);}
+/* FIX (typography): clamp() lets headings and section spacing scale smoothly between
+   320px and 1920px instead of jumping abruptly at breakpoints. Desktop sizes (upper
+   clamp bound) match the original fixed values exactly, so desktop is unchanged. */
+article section{margin:clamp(30px,6vw,44px) 0;}
+article h2{font-size:clamp(1.25rem,4.5vw,1.5rem);margin-bottom:14px;}
+article h3{font-size:clamp(1rem,3.2vw,1.1rem);margin:20px 0 8px;color:var(--maroon);}
 article p{margin-bottom:14px;color:var(--ink);max-width:70ch;}
-article ul,article ol{margin:0 0 14px 22px;color:var(--ink);}
+article ul,article ol{margin:0 0 14px clamp(18px,4vw,22px);color:var(--ink);}
 article li{margin-bottom:6px;}
-.lede{font-size:1.05rem;color:var(--ink-soft);}
+.lede{font-size:clamp(.98rem,3vw,1.05rem);color:var(--ink-soft);}
 
-.wingmap-wrap{background:var(--white);border:1px solid var(--rule);border-radius:var(--radius);padding:30px 28px;margin:26px 0;}
+.wingmap-wrap{background:var(--white);border:1px solid var(--rule);border-radius:var(--radius);padding:clamp(20px,5vw,30px) clamp(18px,5vw,28px);margin:26px 0;}
 .wingmap-wrap h3{margin-top:0;}
-.wingmap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px;}
+/* FIX (typography/layout): fixed repeat(3,1fr) crammed all three cards into one row
+   even at 320px, squashing the Nepali text. auto-fit lets cards reflow to 1–3 columns
+   based on available width instead of a hard breakpoint. */
+.wingmap-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px;margin-top:18px;}
 .wm-card{background:var(--paper);border-radius:8px;padding:16px 14px;}
 .wm-card .swatch{width:100%;height:34px;border-radius:6px;margin-bottom:10px;}
 .wm-card strong{display:block;font-size:.85rem;color:var(--maroon-dark);margin-bottom:4px;}
@@ -250,8 +310,10 @@ article li{margin-bottom:6px;}
 
 .source{font-size:.76rem;color:var(--ink-soft);margin-top:-6px;margin-bottom:14px;font-style:italic;}
 
-.table-wrap{overflow-x:auto;margin:18px 0;}
-table{width:100%;border-collapse:collapse;font-size:.88rem;background:var(--white);border-radius:var(--radius);overflow:hidden;}
+/* FIX (overflow): -webkit-overflow-scrolling improves touch scroll feel; the table
+   below now gets a min-width so this container (not the whole page) is what scrolls. */
+.table-wrap{overflow-x:auto;margin:18px 0;-webkit-overflow-scrolling:touch;}
+table{width:100%;min-width:420px;border-collapse:collapse;font-size:.88rem;background:var(--white);border-radius:var(--radius);overflow:hidden;}
 th,td{padding:10px 14px;text-align:left;border-bottom:1px solid var(--rule);}
 th{background:var(--paper);color:var(--maroon-dark);font-weight:700;font-size:.76rem;letter-spacing:.03em;}
 
@@ -269,21 +331,29 @@ th{background:var(--paper);color:var(--maroon-dark);font-weight:700;font-size:.7
 .related-links a{background:rgba(251,243,230,.1);border:1px solid rgba(251,243,230,.28);border-radius:999px;padding:8px 16px;font-size:.85rem;color:var(--cream);}
 .related-links a:hover{background:var(--marigold);color:var(--ink);border-color:var(--marigold);text-decoration:none;}
 
-.final-cta{text-align:center;margin:40px 0 8px;}
+.final-cta{text-align:center;margin:40px 0 8px;padding:0 clamp(8px,3vw,0px);}
 .final-cta a{
-  display:inline-flex;align-items:center;gap:10px;background:var(--maroon);color:var(--white)!important;
-  font-family:'Inter',sans-serif;font-weight:700;font-size:1rem;padding:16px 34px;border-radius:999px;
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--maroon);color:var(--white)!important;
+  font-family:'Inter',sans-serif;font-weight:700;
+  /* FIX (typography): clamp keeps the button readable and tappable (44px+) at 320px
+     while staying identical to the original 1rem/16px 34px at desktop widths. */
+  font-size:clamp(.92rem,3vw,1rem);padding:clamp(14px,3.5vw,16px) clamp(24px,6vw,34px);
+  min-height:44px;border-radius:999px;max-width:100%;text-align:center;
   text-decoration:none!important;box-shadow:0 10px 26px rgba(126,42,42,.28);transition:transform .15s ease,background .15s ease;
 }
 .final-cta a:hover{background:var(--maroon-dark);transform:translateY(-2px);}
 
 /* ===== FULL FOOTER LINK DIRECTORY (all /ne/ symbol pages) ===== */
 footer{border-top:1px solid var(--rule);background:var(--maroon-dark);color:#EDE0CC;margin-top:56px;}
-footer .wrap{max-width:1000px;}
+/* FIX (footer shifting left): width:100% alongside max-width ensures this wrap always
+   centers via its own margin:0 auto rather than ever being able to sit flush-left. */
+footer .wrap{max-width:1000px;width:100%;}
 .foot-top{padding:44px 0 30px;}
 .foot-brand{font-family:'Fraunces','Noto Sans Devanagari',serif;font-size:1.2rem;color:var(--cream);margin-bottom:8px;}
 .foot-desc{font-size:.86rem;color:rgba(237,224,204,.8);max-width:46ch;margin-bottom:6px;}
-.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr 1fr;gap:26px;font-size:.85rem;margin-top:30px;}
+/* FIX (footer columns): fluid gap via clamp so columns don't feel cramped at 768px
+   or overly spaced at 1920px. Column-count logic itself (5 → 2 → 1) is unchanged. */
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr 1fr;gap:clamp(18px,4vw,26px);font-size:.85rem;margin-top:30px;}
 .foot-grid h5{font-family:'Inter',sans-serif;font-size:.72rem;letter-spacing:.08em;color:var(--marigold);margin-bottom:12px;}
 .foot-grid ul{list-style:none;}
 .foot-grid li{margin-bottom:7px;}
@@ -292,6 +362,19 @@ footer .wrap{max-width:1000px;}
 .foot-bottom{border-top:1px solid rgba(255,255,255,.14);padding:18px 0;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:.78rem;color:rgba(237,224,204,.65);}
 @media(max-width:800px){.foot-grid{grid-template-columns:1fr 1fr;}.foot-grid>div:first-child{grid-column:1 / -1;}}
 @media(max-width:480px){.foot-grid{grid-template-columns:1fr;}.foot-grid>div:first-child{grid-column:auto;}}
+/* FIX (footer centering): below 640px, center the brand block and every column's
+   heading/list so the footer reads as centered rather than left-anchored once it
+   collapses to 1–2 columns. Desktop (above 640px) keeps the original left alignment. */
+@media(max-width:640px){
+  .foot-brand,.foot-desc{margin-left:auto;margin-right:auto;text-align:center;}
+  .foot-grid{text-align:center;}
+  .foot-grid h5,.foot-grid ul{display:inline-block;}
+}
+/* FIX (footer shifting/overlap): stack and center the copyright + disclaimer lines
+   instead of leaving them as awkward space-between left/right fragments. */
+@media(max-width:640px){
+  .foot-bottom{flex-direction:column;align-items:center;text-align:center;gap:6px;}
+}
 
 @media(max-width:640px){
   .hero-photo img{height:220px;}
