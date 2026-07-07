@@ -428,6 +428,14 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
 
 #top-btn{position:fixed;right:24px;bottom:24px;width:44px;height:44px;border-radius:50%;background:var(--maroon);color:#fff;border:none;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.25);z-index:80;display:none;font-size:1.1rem;}
 
+/* Language switcher */
+#lang-switch{position:fixed;left:20px;bottom:24px;z-index:85;display:flex;gap:3px;background:var(--white);border:1px solid var(--rule);border-radius:999px;padding:4px;box-shadow:0 6px 20px rgba(92,30,30,.18);}
+#lang-switch .lang-opt{display:flex;align-items:center;gap:6px;padding:7px 13px;border-radius:999px;font-size:.8rem;font-weight:700;color:var(--ink-soft);font-family:'Inter',sans-serif;}
+#lang-switch .lang-opt .flag{font-size:1rem;line-height:1;}
+#lang-switch .lang-opt.active{background:var(--maroon);color:#fff;cursor:default;}
+#lang-switch .lang-opt:hover:not(.active){background:var(--paper);}
+@media(max-width:900px){#lang-switch{bottom:84px;left:16px;}}
+
 #mobile-cta{display:none;position:fixed;left:0;right:0;bottom:0;z-index:90;background:var(--maroon-dark);border-top:1px solid rgba(255,255,255,.12);padding:10px 16px;box-shadow:0 -4px 16px rgba(0,0,0,.2);}
 #mobile-cta .cta-row{display:flex;gap:10px;}
 #mobile-cta button{flex:1;border:none;border-radius:999px;padding:11px 10px;font-size:.82rem;font-weight:700;font-family:'Inter',sans-serif;cursor:pointer;}
@@ -1168,6 +1176,11 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
 
 <button id="top-btn" aria-label="Scroll to top">↑</button>
 
+<div id="lang-switch" role="group" aria-label="Language / भाषा">
+  <a href="/" class="lang-opt active" hreflang="en" lang="en" aria-current="page"><span class="flag" aria-hidden="true">🇬🇧</span><span>EN</span></a>
+  <a href="/ne/" class="lang-opt" hreflang="ne" lang="ne"><span class="flag" aria-hidden="true">🇳🇵</span><span>NP</span></a>
+</div>
+
 <div id="mobile-cta">
   <div class="cta-row">
     <button type="button" class="primary" id="cta-explore">Explore all 23 symbols</button>
@@ -1522,8 +1535,6 @@ document.addEventListener('click', (e) => {
   let qIndex = 0;
   let score = 0;
   let answered = false;
-
-  function shuffled(arr){ return arr; } // keep order stable/deterministic for simplicity
 
   function renderIntro(){
     body.innerHTML = '<div class="quiz-intro"><div class="quiz-big-emoji">🏆</div>' +
