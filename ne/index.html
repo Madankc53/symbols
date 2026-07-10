@@ -136,11 +136,12 @@ a:focus-visible,button:focus-visible,input:focus-visible{
 
 /* top nav */
 .topnav{position:sticky;top:0;z-index:50;background:rgba(251,243,230,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule);}
-.topnav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 32px;max-width:1200px;margin:0 auto;}
+.topnav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 32px;max-width:1200px;margin:0 auto;gap:16px;}
 .brand{display:flex;align-items:center;gap:10px;}
 .brand-logo{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--maroon-dark),var(--maroon));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:.9rem;}
 .brand-name{font-family:'Fraunces','Noto Sans Devanagari',serif;font-weight:700;font-size:1rem;color:var(--maroon-dark);}
 .brand-sub{font-size:.72rem;color:var(--ink-soft);}
+.topnav-right{display:flex;align-items:center;gap:12px;flex-wrap:wrap;justify-content:flex-end;}
 .search-wrap{position:relative;}
 .search-wrap input{background:var(--paper);border:1px solid var(--rule);border-radius:999px;padding:9px 44px 9px 36px;font-size:.88rem;font-family:'Noto Sans Devanagari','Inter',sans-serif;color:var(--ink);width:220px;outline:none;}
 .search-wrap input:focus{border-color:var(--maroon);width:260px;transition:width .2s ease;}
@@ -159,6 +160,44 @@ a:focus-visible,button:focus-visible,input:focus-visible{
 .subnav-pills{display:flex;gap:8px;overflow-x:auto;padding:10px 32px;max-width:1200px;margin:0 auto;scrollbar-width:none;}
 .pill{flex:0 0 auto;font-size:.875rem;font-weight:600;padding:6px 14px;border-radius:999px;border:1px solid var(--rule);cursor:pointer;background:transparent;color:var(--ink-soft);}
 .pill:hover,.pill.active{background:var(--maroon);border-color:var(--maroon);color:#fff;}
+
+/* language switcher — topbar integrated (matches inner pages) */
+.lang-switch-desktop{
+  display:flex;align-items:center;gap:8px;
+  font-family:'Noto Sans Devanagari','Inter',sans-serif;font-size:.8rem;font-weight:600;
+  background:var(--white);border:1px solid var(--rule);border-radius:999px;
+  padding:5px 7px 5px 11px;flex-shrink:0;
+}
+.lang-switch-desktop .lg-icon{font-size:.88rem;}
+.lang-switch-desktop a.lg-opt{color:var(--ink-soft);text-decoration:none;padding:4px 9px;border-radius:999px;}
+.lang-switch-desktop a.lg-opt:hover{background:var(--paper);color:var(--maroon-dark);}
+.lang-switch-desktop .lg-opt.current{background:var(--maroon);color:#fff;padding:4px 11px;border-radius:999px;cursor:default;}
+.lang-switch-mobile{display:none;}
+@media(max-width:640px){
+  .lang-switch-desktop{display:none;}
+  .lang-switch-mobile{display:block;position:relative;flex-shrink:0;}
+  .lang-switch-mobile summary{
+    list-style:none;cursor:pointer;display:flex;align-items:center;gap:6px;
+    font-family:'Noto Sans Devanagari','Inter',sans-serif;font-size:.78rem;font-weight:700;color:var(--maroon-dark);
+    background:var(--white);border:1px solid var(--rule);border-radius:999px;
+    padding:7px 12px;
+  }
+  .lang-switch-mobile summary::-webkit-details-marker{display:none;}
+  .lang-switch-mobile summary .chev{font-size:.66rem;color:var(--marigold-deep);transition:transform .15s ease;}
+  .lang-switch-mobile[open] summary .chev{transform:rotate(180deg);}
+  .lang-switch-mobile .lg-mobile-list{
+    position:absolute;right:0;top:calc(100% + 8px);z-index:70;
+    background:var(--white);border:1px solid var(--rule);border-radius:10px;
+    box-shadow:0 12px 28px rgba(92,30,30,.18);overflow:hidden;width:150px;
+  }
+  .lang-switch-mobile .lg-mobile-list a{
+    display:flex;align-items:center;gap:8px;
+    font-family:'Noto Sans Devanagari','Inter',sans-serif;font-size:.85rem;font-weight:600;color:var(--ink);
+    min-height:44px;padding:11px 14px;text-decoration:none;
+  }
+  .lang-switch-mobile .lg-mobile-list a.current{background:var(--paper);color:var(--maroon-dark);}
+  .lang-switch-mobile .lg-mobile-list a:not(.current):hover{background:var(--paper);}
+}
 
 /* search-by chips */
 .search-by-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:12px;}
@@ -428,14 +467,6 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
 
 #top-btn{position:fixed;right:24px;bottom:24px;width:44px;height:44px;border-radius:50%;background:var(--maroon);color:#fff;border:none;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.25);z-index:80;display:none;font-size:1.1rem;}
 
-/* Language switcher */
-#lang-switch{position:fixed;left:20px;bottom:24px;z-index:85;display:flex;gap:3px;background:var(--white);border:1px solid var(--rule);border-radius:999px;padding:4px;box-shadow:0 6px 20px rgba(92,30,30,.18);}
-#lang-switch .lang-opt{display:flex;align-items:center;gap:6px;padding:7px 13px;border-radius:999px;font-size:.8rem;font-weight:700;color:var(--ink-soft);font-family:'Noto Sans Devanagari','Inter',sans-serif;}
-#lang-switch .lang-opt .flag{font-size:1rem;line-height:1;}
-#lang-switch .lang-opt.active{background:var(--maroon);color:#fff;cursor:default;}
-#lang-switch .lang-opt:hover:not(.active){background:var(--paper);}
-@media(max-width:900px){#lang-switch{bottom:84px;left:16px;}}
-
 #mobile-cta{display:none;position:fixed;left:0;right:0;bottom:0;z-index:90;background:var(--maroon-dark);border-top:1px solid rgba(255,255,255,.12);padding:10px 16px;box-shadow:0 -4px 16px rgba(0,0,0,.2);}
 #mobile-cta .cta-row{display:flex;gap:10px;}
 #mobile-cta button{flex:1;border:none;border-radius:999px;padding:11px 10px;font-size:.8rem;font-weight:700;font-family:'Noto Sans Devanagari','Inter',sans-serif;cursor:pointer;}
@@ -470,20 +501,36 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
 
 <nav class="topnav" role="navigation" aria-label="मुख्य">
   <div class="topnav-inner">
-    <a href="/ne/" class="brand" aria-label="द नेपाल — राष्ट्रिय चिन्ह केन्द्र, गृहपृष्ठ">
+    <a href="https://symbols.thenepal.io/ne/" class="brand" aria-label="द नेपाल — राष्ट्रिय चिन्ह केन्द्र, गृहपृष्ठ">
       <div class="brand-logo" aria-hidden="true">न</div>
       <div>
         <div class="brand-name">द नेपाल</div>
         <div class="brand-sub">राष्ट्रिय चिन्ह केन्द्र</div>
       </div>
     </a>
-    <div class="search-wrap">
-      <span class="icon" aria-hidden="true">🔍</span>
-      <input type="search" id="search-input" placeholder="चिन्हहरू खोज्नुहोस्…" aria-label="नेपालका राष्ट्रिय चिन्हहरू खोज्नुहोस्" autocomplete="off">
-      <span class="kbd" aria-hidden="true">/</span>
-      <div class="search-suggest" id="search-suggest">
-        <div class="ss-label">यसरी खोज्नुहोस्</div>
+    <div class="topnav-right">
+      <div class="search-wrap">
+        <span class="icon" aria-hidden="true">🔍</span>
+        <input type="search" id="search-input" placeholder="चिन्हहरू खोज्नुहोस्…" aria-label="नेपालका राष्ट्रिय चिन्हहरू खोज्नुहोस्" autocomplete="off">
+        <span class="kbd" aria-hidden="true">/</span>
+        <div class="search-suggest" id="search-suggest">
+          <div class="ss-label">यसरी खोज्नुहोस्</div>
+        </div>
       </div>
+
+      <div class="lang-switch-desktop" aria-label="भाषा छान्नुहोस्">
+        <span class="lg-icon" aria-hidden="true">🌐</span>
+        <a class="lg-opt" href="https://symbols.thenepal.io/">EN</a>
+        <span class="lg-opt current">नेपाली</span>
+      </div>
+
+      <details class="lang-switch-mobile">
+        <summary>🌐 नेपाली <span class="chev" aria-hidden="true">▾</span></summary>
+        <div class="lg-mobile-list">
+          <a href="https://symbols.thenepal.io/">English</a>
+          <a class="current" href="https://symbols.thenepal.io/ne/">नेपाली</a>
+        </div>
+      </details>
     </div>
   </div>
   <div class="subnav-pills" role="tablist" aria-label="श्रेणी अनुसार फिल्टर">
@@ -1175,11 +1222,6 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
 </footer>
 
 <button id="top-btn" aria-label="माथि जानुहोस्">↑</button>
-
-<div id="lang-switch" role="group" aria-label="Language / भाषा छान्नुहोस्">
-  <a href="/" class="lang-opt" hreflang="en" lang="en"><span class="flag" aria-hidden="true">🇬🇧</span><span>EN</span></a>
-  <a href="/ne/" class="lang-opt active" hreflang="ne" lang="ne" aria-current="page"><span class="flag" aria-hidden="true">🇳🇵</span><span>NP</span></a>
-</div>
 
 <div id="mobile-cta">
   <div class="cta-row">
