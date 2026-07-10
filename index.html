@@ -52,8 +52,8 @@
   "@context":"https://schema.org",
   "@type":"ItemList",
   "name":"National Symbols of Nepal",
-  "description":"Complete list of the 23 national symbols of Nepal.",
-  "numberOfItems":23,
+  "description":"Complete list of the 22 national symbols of Nepal.",
+  "numberOfItems":22,
   "itemListElement":[
     {"@type":"ListItem","position":1,"name":"National Animal — Cow","url":"https://symbols.thenepal.io/national-animal/"},
     {"@type":"ListItem","position":2,"name":"National Bird — Himalayan Monal (Danphe)","url":"https://symbols.thenepal.io/national-bird/"},
@@ -66,7 +66,7 @@
     {"@type":"ListItem","position":9,"name":"National Flag","url":"https://symbols.thenepal.io/national-flag/"},
     {"@type":"ListItem","position":10,"name":"National Anthem — Sayaun Thunga Phulka","url":"https://symbols.thenepal.io/national-anthem/"},
     {"@type":"ListItem","position":11,"name":"National Language — Nepali","url":"https://symbols.thenepal.io/national-language/"},
-    {"@type":"ListItem","position":12,"name":"National Colour — Crimson Red","url":"https://symbols.thenepal.io/national-colour/"},
+    {"@type":"ListItem","position":12,"name":"National Colour — Crimson Red","url":"https://symbols.thenepal.io/national-color/"},
     {"@type":"ListItem","position":13,"name":"National Dress — Daura Suruwal & Gunyu Cholo","url":"https://symbols.thenepal.io/national-dress/"},
     {"@type":"ListItem","position":14,"name":"National Sport — Volleyball","url":"https://symbols.thenepal.io/national-sport/"},
     {"@type":"ListItem","position":15,"name":"National Calendar — Bikram Sambat","url":"https://symbols.thenepal.io/national-calendar/"},
@@ -74,10 +74,9 @@
     {"@type":"ListItem","position":17,"name":"National Emblem","url":"https://symbols.thenepal.io/national-emblem/"},
     {"@type":"ListItem","position":18,"name":"National Monument — Dharahara Tower","url":"https://symbols.thenepal.io/national-monument/"},
     {"@type":"ListItem","position":19,"name":"Highest Peak — Sagarmatha (Mt Everest)","url":"https://symbols.thenepal.io/national-everest/"},
-    {"@type":"ListItem","position":20,"name":"National River — Koshi River","url":"https://symbols.thenepal.io/national-river/"},
-    {"@type":"ListItem","position":21,"name":"National Cave — Siddha Gufa","url":"https://symbols.thenepal.io/national-cave/"},
-    {"@type":"ListItem","position":22,"name":"National Museum","url":"https://symbols.thenepal.io/national-museum/"},
-    {"@type":"ListItem","position":23,"name":"National Currency — Nepalese Rupee","url":"https://symbols.thenepal.io/national-currency/"}
+    {"@type":"ListItem","position":20,"name":"National Cave — Siddha Gufa","url":"https://symbols.thenepal.io/national-cave/"},
+    {"@type":"ListItem","position":21,"name":"National Museum","url":"https://symbols.thenepal.io/national-museum/"},
+    {"@type":"ListItem","position":22,"name":"National Currency — Nepalese Rupee","url":"https://symbols.thenepal.io/national-currency/"}
   ]
 }
 </script>
@@ -136,11 +135,12 @@ a:focus-visible,button:focus-visible,input:focus-visible{
 
 /* top nav */
 .topnav{position:sticky;top:0;z-index:50;background:rgba(251,243,230,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule);}
-.topnav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 32px;max-width:1200px;margin:0 auto;}
+.topnav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 32px;max-width:1200px;margin:0 auto;gap:16px;}
 .brand{display:flex;align-items:center;gap:10px;}
 .brand-logo{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--maroon-dark),var(--maroon));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:.9rem;}
 .brand-name{font-family:'Fraunces',serif;font-weight:700;font-size:1rem;color:var(--maroon-dark);}
 .brand-sub{font-size:.72rem;color:var(--ink-soft);}
+.topnav-right{display:flex;align-items:center;gap:12px;flex-wrap:wrap;justify-content:flex-end;}
 .search-wrap{position:relative;}
 .search-wrap input{background:var(--paper);border:1px solid var(--rule);border-radius:999px;padding:9px 44px 9px 36px;font-size:.88rem;font-family:'Inter',sans-serif;color:var(--ink);width:220px;outline:none;}
 .search-wrap input:focus{border-color:var(--maroon);width:260px;transition:width .2s ease;}
@@ -159,6 +159,44 @@ a:focus-visible,button:focus-visible,input:focus-visible{
 .subnav-pills{display:flex;gap:8px;overflow-x:auto;padding:10px 32px;max-width:1200px;margin:0 auto;scrollbar-width:none;}
 .pill{flex:0 0 auto;font-size:.875rem;font-weight:600;padding:6px 14px;border-radius:999px;border:1px solid var(--rule);cursor:pointer;background:transparent;color:var(--ink-soft);}
 .pill:hover,.pill.active{background:var(--maroon);border-color:var(--maroon);color:#fff;}
+
+/* language switcher — topbar integrated (matches inner pages) */
+.lang-switch-desktop{
+  display:flex;align-items:center;gap:8px;
+  font-family:'Inter',sans-serif;font-size:.8rem;font-weight:600;
+  background:var(--white);border:1px solid var(--rule);border-radius:999px;
+  padding:5px 7px 5px 11px;flex-shrink:0;
+}
+.lang-switch-desktop .lg-icon{font-size:.88rem;}
+.lang-switch-desktop a.lg-opt{color:var(--ink-soft);text-decoration:none;padding:4px 9px;border-radius:999px;}
+.lang-switch-desktop a.lg-opt:hover{background:var(--paper);color:var(--maroon-dark);}
+.lang-switch-desktop .lg-opt.current{background:var(--maroon);color:#fff;padding:4px 11px;border-radius:999px;cursor:default;}
+.lang-switch-mobile{display:none;}
+@media(max-width:640px){
+  .lang-switch-desktop{display:none;}
+  .lang-switch-mobile{display:block;position:relative;flex-shrink:0;}
+  .lang-switch-mobile summary{
+    list-style:none;cursor:pointer;display:flex;align-items:center;gap:6px;
+    font-family:'Inter',sans-serif;font-size:.78rem;font-weight:700;color:var(--maroon-dark);
+    background:var(--white);border:1px solid var(--rule);border-radius:999px;
+    padding:7px 12px;
+  }
+  .lang-switch-mobile summary::-webkit-details-marker{display:none;}
+  .lang-switch-mobile summary .chev{font-size:.66rem;color:var(--marigold-deep);transition:transform .15s ease;}
+  .lang-switch-mobile[open] summary .chev{transform:rotate(180deg);}
+  .lang-switch-mobile .lg-mobile-list{
+    position:absolute;right:0;top:calc(100% + 8px);z-index:70;
+    background:var(--white);border:1px solid var(--rule);border-radius:10px;
+    box-shadow:0 12px 28px rgba(92,30,30,.18);overflow:hidden;width:150px;
+  }
+  .lang-switch-mobile .lg-mobile-list a{
+    display:flex;align-items:center;gap:8px;
+    font-family:'Inter',sans-serif;font-size:.85rem;font-weight:600;color:var(--ink);
+    min-height:44px;padding:11px 14px;text-decoration:none;
+  }
+  .lang-switch-mobile .lg-mobile-list a.current{background:var(--paper);color:var(--maroon-dark);}
+  .lang-switch-mobile .lg-mobile-list a:not(.current):hover{background:var(--paper);}
+}
 
 /* search-by chips */
 .search-by-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:12px;}
@@ -282,7 +320,6 @@ a:focus-visible,button:focus-visible,input:focus-visible{
 .v-emblem{background:linear-gradient(135deg,#5C1E1E 0%,#3D5435 100%);}
 .v-monument{background:linear-gradient(135deg,#5a4020 0%,#9a7030 100%);}
 .v-peak{background:linear-gradient(135deg,#1a2a4a 0%,#6a8ab0 100%);}
-.v-river{background:linear-gradient(135deg,#0a3a5a 0%,#2a8aba 100%);}
 .v-cave{background:linear-gradient(135deg,#1a1428 0%,#4a3a6a 100%);}
 .v-museum{background:linear-gradient(135deg,#3a2a10 0%,#7a5a2a 100%);}
 .v-currency{background:linear-gradient(135deg,#1a3020 0%,#4a7040 100%);}
@@ -428,14 +465,6 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
 
 #top-btn{position:fixed;right:24px;bottom:24px;width:44px;height:44px;border-radius:50%;background:var(--maroon);color:#fff;border:none;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.25);z-index:80;display:none;font-size:1.1rem;}
 
-/* Language switcher */
-#lang-switch{position:fixed;left:20px;bottom:24px;z-index:85;display:flex;gap:3px;background:var(--white);border:1px solid var(--rule);border-radius:999px;padding:4px;box-shadow:0 6px 20px rgba(92,30,30,.18);}
-#lang-switch .lang-opt{display:flex;align-items:center;gap:6px;padding:7px 13px;border-radius:999px;font-size:.8rem;font-weight:700;color:var(--ink-soft);font-family:'Inter',sans-serif;}
-#lang-switch .lang-opt .flag{font-size:1rem;line-height:1;}
-#lang-switch .lang-opt.active{background:var(--maroon);color:#fff;cursor:default;}
-#lang-switch .lang-opt:hover:not(.active){background:var(--paper);}
-@media(max-width:900px){#lang-switch{bottom:84px;left:16px;}}
-
 #mobile-cta{display:none;position:fixed;left:0;right:0;bottom:0;z-index:90;background:var(--maroon-dark);border-top:1px solid rgba(255,255,255,.12);padding:10px 16px;box-shadow:0 -4px 16px rgba(0,0,0,.2);}
 #mobile-cta .cta-row{display:flex;gap:10px;}
 #mobile-cta button{flex:1;border:none;border-radius:999px;padding:11px 10px;font-size:.82rem;font-weight:700;font-family:'Inter',sans-serif;cursor:pointer;}
@@ -477,13 +506,29 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
         <div class="brand-sub">National Symbols Hub</div>
       </div>
     </a>
-    <div class="search-wrap">
-      <span class="icon" aria-hidden="true">🔍</span>
-      <input type="search" id="search-input" placeholder="Search symbols…" aria-label="Search national symbols of Nepal" autocomplete="off">
-      <span class="kbd" aria-hidden="true">/</span>
-      <div class="search-suggest" id="search-suggest">
-        <div class="ss-label">Try searching</div>
+    <div class="topnav-right">
+      <div class="search-wrap">
+        <span class="icon" aria-hidden="true">🔍</span>
+        <input type="search" id="search-input" placeholder="Search symbols…" aria-label="Search national symbols of Nepal" autocomplete="off">
+        <span class="kbd" aria-hidden="true">/</span>
+        <div class="search-suggest" id="search-suggest">
+          <div class="ss-label">Try searching</div>
+        </div>
       </div>
+
+      <div class="lang-switch-desktop" aria-label="Choose language">
+        <span class="lg-icon" aria-hidden="true">🌐</span>
+        <span class="lg-opt current">EN</span>
+        <a class="lg-opt" href="https://symbols.thenepal.io/ne/">नेपाली</a>
+      </div>
+
+      <details class="lang-switch-mobile">
+        <summary>🌐 EN <span class="chev" aria-hidden="true">▾</span></summary>
+        <div class="lg-mobile-list">
+          <a class="current" href="https://symbols.thenepal.io/">English</a>
+          <a href="https://symbols.thenepal.io/ne/">नेपाली</a>
+        </div>
+      </details>
     </div>
   </div>
   <div class="subnav-pills" role="tablist" aria-label="Filter symbols by category">
@@ -509,8 +554,8 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
         <h1>National Symbols<br>of <em>Nepal</em></h1>
         <p class="hero-desc">The most complete, SEO-optimised reference for every national symbol of Nepal — from the sacred cow to the Himalayan Monal, from the crimson flag to the song that unites a nation.</p>
         <div class="stat-row">
-          <div class="stat"><div class="num">23</div><div class="lbl">National Symbols</div></div>
-          <div class="stat"><div class="num">23</div><div class="lbl">Guides Live</div></div>
+          <div class="stat"><div class="num">22</div><div class="lbl">National Symbols</div></div>
+          <div class="stat"><div class="num">22</div><div class="lbl">Guides Live</div></div>
           <div class="stat"><div class="num">5</div><div class="lbl">Categories</div></div>
         </div>
         <div class="popular-searches">
@@ -625,7 +670,7 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
       </a>
       <a class="cat-card cat-jump" data-cat="geography" href="#all-section">
         <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEguOoOl5cYuQ-SqFzngURQMOmn3X24ACa2FhlzY37sevd8ehNj_edY06zmG-InlUOMGoPKpYGzhVzXxDByenvvZy4cP5dcNYkCmGebstva9YFlqCVpmS7L4rl65njZFlDfwYqFHku77lJ65zmtwOUG6f_EGSBmGQKAM9MplX5kD8WdciaAIcz5tgef6-HeB/w900-h600-rw/national_everest_of_nepal_2K_202607020827.webp" alt="Geography symbols of Nepal" loading="lazy">
-        <div class="cat-body"><div class="cat-count">4 Symbols</div><h4>Geography</h4><p>Monument, Everest, river, cave</p></div>
+        <div class="cat-body"><div class="cat-count">3 Symbols</div><h4>Geography</h4><p>Monument, Everest, cave</p></div>
       </a>
       <a class="cat-card cat-jump" data-cat="heritage" href="#all-section">
         <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhU3v-9G2IplxP1NNQpdKDt8JVpDLxqeHBk54_cARyKDSESTe0EMpAB8EPsq5dzHtUy7ZMSkLANdhTy-uz0seSFkKDXMLkg_Rxwf4ixoaIMjazCnj1fkbpY1HwCIDHdHffQ_xyIgDSaWOKlOgVapEuIBuZMxlHhD3_NA16lmxTZF0Yl9jFkyszriKzAo3A9/w900-h600-rw/National_museum_of_nepal_2K_202607020826.webp" alt="Heritage and economy symbols of Nepal" loading="lazy">
@@ -664,7 +709,7 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
   <div class="wrap">
     <div class="section-label">
       <span class="eyebrow">Featured Guide</span>
-      <h2>23 of 23 Guides Now Live</h2>
+      <h2>22 of 22 Guides Now Live</h2>
     </div>
     <div class="feature-card">
       <div class="fc-text">
@@ -838,7 +883,7 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
         <span class="card-link">Read Guide <span class="arrow" aria-hidden="true">→</span></span>
       </a>
 
-      <a href="https://symbols.thenepal.io/national-colour/" class="sym-card done" data-cat="culture" data-keywords="colour color crimson red national" data-nepali="चिरागी रातो" data-scientific="—" data-category-label="National Colour" aria-label="National Colour: Crimson Red, read the guide">
+      <a href="https://symbols.thenepal.io/national-color/" class="sym-card done" data-cat="culture" data-keywords="colour color crimson red national" data-nepali="चिरागी रातो" data-scientific="—" data-category-label="National Colour" aria-label="National Colour: Crimson Red, read the guide">
         <div class="badge">Live</div>
         <div class="card-visual v-color"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgkH0SRU89gKv9XmbI9wzv0TD5SHaXk8tWVp4-iUdQS6UXCPMQh70p2yEVKdrL68dNwSTdd9QIgVCAzltyBEnkB7nOnHNdf9UFDvfZkGp-bs_dxuuFJBR_egHpZ0Wdj7IA66R5SfN2KSHXiSX9vy9PO-BL1TVQzjoOmCprb883E-W0IS-98p1MVd4Z-iDZw/w700-h500-rw/National_color_of_nepal_2K_202607020800.webp" alt="Crimson red, the national colour of Nepal" loading="lazy" decoding="async"><div class="visual-overlay"></div></div>
         <div class="card-body">
@@ -935,17 +980,6 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
         <span class="card-link">Read Guide <span class="arrow" aria-hidden="true">→</span></span>
       </a>
 
-      <a href="https://symbols.thenepal.io/national-river/" class="sym-card done" data-cat="geography" data-keywords="river koshi national water" data-nepali="कोशी नदी" data-scientific="—" data-category-label="National River" aria-label="National River: Koshi River, read the guide">
-        <div class="badge">Live</div>
-        <div class="card-visual v-river">🌊</div>
-        <div class="card-body">
-          <span class="eyebrow">National River</span>
-          <h3>Koshi River</h3>
-          <p>The sorrow and the lifeline of eastern Nepal's plains.</p>
-        </div>
-        <span class="card-link">Read Guide <span class="arrow" aria-hidden="true">→</span></span>
-      </a>
-
       <a href="https://symbols.thenepal.io/national-cave/" class="sym-card done" data-cat="geography" data-keywords="cave siddha gufa largest natural" data-nepali="सिद्ध गुफा" data-scientific="—" data-category-label="National Cave" aria-label="National Cave: Siddha Gufa, read the guide">
         <div class="badge">Live</div>
         <div class="card-visual v-cave"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgqRKRh2ydsEIsHtLjLeIYX4mDHDF3ovfefwLefG06A9J_SkT4WqROvNXfWqf2CMPBB0XA9TX1BGkp6-dSFmhfwjJfaDM2IBuoH7_h_OIHBA_lvCI61bxKqs1oDidV1wI3ELURQu6M5PwtmDhxRLACc-zTvTo3W55SJsegdC2ZtYvSn6bzo1QV9KqbYjofc/w700-h500-rw/National_cave_of_nepal_2K_202607020827.webp" alt="Siddha Gufa, Nepal's national cave" loading="lazy" decoding="async"><div class="visual-overlay"></div></div>
@@ -997,8 +1031,8 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
 <div class="stats-band">
   <div class="wrap">
     <div class="stats-inner">
-      <div class="s-stat"><div class="big">23</div><div class="lbl">National Symbols Covered</div></div>
-      <div class="s-stat"><div class="big">23</div><div class="lbl">Guides Published</div></div>
+      <div class="s-stat"><div class="big">22</div><div class="lbl">National Symbols Covered</div></div>
+      <div class="s-stat"><div class="big">22</div><div class="lbl">Guides Published</div></div>
       <div class="s-stat"><div class="big">5</div><div class="lbl">Thematic Categories</div></div>
       <div class="s-stat"><div class="big">∞</div><div class="lbl">Nepal's Cultural Depth</div></div>
     </div>
@@ -1011,16 +1045,16 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
     <div class="challenge-head">
       <div>
         <span class="eyebrow">A Little Challenge</span>
-        <h2>Can You Name All 23 Symbols?</h2>
+        <h2>Can You Name All 22 Symbols?</h2>
         <p>Tap the ones you already knew. Your progress is saved on this device — come back any time to pick up where you left off.</p>
       </div>
       <div class="challenge-progress-wrap">
-        <div class="challenge-progress-label"><span id="chal-progress-text">0 / 23 known</span><span id="chal-progress-pct">0%</span></div>
+        <div class="challenge-progress-label"><span id="chal-progress-text">0 / 22 known</span><span id="chal-progress-pct">0%</span></div>
         <div class="challenge-bar"><div class="challenge-bar-fill" id="chal-bar-fill"></div></div>
       </div>
     </div>
     <div class="challenge-grid" id="challenge-grid"></div>
-    <div class="challenge-done-msg" id="challenge-done-msg">🎉 You know all 23 national symbols of Nepal! Certified Nepal symbols expert.</div>
+    <div class="challenge-done-msg" id="challenge-done-msg">🎉 You know all 22 national symbols of Nepal! Certified Nepal symbols expert.</div>
     <button class="challenge-reset" id="challenge-reset" type="button">Reset progress</button>
   </div>
 </div>
@@ -1112,7 +1146,7 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
       <a class="em-card" href="https://nationalfruit.thenepal.io/"><span class="em-icon">🍊</span><span class="em-title">National Fruit</span><span class="em-sub">Mandarin Orange</span></a>
       <a class="em-card" href="https://symbols.thenepal.io/national-calendar/"><span class="em-icon">📅</span><span class="em-title">Nepali Calendar</span><span class="em-sub">Bikram Sambat</span></a>
       <a class="em-card cat-jump" data-cat="heritage" href="#all-section"><span class="em-icon">🏛️</span><span class="em-title">History</span><span class="em-sub">Museum &amp; monument</span></a>
-      <a class="em-card cat-jump" data-cat="geography" href="#all-section"><span class="em-icon">🏔️</span><span class="em-title">Geography</span><span class="em-sub">Everest, cave &amp; river</span></a>
+      <a class="em-card cat-jump" data-cat="geography" href="#all-section"><span class="em-icon">🏔️</span><span class="em-title">Geography</span><span class="em-sub">Everest &amp; cave</span></a>
     </div>
   </div>
 </div>
@@ -1176,14 +1210,9 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
 
 <button id="top-btn" aria-label="Scroll to top">↑</button>
 
-<div id="lang-switch" role="group" aria-label="Language / भाषा">
-  <a href="/" class="lang-opt active" hreflang="en" lang="en" aria-current="page"><span class="flag" aria-hidden="true">🇬🇧</span><span>EN</span></a>
-  <a href="/ne/" class="lang-opt" hreflang="ne" lang="ne"><span class="flag" aria-hidden="true">🇳🇵</span><span>NP</span></a>
-</div>
-
 <div id="mobile-cta">
   <div class="cta-row">
-    <button type="button" class="primary" id="cta-explore">Explore all 23 symbols</button>
+    <button type="button" class="primary" id="cta-explore">Explore all 22 symbols</button>
     <button type="button" class="secondary" id="cta-categories">Jump to categories</button>
   </div>
 </div>
@@ -1333,7 +1362,7 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
-// ===== Search suggestions dropdown (now lists ALL 23 symbols by default) =====
+// ===== Search suggestions dropdown (now lists ALL symbols by default) =====
 const suggestBox = document.getElementById('search-suggest');
 
 function allSymbolSuggestions(){
@@ -1356,7 +1385,7 @@ function renderSuggestions(query){
     });
     if(list.length === 0) list = [];
   }
-  const labelText = q ? (list.length ? 'Suggestions' : 'No matches — press Enter to search anyway') : 'All 23 national symbols';
+  const labelText = q ? (list.length ? 'Suggestions' : 'No matches — press Enter to search anyway') : 'All national symbols';
   suggestBox.innerHTML = '<div class="ss-label">' + labelText + '</div>' +
     list.map(s => '<button type="button" data-val="'+s.label.replace(/"/g,'')+'"><span class="ss-icon">🔍</span>'+s.label+(s.meta ? '<span class="ss-meta">'+s.meta+'</span>' : '')+'</button>').join('');
   suggestBox.querySelectorAll('button').forEach(b => {
@@ -1441,7 +1470,7 @@ document.addEventListener('click', (e) => {
   render();
 })();
 
-// ===== Challenge: Can you name all 23 symbols? =====
+// ===== Challenge: Can you name all the symbols? =====
 (function(){
   const symbols = [
     {id:'animal', emoji:'🐄', name:'Animal'},
@@ -1463,7 +1492,6 @@ document.addEventListener('click', (e) => {
     {id:'emblem', emoji:'🛡️', name:'Emblem'},
     {id:'monument', emoji:'🗼', name:'Monument'},
     {id:'everest', emoji:'🏔️', name:'Peak'},
-    {id:'river', emoji:'🌊', name:'River'},
     {id:'cave', emoji:'🕳️', name:'Cave'},
     {id:'museum', emoji:'🏛️', name:'Museum'},
     {id:'currency', emoji:'💰', name:'Currency'}
