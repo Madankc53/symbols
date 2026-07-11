@@ -22,9 +22,31 @@ function getHtmlFiles(dir, fileList = []) {
     return fileList;
 }
 
+// Helper to make page names look professional
+function cleanLabel(filePath) {
+    if (filePath === 'index.html') return 'Home';
+    
+    // Remove '.html' and '/index' if it exists at the end
+    let cleanPath = filePath.replace('.html', '').replace(/\/index$/, '');
+    
+    let prefix = '';
+    // Check if it's a Nepali translation file
+    if (cleanPath.startsWith('ne/')) {
+        prefix = 'नेपाली: ';
+        cleanPath = cleanPath.replace('ne/', '');
+        if (!cleanPath) return 'नेपाली गृहपृष्ठ (Nepali Home)'; 
+    }
+    
+    // Capitalize words nicely
+    let words = cleanPath.replace(/[-_]/g, ' ').split(' ');
+    let formattedWords = words.map(word => word.charAt(0).toUpperCase() + word.slice(1));
+    
+    return prefix + formattedWords.join(' ');
+}
+
 function generateSitemaps() {
     const files = getHtmlFiles(__dirname);
-    const currentDate = new Date().toISOString().split('T')[0]; // Format: YYYY-MM-DD
+    const currentDate = new Date().toISOString().split('T')[0];
     
     // --- 1. GENERATE HTML SITEMAP ---
     let htmlContent = `<!DOCTYPE html>
@@ -32,29 +54,29 @@ function generateSitemaps() {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sitemap</title>
+    <title>Sitemap - National Symbols of Nepal</title>
     <style>
-        body { font-family: sans-serif; margin: 40px; line-height: 1.6; }
-        h1 { color: #333; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; margin: 40px auto; max-width: 800px; line-height: 1.6; color: #333; }
+        h1 { color: #111; border-bottom: 2px solid #eee; padding-bottom: 10px; }
         ul { list-style-type: none; padding: 0; }
-        li { margin: 10px 0; }
-        a { color: #0366d6; text-decoration: none; }
-        a:hover { text-decoration: underline; }
+        li { margin: 12px 0; padding-left: 5px; }
+        a { color: #0366d6; text-decoration: none; font-weight: 500; }
+        a:hover { text-decoration: underline; color: #0056b3; }
     </style>
 </head>
 <body>
-    <h1>Sitemap</h1>
+    <h1>Website Sitemap</h1>
     <ul>\n`;
 
     // --- 2. GENERATE XML SITEMAP ---
     let xmlContent = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
 
-    // Loop through files and populate both string buffers
+    // Loop through files and populate both
     files.forEach(file => {
         const urlPath = file === 'index.html' ? '' : file;
         const fullUrl = `${BASE_URL}${urlPath}`;
-        const label = file.replace('.html', '').replace(/[-_]/g, ' ') || 'Home';
+        const label = cleanLabel(file);
         
         // Append to HTML
         htmlContent += `        <li><a href="${fullUrl}">${label}</a></li>\n`;
@@ -63,15 +85,13 @@ function generateSitemaps() {
         xmlContent += `  <url>\n    <loc>${fullUrl}</loc>\n    <lastmod>${currentDate}</lastmod>\n    <priority>${file === 'index.html' ? '1.0' : '0.8'}</priority>\n  </url>\n`;
     });
 
-    // Close formats
     htmlContent += `    </ul>\n</body>\n</html>`;
     xmlContent += `</urlset>`;
 
-    // Write both files to disk
     fs.writeFileSync(path.join(__dirname, HTML_OUTPUT), htmlContent);
     fs.writeFileSync(path.join(__dirname, XML_OUTPUT), xmlContent);
     
-    console.log(`✅ Success: ${HTML_OUTPUT} and ${XML_OUTPUT} updated with ${files.length} links.`);
+    console.log(`✅ Success: ${HTML_OUTPUT} and ${XML_OUTPUT} updated.`);
 }
 
 generateSitemaps();
