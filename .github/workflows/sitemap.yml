@@ -1,36 +1,40 @@
-name: Generate Sitemap
+name: Generate Automated Sitemaps
 
 on:
   push:
     branches:
-      - main # Change to 'master' if your default branch uses that name
+      - main # change to your default branch name if different
     paths-ignore:
-      - '**.md'
-      - '.gitignore'
-      - 'LICENSE'
-      - '_headers'
-      - '_redirects'
+      - 'sitemap.html'
+      - 'sitemap.xml' # Ignore both so the runner doesn't trigger itself
 
 jobs:
-  sitemap_job:
+  build:
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
     steps:
-      - name: Checkout Code
+      - name: Checkout Repository
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0 # Fetches full history so file modification dates match real git history
 
-      - name: Generate Sitemap
-        id: sitemap
-        uses: cicirello/generate-sitemap@v1
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          base-url-path: https://symbols.thenepal.io/
-          exclude-paths: 404.html # Keeps your 404 page hidden from search engine indexing
+          node-version: '20'
+        
+      - name: Run Sitemap Generator
+        run: node generate-sitemap.js
 
-      - name: Commit and Push Sitemap
+      - name: Commit and Push Changes
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add sitemap.xml
-          git diff --quiet && git diff --staged --quiet || git commit -m "Automated sitemap update"
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Stage both files
+          git add sitemap.html sitemap.xml
+          
+          # Only commit if there are changes to avoid workflow errors
+          git diff-index --quiet HEAD || git commit -m "chore: automatically update html and xml sitemaps [skip ci]"
           git push
