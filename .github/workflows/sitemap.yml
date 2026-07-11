@@ -3,17 +3,17 @@ name: Generate Automated Sitemaps
 on:
   push:
     branches:
-      - main # change to your default branch name if different
+      - main # Change to 'master' if your default branch is named master
     paths-ignore:
       - 'sitemap.html'
-      - 'sitemap.xml' # Ignore both so the runner doesn't trigger itself
+      - 'sitemap.xml' # Prevents GitHub Actions from triggering itself in a loop
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     permissions:
-      contents: write
+      contents: write # Allows the action to commit files back to your repo
 
     steps:
       - name: Checkout Repository
@@ -35,6 +35,6 @@ jobs:
           # Stage both files
           git add sitemap.html sitemap.xml
           
-          # Only commit if there are changes to avoid workflow errors
-          git diff-index --quiet HEAD || git commit -m "chore: automatically update html and xml sitemaps [skip ci]"
+          # Removed [skip ci] so Cloudflare detects the commit and deploys the new files
+          git diff-index --quiet HEAD || git commit -m "chore: automatically update html and xml sitemaps"
           git push
