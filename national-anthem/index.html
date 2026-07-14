@@ -15,6 +15,8 @@
 <meta property="og:description" content="Everything about Nepal's national anthem: its 2007 adoption, writer, composer, structure, meaning and ceremonial protocol.">
 <meta property="og:url" content="https://symbols.thenepal.io/national-anthem/">
 <meta property="og:image" content="https://symbols.thenepal.io/photos/National_anthem_of_Nepal.webp">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="ne_NP">
 <meta name="twitter:card" content="summary_large_image">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -146,11 +148,36 @@ img{max-width:100%;display:block;}
 
 /* breadcrumb / nav */
 .topbar{border-bottom:1px solid var(--rule);background:rgba(251,243,230,.94);position:sticky;top:0;z-index:20;backdrop-filter:blur(6px);}
-.topbar-inner{max-width:880px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;font-size:.85rem;}
+.topbar-inner{max-width:880px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:.85rem;flex-wrap:wrap;}
 .crumbs a{color:var(--ink-soft);}
 .crumbs span{color:var(--ink-soft);margin:0 6px;}
 .crumbs .current{color:var(--maroon-dark);font-weight:600;}
 .back-hub{display:inline-flex;align-items:center;gap:6px;font-weight:600;color:var(--maroon);white-space:nowrap;}
+.topbar-right{display:flex;align-items:center;gap:14px;flex-shrink:0;}
+
+/* language switcher (matches network standard — same pattern as symbols.thenepal.io / nationalflag.thenepal.io / nationalanimal.thenepal.io) */
+.lang-switch-desktop{display:flex;align-items:center;gap:8px;font-weight:600;font-size:.78rem;background:var(--white);border:1px solid var(--rule);border-radius:999px;padding:5px 7px 5px 11px;flex-shrink:0;}
+.lang-switch-desktop .lg-icon{font-size:.86rem;}
+.lang-switch-desktop a.lg-opt{color:var(--ink-soft);text-decoration:none;padding:4px 9px;border-radius:999px;}
+.lang-switch-desktop a.lg-opt:hover{background:var(--paper);color:var(--maroon-dark);text-decoration:none;}
+.lang-switch-desktop .lg-opt.current{background:var(--maroon-dark);color:#fff;padding:4px 11px;border-radius:999px;cursor:default;}
+.lang-switch-mobile{display:none;}
+
+@media(max-width:640px){
+  .topbar-inner{font-size:.78rem;}
+  .back-hub{display:none;}
+  .lang-switch-desktop{display:none;}
+  .lang-switch-mobile{display:block;position:relative;flex-shrink:0;}
+  .lang-switch-mobile summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;font-weight:700;font-size:.78rem;color:var(--maroon-dark);background:var(--white);border:1px solid var(--rule);border-radius:999px;min-height:38px;padding:7px 14px;}
+  .lang-switch-mobile summary::-webkit-details-marker{display:none;}
+  .lang-switch-mobile summary::after{content:none;}
+  .lang-switch-mobile summary .chev{font-size:.64rem;color:var(--marigold-deep);transition:transform .15s ease;}
+  .lang-switch-mobile[open] summary .chev{transform:rotate(180deg);}
+  .lang-switch-mobile .lg-mobile-list{position:absolute;right:0;top:calc(100% + 8px);z-index:70;background:var(--white);border:1px solid var(--rule);border-radius:10px;box-shadow:0 12px 28px rgba(92,30,30,.18);overflow:hidden;width:150px;}
+  .lang-switch-mobile .lg-mobile-list a{display:flex;align-items:center;gap:8px;font-size:.85rem;font-weight:600;color:var(--ink);min-height:44px;padding:11px 14px;text-decoration:none;}
+  .lang-switch-mobile .lg-mobile-list a.current{background:var(--paper);color:var(--maroon-dark);}
+  .lang-switch-mobile .lg-mobile-list a:not(.current):hover{background:var(--paper);}
+}
 
 /* hero */
 .hero{padding:56px 0 40px;position:relative;overflow:hidden;
@@ -274,7 +301,21 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;
       <span aria-hidden="true">/</span>
       <span class="current">National Anthem</span>
     </nav>
-    <a class="back-hub" href="https://symbols.thenepal.io/">← All national symbols of Nepal</a>
+    <div class="topbar-right">
+      <a class="back-hub" href="https://symbols.thenepal.io/">← All national symbols of Nepal</a>
+      <div class="lang-switch-desktop" aria-label="Choose language">
+        <span class="lg-icon" aria-hidden="true">🌐</span>
+        <span class="lg-opt current">English</span>
+        <a class="lg-opt" href="https://symbols.thenepal.io/ne/national-anthem/">नेपाली</a>
+      </div>
+      <details class="lang-switch-mobile">
+        <summary>🌐 EN <span class="chev">▾</span></summary>
+        <div class="lg-mobile-list">
+          <a class="current" href="https://symbols.thenepal.io/national-anthem/">English</a>
+          <a href="https://symbols.thenepal.io/ne/national-anthem/">नेपाली</a>
+        </div>
+      </details>
+    </div>
   </div>
 </div>
 
@@ -461,6 +502,16 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;
     <span>Educational content — verify with official Nepali government sources.</span>
   </div>
 </footer>
+
+<script>
+(function(){
+  var lang = document.querySelector('.lang-switch-mobile');
+  if(!lang) return;
+  lang.querySelectorAll('a').forEach(function(link){
+    link.addEventListener('click', function(){ lang.removeAttribute('open'); });
+  });
+})();
+</script>
 
 </body>
 </html>
