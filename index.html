@@ -3,6 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#7E2A2A">
+<link rel="manifest" href="/manifest.json">
+
 <title>National Symbols of Nepal — Complete Guide | symbols.thenepal.io</title>
 <meta name="description" content="Explore all 22 national symbols of Nepal — animal, bird, flower, flag, anthem, fruit, tree, dress, emblem and more. The most complete guide to Nepal's national identity.">
 <link rel="canonical" href="https://symbols.thenepal.io/">
@@ -16,20 +19,20 @@
 <meta property="og:description" content="All 22 national symbols of Nepal in one place — animal, bird, flower, flag, anthem, emblem and more. Complete, accurate, SEO-optimised guides.">
 <meta property="og:url" content="https://symbols.thenepal.io/">
 <meta property="og:site_name" content="The Nepal — National Symbols">
-<meta property="og:image" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhWUd1n_ywAF4B-ge2sKD4M3Cx63-FNQJAtKQn9D5NBCOp3IWPk7zE7qTcTfhl8fosZmjPprBcr4-E9zg2s9CrLxljtYLwSTaVxVIUhdV5_j-ViLF_ijWZm230WfjyLqS6P9z9MFlVY1prlpN0LiUmgDtbdgvXjj5woWhyLLJlwywPsHt8GgeiYm4SETFM_/w1200-h750-rw/National_animal_of_Nepal_202607012252.jpeg">
+<meta property="og:image" content="/photos/national_animal_of_nepal.webp">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="750">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="National Symbols of Nepal — Complete Guide">
 <meta name="twitter:description" content="All 22 national symbols of Nepal in one place.">
-<meta name="twitter:image" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhWUd1n_ywAF4B-ge2sKD4M3Cx63-FNQJAtKQn9D5NBCOp3IWPk7zE7qTcTfhl8fosZmjPprBcr4-E9zg2s9CrLxljtYLwSTaVxVIUhdV5_j-ViLF_ijWZm230WfjyLqS6P9z9MFlVY1prlpN0LiUmgDtbdgvXjj5woWhyLLJlwywPsHt8GgeiYm4SETFM_/w1200-h750-rw/National_animal_of_Nepal_202607012252.jpeg">
+<meta name="twitter:image" content="/photos/national_animal_of_nepal.webp">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-<link rel="preload" as="image" fetchpriority="high" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhWUd1n_ywAF4B-ge2sKD4M3Cx63-FNQJAtKQn9D5NBCOp3IWPk7zE7qTcTfhl8fosZmjPprBcr4-E9zg2s9CrLxljtYLwSTaVxVIUhdV5_j-ViLF_ijWZm230WfjyLqS6P9z9MFlVY1prlpN0LiUmgDtbdgvXjj5woWhyLLJlwywPsHt8GgeiYm4SETFM_/w1200-h750-rw/National_animal_of_Nepal_202607012252.jpeg">
+<link rel="preload" as="image" fetchpriority="high" href="/photos/national_flag_nepal.webp">
 
 <script type="application/ld+json">
 {
@@ -118,6 +121,22 @@
   --white:#FFFFFF;
   --radius:8px;
 }
+[data-theme="dark"]{
+  --cream:#1a1612;
+  --paper:#241f1a;
+  --maroon:#c45a5a;
+  --maroon-dark:#a04040;
+  --maroon-mid:#b05050;
+  --marigold:#e8b050;
+  --marigold-deep:#d4a040;
+  --marigold-ink:#c89030;
+  --forest:#5a7a50;
+  --ink:#e8e0d4;
+  --ink-soft:#b8a890;
+  --rule:#3a3228;
+  --white:#2a241d;
+}
+
 *{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
 body{
@@ -496,8 +515,12 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
   .foot-grid > div:first-child{grid-column:auto;}
   .foot-bottom{flex-direction:column;gap:8px;}
 }
+/* ===== Scroll Reveal Animations ===== */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .6s ease,transform .6s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
 @media(prefers-reduced-motion:reduce){*{transition:none !important;animation:none !important;}}
 </style>
+<base target="_blank">
 </head>
 <body>
 
@@ -522,6 +545,7 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
         </div>
       </div>
 
+      <button id="theme-toggle" aria-label="Toggle dark mode" style="background:none;border:1px solid var(--rule);border-radius:999px;padding:7px 12px;cursor:pointer;font-size:1rem;flex-shrink:0;">🌙</button>
       <div class="lang-switch-desktop" aria-label="Choose language">
         <span class="lg-icon" aria-hidden="true">🌐</span>
         <span class="lg-opt current">EN</span>
@@ -581,7 +605,7 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
           <button type="button" class="sb-chip" data-field="category">Category</button>
         </div>
       </div>
-      <img class="hero-flag" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiH3mz0ZGB0t9c_sIewgfcnidzpN7tlXzhA2Itd1NSAsRrC34Ml4k9ybNgvEruDdss7h_L6u9Nza8kyZV1H50mmnqGuHh5jkAH6_mS4yhZAOIQaMza5Q8Suk60aT_ow_sCntmI-vipPwC_SLm-bxAdC0GkWdc0XEy36zfsx-Q2C6KgHDVTU55STOBvlpdj_/w640-h478-rw/National-Flag-Of-Nepal-removebg-preview.png" alt="Flag of Nepal, made of two stacked crimson pennants with a white sun and moon" width="130" height="97" fetchpriority="high" decoding="async">
+      <img class="hero-flag" src="/photos/national_flag_nepal.webp" alt="Flag of Nepal, made of two stacked crimson pennants with a white sun and moon" width="130" height="97" fetchpriority="high" decoding="async">
     </div>
   </div>
 </section>
@@ -597,7 +621,7 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
       <div class="carousel-track" id="carousel-track">
 
         <div class="c-slide">
-          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhWUd1n_ywAF4B-ge2sKD4M3Cx63-FNQJAtKQn9D5NBCOp3IWPk7zE7qTcTfhl8fosZmjPprBcr4-E9zg2s9CrLxljtYLwSTaVxVIUhdV5_j-ViLF_ijWZm230WfjyLqS6P9z9MFlVY1prlpN0LiUmgDtbdgvXjj5woWhyLLJlwywPsHt8GgeiYm4SETFM_/w1200-h750-rw/National_animal_of_Nepal_202607012252.jpeg" alt="Cow, the national animal of Nepal" loading="eager" decoding="async">
+          <img src="/photos/national_animal_of_nepal.webp" alt="Cow, the national animal of Nepal" loading="eager" decoding="async">
           <div class="c-body">
             <span class="c-eyebrow">🐄 National Animal</span>
             <h3>The Sacred Cow</h3>
@@ -607,7 +631,7 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
         </div>
 
         <div class="c-slide">
-          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg3T8xPOHYO28g7AWYNvPvINNKKX3flfr91LiztHjbfDnE065sBOLVUiCoWDdsr1vhIXRMVCESwu8-6QWrGjDPTJIj-uwas_MExMElMU39jHY-ISlaBWULJ2JAtK8is4Jbl7wYeIBNVEkqF8USRaPkntqIQp5w9OllboY4n6RbTnVB2mrJoY6zoo3v35lDn/w1200-h750-rw/National_bird_of_nepal_2K_202607020755.webp" alt="Himalayan Monal (Danphe), the national bird of Nepal" loading="lazy" decoding="async">
+          <img src="/photos/national_bird_of_nepal.webp" alt="Himalayan Monal (Danphe), the national bird of Nepal" loading="lazy" decoding="async">
           <div class="c-body">
             <span class="c-eyebrow">🦚 National Bird</span>
             <h3>Danphe — Himalayan Monal</h3>
@@ -617,7 +641,7 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
         </div>
 
         <div class="c-slide">
-          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhis_kg3mAEizJqqZ28LSFgDjDU5vxoJ6Z9axNRKJDI6HI1AT9CRAJzB88amJwa26LP9-cCLSRhSagcO6Giz31yV9aIMSkN3eCN2tJWQVIkTGUKIK9oYBfoz4n00qTv4Gzb3XU7o-JL9onnLq41jGEp1RtMdaDpXNM7rfl_0siPk9Gi49QXcfv4bieQULdF/w1200-h750-rw/National-Flower-of-Nepal.jpeg" alt="Rhododendron, the national flower of Nepal" loading="lazy" decoding="async">
+          <img src="/photos/national_flower_of_nepal.webp" alt="Rhododendron, the national flower of Nepal" loading="lazy" decoding="async">
           <div class="c-body">
             <span class="c-eyebrow">🌺 National Flower</span>
             <h3>Rhododendron — Lali Gurans</h3>
@@ -627,7 +651,7 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
         </div>
 
         <div class="c-slide">
-          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEguOoOl5cYuQ-SqFzngURQMOmn3X24ACa2FhlzY37sevd8ehNj_edY06zmG-InlUOMGoPKpYGzhVzXxDByenvvZy4cP5dcNYkCmGebstva9YFlqCVpmS7L4rl65njZFlDfwYqFHku77lJ65zmtwOUG6f_EGSBmGQKAM9MplX5kD8WdciaAIcz5tgef6-HeB/w1200-h750-rw/national_everest_of_nepal_2K_202607020827.webp" alt="Sagarmatha, Mount Everest, seen from the Nepal side" loading="lazy" decoding="async">
+          <img src="/photos/national_everest_of_nepal.webp" alt="Sagarmatha, Mount Everest, seen from the Nepal side" loading="lazy" decoding="async">
           <div class="c-body">
             <span class="c-eyebrow">🏔️ Highest Peak</span>
             <h3>Sagarmatha — Mount Everest</h3>
@@ -637,7 +661,7 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
         </div>
 
         <div class="c-slide">
-          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhtjY-SeYto2xYHiih4yAoP045AUAHrcGMSPEe5gFTWa3oMnuKMMBFrCTExXcsIkSrPLsVE0L6Xz16KzaclGucIUpt_Qm04zqiubk-KZzfG4IckWDbJH6WFAVFw_uj2S5c8hrJXCB4pskkAOtfPV5rGBdFiMPFJJiHRhuqWz0Fs66To59XGaj--YCYm_6BP/w1200-h750-rw/Dal%20Bhat.webp" alt="Dal Bhat thali, the national dish of Nepal" loading="lazy" decoding="async" onerror="this.closest('.c-slide').style.background='linear-gradient(135deg,#6e3a1c,#c06020)';this.style.display='none';">
+          <img src="/photos/national_dish_of_nepal.webp" alt="Dal Bhat thali, the national dish of Nepal" loading="lazy" decoding="async" onerror="this.closest('.c-slide').style.background='linear-gradient(135deg,#6e3a1c,#c06020)';this.style.display='none';">
           <div class="c-body">
             <span class="c-eyebrow">🍛 National Dish</span>
             <h3>Dal Bhat</h3>
@@ -663,23 +687,23 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
     </div>
     <div class="category-grid">
       <a class="cat-card cat-jump" data-cat="nature" href="#all-section">
-        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhWUd1n_ywAF4B-ge2sKD4M3Cx63-FNQJAtKQn9D5NBCOp3IWPk7zE7qTcTfhl8fosZmjPprBcr4-E9zg2s9CrLxljtYLwSTaVxVIUhdV5_j-ViLF_ijWZm230WfjyLqS6P9z9MFlVY1prlpN0LiUmgDtbdgvXjj5woWhyLLJlwywPsHt8GgeiYm4SETFM_/w900-h600-rw/National_animal_of_Nepal_202607012252.jpeg" alt="Nature and wildlife symbols of Nepal" loading="lazy">
+        <img src="/photos/national_animal_of_nepal.webp" alt="Nature and wildlife symbols of Nepal" loading="lazy">
         <div class="cat-body"><div class="cat-count">6 Symbols</div><h3>Nature &amp; Wildlife</h3><p>Animal, bird, flower, tree, fish, butterfly</p></div>
       </a>
       <a class="cat-card cat-jump" data-cat="culture" href="#all-section">
-        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiH3mz0ZGB0t9c_sIewgfcnidzpN7tlXzhA2Itd1NSAsRrC34Ml4k9ybNgvEruDdss7h_L6u9Nza8kyZV1H50mmnqGuHh5jkAH6_mS4yhZAOIQaMza5Q8Suk60aT_ow_sCntmI-vipPwC_SLm-bxAdC0GkWdc0XEy36zfsx-Q2C6KgHDVTU55STOBvlpdj_/w900-h600-rw/National-Flag-Of-Nepal-removebg-preview.png" alt="Culture and identity symbols of Nepal" loading="lazy" style="background:var(--maroon-dark);">
+        <img src="/photos/national_flag_nepal.webp" alt="Culture and identity symbols of Nepal" loading="lazy" style="background:var(--maroon-dark);">
         <div class="cat-body"><div class="cat-count">9 Symbols</div><h3>Culture &amp; Identity</h3><p>Flag, anthem, language, dress, emblem &amp; more</p></div>
       </a>
       <a class="cat-card cat-jump" data-cat="food" href="#all-section">
-        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhDDzcK1830BCNU6NFh9q_b2xql8YvOLFAzXuhLrbOs2YtWIFnZ72vJEUUxNjtX1BQHtdBxhJivSf2sKa9xqljeEW5CR56TGCQWiMWKkEGK84vnrtLO6qmwkFwYaP2E_1haKo6ea-M9CZY1P1kKsvjvavyjEse2_SwQMOnWqRMsE5J1xxk3W-sHydug7O8s/w900-h600-rw/national%20fruit%20of%20nepal%20mandarin%20orange.webp" alt="Food and drink symbols of Nepal" loading="lazy">
+        <img src="/photos/national_fruit_of_nepal.webp" alt="Food and drink symbols of Nepal" loading="lazy">
         <div class="cat-body"><div class="cat-count">2 Symbols</div><h3>Food &amp; Drink</h3><p>National fruit and national dish</p></div>
       </a>
       <a class="cat-card cat-jump" data-cat="geography" href="#all-section">
-        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEguOoOl5cYuQ-SqFzngURQMOmn3X24ACa2FhlzY37sevd8ehNj_edY06zmG-InlUOMGoPKpYGzhVzXxDByenvvZy4cP5dcNYkCmGebstva9YFlqCVpmS7L4rl65njZFlDfwYqFHku77lJ65zmtwOUG6f_EGSBmGQKAM9MplX5kD8WdciaAIcz5tgef6-HeB/w900-h600-rw/national_everest_of_nepal_2K_202607020827.webp" alt="Geography symbols of Nepal" loading="lazy">
+        <img src="/photos/national_everest_of_nepal.webp" alt="Geography symbols of Nepal" loading="lazy">
         <div class="cat-body"><div class="cat-count">3 Symbols</div><h3>Geography</h3><p>Monument, Everest, cave</p></div>
       </a>
       <a class="cat-card cat-jump" data-cat="heritage" href="#all-section">
-        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhU3v-9G2IplxP1NNQpdKDt8JVpDLxqeHBk54_cARyKDSESTe0EMpAB8EPsq5dzHtUy7ZMSkLANdhTy-uz0seSFkKDXMLkg_Rxwf4ixoaIMjazCnj1fkbpY1HwCIDHdHffQ_xyIgDSaWOKlOgVapEuIBuZMxlHhD3_NA16lmxTZF0Yl9jFkyszriKzAo3A9/w900-h600-rw/National_museum_of_nepal_2K_202607020826.webp" alt="Heritage and economy symbols of Nepal" loading="lazy">
+        <img src="/photos/national_museum_nepal.webp" alt="Heritage and economy symbols of Nepal" loading="lazy">
         <div class="cat-body"><div class="cat-count">2 Symbols</div><h3>Heritage</h3><p>National museum, national currency</p></div>
       </a>
     </div>
@@ -725,7 +749,7 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
         <a href="https://symbols.thenepal.io/national-animal/" class="btn-feat" aria-label="Read the full guide about Nepal's national animal, the cow">Read Full Guide <span aria-hidden="true">→</span></a>
       </div>
       <div class="fc-visual">
-        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhWUd1n_ywAF4B-ge2sKD4M3Cx63-FNQJAtKQn9D5NBCOp3IWPk7zE7qTcTfhl8fosZmjPprBcr4-E9zg2s9CrLxljtYLwSTaVxVIUhdV5_j-ViLF_ijWZm230WfjyLqS6P9z9MFlVY1prlpN0LiUmgDtbdgvXjj5woWhyLLJlwywPsHt8GgeiYm4SETFM_/w900-h500-rw/National_animal_of_Nepal_202607012252.jpeg" alt="Cow, the national animal of Nepal" width="600" height="330" loading="eager" decoding="async">
+        <img src="/photos/national_animal_of_nepal.webp" alt="Cow, the national animal of Nepal" width="600" height="330" loading="eager" decoding="async">
       </div>
     </div>
   </div>
@@ -752,7 +776,7 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
 
       <a href="https://symbols.thenepal.io/national-animal/" class="sym-card done" data-cat="nature" data-keywords="cow animal gai sacred" data-nepali="गाई (Gai)" data-scientific="Bos taurus" data-category-label="National Animal" aria-label="National Animal: Cow, read the guide">
         <div class="badge">Live</div>
-        <div class="card-visual v-animal"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhWUd1n_ywAF4B-ge2sKD4M3Cx63-FNQJAtKQn9D5NBCOp3IWPk7zE7qTcTfhl8fosZmjPprBcr4-E9zg2s9CrLxljtYLwSTaVxVIUhdV5_j-ViLF_ijWZm230WfjyLqS6P9z9MFlVY1prlpN0LiUmgDtbdgvXjj5woWhyLLJlwywPsHt8GgeiYm4SETFM_/w700-h500-rw/National_animal_of_Nepal_202607012252.jpeg" alt="Cow, the national animal of Nepal" loading="lazy" decoding="async"><div class="visual-overlay"></div></div>
+        <div class="card-visual v-animal"><img src="/photos/national_animal_of_nepal.webp" alt="Cow, the national animal of Nepal" loading="lazy" decoding="async"><div class="visual-overlay"></div></div>
         <div class="card-body">
           <span class="eyebrow">National Animal</span>
           <h3>Cow — गाई</h3>
@@ -763,7 +787,7 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
 
       <a href="https://symbols.thenepal.io/national-bird/" class="sym-card done" data-cat="nature" data-keywords="bird danphe monal himalayan" data-nepali="डाँफे (Danphe)" data-scientific="Lophophorus impejanus" data-category-label="National Bird" aria-label="National Bird: Himalayan Monal, read the guide">
         <div class="badge">Live</div>
-        <div class="card-visual v-bird"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg3T8xPOHYO28g7AWYNvPvINNKKX3flfr91LiztHjbfDnE065sBOLVUiCoWDdsr1vhIXRMVCESwu8-6QWrGjDPTJIj-uwas_MExMElMU39jHY-ISlaBWULJ2JAtK8is4Jbl7wYeIBNVEkqF8USRaPkntqIQp5w9OllboY4n6RbTnVB2mrJoY6zoo3v35lDn/w700-h500-rw/National_bird_of_nepal_2K_202607020755.webp" alt="Himalayan Monal, the national bird of Nepal" loading="lazy" decoding="async"><div class="visual-overlay"></div></div>
+        <div class="card-visual v-bird"><img src="/photos/national_bird_of_nepal.webp" alt="Himalayan Monal, the national bird of Nepal" loading="lazy" decoding="async"><div class="visual-overlay"></div></div>
         <div class="card-body">
           <span class="eyebrow">National Bird</span>
           <h3>Himalayan Monal — डाँफे</h3>
@@ -774,7 +798,7 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
 
       <a href="https://symbols.thenepal.io/national-flower/" class="sym-card done" data-cat="nature" data-keywords="flower rhododendron lali gurans" data-nepali="लाली गुराँस (Lali Gurans)" data-scientific="Rhododendron arboreum" data-category-label="National Flower" aria-label="National Flower: Rhododendron, read the guide">
         <div class="badge">Live</div>
-        <div class="card-visual v-flower"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhis_kg3mAEizJqqZ28LSFgDjDU5vxoJ6Z9axNRKJDI6HI1AT9CRAJzB88amJwa26LP9-cCLSRhSagcO6Giz31yV9aIMSkN3eCN2tJWQVIkTGUKIK9oYBfoz4n00qTv4Gzb3XU7o-JL9onnLq41jGEp1RtMdaDpXNM7rfl_0siPk9Gi49QXcfv4bieQULdF/w700-h500-rw/National-Flower-of-Nepal.jpeg" alt="Rhododendron, the national flower of Nepal, in bloom" loading="lazy" decoding="async"><div class="visual-overlay"></div></div>
+        <div class="card-visual v-flower"><img src="/photos/national_flower_of_nepal.webp" alt="Rhododendron, the national flower of Nepal, in bloom" loading="lazy" decoding="async"><div class="visual-overlay"></div></div>
         <div class="card-body">
           <span class="eyebrow">National Flower</span>
           <h3>Rhododendron — लाली गुराँस</h3>
@@ -785,7 +809,7 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
 
       <a href="https://symbols.thenepal.io/national-tree/" class="sym-card done" data-cat="nature" data-keywords="tree peepal sacred fig bodhi ficus religiosa" data-nepali="पीपल (Peepal)" data-scientific="Ficus religiosa" data-category-label="National Tree" aria-label="National Tree: Peepal, read the guide">
         <div class="badge">Live</div>
-        <div class="card-visual v-tree"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjuDF6dBehze1AJ0X8jR5MiEY5sjBN5nfTBlj63T7VZakc3PpLham3yPcZTNruPiLd6ANCOCuzVlJV79Ep__TS5Sr70hYxpRTffA2CCcw2-162CYf88jmavntKCkZdoTsXqWAHGIcXyX-y2Png-t5vVSniJLJ_ravn3gCyd2jMQOHovEezFwbtLX5Vg7BaD/w700-h500-rw/National_tree_of_nepal_2K_202607020758.webp" alt="Peepal tree, the national tree of Nepal" loading="lazy" decoding="async"><div class="visual-overlay"></div></div>
+        <div class="card-visual v-tree"><img src="/photos/national_tree_of_nepal.webp" alt="Peepal tree, the national tree of Nepal" loading="lazy" decoding="async"><div class="visual-overlay"></div></div>
         <div class="card-body">
           <span class="eyebrow">National Tree</span>
           <h3>Peepal — Sacred Fig</h3>
@@ -796,7 +820,7 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
 
       <a href="https://symbols.thenepal.io/national-fish/" class="sym-card done" data-cat="nature" data-keywords="fish asala mahseer golden" data-nepali="असला (Asala)" data-scientific="Tor putitora" data-category-label="National Fish" aria-label="National Fish: Asala, read the guide">
         <div class="badge">Live</div>
-        <div class="card-visual v-fish"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhp-_iodF104D54nGDEhfqtvi2MMCTICev008UFNU9fTiO1VLCRSROJIZum1yaTqzEFN9sPREWXMUEpIw4keSx8xqeaJbheym888CtrJtNkdTIgKwbpPtS4zdlcraiFWo8aEeiR3qwK503yAgaJ0pfBUqwo6Fr6yoUr_s2I0t_fFI2w83vIcXjKt_Z-38_f/w700-h500-rw/national_fish_of_nepal_2K_202607020755.webp" alt="Golden Mahseer, the national fish of Nepal" loading="lazy" decoding="async"><div class="visual-overlay"></div></div>
+        <div class="card-visual v-fish"><img src="/photos/national_fish_of_nepal.webp" alt="Golden Mahseer, the national fish of Nepal" loading="lazy" decoding="async"><div class="visual-overlay"></div></div>
         <div class="card-body">
           <span class="eyebrow">National Fish</span>
           <h3>Asala — Golden Mahseer</h3>
@@ -807,7 +831,7 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
 
       <a href="https://symbols.thenepal.io/national-butterfly/" class="sym-card done" data-cat="nature" data-keywords="butterfly krishna peacock papilio swallowtail" data-nepali="कृष्ण मयूर पुतली" data-scientific="Papilio krishna" data-category-label="National Butterfly" aria-label="National Butterfly: Krishna Peacock, read the guide">
         <div class="badge">Live</div>
-        <div class="card-visual v-butterfly"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEio2xt8a-dMCvz_EIR7pSXWoDQ1KI5qrbUiORBtk-qJ7eJ47LsICrx8kkuB3xekARJajJNQhBw6OSyLyibH8JqNQjKOydOTIbRvDuoTqGwF66Cm_aqVVKoLnbn0IS0Zl8ebmglkrjR16y0xUpJwDJDsMDeifSUbTcsByAt26yFdMRwJjLG6cEXN1rei8oN2/w700-h500-rw/National_butterfly_of_nepal_2K_202607020759.webp" alt="Krishna Peacock butterfly, popularly regarded as Nepal's national butterfly" loading="lazy" decoding="async"><div class="visual-overlay"></div></div>
+        <div class="card-visual v-butterfly"><img src="/photos/national_butterfly_of_nepal.webp" alt="Krishna Peacock butterfly, popularly regarded as Nepal's national butterfly" loading="lazy" decoding="async"><div class="visual-overlay"></div></div>
         <div class="card-body">
           <span class="eyebrow">National Butterfly</span>
           <h3>Krishna Peacock</h3>
@@ -827,7 +851,7 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
 
       <a href="https://nationalfruit.thenepal.io/" class="sym-card external" data-cat="food" data-keywords="fruit junar orange sweet citrus mandarin suntala" data-nepali="जुनार / सुन्तला (Junar)" data-scientific="Citrus reticulata" data-category-label="National Fruit" aria-label="National Fruit: Mandarin Orange, read the guide on nationalfruit.thenepal.io">
         <div class="badge">Live</div>
-        <div class="card-visual v-fruit"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhDDzcK1830BCNU6NFh9q_b2xql8YvOLFAzXuhLrbOs2YtWIFnZ72vJEUUxNjtX1BQHtdBxhJivSf2sKa9xqljeEW5CR56TGCQWiMWKkEGK84vnrtLO6qmwkFwYaP2E_1haKo6ea-M9CZY1P1kKsvjvavyjEse2_SwQMOnWqRMsE5J1xxk3W-sHydug7O8s/w700-h500-rw/national%20fruit%20of%20nepal%20mandarin%20orange.webp" alt="Mandarin Orange (Suntala), the national fruit of Nepal" loading="lazy" decoding="async"><div class="visual-overlay"></div></div>
+        <div class="card-visual v-fruit"><img src="/photos/national_fruit_of_nepal.webp" alt="Mandarin Orange (Suntala), the national fruit of Nepal" loading="lazy" decoding="async"><div class="visual-overlay"></div></div>
         <div class="card-body">
           <span class="eyebrow">National Fruit</span>
           <h3>Junar — Mandarin Orange</h3>
@@ -838,7 +862,7 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
 
       <a href="https://nationalfood.thenepal.io/" class="sym-card external" data-cat="food" data-keywords="dish dal bhat food meal rice lentil" data-nepali="दाल भात (Dal Bhat)" data-scientific="—" data-category-label="National Dish" aria-label="National Dish: Dal Bhat, read the guide on nationalfood.thenepal.io">
         <div class="badge">Live</div>
-        <div class="card-visual v-dish"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhtjY-SeYto2xYHiih4yAoP045AUAHrcGMSPEe5gFTWa3oMnuKMMBFrCTExXcsIkSrPLsVE0L6Xz16KzaclGucIUpt_Qm04zqiubk-KZzfG4IckWDbJH6WFAVFw_uj2S5c8hrJXCB4pskkAOtfPV5rGBdFiMPFJJiHRhuqWz0Fs66To59XGaj--YCYm_6BP/w700-h500-rw/Dal%20Bhat.webp" alt="Dal Bhat thali, the national dish of Nepal" loading="lazy" decoding="async" onerror="this.style.display='none';this.parentElement.innerHTML+='🍛';"><div class="visual-overlay"></div></div>
+        <div class="card-visual v-dish"><img src="/photos/national_dish_of_nepal.webp" alt="Dal Bhat thali, the national dish of Nepal" loading="lazy" decoding="async" onerror="this.style.display='none';this.parentElement.innerHTML+='🍛';"><div class="visual-overlay"></div></div>
         <div class="card-body">
           <span class="eyebrow">National Dish</span>
           <h3>Dal Bhat</h3>
@@ -858,7 +882,7 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
 
       <a href="https://symbols.thenepal.io/national-flag/" class="sym-card done" data-cat="culture" data-keywords="flag crimson red triangle pennant" data-nepali="राष्ट्रिय झण्डा" data-scientific="—" data-category-label="National Flag" aria-label="National Flag, read the guide">
         <div class="badge">Live</div>
-        <div class="card-visual v-flag"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiH3mz0ZGB0t9c_sIewgfcnidzpN7tlXzhA2Itd1NSAsRrC34Ml4k9ybNgvEruDdss7h_L6u9Nza8kyZV1H50mmnqGuHh5jkAH6_mS4yhZAOIQaMza5Q8Suk60aT_ow_sCntmI-vipPwC_SLm-bxAdC0GkWdc0XEy36zfsx-Q2C6KgHDVTU55STOBvlpdj_/w640-h478-rw/National-Flag-Of-Nepal-removebg-preview.png" alt="Flag of Nepal" loading="lazy" decoding="async"><div class="visual-overlay"></div></div>
+        <div class="card-visual v-flag"><img src="/photos/national_flag_nepal.webp" alt="Flag of Nepal" loading="lazy" decoding="async"><div class="visual-overlay"></div></div>
         <div class="card-body">
           <span class="eyebrow">National Flag</span>
           <h3>The Crimson Pennant</h3>
@@ -869,7 +893,7 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
 
       <a href="https://symbols.thenepal.io/national-anthem/" class="sym-card done" data-cat="culture" data-keywords="anthem sayaun thunga phool ka song national" data-nepali="सयौं थुँगा फूलका" data-scientific="—" data-category-label="National Anthem" aria-label="National Anthem, read the guide">
         <div class="badge">Live</div>
-        <div class="card-visual v-anthem"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg9dfLp9Rl11FNJwopjLG6OoLFGogA65EnhlUdwn5m8Zbh09Xs6miuuiP3mlYesI_D8CTbqimN9xqI5qA2a-ABgBjXMlFS2sEO0qoFyZSb8lyebZh3MFXH-f7KHLBfJ8xEVtI7pamlkkdzrwmJHHXVK1NSelrOvhfJ5YWFZmmLE6xMa5dmdDm0uoD12yAa8/w700-h500-rw/National_anthem_of_nepal_2K_202607020755.webp" alt="Symbolic imagery for Sayaun Thunga Phulka, the national anthem of Nepal" loading="lazy" decoding="async"><div class="visual-overlay"></div></div>
+        <div class="card-visual v-anthem"><img src="/photos/national_anthem_of_nepal.webp" alt="Symbolic imagery for Sayaun Thunga Phulka, the national anthem of Nepal" loading="lazy" decoding="async"><div class="visual-overlay"></div></div>
         <div class="card-body">
           <span class="eyebrow">National Anthem</span>
           <h3>Sayaun Thunga Phulka</h3>
@@ -880,7 +904,7 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
 
       <a href="https://symbols.thenepal.io/national-language/" class="sym-card done" data-cat="culture" data-keywords="language nepali official script devanagari" data-nepali="नेपाली" data-scientific="—" data-category-label="National Language" aria-label="National Language: Nepali, read the guide">
         <div class="badge">Live</div>
-        <div class="card-visual v-language"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEip-VMgRQgOR-kFavIesqi24pCQpCwp-mkav83Vae3DZrDowVIvwQom2zSmvj-SPsmbg-pociBxOgBIdERsasqp3dFCESO1ZF9EmIa-4zSQmoSH7pJt4CyZO0cJr-XlLxq4A23U0FpAlP74FHVN3NmGrf3FC5awJA6jjnPQznm3smsjJHtZYjj1-dq8bp4h/w700-h500-rw/National_language_of_nepal_2K_202607020800.webp" alt="Nepali language in Devanagari script" loading="lazy" decoding="async"><div class="visual-overlay"></div></div>
+        <div class="card-visual v-language"><img src="/photos/national_language_of_nepal.webp" alt="Nepali language in Devanagari script" loading="lazy" decoding="async"><div class="visual-overlay"></div></div>
         <div class="card-body">
           <span class="eyebrow">National Language</span>
           <h3>Nepali — नेपाली</h3>
@@ -891,7 +915,7 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
 
       <a href="https://symbols.thenepal.io/national-color/" class="sym-card done" data-cat="culture" data-keywords="colour color crimson red national" data-nepali="चिरागी रातो" data-scientific="—" data-category-label="National Colour" aria-label="National Colour: Crimson Red, read the guide">
         <div class="badge">Live</div>
-        <div class="card-visual v-color"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgkH0SRU89gKv9XmbI9wzv0TD5SHaXk8tWVp4-iUdQS6UXCPMQh70p2yEVKdrL68dNwSTdd9QIgVCAzltyBEnkB7nOnHNdf9UFDvfZkGp-bs_dxuuFJBR_egHpZ0Wdj7IA66R5SfN2KSHXiSX9vy9PO-BL1TVQzjoOmCprb883E-W0IS-98p1MVd4Z-iDZw/w700-h500-rw/National_color_of_nepal_2K_202607020800.webp" alt="Crimson red, the national colour of Nepal" loading="lazy" decoding="async"><div class="visual-overlay"></div></div>
+        <div class="card-visual v-color"><img src="/photos/national_color_of_nepal.webp" alt="Crimson red, the national colour of Nepal" loading="lazy" decoding="async"><div class="visual-overlay"></div></div>
         <div class="card-body">
           <span class="eyebrow">National Colour</span>
           <h3>Crimson Red</h3>
@@ -902,7 +926,7 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
 
       <a href="https://symbols.thenepal.io/national-dress/" class="sym-card done" data-cat="culture" data-keywords="dress daura suruwal gunyu cholo clothing" data-nepali="दौरा सुरुवाल / गुन्यू चोलो" data-scientific="—" data-category-label="National Dress" aria-label="National Dress, read the guide">
         <div class="badge">Live</div>
-        <div class="card-visual v-dress"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjebRK11xJYQPccdsZpYe1dJBKJgQ7UQK4Pj3B7Gdu-Kx2LPRhNHQQxLfUAsszKdGYHfYIUaVdhfNEVkEuFzzvvFx0eQgMV9PO-MG0l7xa_pPZIo6tsSbA1C9w95OOdNY7kcwzDTqa6ubLtcaTSomJpbq0RovTBygIbvwTK21cR7ImTzIkzxKR9FevxtNm7/w700-h500-rw/National_dress_of_nepal_2K_202607020828.webp" alt="Daura Suruwal with Dhaka topi, the national dress of Nepal" loading="lazy" decoding="async"><div class="visual-overlay"></div></div>
+        <div class="card-visual v-dress"><img src="/photos/national_dress_of_nepal.webp" alt="Daura Suruwal with Dhaka topi, the national dress of Nepal" loading="lazy" decoding="async"><div class="visual-overlay"></div></div>
         <div class="card-body">
           <span class="eyebrow">National Dress</span>
           <h3>Daura Suruwal &amp; Gunyu Cholo</h3>
@@ -913,7 +937,7 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
 
       <a href="https://symbols.thenepal.io/national-sport/" class="sym-card done" data-cat="culture" data-keywords="sport game volleyball national" data-nepali="भलिबल" data-scientific="—" data-category-label="National Sport" aria-label="National Sport: Volleyball, read the guide">
         <div class="badge">Live</div>
-        <div class="card-visual v-sport"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiqNSbUh5sBF6VbKuxQxLriQcbdDjhpZ2u9Xi5txnZcQt-fRUQKgy63LAh_SmByY4Qv1OlRV3I2r47Pb8B0rtf714SVZKJClyMnLwpvR8iFEy3wI5N3ilJvturbOTbwcPqUGkYXnAI3ysBVR8MHssAajcGdxIwAqb5lJxLPvlOIHqzWrSviduZ1uKZ9cPSi/w700-h500-rw/National_sport_of_nepal_2K_202607020827.webp" alt="Volleyball, the official national sport of Nepal" loading="lazy" decoding="async"><div class="visual-overlay"></div></div>
+        <div class="card-visual v-sport"><img src="/photos/national_sport_of_nepal.webp" alt="Volleyball, the official national sport of Nepal" loading="lazy" decoding="async"><div class="visual-overlay"></div></div>
         <div class="card-body">
           <span class="eyebrow">National Sport</span>
           <h3>Volleyball</h3>
@@ -924,7 +948,7 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
 
       <a href="https://symbols.thenepal.io/national-calendar/" class="sym-card done" data-cat="culture" data-keywords="calendar bikram sambat bs year" data-nepali="विक्रम सम्वत्" data-scientific="—" data-category-label="National Calendar" aria-label="National Calendar: Bikram Sambat, read the guide">
         <div class="badge">Live</div>
-        <div class="card-visual v-calendar"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQFMZCVRL7s3bX-mBAFqxOcneKhbLc4sER2qCGo7RHPMR66nNrXz5WTU70NS3D_7mp4zZaak0337XXPVuClTFgLyTrYzdCgeqdHFaFhBBn7keION8tTQDBsW_LtIgsK1HPi7_voXgxPocYxGCHIvo4EZQ9Jo9s9UbZohWgSf8v9Q02phj5jvfp0bCCtwzc/w700-h500-rw/National_calendar_of_nepal_2K_202607020827.webp" alt="Bikram Sambat, the official calendar of Nepal" loading="lazy" decoding="async"><div class="visual-overlay"></div></div>
+        <div class="card-visual v-calendar"><img src="/photos/national_calendar_of_nepal.webp" alt="Bikram Sambat, the official calendar of Nepal" loading="lazy" decoding="async"><div class="visual-overlay"></div></div>
         <div class="card-body">
           <span class="eyebrow">National Calendar</span>
           <h3>Bikram Sambat</h3>
@@ -935,7 +959,7 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
 
       <a href="https://symbols.thenepal.io/national-dance/" class="sym-card done" data-cat="culture" data-keywords="dance deuda maruni traditional folk" data-nepali="देउडा / मारुनी" data-scientific="—" data-category-label="National Dance" aria-label="National Dance: Deuda and Maruni, read the guide">
         <div class="badge">Live</div>
-        <div class="card-visual v-dance"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgWJL-2CH10iuSIdIYvoC4H76Zi2S-m3ONp5IlKRLAECtd2L2ULEWy-qcLHGvpxcbIx0DQSHBNkpZ8fg6_Rn-gUzmtqrrYNyMFqNB48d4WUXmEbE0VP57nZ9cHzuGTMp-YRQPYgEm4Yyp7v8poY9aILmKoZ8niW1zVRRfrupGRax-hTX264KxwhoNxTeN9c/w700-h500-rw/National_dance_of_nepal_2K_202607020827.webp" alt="Deuda and Maruni, the national dances of Nepal" loading="lazy" decoding="async"><div class="visual-overlay"></div></div>
+        <div class="card-visual v-dance"><img src="/photos/national_dance_of_nepal.webp" alt="Deuda and Maruni, the national dances of Nepal" loading="lazy" decoding="async"><div class="visual-overlay"></div></div>
         <div class="card-body">
           <span class="eyebrow">National Dance</span>
           <h3>Deuda &amp; Maruni</h3>
@@ -946,7 +970,7 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
 
       <a href="https://symbols.thenepal.io/national-emblem/" class="sym-card done" data-cat="culture" data-keywords="emblem coat of arms crest national seal" data-nepali="राष्ट्रिय चिन्ह" data-scientific="—" data-category-label="National Emblem" aria-label="National Emblem, read the guide">
         <div class="badge">Live</div>
-        <div class="card-visual v-emblem"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjzHAOObO7uGMru40-4xFnh6S9CRufNLTshdvMWIjDtklTsUrcw6aktG41y9hlrHWKCY9-iio8nzdy2KtmUwWftau3IbV3nBVDdX_iLyMYKFD5eLhwJy11ETFeCIff29l7_dAhO0LxhdsVPVtDCdZIAtQPSiFjAu-NWVtgj6cCTjAz2NNjs9eiFzGbF7_Cf/w700-h500-rw/Emblem_of_Nepal.webp" alt="The national emblem of Nepal" loading="lazy" decoding="async"><div class="visual-overlay"></div></div>
+        <div class="card-visual v-emblem"><img src="/photos/national_emblem_of_nepal.webp" alt="The national emblem of Nepal" loading="lazy" decoding="async"><div class="visual-overlay"></div></div>
         <div class="card-body">
           <span class="eyebrow">National Emblem</span>
           <h3>National Emblem of Nepal</h3>
@@ -966,7 +990,7 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
 
       <a href="https://symbols.thenepal.io/national-monument/" class="sym-card done" data-cat="geography" data-keywords="monument dharahara tower bhimsen kathmandu" data-nepali="धरहरा" data-scientific="—" data-category-label="National Monument" aria-label="National Monument: Dharahara Tower, read the guide">
         <div class="badge">Live</div>
-        <div class="card-visual v-monument"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg5k_OWRJq4g8i9VpOGZE2kPZHWx3tHzCnRfMWQQgvVteREIt06_QcqtY96mkN3IdMpCBngesJec3bEjrXkhbskUc67RCRFlj6suDjG9FhIq7zrpgLw5p57t3yXXWk95P2lwtuS4ilpFd0m5DygazBUeekgcvpDlpjCl4zSYKWlHLVswmIpK84QngoQOL6q/s320-rw/Dharahara_Tower_Nepal_2K_202607020845.webp" alt="Dharahara tower in Kathmandu, Nepal's national monument" loading="lazy" decoding="async"><div class="visual-overlay"></div></div>
+        <div class="card-visual v-monument"><img src="/photos/national_monument_nepal.webp" alt="Dharahara tower in Kathmandu, Nepal's national monument" loading="lazy" decoding="async"><div class="visual-overlay"></div></div>
         <div class="card-body">
           <span class="eyebrow">National Monument</span>
           <h3>Dharahara Tower</h3>
@@ -977,7 +1001,7 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
 
       <a href="https://symbols.thenepal.io/national-everest/" class="sym-card done" data-cat="geography" data-keywords="everest sagarmatha himalaya peak highest mountain" data-nepali="सगरमाथा" data-scientific="—" data-category-label="Highest Peak" aria-label="Highest Peak: Mt Everest, read the guide">
         <div class="badge">Live</div>
-        <div class="card-visual v-peak"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEguOoOl5cYuQ-SqFzngURQMOmn3X24ACa2FhlzY37sevd8ehNj_edY06zmG-InlUOMGoPKpYGzhVzXxDByenvvZy4cP5dcNYkCmGebstva9YFlqCVpmS7L4rl65njZFlDfwYqFHku77lJ65zmtwOUG6f_EGSBmGQKAM9MplX5kD8WdciaAIcz5tgef6-HeB/w700-h500-rw/national_everest_of_nepal_2K_202607020827.webp" alt="Sagarmatha, Mount Everest" loading="lazy" decoding="async"><div class="visual-overlay"></div></div>
+        <div class="card-visual v-peak"><img src="/photos/national_everest_of_nepal.webp" alt="Sagarmatha, Mount Everest" loading="lazy" decoding="async"><div class="visual-overlay"></div></div>
         <div class="card-body">
           <span class="eyebrow">Highest Peak</span>
           <h3>Sagarmatha — Everest</h3>
@@ -988,7 +1012,7 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
 
       <a href="https://symbols.thenepal.io/national-cave/" class="sym-card done" data-cat="geography" data-keywords="cave siddha gufa largest natural" data-nepali="सिद्ध गुफा" data-scientific="—" data-category-label="National Cave" aria-label="National Cave: Siddha Gufa, read the guide">
         <div class="badge">Live</div>
-        <div class="card-visual v-cave"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgqRKRh2ydsEIsHtLjLeIYX4mDHDF3ovfefwLefG06A9J_SkT4WqROvNXfWqf2CMPBB0XA9TX1BGkp6-dSFmhfwjJfaDM2IBuoH7_h_OIHBA_lvCI61bxKqs1oDidV1wI3ELURQu6M5PwtmDhxRLACc-zTvTo3W55SJsegdC2ZtYvSn6bzo1QV9KqbYjofc/w700-h500-rw/National_cave_of_nepal_2K_202607020827.webp" alt="Siddha Gufa, Nepal's national cave" loading="lazy" decoding="async"><div class="visual-overlay"></div></div>
+        <div class="card-visual v-cave"><img src="/photos/national_cave_of_nepal.webp" alt="Siddha Gufa, Nepal's national cave" loading="lazy" decoding="async"><div class="visual-overlay"></div></div>
         <div class="card-body">
           <span class="eyebrow">National Cave</span>
           <h3>Siddha Gufa</h3>
@@ -1008,7 +1032,7 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
 
       <a href="https://symbols.thenepal.io/national-museum/" class="sym-card done" data-cat="heritage" data-keywords="museum national kathmandu art history" data-nepali="राष्ट्रिय संग्रहालय" data-scientific="—" data-category-label="National Museum" aria-label="National Museum, read the guide">
         <div class="badge">Live</div>
-        <div class="card-visual v-museum"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhU3v-9G2IplxP1NNQpdKDt8JVpDLxqeHBk54_cARyKDSESTe0EMpAB8EPsq5dzHtUy7ZMSkLANdhTy-uz0seSFkKDXMLkg_Rxwf4ixoaIMjazCnj1fkbpY1HwCIDHdHffQ_xyIgDSaWOKlOgVapEuIBuZMxlHhD3_NA16lmxTZF0Yl9jFkyszriKzAo3A9/w700-h500-rw/National_museum_of_nepal_2K_202607020826.webp" alt="The National Museum of Nepal in Chhauni, Kathmandu" loading="lazy" decoding="async"><div class="visual-overlay"></div></div>
+        <div class="card-visual v-museum"><img src="/photos/national_museum_nepal.webp" alt="The National Museum of Nepal in Chhauni, Kathmandu" loading="lazy" decoding="async"><div class="visual-overlay"></div></div>
         <div class="card-body">
           <span class="eyebrow">National Museum</span>
           <h3>National Museum of Nepal</h3>
@@ -1019,7 +1043,7 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
 
       <a href="https://symbols.thenepal.io/national-currency/" class="sym-card done" data-cat="heritage" data-keywords="currency rupee money npr exchange" data-nepali="नेपाली रुपैयाँ" data-scientific="—" data-category-label="National Currency" aria-label="National Currency: Nepalese Rupee, read the guide">
         <div class="badge">Live</div>
-        <div class="card-visual v-currency"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjRVxATSeqX_VTiHEYrR1f_7niH4vSP0xTXOAyjNV5danhHR-PEY-Uk8Tuoz4tZUniQPayhas-ztI7PQIR-SRKO_KFzG0qkCvoNXcSsfjC5NT6-UOEnbmXHN1pUcs1BUJVkfeOo5S1pYvSCac7xXN_EUao4Wzg3-w9uAOsVGjZMBVc2Pn8RxQr3GmPq0_mt/w700-h500-rw/National_currency_of_nepal_2K_202607020827.webp" alt="Nepalese Rupee banknotes and coins" loading="lazy" decoding="async"><div class="visual-overlay"></div></div>
+        <div class="card-visual v-currency"><img src="/photos/nepal_currency_of_nepal.webp" alt="Nepalese Rupee banknotes and coins" loading="lazy" decoding="async"><div class="visual-overlay"></div></div>
         <div class="card-body">
           <span class="eyebrow">National Currency</span>
           <h3>Nepalese Rupee — रू</h3>
@@ -1694,6 +1718,108 @@ document.addEventListener('click', (e) => {
 })();
 </script>
   <!-- Google AdSense -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1239173186536702" crossorigin="anonymous"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1239173186536702" crossorigin="anonymous">
+
+// ===== Dark Mode Toggle =====
+(function(){
+  const themeToggle = document.getElementById('theme-toggle');
+  if(!themeToggle) return;
+  const savedTheme = localStorage.getItem('theme');
+  if(savedTheme === 'dark'){
+    document.documentElement.setAttribute('data-theme','dark');
+    themeToggle.textContent = '☀️';
+  }
+  themeToggle.addEventListener('click',()=>{
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    if(isDark){
+      document.documentElement.removeAttribute('data-theme');
+      localStorage.setItem('theme','light');
+      themeToggle.textContent = '🌙';
+    } else {
+      document.documentElement.setAttribute('data-theme','dark');
+      localStorage.setItem('theme','dark');
+      themeToggle.textContent = '☀️';
+    }
+  });
+})();
+
+// ===== Image Error Fallbacks =====
+(function(){
+  document.querySelectorAll('.card-visual img').forEach(img=>{
+    img.addEventListener('error',function(){
+      this.style.display='none';
+      const parent = this.parentElement;
+      parent.style.display='flex';
+      parent.style.alignItems='center';
+      parent.style.justifyContent='center';
+      // Add emoji fallback based on card type
+      const card = parent.closest('.sym-card');
+      if(card){
+        const eyebrow = card.querySelector('.eyebrow');
+        if(eyebrow){
+          const text = eyebrow.textContent.toLowerCase();
+          const emojis = {
+            'animal':'🐄','bird':'🦚','flower':'🌺','tree':'🌳','fish':'🐟',
+            'butterfly':'🦋','fruit':'🍊','dish':'🍛','flag':'🚩','anthem':'🎶',
+            'language':'🗣️','colour':'🔴','color':'🔴','dress':'👘','sport':'🏐',
+            'calendar':'📅','dance':'💃','emblem':'🛡️','monument':'🗼',
+            'peak':'🏔️','everest':'🏔️','cave':'🕳️','museum':'🏛️','currency':'💰'
+          };
+          for(const[key,val] of Object.entries(emojis)){
+            if(text.includes(key)){ parent.style.fontSize='3.5rem'; parent.textContent=val; break; }
+          }
+        }
+      }
+    });
+  });
+})();
+
+// ===== Scroll Reveal Animation =====
+(function(){
+  const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('visible'); } });
+  },{threshold:.1});
+  document.querySelectorAll('.sym-card,.cat-card,.faq-item,.feature-card,.challenge-section,.quiz-section,.explore-more').forEach(el=>{
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+})();
+
+// ===== Nepali Search Normalization =====
+(function(){
+  const nepaliMap = {
+    'गाई':'gai cow animal','डाँफे':'danphe bird monal','लाली गुराँस':'lali gurans flower rhododendron',
+    'पीपल':'peepal tree','असला':'asala fish mahseer','कृष्ण मयूर पुतली':'krishna butterfly peacock',
+    'जुनार':'junar fruit orange suntala','सुन्तला':'suntala fruit orange junar','दाल भात':'dal bhat dish food',
+    'राष्ट्रिय झण्डा':'flag','सयौं थुँगा फूलका':'sayaun anthem','नेपाली':'nepali language',
+    'चिरागी रातो':'crimson red color colour','दौरा सुरुवाल':'daura suruwal dress','गुन्यू चोलो':'gunyu cholo dress',
+    'भलिबल':'volleyball sport','विक्रम सम्वत्':'bikram sambat calendar','देउडा':'deuda dance','मारुनी':'maruni dance',
+    'राष्ट्रिय चिन्ह':'emblem','धरहरा':'dharahara monument tower','सगरमाथा':'sagarmatha everest peak mountain',
+    'सिद्ध गुफा':'siddha gufa cave','राष्ट्रिय संग्रहालय':'museum','नेपाली रुपैयाँ':'rupee currency money'
+  };
+
+  // Override the fieldText function to include Nepali normalization
+  const originalFieldText = window.fieldText;
+  window.fieldText = function(card, field){
+    let text = '';
+    switch(field){
+      case 'english': text = (card.querySelector('h3')?.textContent || '') + ' ' + (card.querySelector('.eyebrow')?.textContent || ''); break;
+      case 'nepali': text = card.dataset.nepali || ''; break;
+      case 'scientific': text = card.dataset.scientific || ''; break;
+      case 'category': text = card.dataset.categoryLabel || card.dataset.cat || ''; break;
+      default: text = (card.dataset.keywords || '') + ' ' + (card.querySelector('h3')?.textContent || '') + ' ' +
+        (card.querySelector('p')?.textContent || '') + ' ' + (card.dataset.nepali || '') + ' ' +
+        (card.dataset.scientific || '') + ' ' + (card.dataset.categoryLabel || '');
+    }
+    // Add transliterated Nepali terms
+    const nepaliText = card.dataset.nepali || '';
+    let extra = '';
+    for(const[nepali,roman] of Object.entries(nepaliMap)){
+      if(nepaliText.includes(nepali)) extra += ' ' + roman;
+    }
+    return text + extra;
+  };
+})();
+</script>
 </body>
 </html>
