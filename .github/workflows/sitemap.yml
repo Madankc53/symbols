@@ -3,17 +3,16 @@ name: Generate Automated Sitemaps
 on:
   push:
     branches:
-      - main # Change to 'master' if your default branch is named master
+      - main
     paths-ignore:
       - 'sitemap.html'
-      - 'sitemap.xml' # Prevents GitHub Actions from triggering itself in a loop
+      - 'sitemap.xml'
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     permissions:
-      contents: write # Allows the action to commit files back to your repo
+      contents: write
 
     steps:
       - name: Checkout Repository
@@ -23,7 +22,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-        
+
       - name: Run Sitemap Generator
         run: node generate-sitemap.js
 
@@ -31,10 +30,6 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          
-          # Stage both files
           git add sitemap.html sitemap.xml
-          
-          # Removed [skip ci] so Cloudflare detects the commit and deploys the new files
           git diff-index --quiet HEAD || git commit -m "chore: automatically update html and xml sitemaps"
           git push
