@@ -16,10 +16,12 @@
   function find(q) {
     q = norm(q).trim();
     if (!q) return [];
-    var terms = q.split(/\s+/);
+    var stop = lang === 'ne' ? ['राष्ट्रिय', 'नेपालको', 'र'] : ['national', 'of', 'nepal', 'the', 'and'];
+    var all = q.split(/\s+/), terms = all.filter(function (w) { return stop.indexOf(w) < 0; });
+    if (!terms.length) terms = all;
     var out = [];
     data.forEach(function (e) {
-      var title = norm(e.t + ' ' + e.n), hay = title + ' ' + norm(e.k + ' ' + e.c);
+      var title = norm(e.t + ' ' + e.n + ' ' + e.c), hay = title + ' ' + norm(e.k + ' ' + e.c);
       var score = 0;
       for (var i = 0; i < terms.length; i++) {
         if (hay.indexOf(terms[i]) < 0) { score = -1; break; }
@@ -35,7 +37,7 @@
     shown = find(input.value); act = -1;
     if (!input.value.trim()) { box.hidden = true; box.innerHTML = ''; return; }
     box.innerHTML = shown.length ? shown.map(function (e) {
-      return '<a href="' + esc(e.u) + '"><span class="nx-t">' + esc(e.t) + '</span><span class="nx-m">' + esc(e.c) + (e.x ? ' · thenepal.io' : '') + '</span></a>';
+      return '<a href="' + esc(e.u) + '"><span class="nx-t">' + esc(e.c || e.t) + '</span><span class="nx-m">' + esc(e.c ? e.t : '') + (e.x ? ' · thenepal.io' : '') + '</span></a>';
     }).join('') : '<div class="nx-none">' + (lang === 'ne' ? 'कुनै चिन्ह भेटिएन। अर्को शब्द प्रयास गर्नुहोस्।' : 'No symbols found. Try another word.') + '</div>';
     box.hidden = false;
   }
