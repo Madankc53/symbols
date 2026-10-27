@@ -1,218 +1,494 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://symbols.thenepal.io/</loc>
     <lastmod>2026-07-21</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/"/>
+    <image:image>
+      <image:loc>https://symbols.thenepal.io/photos/national_flag_nepal.webp</image:loc>
+      <image:title>Flag of Nepal</image:title>
+      <image:caption>The national flag of Nepal</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://symbols.thenepal.io/national-animal/index.html</loc>
+    <loc>https://symbols.thenepal.io/national-animal/</loc>
     <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/national-animal/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/national-animal/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/national-animal/"/>
+    <image:image>
+      <image:loc>https://symbols.thenepal.io/photos/national_animal_of_nepal.webp</image:loc>
+      <image:title>Cow - National Animal of Nepal</image:title>
+      <image:caption>The sacred cow (Gai), national animal of Nepal</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://symbols.thenepal.io/national-anthem/index.html</loc>
+    <loc>https://symbols.thenepal.io/national-bird/</loc>
     <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/national-bird/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/national-bird/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/national-bird/"/>
+    <image:image>
+      <image:loc>https://symbols.thenepal.io/photos/national_bird_of_nepal.webp</image:loc>
+      <image:title>Himalayan Monal - National Bird of Nepal</image:title>
+      <image:caption>Danphe, the Himalayan Monal</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://symbols.thenepal.io/national-bird/index.html</loc>
+    <loc>https://symbols.thenepal.io/national-flower/</loc>
     <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/national-flower/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/national-flower/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/national-flower/"/>
+    <image:image>
+      <image:loc>https://symbols.thenepal.io/photos/national_flower_of_nepal.webp</image:loc>
+      <image:title>Rhododendron - National Flower of Nepal</image:title>
+      <image:caption>Lali Gurans, the national flower of Nepal</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://symbols.thenepal.io/national-butterfly/index.html</loc>
+    <loc>https://symbols.thenepal.io/national-tree/</loc>
     <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/national-tree/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/national-tree/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/national-tree/"/>
+    <image:image>
+      <image:loc>https://symbols.thenepal.io/photos/national_tree_of_nepal.webp</image:loc>
+      <image:title>Peepal Tree - National Tree of Nepal</image:title>
+      <image:caption>The sacred Peepal tree</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://symbols.thenepal.io/national-calendar/index.html</loc>
+    <loc>https://symbols.thenepal.io/national-fish/</loc>
     <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/national-fish/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/national-fish/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/national-fish/"/>
+    <image:image>
+      <image:loc>https://symbols.thenepal.io/photos/national_fish_of_nepal.webp</image:loc>
+      <image:title>Golden Mahseer - National Fish of Nepal</image:title>
+      <image:caption>Asala, the Golden Mahseer</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://symbols.thenepal.io/national-cave/index.html</loc>
+    <loc>https://symbols.thenepal.io/national-butterfly/</loc>
     <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/national-butterfly/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/national-butterfly/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/national-butterfly/"/>
+    <image:image>
+      <image:loc>https://symbols.thenepal.io/photos/national_butterfly_of_nepal.webp</image:loc>
+      <image:title>Krishna Peacock - National Butterfly of Nepal</image:title>
+      <image:caption>Krishna Peacock butterfly</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://symbols.thenepal.io/national-color/index.html</loc>
+    <loc>https://symbols.thenepal.io/national-flag/</loc>
     <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/national-flag/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/national-flag/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/national-flag/"/>
+    <image:image>
+      <image:loc>https://symbols.thenepal.io/photos/national_flag_nepal.webp</image:loc>
+      <image:title>Flag of Nepal</image:title>
+      <image:caption>The world&apos;s only non-rectangular national flag</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://symbols.thenepal.io/national-currency/index.html</loc>
+    <loc>https://symbols.thenepal.io/national-anthem/</loc>
     <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/national-anthem/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/national-anthem/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/national-anthem/"/>
+    <image:image>
+      <image:loc>https://symbols.thenepal.io/photos/national_anthem_of_nepal.webp</image:loc>
+      <image:title>National Anthem of Nepal</image:title>
+      <image:caption>Sayaun Thunga Phulka</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://symbols.thenepal.io/national-dance/index.html</loc>
+    <loc>https://symbols.thenepal.io/national-language/</loc>
     <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/national-language/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/national-language/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/national-language/"/>
+    <image:image>
+      <image:loc>https://symbols.thenepal.io/photos/national_language_of_nepal.webp</image:loc>
+      <image:title>Nepali Language</image:title>
+      <image:caption>Nepali, the official language of Nepal</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://symbols.thenepal.io/national-dress/index.html</loc>
+    <loc>https://symbols.thenepal.io/national-color/</loc>
     <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/national-color/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/national-color/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/national-color/"/>
+    <image:image>
+      <image:loc>https://symbols.thenepal.io/photos/national_color_of_nepal.webp</image:loc>
+      <image:title>Crimson Red - National Colour of Nepal</image:title>
+      <image:caption>Crimson red, the national colour</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://symbols.thenepal.io/national-emblem/index.html</loc>
+    <loc>https://symbols.thenepal.io/national-dress/</loc>
     <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/national-dress/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/national-dress/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/national-dress/"/>
+    <image:image>
+      <image:loc>https://symbols.thenepal.io/photos/national_dress_of_nepal.webp</image:loc>
+      <image:title>National Dress of Nepal</image:title>
+      <image:caption>Daura Suruwal and Gunyu Cholo</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://symbols.thenepal.io/national-everest/index.html</loc>
+    <loc>https://symbols.thenepal.io/national-sport/</loc>
     <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/national-sport/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/national-sport/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/national-sport/"/>
+    <image:image>
+      <image:loc>https://symbols.thenepal.io/photos/national_sport_of_nepal.webp</image:loc>
+      <image:title>Volleyball - National Sport of Nepal</image:title>
+      <image:caption>Volleyball, the official national sport</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://symbols.thenepal.io/national-fish/index.html</loc>
+    <loc>https://symbols.thenepal.io/national-calendar/</loc>
     <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/national-calendar/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/national-calendar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/national-calendar/"/>
+    <image:image>
+      <image:loc>https://symbols.thenepal.io/photos/national_calendar_of_nepal.webp</image:loc>
+      <image:title>Bikram Sambat - National Calendar of Nepal</image:title>
+      <image:caption>Bikram Sambat, the official calendar</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://symbols.thenepal.io/national-flag/index.html</loc>
+    <loc>https://symbols.thenepal.io/national-dance/</loc>
     <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/national-dance/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/national-dance/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/national-dance/"/>
+    <image:image>
+      <image:loc>https://symbols.thenepal.io/photos/national_dance_of_nepal.webp</image:loc>
+      <image:title>Deuda and Maruni - National Dance of Nepal</image:title>
+      <image:caption>Traditional Nepali folk dances</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://symbols.thenepal.io/national-flower/index.html</loc>
+    <loc>https://symbols.thenepal.io/national-emblem/</loc>
     <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/national-emblem/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/national-emblem/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/national-emblem/"/>
+    <image:image>
+      <image:loc>https://symbols.thenepal.io/photos/national_emblem_of_nepal.webp</image:loc>
+      <image:title>National Emblem of Nepal</image:title>
+      <image:caption>The official national emblem of Nepal</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://symbols.thenepal.io/national-language/index.html</loc>
+    <loc>https://symbols.thenepal.io/national-monument/</loc>
     <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/national-monument/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/national-monument/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/national-monument/"/>
+    <image:image>
+      <image:loc>https://symbols.thenepal.io/photos/national_monument_nepal.webp</image:loc>
+      <image:title>Dharahara Tower - National Monument of Nepal</image:title>
+      <image:caption>Dharahara Tower, Nepal&apos;s national monument</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://symbols.thenepal.io/national-monument/index.html</loc>
+    <loc>https://symbols.thenepal.io/national-everest/</loc>
     <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/national-everest/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/national-everest/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/national-everest/"/>
+    <image:image>
+      <image:loc>https://symbols.thenepal.io/photos/national_everest_of_nepal.webp</image:loc>
+      <image:title>Mount Everest - Sagarmatha</image:title>
+      <image:caption>Sagarmatha (Mt Everest), the highest peak</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://symbols.thenepal.io/national-museum/index.html</loc>
+    <loc>https://symbols.thenepal.io/national-cave/</loc>
     <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/national-cave/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/national-cave/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/national-cave/"/>
+    <image:image>
+      <image:loc>https://symbols.thenepal.io/photos/national_cave_of_nepal.webp</image:loc>
+      <image:title>Siddha Gufa - National Cave of Nepal</image:title>
+      <image:caption>Siddha Gufa, the largest cave in South Asia</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://symbols.thenepal.io/national-sport/index.html</loc>
+    <loc>https://symbols.thenepal.io/national-museum/</loc>
     <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/national-museum/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/national-museum/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/national-museum/"/>
+    <image:image>
+      <image:loc>https://symbols.thenepal.io/photos/national_museum_nepal.webp</image:loc>
+      <image:title>National Museum of Nepal</image:title>
+      <image:caption>The National Museum of Nepal in Kathmandu</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://symbols.thenepal.io/national-tree/index.html</loc>
+    <loc>https://symbols.thenepal.io/national-currency/</loc>
     <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/national-currency/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/national-currency/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/national-currency/"/>
+    <image:image>
+      <image:loc>https://symbols.thenepal.io/photos/nepal_currency_of_nepal.webp</image:loc>
+      <image:title>Nepalese Rupee - National Currency</image:title>
+      <image:caption>Nepalese Rupee banknotes and coins</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://symbols.thenepal.io/ne/index.html</loc>
+    <loc>https://symbols.thenepal.io/ne/</loc>
     <lastmod>2026-07-21</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/"/>
   </url>
   <url>
-    <loc>https://symbols.thenepal.io/ne/national-animal/index.html</loc>
+    <loc>https://symbols.thenepal.io/ne/national-animal/</loc>
     <lastmod>2026-07-21</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/national-animal/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/national-animal/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/national-animal/"/>
   </url>
   <url>
-    <loc>https://symbols.thenepal.io/ne/national-anthem/index.html</loc>
+    <loc>https://symbols.thenepal.io/ne/national-bird/</loc>
     <lastmod>2026-07-21</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/national-bird/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/national-bird/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/national-bird/"/>
   </url>
   <url>
-    <loc>https://symbols.thenepal.io/ne/national-bird/index.html</loc>
+    <loc>https://symbols.thenepal.io/ne/national-flower/</loc>
     <lastmod>2026-07-21</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/national-flower/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/national-flower/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/national-flower/"/>
   </url>
   <url>
-    <loc>https://symbols.thenepal.io/ne/national-butterfly/index.html</loc>
+    <loc>https://symbols.thenepal.io/ne/national-tree/</loc>
     <lastmod>2026-07-21</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/national-tree/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/national-tree/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/national-tree/"/>
   </url>
   <url>
-    <loc>https://symbols.thenepal.io/ne/national-calendar/index.html</loc>
+    <loc>https://symbols.thenepal.io/ne/national-fish/</loc>
     <lastmod>2026-07-21</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/national-fish/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/national-fish/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/national-fish/"/>
   </url>
   <url>
-    <loc>https://symbols.thenepal.io/ne/national-cave/index.html</loc>
+    <loc>https://symbols.thenepal.io/ne/national-butterfly/</loc>
     <lastmod>2026-07-21</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/national-butterfly/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/national-butterfly/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/national-butterfly/"/>
   </url>
   <url>
-    <loc>https://symbols.thenepal.io/ne/national-color/index.html</loc>
+    <loc>https://symbols.thenepal.io/ne/national-flag/</loc>
     <lastmod>2026-07-21</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/national-flag/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/national-flag/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/national-flag/"/>
   </url>
   <url>
-    <loc>https://symbols.thenepal.io/ne/national-currency/index.html</loc>
+    <loc>https://symbols.thenepal.io/ne/national-anthem/</loc>
     <lastmod>2026-07-21</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/national-anthem/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/national-anthem/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/national-anthem/"/>
   </url>
   <url>
-    <loc>https://symbols.thenepal.io/ne/national-dance/index.html</loc>
+    <loc>https://symbols.thenepal.io/ne/national-language/</loc>
     <lastmod>2026-07-21</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/national-language/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/national-language/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/national-language/"/>
   </url>
   <url>
-    <loc>https://symbols.thenepal.io/ne/national-dress/index.html</loc>
+    <loc>https://symbols.thenepal.io/ne/national-color/</loc>
     <lastmod>2026-07-21</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/national-color/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/national-color/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/national-color/"/>
   </url>
   <url>
-    <loc>https://symbols.thenepal.io/ne/national-emblem/index.html</loc>
+    <loc>https://symbols.thenepal.io/ne/national-dress/</loc>
     <lastmod>2026-07-21</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/national-dress/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/national-dress/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/national-dress/"/>
   </url>
   <url>
-    <loc>https://symbols.thenepal.io/ne/national-everest/index.html</loc>
+    <loc>https://symbols.thenepal.io/ne/national-sport/</loc>
     <lastmod>2026-07-21</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/national-sport/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/national-sport/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/national-sport/"/>
   </url>
   <url>
-    <loc>https://symbols.thenepal.io/ne/national-fish/index.html</loc>
+    <loc>https://symbols.thenepal.io/ne/national-calendar/</loc>
     <lastmod>2026-07-21</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/national-calendar/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/national-calendar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/national-calendar/"/>
   </url>
   <url>
-    <loc>https://symbols.thenepal.io/ne/national-flag/index.html</loc>
+    <loc>https://symbols.thenepal.io/ne/national-dance/</loc>
     <lastmod>2026-07-21</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/national-dance/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/national-dance/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/national-dance/"/>
   </url>
   <url>
-    <loc>https://symbols.thenepal.io/ne/national-flower/index.html</loc>
+    <loc>https://symbols.thenepal.io/ne/national-emblem/</loc>
     <lastmod>2026-07-21</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/national-emblem/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/national-emblem/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/national-emblem/"/>
   </url>
   <url>
-    <loc>https://symbols.thenepal.io/ne/national-language/index.html</loc>
+    <loc>https://symbols.thenepal.io/ne/national-monument/</loc>
     <lastmod>2026-07-21</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/national-monument/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/national-monument/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/national-monument/"/>
   </url>
   <url>
-    <loc>https://symbols.thenepal.io/ne/national-monument/index.html</loc>
+    <loc>https://symbols.thenepal.io/ne/national-everest/</loc>
     <lastmod>2026-07-21</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/national-everest/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/national-everest/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/national-everest/"/>
   </url>
   <url>
-    <loc>https://symbols.thenepal.io/ne/national-museum/index.html</loc>
+    <loc>https://symbols.thenepal.io/ne/national-cave/</loc>
     <lastmod>2026-07-21</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/national-cave/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/national-cave/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/national-cave/"/>
   </url>
   <url>
-    <loc>https://symbols.thenepal.io/ne/national-sport/index.html</loc>
+    <loc>https://symbols.thenepal.io/ne/national-museum/</loc>
     <lastmod>2026-07-21</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/national-museum/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/national-museum/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/national-museum/"/>
   </url>
   <url>
-    <loc>https://symbols.thenepal.io/ne/national-tree/index.html</loc>
+    <loc>https://symbols.thenepal.io/ne/national-currency/</loc>
     <lastmod>2026-07-21</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/national-currency/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/national-currency/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/national-currency/"/>
   </url>
   <url>
-    <loc>https://symbols.thenepal.io/photos/index.html</loc>
+    <loc>https://symbols.thenepal.io/photos/</loc>
     <lastmod>2026-07-21</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
 </urlset>
