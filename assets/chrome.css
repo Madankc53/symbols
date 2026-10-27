@@ -1,0 +1,67 @@
+/* Shared header, search and footer for every page on symbols.thenepal.io.
+   All selectors are namespaced .nx- so they cannot clash with page styles. */
+.nx-header,.nx-footer{--nx-cream:#FBF3E6;--nx-paper:#F4E9D8;--nx-maroon:#7E2A2A;--nx-maroon-d:#5C1E1E;--nx-gold:#D89B3C;--nx-ink:#2A241D;--nx-soft:#5A4F40;--nx-rule:#D8C6A8;
+  font-family:'Inter','Noto Sans Devanagari',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;font-size:16px;line-height:1.5;text-align:left;letter-spacing:normal;text-transform:none;font-weight:400;
+  position:relative;z-index:60;box-sizing:border-box;width:100%}
+.nx-header *,.nx-footer *{box-sizing:border-box;word-break:normal;overflow-wrap:break-word}
+.nx-header a,.nx-footer a{text-decoration:none}
+.nx-header ol,.nx-header ul,.nx-footer ul{list-style:none;margin:0;padding:0}
+.nx-header{background:var(--nx-cream);border-bottom:1px solid var(--nx-rule);color:var(--nx-ink)}
+.nx-bc{background:var(--nx-paper);border-bottom:1px solid var(--nx-rule);font-size:.74rem}
+.nx-bc ol{display:flex;flex-wrap:wrap;gap:6px;max-width:1200px;margin:0 auto;padding:6px 24px;color:var(--nx-soft)}
+.nx-bc a{color:var(--nx-soft)}.nx-bc a:hover{text-decoration:underline}
+.nx-bc li[aria-current]{color:var(--nx-maroon);font-weight:600}
+.nx-bc .nx-sep{color:var(--nx-rule)}
+.nx-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;max-width:1200px;margin:0 auto;padding:12px 24px}
+.nx-brand{display:flex;align-items:center;gap:12px;color:var(--nx-ink);flex:0 0 auto}
+.nx-brand img{width:42px;height:42px;border-radius:10px;display:block;flex:0 0 auto}
+.nx-brand b{display:block;font-family:'Fraunces','Noto Sans Devanagari',Georgia,serif;font-size:1.12rem;line-height:1.15;color:var(--nx-maroon-d);font-weight:700}
+.nx-brand small{display:block;font-size:.7rem;letter-spacing:.06em;color:var(--nx-soft);text-transform:uppercase;margin-top:2px}
+.nx-right{display:flex;align-items:center;gap:12px;flex:1 1 auto;justify-content:flex-end;min-width:0}
+.nx-search{position:relative;flex:0 1 340px;min-width:0;margin:0}
+.nx-search input{width:100%;height:40px;border:1px solid var(--nx-rule);background:#fff;border-radius:999px;padding:0 40px 0 38px;font:inherit;font-size:.9rem;color:var(--nx-ink);outline:none;margin:0;-webkit-appearance:none;appearance:none}
+.nx-search input:focus{border-color:var(--nx-maroon);box-shadow:0 0 0 3px rgba(126,42,42,.15)}
+.nx-search .nx-ic{position:absolute;left:13px;top:50%;transform:translateY(-50%);width:16px;height:16px;pointer-events:none;color:var(--nx-soft)}
+.nx-search button{position:absolute;right:4px;top:4px;width:32px;height:32px;border:0;border-radius:50%;background:var(--nx-maroon);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0}
+.nx-search button:hover{background:var(--nx-maroon-d)}
+.nx-search button svg{width:15px;height:15px}
+.nx-suggest{position:absolute;left:0;right:0;top:calc(100% + 8px);background:#fff;border:1px solid var(--nx-rule);border-radius:12px;box-shadow:0 14px 34px rgba(42,36,29,.18);max-height:360px;overflow:auto;z-index:80}
+.nx-suggest[hidden]{display:none}
+.nx-suggest a{display:flex;flex-direction:column;gap:1px;padding:10px 16px;color:var(--nx-ink);border-bottom:1px solid #f1e6d2}
+.nx-suggest a:last-child{border-bottom:0}
+.nx-suggest a:hover,.nx-suggest a.nx-act{background:var(--nx-paper)}
+.nx-suggest .nx-t{font-size:.9rem;font-weight:600}
+.nx-suggest .nx-m{font-size:.74rem;color:var(--nx-soft)}
+.nx-suggest .nx-none{padding:12px 16px;font-size:.86rem;color:var(--nx-soft)}
+.nx-lang{display:flex;align-items:center;gap:2px;border:1px solid var(--nx-rule);border-radius:999px;padding:3px;background:#fff;flex:0 0 auto}
+.nx-lang a,.nx-lang span{font-size:.8rem;font-weight:600;padding:6px 12px;border-radius:999px;color:var(--nx-soft);line-height:1.2}
+.nx-lang a:hover{background:var(--nx-paper)}
+.nx-lang span{background:var(--nx-maroon);color:#fff}
+.nx-skip{position:absolute;left:-9999px;top:0;background:var(--nx-maroon);color:#fff;padding:8px 14px;z-index:100;border-radius:0 0 8px 0}
+.nx-skip:focus{left:0}
+@media(max-width:720px){
+ .nx-inner{flex-wrap:wrap;padding:10px 16px;gap:10px}
+ .nx-right{flex:1 1 100%;order:3}
+ .nx-search{flex:1 1 auto}
+ .nx-brand{flex:1 1 auto}
+ .nx-inner .nx-lang{order:2}
+ .nx-bc ol{padding:6px 16px}
+}
+/* footer */
+.nx-footer{background:var(--nx-maroon-d);color:rgba(251,243,230,.85);margin-top:48px;padding:44px 0 26px}
+.nx-footer .nx-fw{max-width:1200px;margin:0 auto;padding:0 24px}
+.nx-fgrid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr 1fr;gap:28px;font-size:.86rem}
+.nx-fbrand{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.nx-fbrand img{width:40px;height:40px;border-radius:9px}
+.nx-fbrand b{font-family:'Fraunces','Noto Sans Devanagari',Georgia,serif;font-size:1.2rem;color:var(--nx-cream);font-weight:600}
+.nx-footer p{margin:0 0 8px;max-width:38ch;opacity:.85;font-size:.86rem}
+.nx-footer h2{font:inherit;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--nx-gold);margin:0 0 14px}
+.nx-footer li{margin-bottom:8px}
+.nx-footer a{color:rgba(251,243,230,.78)}
+.nx-footer a:hover{color:#fff;text-decoration:underline}
+.nx-fbottom{margin-top:34px;padding-top:18px;border-top:1px solid rgba(255,255,255,.14);font-size:.78rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;opacity:.9}
+.nx-fbottom nav{display:flex;gap:16px;flex-wrap:wrap}
+@media(max-width:900px){.nx-fgrid{grid-template-columns:1fr 1fr}.nx-fgrid>div:first-child{grid-column:1/-1}}
+@media(max-width:520px){.nx-fgrid{grid-template-columns:1fr}.nx-footer .nx-fw{padding:0 16px}.nx-fbottom{flex-direction:column}}
+/* The shared header scrolls away (not sticky), so page tables of contents stick to the very top. */
+.toc-desktop,.toc-mobile{top:0 !important}
