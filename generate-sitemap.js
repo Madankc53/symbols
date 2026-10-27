@@ -343,11 +343,19 @@ const pages = [
     changefreq: 'monthly',
     lastmod: '2026-07-21',
     images: []
+  },
+  {
+    loc: '/photos/',
+    priority: '0.5',
+    changefreq: 'monthly',
+    lastmod: '2026-07-21',
+    images: []
   }
 ];
 
 // Helper: get alternate language URLs
 function getAlternates(loc) {
+  if (loc === '/photos/') return []; // English-only page, no Nepali version
   if (loc === '/') {
     return [
       { lang: 'en', href: `${BASE_URL}/` },
@@ -432,7 +440,7 @@ function generateHTML() {
   // English pages
   html += `  <h2>🇬🇧 English Pages</h2>\n  <ul>\n`;
   for (const page of pages.filter(p => !p.loc.startsWith('/ne/'))) {
-    const name = page.loc === '/' ? 'Homepage' : page.loc.replace(/\/g, '').replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+    const name = page.loc === '/' ? 'Homepage' : page.loc.replace(/\//g, '').replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
     html += `    <li><a href="${BASE_URL}${page.loc}">${name}</a> <span class="lang">(priority: ${page.priority})</span></li>\n`;
   }
   html += `  </ul>\n`;
@@ -440,7 +448,7 @@ function generateHTML() {
   // Nepali pages
   html += `  <h2>🇳🇵 नेपाली पृष्ठहरू</h2>\n  <ul>\n`;
   for (const page of pages.filter(p => p.loc.startsWith('/ne/'))) {
-    const name = page.loc === '/ne/' ? 'मुख्य पृष्ठ' : page.loc.replace('/ne/', '').replace(/\/g, '').replace(/-/g, ' ');
+    const name = page.loc === '/ne/' ? 'मुख्य पृष्ठ' : page.loc.replace('/ne/', '').replace(/\//g, '').replace(/-/g, ' ');
     html += `    <li><a href="${BASE_URL}${page.loc}">${name}</a> <span class="lang">(priority: ${page.priority})</span></li>\n`;
   }
   html += `  </ul>\n`;
