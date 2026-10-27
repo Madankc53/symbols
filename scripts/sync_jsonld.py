@@ -29,7 +29,7 @@ for f in files:
         ld = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in vis]}
         return m.group(1) + json.dumps(ld, ensure_ascii=False, indent=2) + m.group(3)
     s = re.sub(r'(<script type="application/ld\+json">\s*)(\{.*?\})(\s*</script>)', faq, s, flags=re.S)
-    s = re.sub(r',\s*"potentialAction":\s*\{[^{}]*"SearchAction"[^{}]*\}', '', s, flags=re.S)
+    s = re.sub(r',\s*"potentialAction":\s*\{\s*"@type":\s*"SearchAction".*?"query-input":\s*"[^"]*"\s*\}', '', s, flags=re.S)
     def img(m):
         blk = m.group(0)
         mm = re.search(r'"contentUrl":\s*"https://symbols\.thenepal\.io(/[^"]+)"', blk)
@@ -41,7 +41,9 @@ for f in files:
     def art(m):
         blk = m.group(0)
         if '"inLanguage"' not in blk: blk = re.sub(r'("@type":\s*"Article",)', r'\1\n  "inLanguage": "%s",' % lang, blk, count=1)
-        if touch: blk = re.sub(r'("dateModified":\s*")[^"]+', r'\g<1>2026-10-28', blk)
+        if touch:
+            if '"dateModified"' in blk: blk = re.sub(r'("dateModified":\s*")[^"]+', r'\g<1>2026-10-28', blk)
+            else: blk = re.sub(r'("inLanguage":\s*"[a-z]+",)', r'\1\n  "dateModified": "2026-10-28",', blk, count=1)
         return blk
     s = re.sub(r'<script type="application/ld\+json">\s*\{[^<]*?"@type":\s*"Article".*?</script>', art, s, flags=re.S)
     for m in re.finditer(r'<script type="application/ld\+json">(.*?)</script>', s, re.S): json.loads(m.group(1))
