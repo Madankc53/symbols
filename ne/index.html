@@ -1323,6 +1323,38 @@ function fieldText(card, field){
   }
 }
 
+
+// Token search: every meaningful word must match (words like "national" are ignored when
+// other words are present), synonyms count as a match, results are ranked by title/category hit.
+const STOP_WORDS = new Set(['राष्ट्रिय','नेपालको','र']);
+function searchTokens(q){
+  const all = q.toLowerCase().split(/\s+/).filter(Boolean);
+  const keep = all.filter(w => !STOP_WORDS.has(w));
+  return keep.length ? keep : all;
+}
+function tokenAlts(tok){
+  const out = [tok];
+  Object.keys(synonyms).forEach(key => { if(key === tok || key.split(' ').includes(tok)) out.push(...synonyms[key].split(/\s+/)); });
+  return out;
+}
+function rankCards(rawQ, field){
+  const toks = searchTokens(rawQ);
+  const scored = [];
+  allCards.forEach(c => {
+    const hay = fieldText(c, field).toLowerCase();
+    const head = ((c.querySelector('h3')?.textContent || '') + ' ' + (c.dataset.categoryLabel || '') + ' ' + (c.dataset.nepali || '')).toLowerCase();
+    let score = 0;
+    for(const t of toks){
+      const alts = tokenAlts(t);
+      if(!alts.some(a => hay.includes(a))){ score = -1; break; }
+      score += alts.some(a => head.includes(a)) ? 3 : 1;
+    }
+    if(score > 0) scored.push([score, c]);
+  });
+  scored.sort((a, b) => b[0] - a[0]);
+  return scored.map(x => x[1]);
+}
+
 const searchInput = document.getElementById('search-input');
 const searchResults = document.getElementById('search-results');
 const searchTerm = document.getElementById('search-term');
@@ -1336,12 +1368,7 @@ function runSearch(rawQ){
     allSection.style.display = '';
     return;
   }
-  const expanded = activeField === 'all' ? expandQuery(q) : q;
-  const terms = expanded.split(/\s+/).filter(Boolean);
-  const matches = [...allCards].filter(c => {
-    const kw = fieldText(c, activeField).toLowerCase();
-    return terms.some(t => kw.includes(t));
-  });
+  const matches = rankCards(q, activeField);
   searchTerm.textContent = rawQ;
   searchGrid.innerHTML = '';
   matches.forEach(c => searchGrid.appendChild(c.cloneNode(true)));
@@ -1399,11 +1426,8 @@ function renderSuggestions(query){
   if(!q){
     list = allSymbolSuggestions();
   } else {
-    list = allSymbolSuggestions().filter(s => {
-      const card = [...allCards].find(c => c.querySelector('h3')?.textContent.trim() === s.label);
-      const hay = (card ? fieldText(card, activeField) : s.label).toLowerCase();
-      return hay.includes(q);
-    });
+    const ranked = rankCards(q, activeField).map(c => c.querySelector('h3')?.textContent.trim());
+    list = allSymbolSuggestions().filter(s => ranked.includes(s.label)).sort((a, b) => ranked.indexOf(a.label) - ranked.indexOf(b.label));
     if(list.length === 0) list = [];
   }
   const labelText = q ? (list.length ? 'सुझावहरू' : 'कुनै मिल्दो भेटिएन — खोज्न Enter थिच्नुहोस्') : 'सबै २२ राष्ट्रिय चिन्हहरू';
