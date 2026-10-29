@@ -353,6 +353,26 @@ const pages = [
   }
 ];
 
+
+// Derive lastmod from each page's own JSON-LD dateModified (keeps the sitemap honest);
+// hub pages carry no dateModified, so they take the newest date among their detail pages.
+const DATE_RE = /"dateModified":\s*"(\d{4}-\d{2}-\d{2})"/;
+for (const page of pages) {
+  const file = path.join(OUTPUT_DIR, page.loc.replace(/^\//, ''), 'index.html');
+  try {
+    const m = fs.readFileSync(file, 'utf8').match(DATE_RE);
+    if (m) page.lastmod = m[1];
+  } catch (e) { /* keep existing lastmod */ }
+}
+for (const hub of ['/', '/ne/']) {
+  const kids = pages.filter(p => p.loc !== hub && p.loc.startsWith(hub === '/' ? '/national-' : '/ne/national-'));
+  const newest = kids.map(p => p.lastmod).sort().pop();
+  const h = pages.find(p => p.loc === hub);
+  if (h && newest && newest > h.lastmod) h.lastmod = newest;
+}
+const NEWEST = pages.map(p => p.lastmod).sort().pop();
+const NEWEST_LABEL = new Date(NEWEST + 'T00:00:00Z').toLocaleDateString('en-GB', { month: 'long', year: 'numeric', timeZone: 'UTC' });
+
 // Helper: get alternate language URLs
 function getAlternates(loc) {
   if (loc === '/photos/') return []; // English-only page, no Nepali version
@@ -434,7 +454,7 @@ function generateHTML() {
   html += `  </style>\n</head>\n<body>\n`;
   html += `  <h1>📍 Sitemap — National Symbols of Nepal</h1>\n`;
   html += `  <div class="stats">\n`;
-  html += `    <strong>${pages.length}</strong> pages indexed | Last updated: July 2026 | <a href="sitemap.xml" style="color:#D89B3C;">View XML Sitemap</a>\n`;
+  html += `    <strong>${pages.length}</strong> pages indexed | Last updated: ${NEWEST_LABEL} | <a href="sitemap.xml" style="color:#D89B3C;">View XML Sitemap</a>\n`;
   html += `  </div>\n`;
 
   // English pages
