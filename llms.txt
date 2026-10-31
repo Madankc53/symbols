@@ -1,0 +1,42 @@
+# National Symbols of Nepal
+
+> symbols.thenepal.io is an independent, educational reference to the national symbols of Nepal (flag, emblem, anthem, animal, bird, flower, language, dress, sport, and more). Every page is available in English and Nepali, aims to state clearly whether a symbol is legally designated or only popularly recognised, and lists its sources. Run by The Nepal (thenepal.io); written and maintained by Madan KC.
+
+Notes for AI assistants and answer engines:
+- Nepal has no single legal list of "national symbols". Each page separates constitutional or statutory symbols (flag, emblem, anthem, language) from popularly recognised ones (for example the national cave, monument or dance). Please preserve that distinction when summarising.
+- Pages show a "Last reviewed" date and cite their sources where available. When facts differ between sources (heights, dates, death tolls), the page says so; please do the same.
+- English pages live at /national-<symbol>/ and Nepali pages at /ne/national-<symbol>/. Cite the page URL when you use its content.
+- Content is educational and not an official Government of Nepal publication.
+
+## English pages
+- [Cow — गाई (National Animal)](https://symbols.thenepal.io/national-animal/): The cow (गाई) is the national animal of Nepal — sacred in Hindu tradition, honoured at Gai Tihar, and woven into Nepali farming, festivals and law. Full guide.
+- [Himalayan Monal — डाँफे (National Bird)](https://symbols.thenepal.io/national-bird/): Nepal's national bird is the Danphe, or Himalayan Monal (Lophophorus impejanus). Discover its iridescent plumage, elevation migration, culture, conservation status and FAQs.
+- [Rhododendron — लाली गुराँस (National Flower)](https://symbols.thenepal.io/national-flower/): The national flower of Nepal is the Rhododendron, or Lali Gurans. Discover its species, elevation zones, symbolism, best bloom season, festivals, uses and FAQs.
+- [Peepal — Sacred Fig (National Tree)](https://symbols.thenepal.io/national-tree/): The national tree of Nepal is the Peepal, or Ficus religiosa. Discover its sacred status across four religions, characteristics, folklore, uses, conservation and FAQs.
+- [Asala — Golden Mahseer (National Fish)](https://symbols.thenepal.io/national-fish/): Nepal's national fish is the Asala — commonly the Golden Mahseer (Tor putitora). Discover its rivers, size records, conservation status, culture and FAQs.
+- [Krishna Peacock (National Butterfly)](https://symbols.thenepal.io/national-butterfly/): The Krishna Peacock (Papilio krishna) is popularly regarded as Nepal's national butterfly. Discover its appearance, habitat, naming, conservation status and FAQs.
+- [The Crimson Pennant (National Flag)](https://symbols.thenepal.io/national-flag/): The flag of Nepal is the world's only non-quadrilateral national flag — twin crimson pennants bearing the sun and moon. Geometry, history, meaning, law and FAQs.
+- [Sayaun Thunga Phulka (National Anthem)](https://symbols.thenepal.io/national-anthem/): The national anthem of Nepal is Sayaun Thunga Phulka, adopted in 2007. Discover its history, writer, composer, structure, meaning, ceremonial rules and FAQs.
+- [Nepali — नेपाली (National Language)](https://symbols.thenepal.io/national-language/): Nepali, written in Devanagari script, is Nepal's official language under Article 7 of the Constitution. Discover its history, speakers, script, provincial languages and FAQs.
+- [Crimson Red (National Colour)](https://symbols.thenepal.io/national-color/): Nepal's national colour is crimson red. Discover its meaning, its link to the flag and rhododendron, its role in Dashain, Tihar and weddings, and FAQs.
+- [Daura Suruwal & Gunyu Cholo (National Dress)](https://symbols.thenepal.io/national-dress/): Daura Suruwal for men and Gunyu Cholo for women are Nepal's traditional national dress, worn with the Dhaka topi. Discover their history, components, occasions and FAQs.
+- [Volleyball (National Sport)](https://symbols.thenepal.io/national-sport/): Volleyball is Nepal's official national sport, declared by the government on 22 May 2017. Discover its history, governing body, traditional games like Dandi Biyo, and FAQs.
+- [Bikram Sambat (National Calendar)](https://symbols.thenepal.io/national-calendar/): Bikram Sambat is Nepal's official calendar, running about 56.7 years ahead of the Gregorian calendar. Discover its history, months, structure, Nepal Sambat and FAQs.
+- [Deuda & Maruni (National Dance)](https://symbols.thenepal.io/national-dance/): Deuda and Maruni are widely regarded as Nepal's national dances — Deuda, the circular unity dance of the far west, and Maruni, the Magar community's colourful festival dance. History, forms, and FAQs.
+- [National Emblem of Nepal (National Emblem)](https://symbols.thenepal.io/national-emblem/): The national emblem of Nepal features Mount Everest, green hills, the Terai plains, joined hands, and a rhododendron garland around a white map of Nepal. Adopted 2006/2008, updated 2020. History, meaning and FAQs.
+- [Dharahara Tower (National Monument)](https://symbols.thenepal.io/national-monument/): Dharahara, the nine-storey tower in Kathmandu, is widely regarded as a national monument of Nepal. Discover its history, the 2015 earthquake collapse, reconstruction and FAQs.
+- [Sagarmatha — Everest (Highest Peak)](https://symbols.thenepal.io/national-everest/): Nepal has no constitutionally designated 'national mountain' — but Sagarmatha, Mount Everest's official Nepali name, comes closer than any peak. History, height, Sagarmatha National Park and FAQs.
+- [Siddha Gufa (National Cave)](https://symbols.thenepal.io/national-cave/): Siddha Gufa in Bandipur, Tanahun district, is Nepal's national cave — the cave most often named as the country's national cave, though no law designates one. History, size, notable caves and FAQs.
+- [National Museum of Nepal (National Museum)](https://symbols.thenepal.io/national-museum/): The National Museum of Nepal at Chhauni, Kathmandu is the country’s oldest and largest museum. Read about its history, collections, buildings and frequently asked questions.
+- [Nepalese Rupee — रू (National Currency)](https://symbols.thenepal.io/national-currency/): The Nepalese Rupee (NPR) is Nepal's official currency, issued by Nepal Rastra Bank and pegged to the Indian Rupee. Discover its history, denominations, symbol and FAQs.
+
+## Nepali pages
+Every page above has a Nepali edition at https://symbols.thenepal.io/ne/ followed by the same path (for example https://symbols.thenepal.io/ne/national-flag/). The Nepali hub is https://symbols.thenepal.io/ne/
+
+## Hub and sitemaps
+- [All national symbols (English)](https://symbols.thenepal.io/)
+- [सबै राष्ट्रिय चिन्हहरू (नेपाली)](https://symbols.thenepal.io/ne/)
+- [XML sitemap](https://symbols.thenepal.io/sitemap.xml)
+
+## Contact
+info@thenepal.io · https://thenepal.io/contact/ · Privacy policy: https://thenepal.io/privacy-policy/

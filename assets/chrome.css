@@ -65,3 +65,4 @@
 @media(max-width:520px){.nx-fgrid{grid-template-columns:1fr}.nx-footer .nx-fw{padding:0 16px}.nx-fbottom{flex-direction:column}}
 /* The shared header scrolls away (not sticky), so page tables of contents stick to the very top. */
 .toc-desktop,.toc-mobile{top:0 !important}
+.nx-updated{max-width:880px;margin:24px auto 0;padding:0 24px;font:500 .78rem/1.4 'Inter','Noto Sans Devanagari',sans-serif;color:#5A4F40;text-align:center}
