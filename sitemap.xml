@@ -4,7 +4,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://symbols.thenepal.io/</loc>
-    <lastmod>2026-10-30</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/"/>
@@ -297,8 +297,36 @@
     </image:image>
   </url>
   <url>
+    <loc>https://symbols.thenepal.io/national-fruit/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/national-fruit/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/national-fruit/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/national-fruit/"/>
+    <image:image>
+      <image:loc>https://symbols.thenepal.io/photos/national_fruit_of_nepal.webp</image:loc>
+      <image:title>Suntala (Orange) - National Fruit of Nepal</image:title>
+      <image:caption>Illustration of suntala oranges on a branch</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://symbols.thenepal.io/national-food/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/national-food/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/national-food/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/national-food/"/>
+    <image:image>
+      <image:loc>https://symbols.thenepal.io/photos/national_dish_of_nepal.webp</image:loc>
+      <image:title>Dal Bhat - National Food of Nepal</image:title>
+      <image:caption>Illustration of a dal bhat plate</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://symbols.thenepal.io/ne/</loc>
-    <lastmod>2026-10-30</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/"/>
@@ -490,5 +518,23 @@
     <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://symbols.thenepal.io/ne/national-fruit/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/national-fruit/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/national-fruit/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/national-fruit/"/>
+  </url>
+  <url>
+    <loc>https://symbols.thenepal.io/ne/national-food/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/national-food/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/national-food/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/national-food/"/>
   </url>
 </urlset>

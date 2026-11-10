@@ -196,6 +196,24 @@ const pages = [
       { loc: '/photos/nepal_currency_of_nepal.webp', title: 'Nepalese Rupee - National Currency', caption: 'Nepalese Rupee banknotes and coins' }
     ]
   },
+  {
+    loc: '/national-fruit/',
+    priority: '0.8',
+    changefreq: 'monthly',
+    lastmod: '2026-11-10',
+    images: [
+      { loc: '/photos/national_fruit_of_nepal.webp', title: 'Suntala (Orange) - National Fruit of Nepal', caption: 'Illustration of suntala oranges on a branch' }
+    ]
+  },
+  {
+    loc: '/national-food/',
+    priority: '0.8',
+    changefreq: 'monthly',
+    lastmod: '2026-11-10',
+    images: [
+      { loc: '/photos/national_dish_of_nepal.webp', title: 'Dal Bhat - National Food of Nepal', caption: 'Illustration of a dal bhat plate' }
+    ]
+  },
   // Nepali versions
   {
     loc: '/ne/',
@@ -349,6 +367,21 @@ const pages = [
     priority: '0.5',
     changefreq: 'monthly',
     lastmod: '2026-07-21',
+    images: []
+  }
+,
+  {
+    loc: '/ne/national-fruit/',
+    priority: '0.7',
+    changefreq: 'monthly',
+    lastmod: '2026-11-10',
+    images: []
+  },
+  {
+    loc: '/ne/national-food/',
+    priority: '0.7',
+    changefreq: 'monthly',
+    lastmod: '2026-11-10',
     images: []
   }
 ];
