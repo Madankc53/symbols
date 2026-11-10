@@ -29,6 +29,8 @@ Notes for AI assistants and answer engines:
 - [Siddha Gufa (National Cave)](https://symbols.thenepal.io/national-cave/): Siddha Gufa in Bandipur, Tanahun district, is Nepal's national cave — the cave most often named as the country's national cave, though no law designates one. History, size, notable caves and FAQs.
 - [National Museum of Nepal (National Museum)](https://symbols.thenepal.io/national-museum/): The National Museum of Nepal at Chhauni, Kathmandu is the country’s oldest and largest museum. Read about its history, collections, buildings and frequently asked questions.
 - [Nepalese Rupee — रू (National Currency)](https://symbols.thenepal.io/national-currency/): The Nepalese Rupee (NPR) is Nepal's official currency, issued by Nepal Rastra Bank and pegged to the Indian Rupee. Discover its history, denominations, symbol and FAQs.
+- [Suntala — The Orange (National Fruit)](https://symbols.thenepal.io/national-fruit/): The Council of Ministers recognised the orange as Nepal's national fruit on 12 April 2024; this guide covers the decision, suntala vs junar, growing regions and FAQs.
+- [Dal Bhat (National Food)](https://symbols.thenepal.io/national-food/): No official national food is confirmed; dal bhat is the staple most often named and dhindo is also called a national dish. Plate, regions and FAQs.
 
 ## Nepali pages
 Every page above has a Nepali edition at https://symbols.thenepal.io/ne/ followed by the same path (for example https://symbols.thenepal.io/ne/national-flag/). The Nepali hub is https://symbols.thenepal.io/ne/

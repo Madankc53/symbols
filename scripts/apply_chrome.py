@@ -18,8 +18,8 @@ T = {
             note='शैक्षिक सामग्री — आधिकारिक नेपाल सरकारका स्रोतसँग पुष्टि गर्नुहोस्।', made='© 2026 द नेपाल · symbols.thenepal.io', langname='भाषा छान्नुहोस्', main='मुख्य'),
 }
 GROUP = {'nature': 0, 'culture': 1, 'geography': 2, 'heritage': 2}
-NETWORK = [('TheNepal.io', 'https://thenepal.io/'), ('National Fruit Guide', 'https://nationalfruit.thenepal.io/'), ('National Dish Guide', 'https://nationalfood.thenepal.io/'), ('Madan KC', 'https://madankc.com.np')]
-NETWORK_NE = [('द नेपाल', 'https://thenepal.io/'), ('राष्ट्रिय फल', 'https://nationalfruit.thenepal.io/'), ('राष्ट्रिय परिकार', 'https://nationalfood.thenepal.io/ne/'), ('मदन केसी', 'https://madankc.com.np')]
+NETWORK = [('TheNepal.io', 'https://thenepal.io/'), ('Madan KC', 'https://madankc.com.np')]
+NETWORK_NE = [('द नेपाल', 'https://thenepal.io/'), ('मदन केसी', 'https://madankc.com.np')]
 SVG_S = '<svg class="nx-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>'
 SVG_B = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>'
 
@@ -33,7 +33,7 @@ def footer(lang):
     t = T[lang]; cols = [[], [], []]
     for e in IDX[lang]:
         if e.get('x'): continue
-        cols[GROUP.get(e['g'], 2)].append('<li><a href="%s">%s</a></li>' % (e['u'], html.escape(e['c'] or e['t'])))
+        cols[1 if slug_of(e['u']) == 'national-food' else GROUP.get(e['g'], 2) if e['g'] != 'food' else 0].append('<li><a href="%s">%s</a></li>' % (e['u'], html.escape(e['c'] or e['t'])))
     net = ''.join('<li><a href="%s">%s</a></li>' % (u, html.escape(n)) for n, u in (NETWORK if lang == 'en' else NETWORK_NE))
     def col(i, items): return '<div><h2>%s</h2><ul>%s</ul></div>' % (t['g'][i], items)
     return ('<!--nx-footer-->\n<footer class="nx-footer" id="nx-footer"><div class="nx-fw"><div class="nx-fgrid">'
