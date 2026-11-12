@@ -31,10 +31,10 @@ def base_css(lang):
 
 L = {
  'en': dict(facts='Quick Facts', nepali='Nepali', latin='Latin script', say='Pronunciation', dyk='✦ Did you know?', faq='Frequently Asked Questions',
-            more='Explore more national symbols', cta='Explore all 22 National Symbols →', hubname='National Symbols', home='The Nepal',
+            more='Explore more national symbols', cta='Explore all 23 National Symbols →', hubname='National Symbols', home='The Nepal',
             hub_t='National Symbols of Nepal', other_lang='ne', source='Source', sources='Sources'),
  'ne': dict(facts='छोटो तथ्यहरू', nepali='नेपाली', latin='रोमन लिपि', say='उच्चारण', dyk='✦ के तपाईंलाई थाहा छ?', faq='बारम्बार सोधिने प्रश्नहरू',
-            more='अन्य राष्ट्रिय चिन्हहरू हेर्नुहोस्', cta='सबै २२ राष्ट्रिय चिन्हहरू हेर्नुहोस् →', hubname='राष्ट्रिय चिन्ह', home='द नेपाल',
+            more='अन्य राष्ट्रिय चिन्हहरू हेर्नुहोस्', cta='सबै २३ राष्ट्रिय चिन्हहरू हेर्नुहोस् →', hubname='राष्ट्रिय चिन्ह', home='द नेपाल',
             hub_t='नेपालका राष्ट्रिय चिन्हहरू', other_lang='en', source='स्रोत', sources='स्रोतहरू'),
 }
 
@@ -166,7 +166,10 @@ def build(pg, lang):
 exec(open(os.path.join(ROOT, 'scripts', 'food_content.py'), encoding='utf-8').read())
 _ny = os.path.join(ROOT, 'scripts', 'newyear_content.py')
 if os.path.exists(_ny):
-    exec(open(_ny, encoding='utf-8').read()); PAGES = PAGES + EXTRA_PAGES
+    exec(open(_ny, encoding='utf-8').read())
+    _w = os.path.join(ROOT, 'scripts', 'weapon_content.py')
+    if os.path.exists(_w): exec(open(_w, encoding='utf-8').read())
+    PAGES = PAGES + EXTRA_PAGES
 
 for pg in PAGES:
     for lang in ('en', 'ne'):

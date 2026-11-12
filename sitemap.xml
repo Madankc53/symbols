@@ -213,6 +213,20 @@
     </image:image>
   </url>
   <url>
+    <loc>https://symbols.thenepal.io/national-weapon/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/national-weapon/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/national-weapon/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/national-weapon/"/>
+    <image:image>
+      <image:loc>https://symbols.thenepal.io/photos/national_weapon_of_nepal.webp</image:loc>
+      <image:title>National Weapon of Nepal - Khukuri</image:title>
+      <image:caption>The khukuri - original illustration</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://symbols.thenepal.io/national-dance/</loc>
     <lastmod>2026-10-28</lastmod>
     <changefreq>monthly</changefreq>
@@ -476,6 +490,20 @@
       <image:loc>https://symbols.thenepal.io/photos/nepali_new_year_2084.webp</image:loc>
       <image:title>Nepali New Year 2084 (Baisakh 1)</image:title>
       <image:caption>Baisakh 1, 2084 BS - original illustration</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://symbols.thenepal.io/ne/national-weapon/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/national-weapon/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/national-weapon/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/national-weapon/"/>
+    <image:image>
+      <image:loc>https://symbols.thenepal.io/photos/national_weapon_of_nepal.webp</image:loc>
+      <image:title>National Weapon of Nepal - Khukuri</image:title>
+      <image:caption>The khukuri - original illustration</image:caption>
     </image:image>
   </url>
   <url>
