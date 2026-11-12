@@ -63,7 +63,7 @@ def build(pg, lang):
      {"@context": "https://schema.org", "@type": "WebSite", "name": "National Symbols of Nepal", "url": SITE + "/"},
      {"@context": "https://schema.org", "@type": "WebPage", "name": d['og_title'], "url": url, "isPartOf": {"@type": "WebSite", "name": "National Symbols of Nepal", "url": SITE + "/"}, "inLanguage": lang,
       "speakable": {"@type": "SpeakableSpecification", "cssSelector": [".hero-desc", ".facts"]}},
-     {"@context": "https://schema.org", "@type": "ItemList", "name": "National Symbols of Nepal", "url": SITE + "/", "description": d['itemlist_desc'], "numberOfItems": 22},
+     *([] if pg.get('noitemlist') else [{"@context": "https://schema.org", "@type": "ItemList", "name": "National Symbols of Nepal", "url": SITE + "/", "description": d['itemlist_desc'], "numberOfItems": 22}]),
     ]
     ldh = '\n'.join('<script type="application/ld+json">\n%s\n</script>' % json.dumps(x, ensure_ascii=False, indent=2) for x in ld)
     facts = ''.join('<div class="fact"><dt>%s</dt><dd%s>%s</dd></div>' % (k, ' lang="ne"' if (lang == 'en' and k0) else '', v) for (k, v, k0) in d['facts'])
@@ -164,6 +164,9 @@ def build(pg, lang):
 '''
 
 exec(open(os.path.join(ROOT, 'scripts', 'food_content.py'), encoding='utf-8').read())
+_ny = os.path.join(ROOT, 'scripts', 'newyear_content.py')
+if os.path.exists(_ny):
+    exec(open(_ny, encoding='utf-8').read()); PAGES = PAGES + EXTRA_PAGES
 
 for pg in PAGES:
     for lang in ('en', 'ne'):

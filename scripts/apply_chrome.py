@@ -24,7 +24,9 @@ SVG_S = '<svg class="nx-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor
 SVG_B = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>'
 
 def slug_of(url): return url.rstrip('/').split('/')[-1]
+EXTRA_LABELS = {'nepali-new-year-2084': {'en': 'Nepali New Year 2084', 'ne': 'नेपाली नयाँ वर्ष २०८४'}}
 def label_for(lang, slug):
+    if slug in EXTRA_LABELS: return EXTRA_LABELS[slug][lang]
     for e in IDX[lang]:
         if slug_of(e['u']) == slug: return e['c'] or e['t']
     return None
