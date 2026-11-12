@@ -199,6 +199,20 @@
     </image:image>
   </url>
   <url>
+    <loc>https://symbols.thenepal.io/nepali-new-year-2084/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/nepali-new-year-2084/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/nepali-new-year-2084/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/nepali-new-year-2084/"/>
+    <image:image>
+      <image:loc>https://symbols.thenepal.io/photos/nepali_new_year_2084.webp</image:loc>
+      <image:title>Nepali New Year 2084 (Baisakh 1)</image:title>
+      <image:caption>Baisakh 1, 2084 BS - original illustration</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://symbols.thenepal.io/national-dance/</loc>
     <lastmod>2026-10-28</lastmod>
     <changefreq>monthly</changefreq>
@@ -449,6 +463,20 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/national-calendar/"/>
     <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/national-calendar/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/national-calendar/"/>
+  </url>
+  <url>
+    <loc>https://symbols.thenepal.io/ne/nepali-new-year-2084/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/nepali-new-year-2084/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/nepali-new-year-2084/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/nepali-new-year-2084/"/>
+    <image:image>
+      <image:loc>https://symbols.thenepal.io/photos/nepali_new_year_2084.webp</image:loc>
+      <image:title>Nepali New Year 2084 (Baisakh 1)</image:title>
+      <image:caption>Baisakh 1, 2084 BS - original illustration</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://symbols.thenepal.io/ne/national-dance/</loc>

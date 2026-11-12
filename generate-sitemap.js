@@ -134,6 +134,15 @@ const pages = [
     ]
   },
   {
+    loc: '/nepali-new-year-2084/',
+    priority: '0.7',
+    changefreq: 'monthly',
+    lastmod: '2026-11-12',
+    images: [
+      { loc: '/photos/nepali_new_year_2084.webp', title: 'Nepali New Year 2084 (Baisakh 1)', caption: 'Baisakh 1, 2084 BS - original illustration' }
+    ]
+  },
+  {
     loc: '/national-dance/',
     priority: '0.8',
     changefreq: 'monthly',
@@ -312,6 +321,15 @@ const pages = [
     changefreq: 'monthly',
     lastmod: '2026-07-21',
     images: []
+  },
+  {
+    loc: '/ne/nepali-new-year-2084/',
+    priority: '0.6',
+    changefreq: 'monthly',
+    lastmod: '2026-11-12',
+    images: [
+      { loc: '/photos/nepali_new_year_2084.webp', title: 'Nepali New Year 2084 (Baisakh 1)', caption: 'Baisakh 1, 2084 BS - original illustration' }
+    ]
   },
   {
     loc: '/ne/national-dance/',
