@@ -152,6 +152,15 @@ const pages = [
     ]
   },
   {
+    loc: '/official-vs-unofficial/',
+    priority: '0.8',
+    changefreq: 'monthly',
+    lastmod: '2026-11-13',
+    images: [
+      { loc: '/photos/official_vs_unofficial.webp', title: 'Official vs unofficial national symbols of Nepal', caption: 'Constitution vs tradition - original illustration' }
+    ]
+  },
+  {
     loc: '/national-dance/',
     priority: '0.8',
     changefreq: 'monthly',
@@ -347,6 +356,15 @@ const pages = [
     lastmod: '2026-11-13',
     images: [
       { loc: '/photos/national_weapon_of_nepal.webp', title: 'National Weapon of Nepal - Khukuri', caption: 'The khukuri - original illustration' }
+    ]
+  },
+  {
+    loc: '/ne/official-vs-unofficial/',
+    priority: '0.7',
+    changefreq: 'monthly',
+    lastmod: '2026-11-13',
+    images: [
+      { loc: '/photos/official_vs_unofficial.webp', title: 'Official vs unofficial national symbols of Nepal', caption: 'Constitution vs tradition - original illustration' }
     ]
   },
   {
