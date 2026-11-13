@@ -161,6 +161,15 @@ const pages = [
     ]
   },
   {
+    loc: '/quiz/',
+    priority: '0.8',
+    changefreq: 'monthly',
+    lastmod: '2026-11-13',
+    images: [
+      { loc: '/photos/nepal_symbols_quiz.webp', title: 'Nepal national symbols quiz', caption: 'Quiz trophy - original illustration' }
+    ]
+  },
+  {
     loc: '/national-dance/',
     priority: '0.8',
     changefreq: 'monthly',
@@ -365,6 +374,15 @@ const pages = [
     lastmod: '2026-11-13',
     images: [
       { loc: '/photos/official_vs_unofficial.webp', title: 'Official vs unofficial national symbols of Nepal', caption: 'Constitution vs tradition - original illustration' }
+    ]
+  },
+  {
+    loc: '/ne/quiz/',
+    priority: '0.7',
+    changefreq: 'monthly',
+    lastmod: '2026-11-13',
+    images: [
+      { loc: '/photos/nepal_symbols_quiz.webp', title: 'Nepal national symbols quiz', caption: 'Quiz trophy - original illustration' }
     ]
   },
   {

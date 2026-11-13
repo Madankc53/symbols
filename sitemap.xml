@@ -241,6 +241,20 @@
     </image:image>
   </url>
   <url>
+    <loc>https://symbols.thenepal.io/quiz/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/quiz/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/quiz/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/quiz/"/>
+    <image:image>
+      <image:loc>https://symbols.thenepal.io/photos/nepal_symbols_quiz.webp</image:loc>
+      <image:title>Nepal national symbols quiz</image:title>
+      <image:caption>Quiz trophy - original illustration</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://symbols.thenepal.io/national-dance/</loc>
     <lastmod>2026-10-28</lastmod>
     <changefreq>monthly</changefreq>
@@ -532,6 +546,20 @@
       <image:loc>https://symbols.thenepal.io/photos/official_vs_unofficial.webp</image:loc>
       <image:title>Official vs unofficial national symbols of Nepal</image:title>
       <image:caption>Constitution vs tradition - original illustration</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://symbols.thenepal.io/ne/quiz/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/quiz/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/quiz/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/quiz/"/>
+    <image:image>
+      <image:loc>https://symbols.thenepal.io/photos/nepal_symbols_quiz.webp</image:loc>
+      <image:title>Nepal national symbols quiz</image:title>
+      <image:caption>Quiz trophy - original illustration</image:caption>
     </image:image>
   </url>
   <url>

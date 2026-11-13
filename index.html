@@ -459,7 +459,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{
 .challenge-done-msg.show{display:block;}
 
 /* ===== QUIZ SECTION ===== */
-.quiz-section{background:linear-gradient(135deg,var(--maroon-dark) 0%,#4a1818 100%);border-radius:14px;padding:38px;margin:56px 0;color:var(--cream);position:relative;overflow:hidden;}
+.quiz-section{background:linear-gradient(135deg,var(--maroon-dark) 0%,#4a1818 100%);border-radius:14px;padding:38px;margin:56px 0;color:var(--cream);position:relative;overflow:hidden;overflow:clip;}
 .quiz-section::before{content:'';position:absolute;top:-80px;right:-80px;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,rgba(216,155,60,.18),transparent 70%);}
 .quiz-head{position:relative;z-index:1;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:18px;margin-bottom:26px;}
 .quiz-head .eyebrow{color:var(--marigold);}
@@ -1191,6 +1191,7 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
         <h2>Nepal National Symbols Quiz</h2>
         <p>12 questions, multiple choice. Get your score and download a shareable certificate at the end.</p>
       </div>
+      <a class="quiz-full-link" href="/quiz/" style="color:var(--marigold);font-size:.85rem;font-weight:600;align-self:center">Open the full quiz page →</a>
       <button class="quiz-start-btn" id="quiz-start-btn" type="button">Start Quiz <span aria-hidden="true">→</span></button>
     </div>
     <div class="quiz-body" id="quiz-body">
@@ -1317,6 +1318,10 @@ footer{background:var(--maroon-dark);color:rgba(251,243,230,.85);padding:48px 0 
 
 
 <!--nx-updated--><p class="nx-updated"><time datetime="2026-10-30">Last reviewed: 30 October 2026</time></p><!--/nx-updated-->
+
+
+
+
 
 
 
@@ -1704,7 +1709,7 @@ document.addEventListener('click', (e) => {
     {q:"What is widely regarded as Nepal's national dish?", choices:["Momo","Dal Bhat","Sel Roti","Chow Mein"], answer:1},
     {q:"Which sport was declared Nepal's official national sport in 2017?", choices:["Cricket","Football","Volleyball","Kabaddi"], answer:2},
     {q:"What is Nepal's official calendar called?", choices:["Gregorian Calendar","Bikram Sambat","Islamic Calendar","Lunar Calendar"], answer:1},
-    {q:"What is the national language of Nepal?", choices:["Hindi","Nepali","Maithili","Newari"], answer:1},
+    {q:"Which language is Nepal's language of official business (Article 7)?", choices:["Hindi","Nepali","Maithili","Newari"], answer:1},
     {q:"What is Nepal's national colour?", choices:["Blue","Green","Crimson Red","Yellow"], answer:2},
     {q:"What is the name of Nepal's national monument, rebuilt after the 2015 earthquake?", choices:["Boudhanath Stupa","Dharahara Tower","Swayambhunath","Patan Durbar"], answer:1},
     {q:"What is the highest peak associated with Nepal?", choices:["K2","Annapurna","Sagarmatha (Mt Everest)","Kanchenjunga"], answer:2}

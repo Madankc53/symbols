@@ -171,6 +171,8 @@ if os.path.exists(_ny):
     if os.path.exists(_w): exec(open(_w, encoding='utf-8').read())
     _o = os.path.join(ROOT, 'scripts', 'official_content.py')
     if os.path.exists(_o): exec(open(_o, encoding='utf-8').read())
+    _q = os.path.join(ROOT, 'scripts', 'quiz_content.py')
+    if os.path.exists(_q): exec(open(_q, encoding='utf-8').read())
     PAGES = PAGES + EXTRA_PAGES
 
 for pg in PAGES:
