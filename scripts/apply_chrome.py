@@ -10,11 +10,11 @@ SITE = 'https://symbols.thenepal.io'
 T = {
  'en': dict(brand='The Nepal', sub='National Symbols Hub', bc_home='The Nepal', bc_hub='National Symbols', ph='Search symbols…', aria='Search national symbols of Nepal',
             hub='/', desc="Nepal's most complete reference for national symbols, culture, geography and heritage.",
-            g=['Nature', 'Culture', 'Geography & Heritage', 'The Nepal Network'], about='About', contact='Contact', privacy='Privacy Policy',
+            g=['Nature', 'Culture', 'Geography & Heritage', 'The Nepal Network'], sources='Sources', quizl='Quiz', about='About', contact='Contact', privacy='Privacy Policy',
             note='Educational content — verify with official Government of Nepal sources.', made='© 2026 The Nepal · symbols.thenepal.io · Made in Nepal', langname='Language', main='Main'),
  'ne': dict(brand='द नेपाल', sub='राष्ट्रिय चिन्ह केन्द्र', bc_home='द नेपाल', bc_hub='राष्ट्रिय चिन्हहरू', ph='चिन्ह खोज्नुहोस्…', aria='नेपालका राष्ट्रिय चिन्हहरू खोज्नुहोस्',
             hub='/ne/', desc='राष्ट्रिय चिन्ह, संस्कृति, भूगोल र सम्पदाबारे नेपालको सबैभन्दा पूर्ण सन्दर्भ सामग्री।',
-            g=['प्रकृति', 'संस्कृति', 'भूगोल र सम्पदा', 'द नेपाल नेटवर्क'], about='हाम्रोबारे', contact='सम्पर्क', privacy='गोपनीयता नीति',
+            g=['प्रकृति', 'संस्कृति', 'भूगोल र सम्पदा', 'द नेपाल नेटवर्क'], sources='स्रोतहरू', quizl='क्विज', about='हाम्रोबारे', contact='सम्पर्क', privacy='गोपनीयता नीति',
             note='शैक्षिक सामग्री — आधिकारिक नेपाल सरकारका स्रोतसँग पुष्टि गर्नुहोस्।', made='© 2026 द नेपाल · symbols.thenepal.io', langname='भाषा छान्नुहोस्', main='मुख्य'),
 }
 GROUP = {'nature': 0, 'culture': 1, 'geography': 2, 'heritage': 2}
@@ -24,7 +24,7 @@ SVG_S = '<svg class="nx-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor
 SVG_B = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>'
 
 def slug_of(url): return url.rstrip('/').split('/')[-1]
-EXTRA_LABELS = {'quiz': {'en': 'Quiz', 'ne': 'क्विज'}, 'official-vs-unofficial': {'en': 'Official vs Unofficial', 'ne': 'आधिकारिक कि परम्परागत'}, 'nepali-new-year-2084': {'en': 'Nepali New Year 2084', 'ne': 'नेपाली नयाँ वर्ष २०८४'}}
+EXTRA_LABELS = {'sources': {'en': 'Sources', 'ne': 'स्रोतहरू'}, 'quiz': {'en': 'Quiz', 'ne': 'क्विज'}, 'official-vs-unofficial': {'en': 'Official vs Unofficial', 'ne': 'आधिकारिक कि परम्परागत'}, 'nepali-new-year-2084': {'en': 'Nepali New Year 2084', 'ne': 'नेपाली नयाँ वर्ष २०८४'}}
 def label_for(lang, slug):
     if slug in EXTRA_LABELS: return EXTRA_LABELS[slug][lang]
     for e in IDX[lang]:
@@ -41,10 +41,10 @@ def footer(lang):
     return ('<!--nx-footer-->\n<footer class="nx-footer" id="nx-footer"><div class="nx-fw"><div class="nx-fgrid">'
         '<div><a class="nx-fbrand" href="%s"><img src="/logo.png" width="40" height="40" alt="" loading="lazy"><b>%s</b></a><p>%s</p><p>symbols.thenepal.io</p></div>'
         '%s%s%s%s</div>'
-        '<div class="nx-fbottom"><span>%s</span><nav aria-label="Site"><a href="https://thenepal.io/about/">%s</a><a href="https://thenepal.io/contact/">%s</a><a href="https://thenepal.io/privacy-policy/">%s</a></nav></div>'
+        '<div class="nx-fbottom"><span>%s</span><nav aria-label="Site"><a href="%ssources/">%s</a><a href="%squiz/">%s</a><a href="https://thenepal.io/about/">%s</a><a href="https://thenepal.io/contact/">%s</a><a href="https://thenepal.io/privacy-policy/">%s</a></nav></div>'
         '<div class="nx-fbottom" style="border:0;margin-top:0;padding-top:10px"><span>%s</span></div>'
         '</div></footer>\n<!--/nx-footer-->') % (t['hub'], t['brand'], t['desc'], col(0, ''.join(cols[0])), col(1, ''.join(cols[1])), col(2, ''.join(cols[2])), col(3, net),
-        t['made'], t['about'], t['contact'], t['privacy'], t['note'])
+        t['made'], t['hub'], t['sources'], t['hub'], t['quizl'], t['about'], t['contact'], t['privacy'], t['note'])
 
 def header(lang, slug):
     t = T[lang]
