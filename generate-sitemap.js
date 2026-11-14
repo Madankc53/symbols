@@ -170,6 +170,13 @@ const pages = [
     ]
   },
   {
+    loc: '/sources/',
+    priority: '0.6',
+    changefreq: 'monthly',
+    lastmod: '2026-11-14',
+    images: []
+  },
+  {
     loc: '/national-dance/',
     priority: '0.8',
     changefreq: 'monthly',
@@ -384,6 +391,13 @@ const pages = [
     images: [
       { loc: '/photos/nepal_symbols_quiz.webp', title: 'Nepal national symbols quiz', caption: 'Quiz trophy - original illustration' }
     ]
+  },
+  {
+    loc: '/ne/sources/',
+    priority: '0.5',
+    changefreq: 'monthly',
+    lastmod: '2026-11-14',
+    images: []
   },
   {
     loc: '/ne/national-dance/',

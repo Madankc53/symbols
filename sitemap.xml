@@ -255,6 +255,15 @@
     </image:image>
   </url>
   <url>
+    <loc>https://symbols.thenepal.io/sources/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/sources/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/sources/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/sources/"/>
+  </url>
+  <url>
     <loc>https://symbols.thenepal.io/national-dance/</loc>
     <lastmod>2026-10-28</lastmod>
     <changefreq>monthly</changefreq>
@@ -561,6 +570,15 @@
       <image:title>Nepal national symbols quiz</image:title>
       <image:caption>Quiz trophy - original illustration</image:caption>
     </image:image>
+  </url>
+  <url>
+    <loc>https://symbols.thenepal.io/ne/sources/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/sources/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/sources/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/sources/"/>
   </url>
   <url>
     <loc>https://symbols.thenepal.io/ne/national-dance/</loc>
