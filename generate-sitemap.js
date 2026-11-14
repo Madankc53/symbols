@@ -170,6 +170,15 @@ const pages = [
     ]
   },
   {
+    loc: '/flag-construction-guide/',
+    priority: '0.7',
+    changefreq: 'monthly',
+    lastmod: '2026-11-14',
+    images: [
+      { loc: '/photos/national_flag_nepal.webp', title: 'Flag of Nepal', caption: 'The national flag of Nepal' }
+    ]
+  },
+  {
     loc: '/sources/',
     priority: '0.6',
     changefreq: 'monthly',
@@ -390,6 +399,15 @@ const pages = [
     lastmod: '2026-11-13',
     images: [
       { loc: '/photos/nepal_symbols_quiz.webp', title: 'Nepal national symbols quiz', caption: 'Quiz trophy - original illustration' }
+    ]
+  },
+  {
+    loc: '/ne/flag-construction-guide/',
+    priority: '0.6',
+    changefreq: 'monthly',
+    lastmod: '2026-11-14',
+    images: [
+      { loc: '/photos/national_flag_nepal.webp', title: 'Flag of Nepal', caption: 'The national flag of Nepal' }
     ]
   },
   {
