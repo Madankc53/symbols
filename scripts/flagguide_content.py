@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
 # /flag-construction-guide/ and /ne/. Overview of Schedule 1 (24 steps in four parts) in our own words.
+# Also embeds the 3D viewer (assets/nfc.js, scripts/nfc_viewer.py); geometry checked: height/width = 1.2190.
 # Verified from: nepallaws.com Schedule-1 page and ICL (servat.unibe.ch) Schedule text (step grouping, 8 moon / 12 sun triangles,
 # border = width TN, imaginary lines, size set by Government), Vintage News (AC = AB + one third of AB). Exact measurements are NOT reproduced.
 CONST_F = '<a href="https://www.constituteproject.org/constitution/Nepal_2015" rel="noopener">Constitute Project</a>'
 EN_BODY_F = '''    <section>
-      <p class="lede">Nepal's flag is not drawn from a simple width-to-height ratio. <b>Schedule 1 of the Constitution of Nepal</b> gives a method of 24 numbered steps, built from straight lines, arcs and circles. This page explains how that method is organised. It does not replace the legal text.</p>
-      <div class="status warn"><b>For manufacturing or exams.</b> We summarise the method in our own words and do not reproduce the exact measurements. Use the full text of Schedule 1 on ''' + CONST_F + ''' for any exact drawing.</div>
+      <p class="lede">Nepal's flag is not drawn from a simple width-to-height ratio. <b>Schedule 1 of the Constitution of Nepal</b> gives a method of 24 numbered steps, built from straight lines, arcs and circles. This page lets you watch it being built in 3D and explains how the method is organised. It does not replace the legal text.</p>
+      <div class="status warn"><b>For manufacturing or exams.</b> The animation below calculates every point from the clauses of Schedule 1, in our own wording. When a flag has to be made, use the full official text of Schedule 1 on ''' + CONST_F + '''.</div>
     </section>
 
     <section id="overview">
@@ -56,11 +57,12 @@ EN_FAQ_F = [
  ("Why is Nepal's flag not a rectangle?", "Its outline is two stacked triangular pennants. It is the only national flag in the world that is neither a rectangle nor a square, and Schedule 1 fixes the exact shape."),
  ("How many rays do the sun and moon have?", "The moon has eight equal triangles and the sun has twelve, as set by Schedule 1."),
  ("What colour and width is the border?", "Deep blue, running on all sides. Its width equals the segment called TN in the construction."),
- ("Where can I read the exact measurements?", "In Schedule 1 of the Constitution of Nepal 2015, available on Constitute Project and from the Nepal Law Commission. This page only explains the structure."),
+ ("Where can I read the official text?", "In Schedule 1 of the Constitution of Nepal 2015, available on Constitute Project and from the Nepal Law Commission. This page animates and explains it, but the legal text is the authority."),
+ ("Is the 3D animation accurate?", "Every point from A to W is calculated from the clauses of Schedule 1, and the resulting height-to-width ratio comes out at about 1.219, the flag's published ratio. The on-screen colours are digital approximations."),
 ]
 NE_BODY_F = '''    <section>
       <p class="lede">नेपालको झण्डा चौडाइ-उचाइको साधारण अनुपातबाट बनाइँदैन। <b>नेपालको संविधानको अनुसूची १</b> मा सरल रेखा, चाप र वृत्त प्रयोग गरी २४ क्रमबद्ध चरणको विधि दिइएको छ। यो पृष्ठले त्यो विधि कसरी व्यवस्थित छ भन्ने बुझाउँछ। यसले कानुनी पाठको स्थान लिँदैन।</p>
-      <div class="status warn"><b>निर्माण वा परीक्षाका लागि।</b> हामी विधिको सार आफ्नै शब्दमा दिन्छौँ, ठ्याक्कै नाप दिँदैनौँ। सही चित्रका लागि ''' + CONST_F + ''' मा अनुसूची १ को पूरा पाठ हेर्नुहोस्।</div>
+      <div class="status warn"><b>निर्माण वा परीक्षाका लागि।</b> तलको एनिमेसनले अनुसूची १ का चरणबाट हरेक बिन्दु गणना गर्छ, हाम्रै शब्दमा। झण्डा बनाउनुपर्दा ''' + CONST_F + ''' मा अनुसूची १ को आधिकारिक पूरा पाठ हेर्नुहोस्।</div>
     </section>
 
     <section id="overview">
@@ -111,8 +113,15 @@ NE_FAQ_F = [
  ("नेपालको झण्डा किन आयताकार छैन?", "यसको आकार माथि-तल दुई त्रिभुज पताकाको हो। यो संसारको एक मात्र आयत वा वर्ग नभएको राष्ट्रिय झण्डा हो, र अनुसूची १ ले आकार ठ्याक्कै तोकेको छ।"),
  ("सूर्य र चन्द्रमामा कति त्रिभुज छन्?", "अनुसूची १ अनुसार चन्द्रमामा आठ र सूर्यमा बाह्र समान त्रिभुज छन्।"),
  ("किनाराको रङ र चौडाइ कति हो?", "गाढा नीलो, सबै छेउमा। चौडाइ विधिमा आएको TN खण्ड बराबर हुन्छ।"),
- ("ठ्याक्कै नाप कहाँ हेर्ने?", "नेपालको संविधान २०७२ को अनुसूची १ मा, Constitute Project वा नेपाल कानुन आयोगबाट। यो पृष्ठले संरचना मात्र बुझाउँछ।"),
+ ("आधिकारिक पाठ कहाँ हेर्ने?", "नेपालको संविधान २०७२ को अनुसूची १ मा, Constitute Project वा नेपाल कानुन आयोगबाट। यो पृष्ठले त्यसलाई एनिमेसन र व्याख्या गर्छ, तर कानुनी पाठ नै आधिकारिक हो।"),
+ ("३D एनिमेसन कति सही छ?", "A देखि W सम्मका हरेक बिन्दु अनुसूची १ का चरणबाट गणना गरिएका छन्, र निस्कने उचाइ-चौडाइ अनुपात करिब १.२१९ आउँछ, जुन झण्डाको प्रकाशित अनुपात हो। स्क्रिनका रङ डिजिटल अनुमान हुन्।"),
 ]
+_nv = {}
+exec(open(os.path.join(ROOT, 'scripts', 'nfc_viewer.py'), encoding='utf-8').read(), _nv)
+_SEP = '    </section>\n\n    <section id="overview">'
+assert _SEP in EN_BODY_F and _SEP in NE_BODY_F
+EN_BODY_F = EN_BODY_F.replace(_SEP, '    </section>\n\n' + _nv['html']('en') + '\n\n    <section id="overview">', 1)
+NE_BODY_F = NE_BODY_F.replace(_SEP, '    </section>\n\n' + _nv['html']('ne') + '\n\n    <section id="overview">', 1)
 REL_F = [('national-flag', 'National Flag'), ('national-color', 'National Colour'), ('official-vs-unofficial', 'Official vs Unofficial Symbols'), ('quiz', 'Nepal Symbols Quiz')]
 REL_F_NE = [('national-flag', 'राष्ट्रिय झण्डा'), ('national-color', 'राष्ट्रिय रङ'), ('official-vs-unofficial', 'आधिकारिक कि परम्परागत'), ('quiz', 'नेपाल चिन्ह क्विज')]
 EXTRA_PAGES = EXTRA_PAGES + [
