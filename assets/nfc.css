@@ -1,0 +1,63 @@
+.nfc{--nfc-maroon:var(--crimson,#7E2A2A);--nfc-maroon-d:var(--crimson-deep,#5C1E1E);--nfc-gold:var(--gold,#D89B3C);--nfc-cream:var(--bg,#FBF3E6);--nfc-ink:var(--ink,#2A241D);--nfc-soft:var(--ink-soft,#5A4F40);max-width:1100px;margin:48px auto;padding:0 24px;font-family:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;color:var(--nfc-ink);line-height:1.6}
+.nfc *,.nfc *::before,.nfc *::after{box-sizing:border-box}
+.nfc-head{max-width:68ch;margin:0 0 22px}
+.nfc h2{font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:clamp(1.6rem,3.6vw,2.15rem);line-height:1.15;color:var(--nfc-maroon-d);margin:0 0 10px}
+.nfc-head p{margin:0;color:var(--nfc-soft);font-size:1.02rem}
+
+.nfc-stage{position:relative;width:100%;height:clamp(480px,78vh,800px);border-radius:16px;overflow:hidden;background:radial-gradient(ellipse at 50% 36%,#1d2d5e 0%,#0e1634 56%,#070b1d 100%);box-shadow:0 24px 60px rgba(14,22,52,.35);isolation:isolate;color:#eaf0ff;user-select:none;-webkit-user-select:none}
+.nfc-stage:focus-visible{outline:3px solid var(--nfc-gold);outline-offset:3px}
+.nfc-stage::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 50% 45%,transparent 55%,rgba(3,5,16,.55) 100%);z-index:1}
+.nfc-canvas{position:absolute;inset:0;width:100%;height:100%;display:block;touch-action:pan-y;cursor:grab}
+.nfc-canvas:active{cursor:grabbing}
+.nfc-load{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:24px;font-size:.95rem;color:#b9c7f0;z-index:2;pointer-events:none;transition:opacity .5s}
+.nfc-load.nfc-off{opacity:0}
+.nfc-fallback{position:absolute;inset:0;display:none;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:24px;text-align:center;z-index:3;font-size:.92rem;color:#c9d5f7}
+.nfc-fallback canvas{max-height:72%;max-width:80%;width:auto;height:auto;filter:drop-shadow(0 10px 24px rgba(0,0,0,.45))}
+.nfc.nfc-nogl .nfc-fallback{display:flex}
+.nfc.nfc-nogl .nfc-canvas,.nfc.nfc-nogl .nfc-top,.nfc.nfc-nogl .nfc-caption,.nfc.nfc-nogl .nfc-bar,.nfc.nfc-nogl .nfc-load{display:none}
+
+.nfc-top{position:absolute;z-index:4;top:12px;left:12px;right:12px;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+.nfc-top::-webkit-scrollbar{display:none}
+.nfc-chip{flex:0 0 auto;min-height:36px;padding:0 14px;border-radius:999px;border:1px solid rgba(255,255,255,.2);background:rgba(8,12,30,.5);color:#dbe5ff;font:600 .8rem/1 'Inter',system-ui,sans-serif;cursor:pointer;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);transition:background .2s,color .2s,border-color .2s}
+.nfc-chip:hover{background:rgba(255,255,255,.14)}
+.nfc-chip[aria-current="step"]{background:var(--nfc-gold);border-color:var(--nfc-gold);color:#24180a}
+
+.nfc-caption{position:absolute;z-index:4;left:12px;bottom:112px;width:min(520px,calc(100% - 24px));padding:14px 16px 15px;border-radius:12px;background:rgba(8,12,30,.66);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);transition:opacity .6s,transform .6s;pointer-events:none}
+.nfc-clause{display:block;font-size:.78rem;font-weight:600;color:var(--nfc-gold);margin-bottom:3px;letter-spacing:.01em}
+.nfc-ctitle{display:block;font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:1.12rem;line-height:1.25;color:#fff;margin-bottom:4px}
+.nfc-ctext{margin:0;font-size:.9rem;line-height:1.5;color:#c9d5f7}
+.nfc-stage.nfc-final .nfc-caption{opacity:0;transform:translateY(8px)}
+
+.nfc-bar{position:absolute;z-index:5;left:12px;right:12px;bottom:10px;display:grid;gap:6px}
+.nfc-scrub{width:100%;height:24px;margin:0;background:transparent;accent-color:var(--nfc-gold);cursor:pointer}
+.nfc-btns{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.nfc-btn{min-width:44px;min-height:44px;padding:0 13px;border-radius:12px;border:1px solid rgba(255,255,255,.2);background:rgba(8,12,30,.6);color:#eef3ff;font:600 .85rem/1 'Inter',system-ui,sans-serif;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:7px;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);transition:background .2s}
+.nfc-btn:hover{background:rgba(255,255,255,.16)}
+.nfc-btn[aria-pressed="true"]{background:var(--nfc-gold);border-color:var(--nfc-gold);color:#24180a}
+.nfc-btn svg{width:18px;height:18px;flex:0 0 18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.nfc-sp{flex:1 1 auto}
+.nfc .nfc-lbl{display:none}
+@media(min-width:760px){.nfc .nfc-lbl{display:inline}}
+.nfc :focus-visible{outline:3px solid #ffd27a;outline-offset:2px}
+.nfc-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+.nfc-steps{margin:18px 0 0;border:1px solid var(--line,#D8C6A8);border-radius:12px;background:#fff;padding:0 18px}
+.nfc-steps summary{cursor:pointer;font-weight:600;color:var(--nfc-maroon-d);padding:14px 0;list-style:none}
+.nfc-steps summary::-webkit-details-marker{display:none}
+.nfc-steps summary::after{content:"+";float:right;color:var(--nfc-gold);font-size:1.25rem;line-height:1}
+.nfc-steps[open] summary::after{content:"–"}
+.nfc-steps ol{margin:0 0 14px 20px;padding:0;color:var(--nfc-ink);font-size:.93rem}
+.nfc-steps li{margin-bottom:7px;max-width:76ch}
+.nfc-steps li strong{color:var(--nfc-maroon-d)}
+.nfc-note{margin:14px 0 0;font-size:.82rem;color:var(--nfc-soft);max-width:80ch}
+.nfc-note a{color:var(--nfc-maroon)}
+
+.nfc-stage:fullscreen{height:100%;border-radius:0}
+.nfc-stage:-webkit-full-screen{height:100%;border-radius:0}
+.nfc-stage.nfc-pseudo{position:fixed;inset:0;z-index:2147483000;height:100%;height:100dvh;border-radius:0}
+@media(max-width:600px){.nfc{padding:0 12px;margin:32px auto}.nfc-stage{height:clamp(500px,80vh,720px)}.nfc-caption{bottom:136px}.nfc-ctext{font-size:.84rem}}
+@media(prefers-reduced-motion:reduce){.nfc-caption,.nfc-load,.nfc-chip{transition:none}}
+.nfc-btn[hidden]{display:none}
+.nfc :lang(ne),.nfc[lang="ne"]{font-family:"Noto Sans Devanagari","Inter",system-ui,sans-serif}
+.nfc[lang="ne"] h2,.nfc[lang="ne"] .nfc-ctitle{font-family:"Noto Serif Devanagari","Fraunces",Georgia,serif}
+

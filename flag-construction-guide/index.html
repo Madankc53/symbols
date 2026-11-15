@@ -98,6 +98,14 @@
   "mainEntity": [
     {
       "@type": "Question",
+      "name": "Read all 24 steps as text",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Base line. On crimson cloth, draw a line AB from left to right. Its length sets the scale, so AB = 1.Height and point D. Raise AC at right angles to AB, with AC = AB plus one third of AB. Mark D on AC so that AD = AB, then join B and D.Point E. On BD, mark E so that BE = AB.Line FG. Through E, draw FG parallel to AB, starting at F on AC, with FG = AB.Join C and G. The outline is now complete: two stacked pennants.Points H and I. Mark H on AB with AH = one quarter of AB. Draw HI parallel to AC, meeting CG at I.Bisect CF. Find the midpoint J of CF and draw JK parallel to AB, meeting CG at K.Point L. L is where JK and HI cross.Join J and G. Draw the line JG.Point M. M is where JG meets HI.Point N. With centre M and the shortest distance from M to BD as radius, mark N on HI below M.Line OM. Through M, draw a line parallel to AB, starting at O on AC.Arc PNQ. With centre L and radius LN, draw the lower semicircle. P and Q are where it meets line OM.Outer edge of the crescent. With centre M and radius MQ, draw the lower semicircle through P and Q.Points R, S and T. With centre N and radius NM, draw an arc meeting arc PNQ at R and S. Join RS; T is where RS meets HI.Outer boundary of the rays. With centre T and radius TS, draw the upper semicircle.Inner boundary of the rays. With centre T and radius TM, draw the upper arc.Eight moon rays. Make eight equal, similar triangles in the space between the two arcs.Points U and V. Bisect AF at U and draw UV parallel to AB, meeting BE at V.Inner circle of the sun. W is where UV meets HI. With centre W and radius MN, draw a circle.Outer circle of the sun. With centre W and radius LN, draw a second circle.Twelve sun rays. Make twelve equal, similar triangles in the ring between the circles, with two apexes touching HI.The border. The deep blue border is as wide as TN and runs along all sides. At the five angles of the flag, the outer angles equal the inner ones.Rope or pole. The border is made as described when the flag is hung from a rope. For a pole, the hole in the border alongside AC can be extended as needed."
+      }
+    },
+    {
+      "@type": "Question",
       "name": "How many steps are in the construction of Nepal's flag?",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -130,10 +138,18 @@
     },
     {
       "@type": "Question",
-      "name": "Where can I read the exact measurements?",
+      "name": "Where can I read the official text?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "In Schedule 1 of the Constitution of Nepal 2015, available on Constitute Project and from the Nepal Law Commission. This page only explains the structure."
+        "text": "In Schedule 1 of the Constitution of Nepal 2015, available on Constitute Project and from the Nepal Law Commission. This page animates and explains it, but the legal text is the authority."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the 3D animation accurate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Every point from A to W is calculated from the clauses of Schedule 1, and the resulting height-to-width ratio comes out at about 1.219, the flag's published ratio. The on-screen colours are digital approximations."
       }
     }
   ]
@@ -388,9 +404,40 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;
 
   <article>
     <section>
-      <p class="lede">Nepal's flag is not drawn from a simple width-to-height ratio. <b>Schedule 1 of the Constitution of Nepal</b> gives a method of 24 numbered steps, built from straight lines, arcs and circles. This page explains how that method is organised. It does not replace the legal text.</p>
-      <div class="status warn"><b>For manufacturing or exams.</b> We summarise the method in our own words and do not reproduce the exact measurements. Use the full text of Schedule 1 on <a href="https://www.constituteproject.org/constitution/Nepal_2015" rel="noopener">Constitute Project</a> for any exact drawing.</div>
+      <p class="lede">Nepal's flag is not drawn from a simple width-to-height ratio. <b>Schedule 1 of the Constitution of Nepal</b> gives a method of 24 numbered steps, built from straight lines, arcs and circles. This page lets you watch it being built in 3D and explains how the method is organised. It does not replace the legal text.</p>
+      <div class="status warn"><b>For manufacturing or exams.</b> The animation below calculates every point from the clauses of Schedule 1, in our own wording. When a flag has to be made, use the full official text of Schedule 1 on <a href="https://www.constituteproject.org/constitution/Nepal_2015" rel="noopener">Constitute Project</a>.</div>
     </section>
+
+<link rel="stylesheet" href="/assets/nfc.css?v=1">
+<section class="nfc" id="nfc" lang="en" data-i18n="{&quot;pause&quot;: &quot;Pause&quot;, &quot;play&quot;: &quot;Play&quot;, &quot;replay&quot;: &quot;Replay&quot;, &quot;replayAria&quot;: &quot;Replay from the start&quot;, &quot;speedAria&quot;: &quot;Playback speed {n} times&quot;, &quot;clause&quot;: &quot;Clause {n} of 24&quot;, &quot;preparing&quot;: &quot;Preparing the 3D scene…&quot;, &quot;libFail&quot;: &quot;The 3D library could not be loaded. This is the flag, drawn flat to the same geometry. The 24 steps are written out below.&quot;, &quot;pcap&quot;: [{&quot;t&quot;: &quot;Start with one unit&quot;, &quot;x&quot;: &quot;Schedule 1 builds the flag from straight lines, arcs and circles. Every length comes from the base line AB.&quot;}, {&quot;t&quot;: &quot;The shape · clauses 1–5&quot;, &quot;x&quot;: &quot;Two stacked pennants, drawn with a ruler and a compass.&quot;}, {&quot;t&quot;: &quot;The moon · clauses 6–18&quot;, &quot;x&quot;: &quot;A crescent that cradles a fan of eight rays.&quot;}, {&quot;t&quot;: &quot;The sun · clauses 19–22&quot;, &quot;x&quot;: &quot;A twelve-rayed sun, built from two circles.&quot;}, {&quot;t&quot;: &quot;Border and cloth · clauses 23–24&quot;, &quot;x&quot;: &quot;Crimson cloth, then a deep blue border as wide as TN.&quot;}, {&quot;t&quot;: &quot;From pattern to cloth&quot;, &quot;x&quot;: &quot;The finished pattern becomes a flag. Its outline is the two pennants you just drew.&quot;}, {&quot;t&quot;: &quot;The national flag of Nepal&quot;, &quot;x&quot;: &quot;Drag to look around. Use Replay to watch it built again.&quot;}], &quot;ph&quot;: [&quot;Grid&quot;, &quot;Shape&quot;, &quot;Moon&quot;, &quot;Sun&quot;, &quot;Border and cloth&quot;, &quot;3D flag&quot;, &quot;Full view&quot;]}" aria-labelledby="nfc-title">
+<header class="nfc-head"><h2 id="nfc-title">Watch Nepal’s flag being built</h2><p>Schedule 1 of the Constitution builds the flag in 24 steps. Here every point is calculated from those steps, drawn on a grid, filled with cloth, and then raised into a 3D flag. Drag to look around, or scrub the timeline.</p></header>
+<div class="nfc-stage" id="nfc-stage" tabindex="0" role="group" aria-label="Interactive 3D animation of Nepal’s flag construction. Space plays or pauses, left and right arrows jump between sections, R replays, F toggles full screen.">
+  <canvas class="nfc-canvas" id="nfc-canvas" role="img" aria-label="Three-dimensional view of Nepal’s flag being constructed step by step"></canvas>
+  <div class="nfc-load" id="nfc-load">The 3D scene loads when you scroll here.</div>
+  <div class="nfc-fallback" id="nfc-fallback"><canvas id="nfc-fbc" width="480" height="586" role="img" aria-label="Nepal’s national flag, drawn to Schedule 1 geometry"></canvas><p id="nfc-fbmsg">The 3D view needs WebGL, which isn’t available here. This is the flag, drawn flat to the same geometry. The 24 steps are written out below.</p></div>
+  <div class="nfc-top" role="group" aria-label="Jump to a section"><button type="button" class="nfc-chip" data-i="0">Grid</button><button type="button" class="nfc-chip" data-i="1">Shape</button><button type="button" class="nfc-chip" data-i="2">Moon</button><button type="button" class="nfc-chip" data-i="3">Sun</button><button type="button" class="nfc-chip" data-i="4">Border and cloth</button><button type="button" class="nfc-chip" data-i="5">3D flag</button><button type="button" class="nfc-chip" data-i="6">Full view</button></div>
+  <div class="nfc-caption" id="nfc-caption" aria-hidden="true"><span class="nfc-clause" id="nfc-clause"></span><span class="nfc-ctitle" id="nfc-ctitle"></span><p class="nfc-ctext" id="nfc-ctext"></p></div>
+  <div class="nfc-bar">
+    <input class="nfc-scrub" id="nfc-scrub" type="range" min="0" max="48" step="0.01" value="0" aria-label="Timeline">
+    <div class="nfc-btns">
+      <button type="button" class="nfc-btn" id="nfc-play" aria-label="Pause"><svg viewBox="0 0 24 24" aria-hidden="true"><path id="nfc-play-ic" d="M7 5v14M17 5v14"/></svg><span class="nfc-lbl" id="nfc-play-t">Pause</span></button>
+      <button type="button" class="nfc-btn" id="nfc-replay" aria-label="Replay from the start"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7M3 4v5h5"/></svg><span class="nfc-lbl">Replay</span></button>
+      <button type="button" class="nfc-btn" id="nfc-end" aria-label="Skip to the finished flag"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l9 7-9 7zM18 5v14"/></svg><span class="nfc-lbl">Skip</span></button>
+      <button type="button" class="nfc-btn" id="nfc-speed" aria-label="Playback speed 1 times">1×</button>
+      <span class="nfc-sp"></span>
+      <button type="button" class="nfc-btn" id="nfc-orbit" aria-pressed="true" aria-label="Drag to rotate and zoom"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 4 0 1 0 0 0M12 3v18M3 12a9 4 0 0 0 18 0"/></svg><span class="nfc-lbl">Orbit</span></button>
+      <button type="button" class="nfc-btn" id="nfc-zout" aria-label="Zoom out"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/></svg></button>
+      <button type="button" class="nfc-btn" id="nfc-zin" aria-label="Zoom in"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5v14"/></svg></button>
+      <button type="button" class="nfc-btn" id="nfc-fs" aria-label="Full screen"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>
+    </div>
+  </div>
+  <p class="nfc-sr" id="nfc-sr" aria-live="polite"></p>
+</div>
+<details class="nfc-steps" id="nfc-steps"><summary>Read all 24 steps as text</summary><ol><li><strong>Base line.</strong> On crimson cloth, draw a line AB from left to right. Its length sets the scale, so AB = 1.</li><li><strong>Height and point D.</strong> Raise AC at right angles to AB, with AC = AB plus one third of AB. Mark D on AC so that AD = AB, then join B and D.</li><li><strong>Point E.</strong> On BD, mark E so that BE = AB.</li><li><strong>Line FG.</strong> Through E, draw FG parallel to AB, starting at F on AC, with FG = AB.</li><li><strong>Join C and G.</strong> The outline is now complete: two stacked pennants.</li><li><strong>Points H and I.</strong> Mark H on AB with AH = one quarter of AB. Draw HI parallel to AC, meeting CG at I.</li><li><strong>Bisect CF.</strong> Find the midpoint J of CF and draw JK parallel to AB, meeting CG at K.</li><li><strong>Point L.</strong> L is where JK and HI cross.</li><li><strong>Join J and G.</strong> Draw the line JG.</li><li><strong>Point M.</strong> M is where JG meets HI.</li><li><strong>Point N.</strong> With centre M and the shortest distance from M to BD as radius, mark N on HI below M.</li><li><strong>Line OM.</strong> Through M, draw a line parallel to AB, starting at O on AC.</li><li><strong>Arc PNQ.</strong> With centre L and radius LN, draw the lower semicircle. P and Q are where it meets line OM.</li><li><strong>Outer edge of the crescent.</strong> With centre M and radius MQ, draw the lower semicircle through P and Q.</li><li><strong>Points R, S and T.</strong> With centre N and radius NM, draw an arc meeting arc PNQ at R and S. Join RS; T is where RS meets HI.</li><li><strong>Outer boundary of the rays.</strong> With centre T and radius TS, draw the upper semicircle.</li><li><strong>Inner boundary of the rays.</strong> With centre T and radius TM, draw the upper arc.</li><li><strong>Eight moon rays.</strong> Make eight equal, similar triangles in the space between the two arcs.</li><li><strong>Points U and V.</strong> Bisect AF at U and draw UV parallel to AB, meeting BE at V.</li><li><strong>Inner circle of the sun.</strong> W is where UV meets HI. With centre W and radius MN, draw a circle.</li><li><strong>Outer circle of the sun.</strong> With centre W and radius LN, draw a second circle.</li><li><strong>Twelve sun rays.</strong> Make twelve equal, similar triangles in the ring between the circles, with two apexes touching HI.</li><li><strong>The border.</strong> The deep blue border is as wide as TN and runs along all sides. At the five angles of the flag, the outer angles equal the inner ones.</li><li><strong>Rope or pole.</strong> The border is made as described when the flag is hung from a rope. For a pole, the hole in the border alongside AC can be extended as needed.</li></ol></details>
+<p class="nfc-note">Geometry follows Schedule 1 (Article 8) of the Constitution of Nepal 2015: all points A to W are calculated from the clauses with AB = 1, and the animation’s proportions are checked against the flag’s published height-to-width ratio of about 1.219. Schedule 1 leaves the real-world size to the Government of Nepal, and on-screen size here is arbitrary. The Constitution says “crimson” and “deep blue” only; the on-screen colours are common digital approximations, not official values. Point letters follow the English text. Read the original on <a href="https://www.constituteproject.org/constitution/Nepal_2015" rel="noopener">Constitute Project</a> or <a href="https://nepallaws.com/?p=38031" rel="noopener">Nepal Laws</a>.</p>
+<noscript><p class="nfc-note">This section needs JavaScript for the animation. The 24 steps are listed above as text.</p></noscript>
+<script defer src="/assets/nfc.js?v=1"></script>
+</section>
 
     <section id="overview">
       <h2>The 24 Steps in Four Parts</h2>
@@ -437,7 +484,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;
 
     <section id="faq">
       <h2>Frequently Asked Questions</h2>
-      <details class="faq-item"><summary>How many steps are in the construction of Nepal's flag?</summary><p>Schedule 1 of the Constitution of Nepal gives 24 numbered steps, grouped as the shape (steps 1–5), the moon (6–18), the sun (19–22) and the border (23–24).</p></details><details class="faq-item"><summary>Why is Nepal's flag not a rectangle?</summary><p>Its outline is two stacked triangular pennants. It is the only national flag in the world that is neither a rectangle nor a square, and Schedule 1 fixes the exact shape.</p></details><details class="faq-item"><summary>How many rays do the sun and moon have?</summary><p>The moon has eight equal triangles and the sun has twelve, as set by Schedule 1.</p></details><details class="faq-item"><summary>What colour and width is the border?</summary><p>Deep blue, running on all sides. Its width equals the segment called TN in the construction.</p></details><details class="faq-item"><summary>Where can I read the exact measurements?</summary><p>In Schedule 1 of the Constitution of Nepal 2015, available on Constitute Project and from the Nepal Law Commission. This page only explains the structure.</p></details>
+      <details class="faq-item"><summary>How many steps are in the construction of Nepal's flag?</summary><p>Schedule 1 of the Constitution of Nepal gives 24 numbered steps, grouped as the shape (steps 1–5), the moon (6–18), the sun (19–22) and the border (23–24).</p></details><details class="faq-item"><summary>Why is Nepal's flag not a rectangle?</summary><p>Its outline is two stacked triangular pennants. It is the only national flag in the world that is neither a rectangle nor a square, and Schedule 1 fixes the exact shape.</p></details><details class="faq-item"><summary>How many rays do the sun and moon have?</summary><p>The moon has eight equal triangles and the sun has twelve, as set by Schedule 1.</p></details><details class="faq-item"><summary>What colour and width is the border?</summary><p>Deep blue, running on all sides. Its width equals the segment called TN in the construction.</p></details><details class="faq-item"><summary>Where can I read the official text?</summary><p>In Schedule 1 of the Constitution of Nepal 2015, available on Constitute Project and from the Nepal Law Commission. This page animates and explains it, but the legal text is the authority.</p></details><details class="faq-item"><summary>Is the 3D animation accurate?</summary><p>Every point from A to W is calculated from the clauses of Schedule 1, and the resulting height-to-width ratio comes out at about 1.219, the flag's published ratio. The on-screen colours are digital approximations.</p></details>
     </section>
   </article>
 
