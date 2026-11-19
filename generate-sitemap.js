@@ -215,6 +215,33 @@ const pages = [
     ]
   },
   {
+    loc: '/national-parks-of-nepal/',
+    priority: '0.8',
+    changefreq: 'monthly',
+    lastmod: '2026-11-20',
+    images: [
+      { loc: '/photos/nepal_national_parks_hero.webp', title: 'National parks of Nepal', caption: 'Infographic of the 13 national parks of Nepal' }
+    ]
+  },
+  {
+    loc: '/nepal-tiger-census-2026/',
+    priority: '0.8',
+    changefreq: 'monthly',
+    lastmod: '2026-11-20',
+    images: [
+      { loc: '/photos/nepal_tiger_census_hero.webp', title: 'Nepal tiger census 2026', caption: '429 tigers counted in Nepal in 2026' }
+    ]
+  },
+  {
+    loc: '/national-days-of-nepal/',
+    priority: '0.8',
+    changefreq: 'monthly',
+    lastmod: '2026-11-20',
+    images: [
+      { loc: '/photos/nepal_national_days_hero.webp', title: 'National days of Nepal', caption: 'The five national days of Nepal' }
+    ]
+  },
+  {
     loc: '/sources/',
     priority: '0.6',
     changefreq: 'monthly',
@@ -480,6 +507,33 @@ const pages = [
     lastmod: '2026-11-20',
     images: [
       { loc: '/photos/national_everest_of_nepal.webp', title: 'Is the Yeti a national symbol', caption: 'Himalayan peaks' }
+    ]
+  },
+  {
+    loc: '/ne/national-parks-of-nepal/',
+    priority: '0.8',
+    changefreq: 'monthly',
+    lastmod: '2026-11-20',
+    images: [
+      { loc: '/photos/nepal_national_parks_hero.webp', title: 'National parks of Nepal', caption: 'Infographic of the 13 national parks of Nepal' }
+    ]
+  },
+  {
+    loc: '/ne/nepal-tiger-census-2026/',
+    priority: '0.8',
+    changefreq: 'monthly',
+    lastmod: '2026-11-20',
+    images: [
+      { loc: '/photos/nepal_tiger_census_hero.webp', title: 'Nepal tiger census 2026', caption: '429 tigers counted in Nepal in 2026' }
+    ]
+  },
+  {
+    loc: '/ne/national-days-of-nepal/',
+    priority: '0.8',
+    changefreq: 'monthly',
+    lastmod: '2026-11-20',
+    images: [
+      { loc: '/photos/nepal_national_days_hero.webp', title: 'National days of Nepal', caption: 'The five national days of Nepal' }
     ]
   },
   {

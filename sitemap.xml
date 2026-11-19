@@ -325,6 +325,48 @@
     </image:image>
   </url>
   <url>
+    <loc>https://symbols.thenepal.io/national-parks-of-nepal/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/national-parks-of-nepal/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/national-parks-of-nepal/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/national-parks-of-nepal/"/>
+    <image:image>
+      <image:loc>https://symbols.thenepal.io/photos/nepal_national_parks_hero.webp</image:loc>
+      <image:title>National parks of Nepal</image:title>
+      <image:caption>Infographic of the 13 national parks of Nepal</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://symbols.thenepal.io/nepal-tiger-census-2026/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/nepal-tiger-census-2026/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/nepal-tiger-census-2026/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/nepal-tiger-census-2026/"/>
+    <image:image>
+      <image:loc>https://symbols.thenepal.io/photos/nepal_tiger_census_hero.webp</image:loc>
+      <image:title>Nepal tiger census 2026</image:title>
+      <image:caption>429 tigers counted in Nepal in 2026</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://symbols.thenepal.io/national-days-of-nepal/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/national-days-of-nepal/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/national-days-of-nepal/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/national-days-of-nepal/"/>
+    <image:image>
+      <image:loc>https://symbols.thenepal.io/photos/nepal_national_days_hero.webp</image:loc>
+      <image:title>National days of Nepal</image:title>
+      <image:caption>The five national days of Nepal</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://symbols.thenepal.io/sources/</loc>
     <lastmod>2026-11-10</lastmod>
     <changefreq>monthly</changefreq>
@@ -709,6 +751,48 @@
       <image:loc>https://symbols.thenepal.io/photos/national_everest_of_nepal.webp</image:loc>
       <image:title>Is the Yeti a national symbol</image:title>
       <image:caption>Himalayan peaks</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://symbols.thenepal.io/ne/national-parks-of-nepal/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/national-parks-of-nepal/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/national-parks-of-nepal/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/national-parks-of-nepal/"/>
+    <image:image>
+      <image:loc>https://symbols.thenepal.io/photos/nepal_national_parks_hero.webp</image:loc>
+      <image:title>National parks of Nepal</image:title>
+      <image:caption>Infographic of the 13 national parks of Nepal</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://symbols.thenepal.io/ne/nepal-tiger-census-2026/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/nepal-tiger-census-2026/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/nepal-tiger-census-2026/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/nepal-tiger-census-2026/"/>
+    <image:image>
+      <image:loc>https://symbols.thenepal.io/photos/nepal_tiger_census_hero.webp</image:loc>
+      <image:title>Nepal tiger census 2026</image:title>
+      <image:caption>429 tigers counted in Nepal in 2026</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://symbols.thenepal.io/ne/national-days-of-nepal/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/national-days-of-nepal/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/national-days-of-nepal/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/national-days-of-nepal/"/>
+    <image:image>
+      <image:loc>https://symbols.thenepal.io/photos/nepal_national_days_hero.webp</image:loc>
+      <image:title>National days of Nepal</image:title>
+      <image:caption>The five national days of Nepal</image:caption>
     </image:image>
   </url>
   <url>
