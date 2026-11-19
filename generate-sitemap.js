@@ -188,6 +188,33 @@ const pages = [
     ]
   },
   {
+    loc: '/national-poet/',
+    priority: '0.7',
+    changefreq: 'monthly',
+    lastmod: '2026-11-20',
+    images: [
+      { loc: '/photos/national_language_of_nepal.webp', title: 'National poet of Nepal', caption: 'Nepali literature' }
+    ]
+  },
+  {
+    loc: '/world-heritage-sites/',
+    priority: '0.7',
+    changefreq: 'monthly',
+    lastmod: '2026-11-20',
+    images: [
+      { loc: '/photos/national_everest_of_nepal.webp', title: 'World Heritage Sites of Nepal', caption: 'Himalaya in Sagarmatha National Park' }
+    ]
+  },
+  {
+    loc: '/is-yeti-national-symbol/',
+    priority: '0.7',
+    changefreq: 'monthly',
+    lastmod: '2026-11-20',
+    images: [
+      { loc: '/photos/national_everest_of_nepal.webp', title: 'Is the Yeti a national symbol', caption: 'Himalayan peaks' }
+    ]
+  },
+  {
     loc: '/sources/',
     priority: '0.6',
     changefreq: 'monthly',
@@ -426,6 +453,33 @@ const pages = [
     lastmod: '2026-11-19',
     images: [
       { loc: '/photos/national_flag_nepal.webp', title: 'Flag of Nepal', caption: 'The national flag of Nepal' }
+    ]
+  },
+  {
+    loc: '/ne/national-poet/',
+    priority: '0.7',
+    changefreq: 'monthly',
+    lastmod: '2026-11-20',
+    images: [
+      { loc: '/photos/national_language_of_nepal.webp', title: 'National poet of Nepal', caption: 'Nepali literature' }
+    ]
+  },
+  {
+    loc: '/ne/world-heritage-sites/',
+    priority: '0.7',
+    changefreq: 'monthly',
+    lastmod: '2026-11-20',
+    images: [
+      { loc: '/photos/national_everest_of_nepal.webp', title: 'World Heritage Sites of Nepal', caption: 'Himalaya in Sagarmatha National Park' }
+    ]
+  },
+  {
+    loc: '/ne/is-yeti-national-symbol/',
+    priority: '0.7',
+    changefreq: 'monthly',
+    lastmod: '2026-11-20',
+    images: [
+      { loc: '/photos/national_everest_of_nepal.webp', title: 'Is the Yeti a national symbol', caption: 'Himalayan peaks' }
     ]
   },
   {

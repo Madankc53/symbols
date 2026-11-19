@@ -283,6 +283,48 @@
     </image:image>
   </url>
   <url>
+    <loc>https://symbols.thenepal.io/national-poet/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/national-poet/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/national-poet/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/national-poet/"/>
+    <image:image>
+      <image:loc>https://symbols.thenepal.io/photos/national_language_of_nepal.webp</image:loc>
+      <image:title>National poet of Nepal</image:title>
+      <image:caption>Nepali literature</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://symbols.thenepal.io/world-heritage-sites/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/world-heritage-sites/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/world-heritage-sites/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/world-heritage-sites/"/>
+    <image:image>
+      <image:loc>https://symbols.thenepal.io/photos/national_everest_of_nepal.webp</image:loc>
+      <image:title>World Heritage Sites of Nepal</image:title>
+      <image:caption>Himalaya in Sagarmatha National Park</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://symbols.thenepal.io/is-yeti-national-symbol/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/is-yeti-national-symbol/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/is-yeti-national-symbol/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/is-yeti-national-symbol/"/>
+    <image:image>
+      <image:loc>https://symbols.thenepal.io/photos/national_everest_of_nepal.webp</image:loc>
+      <image:title>Is the Yeti a national symbol</image:title>
+      <image:caption>Himalayan peaks</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://symbols.thenepal.io/sources/</loc>
     <lastmod>2026-11-10</lastmod>
     <changefreq>monthly</changefreq>
@@ -625,6 +667,48 @@
       <image:loc>https://symbols.thenepal.io/photos/national_flag_nepal.webp</image:loc>
       <image:title>Flag of Nepal</image:title>
       <image:caption>The national flag of Nepal</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://symbols.thenepal.io/ne/national-poet/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/national-poet/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/national-poet/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/national-poet/"/>
+    <image:image>
+      <image:loc>https://symbols.thenepal.io/photos/national_language_of_nepal.webp</image:loc>
+      <image:title>National poet of Nepal</image:title>
+      <image:caption>Nepali literature</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://symbols.thenepal.io/ne/world-heritage-sites/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/world-heritage-sites/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/world-heritage-sites/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/world-heritage-sites/"/>
+    <image:image>
+      <image:loc>https://symbols.thenepal.io/photos/national_everest_of_nepal.webp</image:loc>
+      <image:title>World Heritage Sites of Nepal</image:title>
+      <image:caption>Himalaya in Sagarmatha National Park</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://symbols.thenepal.io/ne/is-yeti-national-symbol/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/is-yeti-national-symbol/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/is-yeti-national-symbol/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/is-yeti-national-symbol/"/>
+    <image:image>
+      <image:loc>https://symbols.thenepal.io/photos/national_everest_of_nepal.webp</image:loc>
+      <image:title>Is the Yeti a national symbol</image:title>
+      <image:caption>Himalayan peaks</image:caption>
     </image:image>
   </url>
   <url>
