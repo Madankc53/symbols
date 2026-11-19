@@ -177,6 +177,8 @@ if os.path.exists(_ny):
     if os.path.exists(_s): exec(open(_s, encoding='utf-8').read())
     _f = os.path.join(ROOT, 'scripts', 'flagguide_content.py')
     if os.path.exists(_f): exec(open(_f, encoding='utf-8').read())
+    _n = os.path.join(ROOT, 'scripts', 'nationalday_content.py')
+    if os.path.exists(_n): exec(open(_n, encoding='utf-8').read())
     PAGES = PAGES + EXTRA_PAGES
 
 for pg in PAGES:

@@ -179,6 +179,15 @@ const pages = [
     ]
   },
   {
+    loc: '/national-day/',
+    priority: '0.7',
+    changefreq: 'monthly',
+    lastmod: '2026-11-19',
+    images: [
+      { loc: '/photos/national_flag_nepal.webp', title: 'Flag of Nepal', caption: 'The national flag of Nepal' }
+    ]
+  },
+  {
     loc: '/sources/',
     priority: '0.6',
     changefreq: 'monthly',
@@ -406,6 +415,15 @@ const pages = [
     priority: '0.6',
     changefreq: 'monthly',
     lastmod: '2026-11-14',
+    images: [
+      { loc: '/photos/national_flag_nepal.webp', title: 'Flag of Nepal', caption: 'The national flag of Nepal' }
+    ]
+  },
+  {
+    loc: '/ne/national-day/',
+    priority: '0.7',
+    changefreq: 'monthly',
+    lastmod: '2026-11-19',
     images: [
       { loc: '/photos/national_flag_nepal.webp', title: 'Flag of Nepal', caption: 'The national flag of Nepal' }
     ]
