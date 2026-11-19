@@ -181,6 +181,8 @@ if os.path.exists(_ny):
     if os.path.exists(_n): exec(open(_n, encoding='utf-8').read())
     _m = os.path.join(ROOT, 'scripts', 'morepages_content.py')
     if os.path.exists(_m): exec(open(_m, encoding='utf-8').read())
+    _m2 = os.path.join(ROOT, 'scripts', 'morepages2_content.py')
+    if os.path.exists(_m2): exec(open(_m2, encoding='utf-8').read())
     PAGES = PAGES + EXTRA_PAGES
 
 for pg in PAGES:

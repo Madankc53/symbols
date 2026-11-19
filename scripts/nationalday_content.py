@@ -51,6 +51,7 @@ ND_EN_BODY = '''    <section>
           </tbody>
         </table>
       </div>
+      <p>See all five national days with their next dates on our <a href="/national-days-of-nepal/">National Days of Nepal</a> page.</p>
       <div class="dyk">
         <h3>✦ Did you know?</h3>
         <ul>
@@ -115,6 +116,7 @@ ND_NE_BODY = '''    <section>
           </tbody>
         </table>
       </div>
+      <p>पाँचै राष्ट्रिय दिवस र तिनका अर्को मिति <a href="/ne/national-days-of-nepal/">नेपालका राष्ट्रिय दिवस</a> पृष्ठमा हेर्नुहोस्।</p>
       <div class="dyk">
         <h3>✦ के तपाईंलाई थाह छ?</h3>
         <ul>
