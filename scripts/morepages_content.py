@@ -11,8 +11,8 @@ def _mk(slug, photo, about_name, about_sameas, en, ne):
 
 REL_MP = [('national-language', 'National Language'), ('national-day', 'National Day'), ('official-vs-unofficial', 'Official vs Unofficial Symbols'), ('sources', 'Sources & Methodology')]
 REL_MP_NE = [('national-language', 'राष्ट्रिय भाषा'), ('national-day', 'राष्ट्रिय दिवस'), ('official-vs-unofficial', 'आधिकारिक कि परम्परागत'), ('sources', 'स्रोत र कार्यविधि')]
-REL_WH = [('national-monument', 'National Monument'), ('national-everest', 'Mount Everest'), ('national-museum', 'National Museum'), ('official-vs-unofficial', 'Official vs Unofficial Symbols')]
-REL_WH_NE = [('national-monument', 'राष्ट्रिय स्मारक'), ('national-everest', 'सगरमाथा'), ('national-museum', 'राष्ट्रिय संग्रहालय'), ('official-vs-unofficial', 'आधिकारिक कि परम्परागत')]
+REL_WH = [('national-parks-of-nepal', 'National Parks of Nepal'), ('national-monument', 'National Monument'), ('national-everest', 'Mount Everest'), ('national-museum', 'National Museum'), ('official-vs-unofficial', 'Official vs Unofficial Symbols')]
+REL_WH_NE = [('national-parks-of-nepal', 'नेपालका राष्ट्रिय निकुञ्ज'), ('national-monument', 'राष्ट्रिय स्मारक'), ('national-everest', 'सगरमाथा'), ('national-museum', 'राष्ट्रिय संग्रहालय'), ('official-vs-unofficial', 'आधिकारिक कि परम्परागत')]
 REL_YT = [('national-animal', 'National Animal'), ('national-everest', 'Mount Everest'), ('official-vs-unofficial', 'Official vs Unofficial Symbols'), ('sources', 'Sources & Methodology')]
 REL_YT_NE = [('national-animal', 'राष्ट्रिय पशु'), ('national-everest', 'सगरमाथा'), ('official-vs-unofficial', 'आधिकारिक कि परम्परागत'), ('sources', 'स्रोत र कार्यविधि')]
 
@@ -158,7 +158,7 @@ WH_EN_BODY = '''    <section>
       <div class="dyk">
         <h3>✦ Did you know?</h3>
         <ul>
-          <li>Sagarmatha National Park protects the area around Mount Everest. Read more on our <a href="/national-everest/">Mount Everest page</a>.</li>
+          <li>Sagarmatha National Park protects the area around Mount Everest. Read more on our <a href="/national-everest/">Mount Everest page</a> and the <a href="/national-parks-of-nepal/">list of all 13 national parks</a>.</li>
           <li>Lumbini is where Siddhartha Gautama, the Buddha, was born.</li>
         </ul>
       </div>
@@ -207,7 +207,7 @@ WH_NE_BODY = '''    <section>
       <div class="dyk">
         <h3>✦ के तपाईंलाई थाह छ?</h3>
         <ul>
-          <li>सगरमाथा राष्ट्रिय निकुञ्जले सगरमाथा वरपरको क्षेत्र जोगाउँछ। हाम्रो <a href="/ne/national-everest/">सगरमाथा पृष्ठ</a> हेर्नुहोस्।</li>
+          <li>सगरमाथा राष्ट्रिय निकुञ्जले सगरमाथा वरपरको क्षेत्र जोगाउँछ। हाम्रो <a href="/ne/national-everest/">सगरमाथा पृष्ठ</a> र <a href="/ne/national-parks-of-nepal/">सबै १३ राष्ट्रिय निकुञ्जको सूची</a> हेर्नुहोस्।</li>
           <li>लुम्बिनी सिद्धार्थ गौतम बुद्धको जन्मस्थल हो।</li>
         </ul>
       </div>
