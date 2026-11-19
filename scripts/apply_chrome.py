@@ -24,7 +24,7 @@ SVG_S = '<svg class="nx-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor
 SVG_B = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>'
 
 def slug_of(url): return url.rstrip('/').split('/')[-1]
-EXTRA_LABELS = {'flag-construction-guide': {'en': 'Flag Construction', 'ne': 'झण्डा बनाउने विधि'}, 'sources': {'en': 'Sources', 'ne': 'स्रोतहरू'}, 'national-day': {'en': 'National Day', 'ne': 'राष्ट्रिय दिवस'}, 'quiz': {'en': 'Quiz', 'ne': 'क्विज'}, 'official-vs-unofficial': {'en': 'Official vs Unofficial', 'ne': 'आधिकारिक कि परम्परागत'}, 'nepali-new-year-2084': {'en': 'Nepali New Year 2084', 'ne': 'नेपाली नयाँ वर्ष २०८४'}}
+EXTRA_LABELS = {'flag-construction-guide': {'en': 'Flag Construction', 'ne': 'झण्डा बनाउने विधि'}, 'sources': {'en': 'Sources', 'ne': 'स्रोतहरू'}, 'national-poet': {'en': 'National Poet', 'ne': 'राष्ट्रकवि'}, 'world-heritage-sites': {'en': 'World Heritage Sites', 'ne': 'विश्व सम्पदा स्थल'}, 'is-yeti-national-symbol': {'en': 'Yeti Myth Check', 'ne': 'येती तथ्य जाँच'}, 'national-day': {'en': 'National Day', 'ne': 'राष्ट्रिय दिवस'}, 'quiz': {'en': 'Quiz', 'ne': 'क्विज'}, 'official-vs-unofficial': {'en': 'Official vs Unofficial', 'ne': 'आधिकारिक कि परम्परागत'}, 'nepali-new-year-2084': {'en': 'Nepali New Year 2084', 'ne': 'नेपाली नयाँ वर्ष २०८४'}}
 def label_for(lang, slug):
     if slug in EXTRA_LABELS: return EXTRA_LABELS[slug][lang]
     for e in IDX[lang]:
