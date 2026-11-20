@@ -47,6 +47,8 @@ def build(pg, lang):
     url = SITE + path; alt_url = SITE + ('/' if lang == 'ne' else '/ne/') + slug + '/'
     en_url = SITE + '/' + slug + '/'; ne_url = SITE + '/ne/' + slug + '/'
     img = SITE + '/photos/' + pg['photo']
+    _og = os.path.join(ROOT, 'photos', 'og', slug + '.jpg')
+    og_img, og_w, og_h = (SITE + '/photos/og/' + slug + '.jpg', 1200, 630) if os.path.exists(_og) else (img, 1600, 900)
     faq_ld = [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": strip(a)}} for q, a in d['faq']]
     ld = [
      {"@context": "https://schema.org", "@type": "Article", "inLanguage": lang, "dateModified": DATE, "headline": d['og_title'], "description": d['ld_desc'],
@@ -88,9 +90,9 @@ def build(pg, lang):
 <meta property="og:description" content="{esc(d['og_desc'])}">
 <meta property="og:url" content="{url}">
 <meta property="og:site_name" content="National Symbols of Nepal">
-<meta property="og:image" content="{img}">
-<meta property="og:image:width" content="1600">
-<meta property="og:image:height" content="900">
+<meta property="og:image" content="{og_img}">
+<meta property="og:image:width" content="{og_w}">
+<meta property="og:image:height" content="{og_h}">
 <meta property="og:image:alt" content="{esc(d['img_alt'])}">
 <meta name="twitter:card" content="summary_large_image">
 
