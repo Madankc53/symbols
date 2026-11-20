@@ -10,11 +10,11 @@ CSS = f'''*{{box-sizing:border-box;margin:0}}body{{font-family:"DejaVu Sans","Li
 .wm{{position:absolute;right:28px;bottom:20px;font-size:30px;font-weight:700;color:#fff;opacity:.82;letter-spacing:.5px;text-shadow:0 1px 3px rgba(0,0,0,.45)}}
 .hero{{width:1760px;height:680px;position:relative;overflow:hidden;background:linear-gradient(135deg,{NAVY} 0%,#13306b 55%,{BLUE} 100%)}}
 .hero:before{{content:"";position:absolute;right:-120px;top:-160px;width:760px;height:1000px;background:{CRIM};opacity:.92;clip-path:polygon(0 0,100% 0,100% 100%,0 100%,40% 55%)}}
-.hero .in{{position:absolute;left:90px;top:0;bottom:0;display:flex;flex-direction:column;justify-content:center;max-width:1200px}}
-.k{{font-size:34px;letter-spacing:6px;text-transform:uppercase;color:#ffd9de;font-weight:700}}
-.big{{font-size:210px;font-weight:800;line-height:1;margin:10px 0}}
-h1{{font-size:88px;line-height:1.05;font-weight:800;margin:14px 0}}
-.sub{{font-size:40px;opacity:.92;max-width:1050px;line-height:1.3}}
+.hero .in{{position:absolute;left:410px;width:940px;top:0;bottom:60px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}}
+.k{{font-size:28px;letter-spacing:5px;text-transform:uppercase;color:#ffd9de;font-weight:700}}
+.big{{font-size:190px;font-weight:800;line-height:1;margin:10px 0}}
+h1{{font-size:60px;line-height:1.05;font-weight:800;margin:14px 0}}
+.sub{{font-size:33px;opacity:.92;max-width:900px;line-height:1.3}}
 .chart{{width:1200px;height:675px;position:relative;background:{CREAM};color:#1d2433;padding:34px 44px}}
 .chart h2{{font-size:46px;font-weight:800;color:{NAVY}}}.chart .s{{font-size:27px;color:#5a6378;margin:6px 0 18px}}
 .chart .wm{{color:{NAVY};text-shadow:none;opacity:.7;font-size:32px}}
@@ -22,7 +22,7 @@ h1{{font-size:88px;line-height:1.05;font-weight:800;margin:14px 0}}
 .bar{{height:34px;border-radius:0 6px 6px 0;background:{CRIM}}}.val{{padding-left:10px;font-weight:700;color:{NAVY}}}
 '''
 def hero(big, kicker, title, sub):
-    return f'<style>{CSS}</style><div class="hero"><div class="in"><div class="k">{kicker}</div>' + (f'<div class="big">{big}</div>' if big else '') + f'<h1>{title}</h1><div class="sub">{sub}</div></div><div class="wm" style="font-size:36px">@thenepal.io</div></div>'
+    return f'<style>{CSS}</style><div class="hero"><div class="in"><div class="k">{kicker}</div>' + (f'<div class="big">{big}</div>' if big else '') + f'<h1>{title}</h1><div class="sub">{sub}</div></div><div class="wm" style="font-size:34px;right:auto;left:880px;transform:translateX(-50%);bottom:26px">@thenepal.io</div></div>'
 def chart(title, sub, body):
     return f'<style>{CSS}</style><div class="chart"><h2>{title}</h2><div class="s">{sub}</div>{body}<div class="wm">@thenepal.io</div></div>'
 def hbars(rows, maxv, w=700, color=CRIM):
@@ -54,27 +54,27 @@ def days_body():
         out += f'<div style="display:flex;align-items:center;margin:11px 0"><div style="width:210px;height:76px;background:{CRIM if i%2==0 else BLUE};color:#fff;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:32px;font-weight:800">{d}</div><div style="margin-left:22px"><div style="font-size:36px;font-weight:800;color:{NAVY}">{n}</div><div style="font-size:25px;color:#5a6378">{t}</div></div></div>'
     return out
 IMAGES = {
- 'nepal_national_parks_hero': (hero('13', 'Nepal · Protected areas', 'National Parks of Nepal', 'The full list with area and year, updated for Chhayanath National Park (2025)'), 1760, 680),
+ 'nepal_national_parks_hero': (hero('13', 'Nepal · Protected areas', 'National Parks of Nepal', 'Full list with area and year, updated for Chhayanath (2025)'), 1760, 680),
  'nepal_national_parks_area': (chart('National parks of Nepal by area (km²)', 'Area in km² · year established', pk_body()), 1200, 900),
- 'nepal_tiger_census_hero': (hero('429', 'Nepal · National tiger census 2026', 'Tigers in Nepal', 'A record count released on Global Tiger Day, 29 July 2026'), 1760, 680),
+ 'nepal_tiger_census_hero': (hero('429', 'Nepal · National tiger census 2026', 'Tigers in Nepal', 'Record count released on Global Tiger Day, 29 July 2026'), 1760, 680),
  'nepal_tiger_census_trend': (chart('Nepal tiger count by census year', 'Wild tigers counted nationwide', trend_body()), 1200, 675),
  'nepal_tiger_census_parks': (chart('Tigers by park: 2022 vs 2026', 'Only Bardiya recorded a decline', park_body()), 1200, 675),
- 'nepal_national_days_hero': (hero('', 'Nepal · Calendar', 'National Days of Nepal', 'Republic Day, National Day, Unity Day, Martyrs’ Day and Democracy Day: dates and meaning'), 1760, 680),
+ 'nepal_national_days_hero': (hero('', 'Nepal · Calendar', 'National Days of Nepal', 'Five days: dates, meaning and next dates'), 1760, 680),
  'nepal_national_days_calendar': (chart('Five national days in Bikram Sambat order', 'Each falls on the same BS date every year', days_body()), 1200, 675),
 }
 
 def trio_hero():
-    cells = ''.join(f'<div style="flex:1;text-align:center"><div style="font-size:150px;font-weight:800;line-height:1">{n}</div><div style="font-size:36px;opacity:.92;margin-top:6px">{l}</div></div>' for n, l in [('429', 'tigers · 2026'), ('752', 'rhinos · 2021'), ('397', 'snow leopards · 2025')])
-    return f'<style>{CSS}</style><div class="hero"><div class="in" style="max-width:1500px;width:1500px"><div class="k">Nepal · Wildlife population</div><h1 style="font-size:70px;margin:12px 0 30px">How many wild animals in Nepal?</h1><div style="display:flex;gap:20px;width:1450px">{cells}</div></div><div class="wm" style="font-size:36px">@thenepal.io</div></div>'
+    cells = ''.join(f'<div style="flex:1;text-align:center"><div style="font-size:118px;font-weight:800;line-height:1">{n}</div><div style="font-size:27px;opacity:.92;margin-top:6px">{l}</div></div>' for n, l in [('429', 'tigers 2026'), ('752', 'rhinos 2021'), ('397', 'snow leopards 2025')])
+    return f'<style>{CSS}</style><div class="hero"><div class="in"><div class="k">Nepal · Wildlife</div><h1 style="font-size:56px;margin:12px 0 26px">Wild animals in Nepal</h1><div style="display:flex;gap:10px;width:940px">{cells}</div></div><div class="wm" style="font-size:34px;right:auto;left:880px;transform:translateX(-50%);bottom:26px">@thenepal.io</div></div>'
 def rhino_body():
     rows = [('Chitwan', 694, '694'), ('Bardiya', 38, '38'), ('Shuklaphanta', 17, '17'), ('Parsa', 3, '3')]
     return hbars(rows, 694, 560) + '<div style="font-size:30px;margin-top:22px;color:#0B1B3F"><b>Total 752</b> in 2021, up from 645 in 2015</div>'
 def snow_body():
     return hbars([('Nepal', 397, '397'), ('India', 718, '718')], 718, 560, BLUE) + '<div style="font-size:26px;margin-top:22px;color:#5a6378;max-width:1050px">Nepal: DNPWC report, data 2015-2024. India: January 2024 status report, as cited by Down To Earth.</div>'
 IMAGES.update({
- 'nepal_rhino_count_hero': (hero('752', 'Nepal · Rhino census', 'One-Horned Rhinos in Nepal', 'Last counted in 2021. The next census is being redesigned.'), 1760, 680),
+ 'nepal_rhino_count_hero': (hero('752', 'Nepal · Rhino census', 'Rhinos in Nepal', 'Last counted in 2021. Next census being redesigned.'), 1760, 680),
  'nepal_rhino_count_chart': (chart('Rhinos by park, 2021 census', 'Greater one-horned rhinoceros', rhino_body()), 1200, 470),
- 'nepal_snow_leopard_hero': (hero('397', 'Nepal · Snow leopard survey', 'Snow Leopards in Nepal', 'First national estimate, released April 2025 (data 2015 to 2024)'), 1760, 680),
+ 'nepal_snow_leopard_hero': (hero('397', 'Nepal · Snow leopard survey', 'Snow Leopards in Nepal', 'First national estimate, released April 2025'), 1760, 680),
  'nepal_snow_leopard_chart': (chart('Snow leopard estimates: Nepal and India', 'Number of individuals', snow_body()), 1200, 470),
  'nepal_wildlife_counts_hero': (trio_hero(), 1760, 680),
 })
