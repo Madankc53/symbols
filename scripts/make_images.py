@@ -79,6 +79,36 @@ IMAGES.update({
  'nepal_wildlife_counts_hero': (trio_hero(), 1760, 680),
 })
 
+# ---- 1200x630 JPEG share cards (Facebook/WhatsApp/X crop wide heroes; WebP is unreliable for link previews) ----
+OG = [  # slug, kicker, big (or ''), title, sub
+ ('national-parks-of-nepal', 'Nepal · Protected areas', '13', 'National Parks of Nepal', 'Full list with area and year'),
+ ('nepal-tiger-census-2026', 'Nepal · Tiger census 2026', '429', 'Tigers in Nepal', 'A record count, up 74 since 2022'),
+ ('national-days-of-nepal', 'Nepal · Calendar', '5', 'National Days of Nepal', 'Dates, meaning and next dates'),
+ ('nepal-rhino-count', 'Nepal · Rhino census', '752', 'Rhinos in Nepal', 'Count by park (2021)'),
+ ('nepal-snow-leopard-population', 'Nepal · Snow leopard survey', '397', 'Snow Leopards in Nepal', 'First national estimate (2025)'),
+ ('nepal-wildlife-population', 'Nepal · Wildlife', '', 'Wild Animals in Nepal', 'Tigers 429 · Rhinos 752 · Snow leopards 397'),
+ ('world-heritage-sites', 'Nepal · UNESCO', '4', 'World Heritage Sites of Nepal', 'Types, years and what each includes'),
+ ('national-poet', 'Nepal · Literature', '', 'National Poet of Nepal', 'Madhav Prasad Ghimire, Rastra Kavi'),
+ ('is-yeti-national-symbol', 'Nepal · Myth check', 'No', 'Is the Yeti a National Symbol?', 'The 2024 banknote story was an April Fool joke'),
+ ('national-day', 'Nepal · Constitution Day', '20 Sep', 'National Day of Nepal', 'Ashoj 3, the day the Constitution was promulgated'),
+]
+def og_html(kicker, big, title, sub):
+    return (f'<style>{CSS}.og{{width:1200px;height:630px;position:relative;overflow:hidden;background:linear-gradient(135deg,{NAVY} 0%,#13306b 55%,{BLUE} 100%);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:0 90px}}'
+            f'.og:before{{content:"";position:absolute;right:-60px;top:-100px;width:380px;height:860px;background:{CRIM};opacity:.92;clip-path:polygon(0 0,100% 0,100% 100%,0 100%,40% 55%)}}'
+            f'.og>*:not(.wm){{position:relative}}</style><div class="og"><div class="k" style="font-size:26px">{kicker}</div>' + (f'<div class="big" style="font-size:170px">{big}</div>' if big else '<div style="height:18px"></div>') +
+            f'<h1 style="font-size:{54 if len(title)<24 else 46}px;margin:8px 0">{title}</h1><div class="sub" style="font-size:30px;max-width:900px">{sub}</div><div class="wm" style="right:auto;left:50%;transform:translateX(-50%);bottom:24px;font-size:30px">@thenepal.io</div></div>')
+def make_og():
+    os.makedirs(os.path.join(ROOT, 'photos', 'og'), exist_ok=True)
+    with sync_playwright() as p:
+        b = p.chromium.launch()
+        for slug, k, big, t, sub in OG:
+            pg = b.new_page(viewport={'width': 1200, 'height': 630})
+            pg.set_content('<body style="margin:0">' + og_html(k, big, t, sub) + '</body>')
+            png = pg.screenshot(clip={'x': 0, 'y': 0, 'width': 1200, 'height': 630})
+            Image.open(io.BytesIO(png)).convert('RGB').save(os.path.join(ROOT, 'photos', 'og', slug + '.jpg'), quality=88, optimize=True)
+            print('og', slug)
+        b.close()
+
 if __name__ == '__main__':
     with sync_playwright() as p:
         b = p.chromium.launch()
@@ -90,3 +120,4 @@ if __name__ == '__main__':
             Image.open(io.BytesIO(png)).convert('RGB').save(os.path.join(ROOT, 'photos', name + '.webp'), quality=88, method=6)
             print(name)
         b.close()
+    make_og()
