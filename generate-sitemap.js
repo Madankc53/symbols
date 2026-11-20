@@ -242,6 +242,33 @@ const pages = [
     ]
   },
   {
+    loc: '/nepal-rhino-count/',
+    priority: '0.8',
+    changefreq: 'monthly',
+    lastmod: '2026-11-20',
+    images: [
+      { loc: '/photos/nepal_rhino_count_hero.webp', title: 'How many rhinos in Nepal', caption: '752 rhinos counted in 2021' }
+    ]
+  },
+  {
+    loc: '/nepal-snow-leopard-population/',
+    priority: '0.8',
+    changefreq: 'monthly',
+    lastmod: '2026-11-20',
+    images: [
+      { loc: '/photos/nepal_snow_leopard_hero.webp', title: 'Snow leopards in Nepal', caption: '397 snow leopards estimated' }
+    ]
+  },
+  {
+    loc: '/nepal-wildlife-population/',
+    priority: '0.8',
+    changefreq: 'monthly',
+    lastmod: '2026-11-20',
+    images: [
+      { loc: '/photos/nepal_wildlife_counts_hero.webp', title: 'Wildlife population of Nepal', caption: 'Tigers 429, rhinos 752, snow leopards 397' }
+    ]
+  },
+  {
     loc: '/sources/',
     priority: '0.6',
     changefreq: 'monthly',
@@ -534,6 +561,33 @@ const pages = [
     lastmod: '2026-11-20',
     images: [
       { loc: '/photos/nepal_national_days_hero.webp', title: 'National days of Nepal', caption: 'The five national days of Nepal' }
+    ]
+  },
+  {
+    loc: '/ne/nepal-rhino-count/',
+    priority: '0.8',
+    changefreq: 'monthly',
+    lastmod: '2026-11-20',
+    images: [
+      { loc: '/photos/nepal_rhino_count_hero.webp', title: 'How many rhinos in Nepal', caption: '752 rhinos counted in 2021' }
+    ]
+  },
+  {
+    loc: '/ne/nepal-snow-leopard-population/',
+    priority: '0.8',
+    changefreq: 'monthly',
+    lastmod: '2026-11-20',
+    images: [
+      { loc: '/photos/nepal_snow_leopard_hero.webp', title: 'Snow leopards in Nepal', caption: '397 snow leopards estimated' }
+    ]
+  },
+  {
+    loc: '/ne/nepal-wildlife-population/',
+    priority: '0.8',
+    changefreq: 'monthly',
+    lastmod: '2026-11-20',
+    images: [
+      { loc: '/photos/nepal_wildlife_counts_hero.webp', title: 'Wildlife population of Nepal', caption: 'Tigers 429, rhinos 752, snow leopards 397' }
     ]
   },
   {

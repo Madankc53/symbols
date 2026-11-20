@@ -84,7 +84,7 @@ NP_EN_BODY = '''    <section>
 
     <section id="heritage">
       <h2>Which Parks Are World Heritage Sites?</h2>
-      <p>Two of the national parks are UNESCO World Heritage Sites: <strong>Sagarmatha</strong> (1979) and <strong>Chitwan</strong> (1984). See all four Nepali sites on our <a href="/world-heritage-sites/">World Heritage Sites page</a>. For the park that protects the highest mountain, read about <a href="/national-everest/">Mount Everest</a>. For the animal numbers behind the Terai parks, see the <a href="/nepal-tiger-census-2026/">2026 tiger census</a>.</p>
+      <p>Two of the national parks are UNESCO World Heritage Sites: <strong>Sagarmatha</strong> (1979) and <strong>Chitwan</strong> (1984). See all four Nepali sites on our <a href="/world-heritage-sites/">World Heritage Sites page</a>. For the park that protects the highest mountain, read about <a href="/national-everest/">Mount Everest</a>. For the animal numbers behind the parks, see the <a href="/nepal-tiger-census-2026/">2026 tiger census</a>, the <a href="/nepal-rhino-count/">rhino count</a> and the <a href="/nepal-snow-leopard-population/">snow leopard estimate</a>.</p>
       <div class="dyk">
         <h3>✦ Did you know?</h3>
         <ul>
@@ -155,7 +155,7 @@ NP_NE_BODY = '''    <section>
 
     <section id="heritage">
       <h2>कुन निकुञ्ज विश्व सम्पदा स्थल हुन्?</h2>
-      <p>दुईवटा राष्ट्रिय निकुञ्ज युनेस्कोका विश्व सम्पदा स्थल हुन्: <strong>सगरमाथा</strong> (१९७९) र <strong>चितवन</strong> (१९८४)। नेपालका चारवटै स्थल <a href="/ne/world-heritage-sites/">विश्व सम्पदा स्थल पृष्ठ</a> मा हेर्नुहोस्। सबैभन्दा अग्लो हिमालको जानकारीका लागि <a href="/ne/national-everest/">सगरमाथा</a> पृष्ठ र तराईका निकुञ्जका जनावरका लागि <a href="/ne/nepal-tiger-census-2026/">२०२६ को बाघ गणना</a> हेर्नुहोस्।</p>
+      <p>दुईवटा राष्ट्रिय निकुञ्ज युनेस्कोका विश्व सम्पदा स्थल हुन्: <strong>सगरमाथा</strong> (१९७९) र <strong>चितवन</strong> (१९८४)। नेपालका चारवटै स्थल <a href="/ne/world-heritage-sites/">विश्व सम्पदा स्थल पृष्ठ</a> मा हेर्नुहोस्। सबैभन्दा अग्लो हिमालको जानकारीका लागि <a href="/ne/national-everest/">सगरमाथा</a> पृष्ठ र निकुञ्जका जनावरका लागि <a href="/ne/nepal-tiger-census-2026/">२०२६ को बाघ गणना</a>, <a href="/ne/nepal-rhino-count/">गैँडा गणना</a> र <a href="/ne/nepal-snow-leopard-population/">हिउँचितुवाको अनुमान</a> हेर्नुहोस्।</p>
       <div class="dyk">
         <h3>✦ के तपाईंलाई थाह छ?</h3>
         <ul>
@@ -216,7 +216,7 @@ TG_EN_BODY = '''    <section>
           </tbody>
         </table>
       </div>
-      <p>Chitwan remains the largest tiger habitat. The biggest jumps were in Parsa and Banke. Bardiya was the only park to decline, from 125 to 112. Read more about the parks on our <a href="/national-parks-of-nepal/">national parks of Nepal</a> page.</p>
+      <p>Chitwan remains the largest tiger habitat. The biggest jumps were in Parsa and Banke. Bardiya was the only park to decline, from 125 to 112. Read more about the parks on our <a href="/national-parks-of-nepal/">national parks of Nepal</a> page, and compare with the <a href="/nepal-rhino-count/">rhino count</a> and <a href="/nepal-snow-leopard-population/">snow leopard estimate</a> in our <a href="/nepal-wildlife-population/">wildlife counts</a> guide.</p>
       <p class="source">Source: The Kathmandu Post, "Habitat concerns grow as Nepal counts a record 429 tigers" (30 July 2026); IUCN (29 July 2026).</p>
     </section>
 
@@ -288,7 +288,7 @@ TG_NE_BODY = '''    <section>
           </tbody>
         </table>
       </div>
-      <p>चितवन बाघको सबैभन्दा ठूलो बासस्थान नै रह्यो। सबैभन्दा धेरै वृद्धि पर्सा र बाँकेमा देखियो। बर्दिया मात्र घट्यो, १२५ बाट ११२ मा। निकुञ्जबारे थप <a href="/ne/national-parks-of-nepal/">नेपालका राष्ट्रिय निकुञ्ज</a> पृष्ठमा पढ्नुहोस्।</p>
+      <p>चितवन बाघको सबैभन्दा ठूलो बासस्थान नै रह्यो। सबैभन्दा धेरै वृद्धि पर्सा र बाँकेमा देखियो। बर्दिया मात्र घट्यो, १२५ बाट ११२ मा। निकुञ्जबारे थप <a href="/ne/national-parks-of-nepal/">नेपालका राष्ट्रिय निकुञ्ज</a> पृष्ठमा पढ्नुहोस् र <a href="/ne/nepal-wildlife-population/">वन्यजन्तुको सङ्ख्या</a> सँग तुलना गर्नुहोस्।</p>
       <p class="source">स्रोत: द काठमाडौं पोस्ट, "Habitat concerns grow as Nepal counts a record 429 tigers" (३० जुलाई २०२६); IUCN (२९ जुलाई २०२६)।</p>
     </section>
 

@@ -62,6 +62,23 @@ IMAGES = {
  'nepal_national_days_hero': (hero('', 'Nepal · Calendar', 'National Days of Nepal', 'Republic Day, National Day, Unity Day, Martyrs’ Day and Democracy Day: dates and meaning'), 1760, 680),
  'nepal_national_days_calendar': (chart('Five national days in Bikram Sambat order', 'Each falls on the same BS date every year', days_body()), 1200, 675),
 }
+
+def trio_hero():
+    cells = ''.join(f'<div style="flex:1;text-align:center"><div style="font-size:150px;font-weight:800;line-height:1">{n}</div><div style="font-size:36px;opacity:.92;margin-top:6px">{l}</div></div>' for n, l in [('429', 'tigers · 2026'), ('752', 'rhinos · 2021'), ('397', 'snow leopards · 2025')])
+    return f'<style>{CSS}</style><div class="hero"><div class="in" style="max-width:1500px;width:1500px"><div class="k">Nepal · Wildlife population</div><h1 style="font-size:70px;margin:12px 0 30px">How many wild animals in Nepal?</h1><div style="display:flex;gap:20px;width:1450px">{cells}</div></div><div class="wm" style="font-size:36px">@thenepal.io</div></div>'
+def rhino_body():
+    rows = [('Chitwan', 694, '694'), ('Bardiya', 38, '38'), ('Shuklaphanta', 17, '17'), ('Parsa', 3, '3')]
+    return hbars(rows, 694, 560) + '<div style="font-size:30px;margin-top:22px;color:#0B1B3F"><b>Total 752</b> in 2021, up from 645 in 2015</div>'
+def snow_body():
+    return hbars([('Nepal', 397, '397'), ('India', 718, '718')], 718, 560, BLUE) + '<div style="font-size:26px;margin-top:22px;color:#5a6378;max-width:1050px">Nepal: DNPWC report, data 2015-2024. India: January 2024 status report, as cited by Down To Earth.</div>'
+IMAGES.update({
+ 'nepal_rhino_count_hero': (hero('752', 'Nepal · Rhino census', 'One-Horned Rhinos in Nepal', 'Last counted in 2021. The next census is being redesigned.'), 1760, 680),
+ 'nepal_rhino_count_chart': (chart('Rhinos by park, 2021 census', 'Greater one-horned rhinoceros', rhino_body()), 1200, 470),
+ 'nepal_snow_leopard_hero': (hero('397', 'Nepal · Snow leopard survey', 'Snow Leopards in Nepal', 'First national estimate, released April 2025 (data 2015 to 2024)'), 1760, 680),
+ 'nepal_snow_leopard_chart': (chart('Snow leopard estimates: Nepal and India', 'Number of individuals', snow_body()), 1200, 470),
+ 'nepal_wildlife_counts_hero': (trio_hero(), 1760, 680),
+})
+
 if __name__ == '__main__':
     with sync_playwright() as p:
         b = p.chromium.launch()
