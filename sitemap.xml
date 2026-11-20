@@ -367,6 +367,48 @@
     </image:image>
   </url>
   <url>
+    <loc>https://symbols.thenepal.io/nepal-rhino-count/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/nepal-rhino-count/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/nepal-rhino-count/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/nepal-rhino-count/"/>
+    <image:image>
+      <image:loc>https://symbols.thenepal.io/photos/nepal_rhino_count_hero.webp</image:loc>
+      <image:title>How many rhinos in Nepal</image:title>
+      <image:caption>752 rhinos counted in 2021</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://symbols.thenepal.io/nepal-snow-leopard-population/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/nepal-snow-leopard-population/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/nepal-snow-leopard-population/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/nepal-snow-leopard-population/"/>
+    <image:image>
+      <image:loc>https://symbols.thenepal.io/photos/nepal_snow_leopard_hero.webp</image:loc>
+      <image:title>Snow leopards in Nepal</image:title>
+      <image:caption>397 snow leopards estimated</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://symbols.thenepal.io/nepal-wildlife-population/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/nepal-wildlife-population/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/nepal-wildlife-population/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/nepal-wildlife-population/"/>
+    <image:image>
+      <image:loc>https://symbols.thenepal.io/photos/nepal_wildlife_counts_hero.webp</image:loc>
+      <image:title>Wildlife population of Nepal</image:title>
+      <image:caption>Tigers 429, rhinos 752, snow leopards 397</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://symbols.thenepal.io/sources/</loc>
     <lastmod>2026-11-10</lastmod>
     <changefreq>monthly</changefreq>
@@ -793,6 +835,48 @@
       <image:loc>https://symbols.thenepal.io/photos/nepal_national_days_hero.webp</image:loc>
       <image:title>National days of Nepal</image:title>
       <image:caption>The five national days of Nepal</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://symbols.thenepal.io/ne/nepal-rhino-count/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/nepal-rhino-count/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/nepal-rhino-count/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/nepal-rhino-count/"/>
+    <image:image>
+      <image:loc>https://symbols.thenepal.io/photos/nepal_rhino_count_hero.webp</image:loc>
+      <image:title>How many rhinos in Nepal</image:title>
+      <image:caption>752 rhinos counted in 2021</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://symbols.thenepal.io/ne/nepal-snow-leopard-population/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/nepal-snow-leopard-population/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/nepal-snow-leopard-population/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/nepal-snow-leopard-population/"/>
+    <image:image>
+      <image:loc>https://symbols.thenepal.io/photos/nepal_snow_leopard_hero.webp</image:loc>
+      <image:title>Snow leopards in Nepal</image:title>
+      <image:caption>397 snow leopards estimated</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://symbols.thenepal.io/ne/nepal-wildlife-population/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/nepal-wildlife-population/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/nepal-wildlife-population/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/nepal-wildlife-population/"/>
+    <image:image>
+      <image:loc>https://symbols.thenepal.io/photos/nepal_wildlife_counts_hero.webp</image:loc>
+      <image:title>Wildlife population of Nepal</image:title>
+      <image:caption>Tigers 429, rhinos 752, snow leopards 397</image:caption>
     </image:image>
   </url>
   <url>
