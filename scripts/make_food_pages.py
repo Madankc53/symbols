@@ -6,6 +6,7 @@ import re, json, html, os
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__))); os.chdir(ROOT)
 SITE = 'https://symbols.thenepal.io'
 DATE = '2026-11-10'
+UPDATED = {}  # slug -> ISO date; set for data pages that carry a visible 'Last updated' line and dateModified
 
 EXTRA_CSS = '''
 /* fruit & food additions */
@@ -47,11 +48,20 @@ def build(pg, lang):
     url = SITE + path; alt_url = SITE + ('/' if lang == 'ne' else '/ne/') + slug + '/'
     en_url = SITE + '/' + slug + '/'; ne_url = SITE + '/ne/' + slug + '/'
     img = SITE + '/photos/' + pg['photo']
+    upd = UPDATED.get(slug, DATE)
+    _y, _m, _d = upd.split('-')
+    if slug in UPDATED:
+        _MO = {'en': ['January','February','March','April','May','June','July','August','September','October','November','December'],
+               'ne': ['जनवरी','फेब्रुअरी','मार्च','अप्रिल','मे','जुन','जुलाई','अगस्ट','सेप्टेम्बर','अक्टोबर','नोभेम्बर','डिसेम्बर']}[lang]
+        _dig = (lambda x: x) if lang == 'en' else (lambda x: x.translate(str.maketrans('0123456789', '०१२३४५६७८९')))
+        _txt = ('Last updated: %s %s %s. Figures are checked against the sources listed on this page.' % (int(_d), _MO[int(_m)-1], _y)) if lang == 'en' else ('अन्तिम अद्यावधिक: %s %s %s। तथ्यांक यस पृष्ठमा उल्लेखित स्रोतसँग जाँचिएका छन्।' % (_dig(str(int(_d))), _MO[int(_m)-1], _dig(_y)))
+        _line = '    <p class="updated" style="font-size:.9rem;opacity:.8;margin:0 0 18px">' + _txt + '</p>\n'
+        d = dict(d); d['body'] = d['body'].replace('</section>\n', '</section>\n' + _line, 1)
     _og = os.path.join(ROOT, 'photos', 'og', slug + '.jpg')
     og_img, og_w, og_h = (SITE + '/photos/og/' + slug + '.jpg', 1200, 630) if os.path.exists(_og) else (img, 1600, 900)
     faq_ld = [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": strip(a)}} for q, a in d['faq']]
     ld = [
-     {"@context": "https://schema.org", "@type": "Article", "inLanguage": lang, "dateModified": DATE, "headline": d['og_title'], "description": d['ld_desc'],
+     {"@context": "https://schema.org", "@type": "Article", "inLanguage": lang, "dateModified": upd, "headline": d['og_title'], "description": d['ld_desc'],
       "image": img, "author": {"@type": "Organization", "name": "The Nepal"}, "publisher": {"@type": "Organization", "name": "The Nepal", "url": "https://thenepal.io"},
       "mainEntityOfPage": url, "about": {"@type": "Thing", "name": pg['about_name'], "sameAs": pg['about_sameas']},
       "mentions": [{"@type": "Thing", "name": "Nepal", "sameAs": "https://en.wikipedia.org/wiki/Nepal"}, {"@type": "Thing", "name": "National symbols of Nepal", "sameAs": "https://en.wikipedia.org/wiki/National_symbols_of_Nepal"}]},
@@ -187,6 +197,7 @@ if os.path.exists(_ny):
     if os.path.exists(_m2): exec(open(_m2, encoding='utf-8').read())
     _m3 = os.path.join(ROOT, 'scripts', 'morepages3_content.py')
     if os.path.exists(_m3): exec(open(_m3, encoding='utf-8').read())
+    UPDATED.update({k: '2026-11-20' for k in ('nepal-tiger-census-2026', 'nepal-rhino-count', 'nepal-snow-leopard-population', 'nepal-wildlife-population', 'national-parks-of-nepal', 'national-days-of-nepal')})
     PAGES = PAGES + EXTRA_PAGES
 
 for pg in PAGES:
