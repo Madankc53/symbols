@@ -54,7 +54,7 @@ def build(pg, lang):
         _MO = {'en': ['January','February','March','April','May','June','July','August','September','October','November','December'],
                'ne': ['जनवरी','फेब्रुअरी','मार्च','अप्रिल','मे','जुन','जुलाई','अगस्ट','सेप्टेम्बर','अक्टोबर','नोभेम्बर','डिसेम्बर']}[lang]
         _dig = (lambda x: x) if lang == 'en' else (lambda x: x.translate(str.maketrans('0123456789', '०१२३४५६७८९')))
-        _txt = ('Last updated: %s %s %s. Figures are checked against the sources listed on this page.' % (int(_d), _MO[int(_m)-1], _y)) if lang == 'en' else ('अन्तिम अद्यावधिक: %s %s %s। तथ्यांक यस पृष्ठमा उल्लेखित स्रोतसँग जाँचिएका छन्।' % (_dig(str(int(_d))), _MO[int(_m)-1], _dig(_y)))
+        _txt = ('Last updated: %s %s %s. Figures are checked against the sources listed on this page. <a class="nx-report" href="https://thenepal.io/contact/">Report a mistake</a>' % (int(_d), _MO[int(_m)-1], _y)) if lang == 'en' else ('अन्तिम अद्यावधिक: %s %s %s। तथ्यांक यस पृष्ठमा उल्लेखित स्रोतसँग जाँचिएका छन्। <a class="nx-report" href="https://thenepal.io/contact/">गल्ती रिपोर्ट गर्नुहोस्</a>' % (_dig(str(int(_d))), _MO[int(_m)-1], _dig(_y)))
         _line = '    <p class="updated" style="font-size:.9rem;opacity:.8;margin:0 0 18px">' + _txt + '</p>\n'
         d = dict(d); d['body'] = d['body'].replace('</section>\n', '</section>\n' + _line, 1)
     _og = os.path.join(ROOT, 'photos', 'og', slug + '.jpg')

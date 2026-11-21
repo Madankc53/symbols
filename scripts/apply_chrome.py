@@ -10,11 +10,11 @@ SITE = 'https://symbols.thenepal.io'
 T = {
  'en': dict(brand='The Nepal', sub='National Symbols Hub', bc_home='The Nepal', bc_hub='National Symbols', ph='Search symbols…', aria='Search national symbols of Nepal',
             hub='/', desc="Nepal's most complete reference for national symbols, culture, geography and heritage.",
-            g=['Nature', 'Culture', 'Geography & Heritage', 'The Nepal Network'], sources='Sources', quizl='Quiz', about='About', contact='Contact', privacy='Privacy Policy',
+            g=['Nature', 'Culture', 'Geography & Heritage', 'The Nepal Network'], sources='Sources', quizl='Quiz', about='About', contact='Contact', report='Report a mistake', privacy='Privacy Policy',
             note='Educational content — verify with official Government of Nepal sources.', made='© 2026 The Nepal · symbols.thenepal.io · Made in Nepal', langname='Language', main='Main'),
  'ne': dict(brand='द नेपाल', sub='राष्ट्रिय चिन्ह केन्द्र', bc_home='द नेपाल', bc_hub='राष्ट्रिय चिन्हहरू', ph='चिन्ह खोज्नुहोस्…', aria='नेपालका राष्ट्रिय चिन्हहरू खोज्नुहोस्',
             hub='/ne/', desc='राष्ट्रिय चिन्ह, संस्कृति, भूगोल र सम्पदाबारे नेपालको सबैभन्दा पूर्ण सन्दर्भ सामग्री।',
-            g=['प्रकृति', 'संस्कृति', 'भूगोल र सम्पदा', 'द नेपाल नेटवर्क'], sources='स्रोतहरू', quizl='क्विज', about='हाम्रोबारे', contact='सम्पर्क', privacy='गोपनीयता नीति',
+            g=['प्रकृति', 'संस्कृति', 'भूगोल र सम्पदा', 'द नेपाल नेटवर्क'], sources='स्रोतहरू', quizl='क्विज', about='हाम्रोबारे', report='गल्ती रिपोर्ट गर्नुहोस्', contact='सम्पर्क', privacy='गोपनीयता नीति',
             note='शैक्षिक सामग्री — आधिकारिक नेपाल सरकारका स्रोतसँग पुष्टि गर्नुहोस्।', made='© 2026 द नेपाल · symbols.thenepal.io', langname='भाषा छान्नुहोस्', main='मुख्य'),
 }
 GROUP = {'nature': 0, 'culture': 1, 'geography': 2, 'heritage': 2}
@@ -31,6 +31,11 @@ def label_for(lang, slug):
         if slug_of(e['u']) == slug: return e['c'] or e['t']
     return None
 
+# Every .nx-report link opens a pre-filled GitHub issue for the page being read (no backend needed).
+# Change REPORT_REPO to move reports elsewhere; without JavaScript the link falls back to the contact page.
+REPORT_REPO = 'Madankc53/symbols'
+REPORT_JS = ('<script>(function(){var l=document.querySelectorAll(".nx-report");if(!l.length)return;var u="https://github.com/%s/issues/new?labels=correction&title="+encodeURIComponent("Correction: "+location.pathname)+"&body="+encodeURIComponent("Page: "+location.href+"\\n\\nWhat is wrong:\\n\\nCorrect information (with a source link if possible):\\n");for(var i=0;i<l.length;i++){l[i].href=u;l[i].target="_blank";l[i].rel="noopener nofollow"}})();</script>' % REPORT_REPO)
+
 def footer(lang):
     t = T[lang]; cols = [[], [], []]
     for e in IDX[lang]:
@@ -41,10 +46,10 @@ def footer(lang):
     return ('<!--nx-footer-->\n<footer class="nx-footer" id="nx-footer"><div class="nx-fw"><div class="nx-fgrid">'
         '<div><a class="nx-fbrand" href="%s"><img src="/logo.png" width="40" height="40" alt="" loading="lazy"><b>%s</b></a><p>%s</p><p>symbols.thenepal.io</p></div>'
         '%s%s%s%s</div>'
-        '<div class="nx-fbottom"><span>%s</span><nav aria-label="Site"><a href="%ssources/">%s</a><a href="%squiz/">%s</a><a href="https://thenepal.io/about/">%s</a><a href="https://thenepal.io/contact/">%s</a><a href="https://thenepal.io/privacy-policy/">%s</a></nav></div>'
+        '<div class="nx-fbottom"><span>%s</span><nav aria-label="Site"><a href="%ssources/">%s</a><a href="%squiz/">%s</a><a href="https://thenepal.io/about/">%s</a><a href="https://thenepal.io/contact/">%s</a><a class="nx-report" href="https://thenepal.io/contact/" rel="nofollow">%s</a><a href="https://thenepal.io/privacy-policy/">%s</a></nav></div>'
         '<div class="nx-fbottom" style="border:0;margin-top:0;padding-top:10px"><span>%s</span></div>'
-        '</div></footer>\n<!--/nx-footer-->') % (t['hub'], t['brand'], t['desc'], col(0, ''.join(cols[0])), col(1, ''.join(cols[1])), col(2, ''.join(cols[2])), col(3, net),
-        t['made'], t['hub'], t['sources'], t['hub'], t['quizl'], t['about'], t['contact'], t['privacy'], t['note'])
+        '</div></footer>\n' + REPORT_JS + '\n<!--/nx-footer-->') % (t['hub'], t['brand'], t['desc'], col(0, ''.join(cols[0])), col(1, ''.join(cols[1])), col(2, ''.join(cols[2])), col(3, net),
+        t['made'], t['hub'], t['sources'], t['hub'], t['quizl'], t['about'], t['contact'], t['report'], t['privacy'], t['note'])
 
 def header(lang, slug):
     t = T[lang]
