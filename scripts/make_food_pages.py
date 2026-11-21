@@ -197,7 +197,10 @@ if os.path.exists(_ny):
     if os.path.exists(_m2): exec(open(_m2, encoding='utf-8').read())
     _m3 = os.path.join(ROOT, 'scripts', 'morepages3_content.py')
     if os.path.exists(_m3): exec(open(_m3, encoding='utf-8').read())
+    _m4 = os.path.join(ROOT, 'scripts', 'morepages4_content.py')
+    if os.path.exists(_m4): exec(open(_m4, encoding='utf-8').read())
     UPDATED.update({k: '2026-11-20' for k in ('nepal-tiger-census-2026', 'nepal-rhino-count', 'nepal-snow-leopard-population', 'nepal-wildlife-population', 'national-parks-of-nepal', 'national-days-of-nepal')})
+    UPDATED['national-symbols-with-pictures'] = '2026-11-22'
     PAGES = PAGES + EXTRA_PAGES
 
 for pg in PAGES:

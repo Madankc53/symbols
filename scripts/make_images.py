@@ -77,6 +77,7 @@ IMAGES.update({
  'nepal_snow_leopard_hero': (hero('397', 'Nepal · Snow leopard survey', 'Snow Leopards in Nepal', 'First national estimate, released April 2025'), 1760, 680),
  'nepal_snow_leopard_chart': (chart('Snow leopard estimates: Nepal and India', 'Number of individuals', snow_body()), 1200, 470),
  'nepal_wildlife_counts_hero': (trio_hero(), 1760, 680),
+ 'nepal_symbols_pictures_hero': (hero('23', 'Nepal · Picture guide', 'National Symbols of Nepal', 'Pictures, names and legal status for every symbol'), 1760, 680),
 })
 
 # ---- 1200x630 JPEG share cards (Facebook/WhatsApp/X crop wide heroes; WebP is unreliable for link previews) ----
@@ -87,6 +88,7 @@ OG = [  # slug, kicker, big (or ''), title, sub
  ('nepal-rhino-count', 'Nepal · Rhino census', '752', 'Rhinos in Nepal', 'Count by park (2021)'),
  ('nepal-snow-leopard-population', 'Nepal · Snow leopard survey', '397', 'Snow Leopards in Nepal', 'First national estimate (2025)'),
  ('nepal-wildlife-population', 'Nepal · Wildlife', '', 'Wild Animals in Nepal', 'Tigers 429 · Rhinos 752 · Snow leopards 397'),
+ ('national-symbols-with-pictures', 'Nepal · Picture guide', '23', 'National Symbols With Pictures', 'Names and status: 7 official, rest customary'),
  ('world-heritage-sites', 'Nepal · UNESCO', '4', 'World Heritage Sites of Nepal', 'Types, years and what each includes'),
  ('national-poet', 'Nepal · Literature', '', 'National Poet of Nepal', 'Madhav Prasad Ghimire, Rastra Kavi'),
  ('is-yeti-national-symbol', 'Nepal · Myth check', 'No', 'Is the Yeti a National Symbol?', 'The 2024 banknote story was an April Fool joke'),

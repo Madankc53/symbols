@@ -119,8 +119,8 @@ OF_NE_FAQ = [
  ("सगरमाथा नेपालको राष्ट्रिय हिमाल हो?", "राष्ट्रिय हिमाल तोकिएको पुष्टि भएको छैन। सगरमाथा नेपालको सबैभन्दा अग्लो शिखर र त्यसको सबैभन्दा नजिकको कुरा हो।"),
  ("केही वेबसाइटले राष्ट्रिय रूख, माछा वा नदीलाई आधिकारिक किन भन्छन्?", "धेरै सूचीले एकअर्काको नक्कल गरी लोकप्रिय छनोटलाई घोषित भनिदिन्छन्। उद्धृत गर्नुअघि संविधान, नेपाल राजपत्र वा सम्बन्धित मन्त्रालय जाँच्नुहोस्।"),
 ]
-REL_OF = [('national-flag', 'National Flag'), ('national-animal', 'Cow — National Animal'), ('national-sport', 'Volleyball — National Sport'), ('national-tree', 'Peepal — National Tree')]
-REL_OF_NE = [('national-flag', 'राष्ट्रिय झण्डा'), ('national-animal', 'गाई — राष्ट्रिय पशु'), ('national-sport', 'भलिबल — राष्ट्रिय खेल'), ('national-tree', 'पीपल — राष्ट्रिय रूख')]
+REL_OF = [('national-symbols-with-pictures', 'All 23 Symbols With Pictures'), ('national-flag', 'National Flag'), ('national-animal', 'Cow — National Animal'), ('national-sport', 'Volleyball — National Sport'), ('national-tree', 'Peepal — National Tree')]
+REL_OF_NE = [('national-symbols-with-pictures', 'सबै २३ चिन्ह तस्बिरसहित'), ('national-flag', 'राष्ट्रिय झण्डा'), ('national-animal', 'गाई — राष्ट्रिय पशु'), ('national-sport', 'भलिबल — राष्ट्रिय खेल'), ('national-tree', 'पीपल — राष्ट्रिय रूख')]
 EXTRA_PAGES = EXTRA_PAGES + [
  dict(slug='official-vs-unofficial', photo='official_vs_unofficial.webp', noitemlist=True, about_name='National symbols of Nepal', about_sameas='https://en.wikipedia.org/wiki/National_symbols_of_Nepal',
   en=dict(title='Official vs Unofficial National Symbols of Nepal — What the Law Says',
