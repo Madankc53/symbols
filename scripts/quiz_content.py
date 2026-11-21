@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# /quiz/ and /ne/quiz/: 20-question bank, 12 drawn at random per run, explanation after each answer.
+# /quiz/ and /ne/quiz/: 30-question bank, 12 drawn at random per run, explanation after each answer.
 # All answers come from facts on our own pages (see official-vs-unofficial for constitutional articles).
 import re as _re, json as _json
 _hub = open(os.path.join(ROOT, 'index.html'), encoding='utf-8').read()
@@ -30,6 +30,16 @@ QEN = [
  ("Which flower forms the garland on Nepal's national emblem?", ["Lotus", "Rhododendron", "Marigold", "Jasmine"], 1, "The emblem shows Everest, hills, the Terai, joined hands and a rhododendron garland."),
  ("Which of these is NOT named in the Constitution as a national symbol?", ["The cow", "The Danphe", "Rhododendron", "The peepal tree"], 3, "The peepal is a customary symbol; the cow, Danphe and rhododendron are in Article 9(3)."),
  ("What colour are the borders of Nepal's flag?", ["White", "Green", "Deep blue", "Black"], 2, "Article 8(1) describes a crimson base with deep blue borders."),
+ ("How many tigers did Nepal's 2026 national census count?", ["235", "355", "429", "198"], 2, "The 2026 census counted 429 wild tigers, up from 355 in 2022."),
+ ("How many greater one-horned rhinos did Nepal's 2021 census count?", ["645", "752", "512", "894"], 1, "The 2021 census counted 752 rhinos, up from 645 in 2015."),
+ ("How many national parks does Nepal have?", ["10", "12", "13", "20"], 2, "Nepal has 13 national parks; Chhayanath, created in 2025, is the newest."),
+ ("Which national park was created in 2025?", ["Chitwan", "Chhayanath", "Banke", "Parsa"], 1, "Chhayanath National Park in Mugu was established on 29 August 2025."),
+ ("What is the officially recognised height of Sagarmatha (Mount Everest)?", ["8,848 m", "8,848.86 m", "8,850 m", "8,844 m"], 1, "Nepal and China jointly announced 8,848.86 m in December 2020."),
+ ("Who is Nepal's national poet (Rastra Kavi)?", ["Laxmi Prasad Devkota", "Bhanubhakta Acharya", "Madhav Prasad Ghimire", "Lekhnath Paudyal"], 2, "Madhav Prasad Ghimire (1919-2020) was given the title in 2003."),
+ ("How many snow leopards did Nepal's first national estimate suggest?", ["97", "197", "397", "797"], 2, "The 2025 estimate was about 397 individuals."),
+ ("How many UNESCO World Heritage Sites does Nepal have?", ["2", "4", "7", "10"], 1, "Kathmandu Valley, Lumbini, Sagarmatha National Park and Chitwan National Park."),
+ ("The 2024 story about a Yeti banknote in Nepal turned out to be what?", ["A real government plan", "An April Fools' joke", "A court order", "A museum project"], 1, "It was an April Fool joke; the Yeti is not a national symbol."),
+ ("How many symbols are named in Articles 8 and 9 of the Constitution (flag, anthem, emblem, flower, colour, animal, bird)?", ["5", "7", "9", "23"], 1, "Seven; the other symbols are declared by government or customary."),
 ]
 QNE = [
  ("नेपालको राष्ट्रिय पशु कुन हो?", ["चौँरी", "गाई", "हात्ती", "बाघ"], 1, "संविधानको धारा ९(३) ले गाईलाई राष्ट्रिय पशु भनेको छ।"),
@@ -52,15 +62,25 @@ QNE = [
  ("नेपालको राष्ट्रिय प्रतीक चिन्हमा कुन फूलको माला छ?", ["कमल", "लालीगुराँस", "सयपत्री", "चमेली"], 1, "प्रतीक चिन्हमा सगरमाथा, पहाड, तराई, मिलेका हात र लालीगुराँसको माला छ।"),
  ("तलका मध्ये कुन संविधानमा राष्ट्रिय चिन्हका रूपमा उल्लेख छैन?", ["गाई", "डाँफे", "लालीगुराँस", "पीपलको रूख"], 3, "पीपल परम्परागत चिन्ह हो; गाई, डाँफे र लालीगुराँस धारा ९(३) मा छन्।"),
  ("नेपालको झण्डाको किनाराको रङ कुन हो?", ["सेतो", "हरियो", "गाढा नीलो", "कालो"], 2, "धारा ८(१) मा गाढा रातो आधार र गाढा नीलो किनारा वर्णित छ।"),
+("नेपालको २०२६ को राष्ट्रिय गणनाले कति बाघ गन्यो?", ["२३५", "३५५", "४२९", "१९८"], 2, "२०२६ को गणनाले ४२९ वन्य बाघ गन्यो, २०२२ मा ३५५ थिए।"),
+ ("नेपालको २०२१ को गणनाले कति एकसिङ्गे गैँडा गन्यो?", ["६४५", "७५२", "५१२", "८९४"], 1, "२०२१ को गणनाले ७५२ गैँडा गन्यो, २०१५ मा ६४५ थिए।"),
+ ("नेपालमा कतिवटा राष्ट्रिय निकुञ्ज छन्?", ["१०", "१२", "१३", "२०"], 2, "नेपालमा १३ राष्ट्रिय निकुञ्ज छन्; २०२५ मा बनेको छायानाथ सबैभन्दा नयाँ हो।"),
+ ("२०२५ मा कुन राष्ट्रिय निकुञ्ज बनाइयो?", ["चितवन", "छायानाथ", "बाँके", "पर्सा"], 1, "मुगुको छायानाथ राष्ट्रिय निकुञ्ज २०२५ अगस्ट २९ मा स्थापना भयो।"),
+ ("सगरमाथाको आधिकारिक रूपमा मान्यता पाएको उचाइ कति हो?", ["८,८४८ मिटर", "८,८४८.८६ मिटर", "८,८५० मिटर", "८,८४४ मिटर"], 1, "नेपाल र चीनले संयुक्त रूपमा २०२० डिसेम्बरमा ८,८४८.८६ मिटर घोषणा गरे।"),
+ ("नेपालका राष्ट्रकवि को हुन्?", ["लक्ष्मीप्रसाद देवकोटा", "भानुभक्त आचार्य", "माधवप्रसाद घिमिरे", "लेखनाथ पौड्याल"], 2, "माधवप्रसाद घिमिरे (१९१९-२०२०) लाई २००३ मा उपाधि दिइयो।"),
+ ("नेपालको पहिलो राष्ट्रिय अनुमानले कति हिउँचितुवा देखायो?", ["९७", "१९७", "३९७", "७९७"], 2, "२०२५ को अनुमान करिब ३९७ थियो।"),
+ ("नेपालमा कतिवटा युनेस्को विश्व सम्पदा स्थल छन्?", ["२", "४", "७", "१०"], 1, "काठमाडौँ उपत्यका, लुम्बिनी, सगरमाथा राष्ट्रिय निकुञ्ज र चितवन राष्ट्रिय निकुञ्ज।"),
+ ("नेपालमा २०२४ को येती नोटको खबर के रहेछ?", ["सरकारी योजना", "अप्रिल फूलको मजाक", "अदालतको आदेश", "संग्रहालय परियोजना"], 1, "त्यो अप्रिल फूलको मजाक थियो; येती राष्ट्रिय चिन्ह होइन।"),
+ ("संविधानको धारा ८ र ९ मा (झण्डा, राष्ट्रगान, प्रतीक चिन्ह, फूल, रङ, पशु, चरा) कतिवटा चिन्ह उल्लेखित छन्?", ["५", "७", "९", "२३"], 1, "सातवटा; अरू सरकारले घोषणा गरेका वा परम्परागत हुन्।"),
 ]
 def _quiz_body(lang):
     en = lang == 'en'
     Q = QEN if en else QNE
     data = _json.dumps([dict(q=a, c=b, a=c, w=d) for a, b, c, d in Q], ensure_ascii=False)
-    T = (dict(q='Question', of='/', score='Score', next='Next Question', res='See Results', retry='Retry Quiz', share='Share Result', copied='Copied! ✓', ph='Your name for the certificate', cert='Certificate of Achievement', title='Nepal National Symbols Quiz', name='Nepal Symbols Explorer', scored='scored', outof='out of', start='Start Quiz', intro='12 random questions from a bank of 20. Instant feedback with the reason, then a score and a certificate.',
+    T = (dict(q='Question', of='/', score='Score', next='Next Question', res='See Results', retry='Retry Quiz', share='Share Result', copied='Copied! ✓', ph='Your name for the certificate', cert='Certificate of Achievement', title='Nepal National Symbols Quiz', name='Nepal Symbols Explorer', scored='scored', outof='out of', start='Start Quiz', intro='12 random questions from a bank of 30. Instant feedback with the reason, then a score and a certificate.',
               m100='Perfect score — a true Nepal symbols expert!', m80="Excellent! You know Nepal's symbols very well.", m50="Good effort — a solid grasp of Nepal's national symbols.", m0='Nice try — read the guides and take the quiz again.', url='https://symbols.thenepal.io/quiz/', sharetxt='on the Nepal National Symbols Quiz! Try it:')
          if en else
-         dict(q='प्रश्न', of='/', score='अङ्क', next='अर्को प्रश्न', res='नतिजा हेर्नुहोस्', retry='फेरि प्रयास गर्नुहोस्', share='नतिजा सेयर गर्नुहोस्', copied='कपी भयो ✓', ph='प्रमाणपत्रका लागि तपाईंको नाम', cert='उपलब्धिको प्रमाणपत्र', title='नेपालका राष्ट्रिय चिन्ह क्विज', name='नेपाल चिन्ह अन्वेषक', scored='ले', outof='मध्ये', start='क्विज सुरु गर्नुहोस्', intro='२० प्रश्नको बैङ्कबाट अनियमित १२ प्रश्न। तुरुन्त कारणसहितको प्रतिक्रिया, त्यसपछि अङ्क र प्रमाणपत्र।',
+         dict(q='प्रश्न', of='/', score='अङ्क', next='अर्को प्रश्न', res='नतिजा हेर्नुहोस्', retry='फेरि प्रयास गर्नुहोस्', share='नतिजा सेयर गर्नुहोस्', copied='कपी भयो ✓', ph='प्रमाणपत्रका लागि तपाईंको नाम', cert='उपलब्धिको प्रमाणपत्र', title='नेपालका राष्ट्रिय चिन्ह क्विज', name='नेपाल चिन्ह अन्वेषक', scored='ले', outof='मध्ये', start='क्विज सुरु गर्नुहोस्', intro='३० प्रश्नको बैङ्कबाट अनियमित १२ प्रश्न। तुरुन्त कारणसहितको प्रतिक्रिया, त्यसपछि अङ्क र प्रमाणपत्र।',
               m100='पूर्ण अङ्क — साँच्चै नेपाली चिन्हका विज्ञ!', m80='उत्कृष्ट! तपाईंलाई नेपालका चिन्ह राम्ररी थाहा छ।', m50='राम्रो प्रयास — नेपालका राष्ट्रिय चिन्हको राम्रो ज्ञान।', m0='राम्रो प्रयास — गाइडहरू पढेर फेरि प्रयास गर्नुहोस्।', url='https://symbols.thenepal.io/ne/quiz/', sharetxt='ले नेपालका राष्ट्रिय चिन्ह क्विजमा अङ्क ल्याए! तपाईं पनि प्रयास गर्नुहोस्:'))
     hub = ('/', 'All 23 national symbols', '/official-vs-unofficial/', 'Which symbols are official?') if en else ('/ne/', 'सबै २३ राष्ट्रिय चिन्ह', '/ne/official-vs-unofficial/', 'कुन चिन्ह आधिकारिक छन्?')
     js = r'''
@@ -116,13 +136,13 @@ def _quiz_body(lang):
 ''' % (('Test what you know about Nepal\'s flag, anthem, emblem, animals, calendar and more. Every answer comes with the reason, so you learn as you go — useful for students and for Lok Sewa (PSC) general-knowledge practice.' if en else 'नेपालको झण्डा, राष्ट्रगान, प्रतीक चिन्ह, पशुपन्छी, पात्रो र अरूबारे आफ्नो ज्ञान जाँच्नुहोस्। हरेक उत्तरसँगै कारण दिइएको छ, त्यसैले खेल्दै सिक्न सकिन्छ — विद्यार्थी र लोकसेवा सामान्य ज्ञान अभ्यासका लागि उपयोगी।'),
         hub[0], hub[1], hub[2], hub[3], ('Test Yourself' if en else 'आफूलाई जाँच्नुहोस्'), T['title'], T['start'], T['intro'], js)
 QUIZ_EN_FAQ = [
- ("How many questions are in the Nepal national symbols quiz?", "Each round has 12 questions drawn at random from a bank of 20, so every attempt is a little different."),
+ ("How many questions are in the Nepal national symbols quiz?", "Each round has 12 questions drawn at random from a bank of 30, so every attempt is a little different."),
  ("Is this quiz useful for Lok Sewa (PSC) preparation?", "It covers general-knowledge facts on Nepal's symbols, with the constitutional articles where they apply. Always check the current syllabus and official sources for your exam."),
  ("Where do the answers come from?", "From the guides on this site, which cite the Constitution of Nepal (2015) and government announcements. See the Official vs Unofficial page for the legal basis of each symbol."),
  ("Can I download a certificate?", "At the end you can type your name to see it on the certificate and share your score. Taking a screenshot saves the certificate."),
 ]
 QUIZ_NE_FAQ = [
- ("नेपालका राष्ट्रिय चिन्हको क्विजमा कति प्रश्न छन्?", "हरेक चरणमा २० प्रश्नको बैङ्कबाट अनियमित रूपमा १२ प्रश्न आउँछन्, त्यसैले हरेक प्रयास अलि फरक हुन्छ।"),
+ ("नेपालका राष्ट्रिय चिन्हको क्विजमा कति प्रश्न छन्?", "हरेक चरणमा ३० प्रश्नको बैङ्कबाट अनियमित रूपमा १२ प्रश्न आउँछन्, त्यसैले हरेक प्रयास अलि फरक हुन्छ।"),
  ("यो क्विज लोकसेवा तयारीका लागि उपयोगी छ?", "यसले नेपालका चिन्हसम्बन्धी सामान्य ज्ञान र लागू हुँदा संवैधानिक धारासमेत समेट्छ। परीक्षाका लागि हालको पाठ्यक्रम र आधिकारिक स्रोत सधैँ जाँच्नुहोस्।"),
  ("उत्तरहरू कहाँबाट आएका हुन्?", "यस साइटका गाइडबाट, जसले नेपालको संविधान (२०७२) र सरकारी घोषणा उद्धृत गर्छन्। हरेक चिन्हको कानुनी आधारका लागि आधिकारिक कि परम्परागत पृष्ठ हेर्नुहोस्।"),
  ("के प्रमाणपत्र डाउनलोड गर्न सकिन्छ?", "अन्त्यमा आफ्नो नाम लेखेर प्रमाणपत्रमा हेर्न र अङ्क सेयर गर्न सकिन्छ। स्क्रिनसट लिएर प्रमाणपत्र सुरक्षित गर्न सकिन्छ।"),
@@ -133,23 +153,23 @@ EXTRA_PAGES = EXTRA_PAGES + [
  dict(slug='quiz', photo='nepal_symbols_quiz.webp', noitemlist=True, about_name='National symbols of Nepal', about_sameas='https://en.wikipedia.org/wiki/National_symbols_of_Nepal',
   en=dict(title='Nepal National Symbols Quiz — 12 Questions with Answers & Certificate',
     desc='Free Nepal general-knowledge quiz on national symbols: flag, anthem, emblem, animal, bird, flower, calendar and more. 12 random questions, instant reasons and a certificate.',
-    og_title='Nepal National Symbols Quiz', og_desc='12 random questions from a bank of 20, with the reason behind every answer and a shareable certificate.',
+    og_title='Nepal National Symbols Quiz', og_desc='12 random questions from a bank of 30, with the reason behind every answer and a shareable certificate.',
     ld_desc='An interactive quiz on the national symbols of Nepal with explanations for every answer.', itemlist_desc='', crumb='Quiz',
     img_alt='A gold trophy, a crimson pennant and question marks (illustration)', img_caption='Nepal symbols quiz — original illustration.',
     eyebrow='Free Quiz — General Knowledge', h1='Nepal National Symbols <em>Quiz</em>',
     hero='<strong>12 random questions, the reason behind every answer, and a certificate at the end.</strong> Covers the flag, anthem, emblem, animal, bird, flower, colour, calendar and more.',
-    tags=['12 questions per round', '20-question bank', 'Reasons shown', 'Free'], caption='Original illustration — not a photograph.',
-    facts=[('Questions', '12 per round', False), ('Bank size', '20 questions', False), ('Format', 'Multiple choice', False), ('Feedback', 'Reason after each answer', False), ('Result', 'Score and certificate', False), ('Cost', 'Free', False)],
+    tags=['12 questions per round', '30-question bank', 'Reasons shown', 'Free'], caption='Original illustration — not a photograph.',
+    facts=[('Questions', '12 per round', False), ('Bank size', '30 questions', False), ('Format', 'Multiple choice', False), ('Feedback', 'Reason after each answer', False), ('Result', 'Score and certificate', False), ('Cost', 'Free', False)],
     pron=('क्विज', 'Quiz', 'kwiz'), body=_quiz_body('en'), faq=QUIZ_EN_FAQ, related=rel('en', REL_Q) + [(S + '/', 'All national symbols of Nepal →')], related_p='Study the guides, then retake the quiz.'),
   ne=dict(title='नेपालका राष्ट्रिय चिन्ह क्विज — १२ प्रश्न, उत्तर र प्रमाणपत्र',
     desc='नेपालका राष्ट्रिय चिन्हबारे निःशुल्क सामान्य ज्ञान क्विज: झण्डा, राष्ट्रगान, प्रतीक चिन्ह, पशु, पन्छी, फूल, पात्रो र अरू। अनियमित १२ प्रश्न, कारणसहित उत्तर र प्रमाणपत्र।',
-    og_title='नेपालका राष्ट्रिय चिन्ह क्विज', og_desc='२० प्रश्नको बैङ्कबाट अनियमित १२ प्रश्न, हरेक उत्तरको कारण र सेयर गर्न मिल्ने प्रमाणपत्र।',
+    og_title='नेपालका राष्ट्रिय चिन्ह क्विज', og_desc='३० प्रश्नको बैङ्कबाट अनियमित १२ प्रश्न, हरेक उत्तरको कारण र सेयर गर्न मिल्ने प्रमाणपत्र।',
     ld_desc='नेपालका राष्ट्रिय चिन्हबारे हरेक उत्तरको व्याख्यासहितको अन्तरक्रियात्मक क्विज।', itemlist_desc='', crumb='क्विज',
     img_alt='सुनौलो ट्रफी, गाढा रातो पताका र प्रश्नचिह्न (चित्रण)', img_caption='नेपाल चिन्ह क्विज — मौलिक चित्रण।',
     eyebrow='निःशुल्क क्विज — सामान्य ज्ञान', h1='नेपालका राष्ट्रिय चिन्ह <em>क्विज</em>',
     hero='<strong>अनियमित १२ प्रश्न, हरेक उत्तरको कारण, र अन्त्यमा प्रमाणपत्र।</strong> झण्डा, राष्ट्रगान, प्रतीक चिन्ह, पशु, पन्छी, फूल, रङ, पात्रो र अरू समेटिएको।',
-    tags=['प्रत्येक चरणमा १२ प्रश्न', '२० प्रश्नको बैङ्क', 'कारणसहित', 'निःशुल्क'], caption='मौलिक चित्रण — तस्बिर होइन।',
-    facts=[('प्रश्न', 'प्रत्येक चरणमा १२', False), ('बैङ्क', '२० प्रश्न', False), ('ढाँचा', 'बहुवैकल्पिक', False), ('प्रतिक्रिया', 'हरेक उत्तरपछि कारण', False), ('नतिजा', 'अङ्क र प्रमाणपत्र', False), ('शुल्क', 'निःशुल्क', False)],
+    tags=['प्रत्येक चरणमा १२ प्रश्न', '३० प्रश्नको बैङ्क', 'कारणसहित', 'निःशुल्क'], caption='मौलिक चित्रण — तस्बिर होइन।',
+    facts=[('प्रश्न', 'प्रत्येक चरणमा १२', False), ('बैङ्क', '३० प्रश्न', False), ('ढाँचा', 'बहुवैकल्पिक', False), ('प्रतिक्रिया', 'हरेक उत्तरपछि कारण', False), ('नतिजा', 'अङ्क र प्रमाणपत्र', False), ('शुल्क', 'निःशुल्क', False)],
     pron=('क्विज', 'Quiz', 'क्विज'), body=_quiz_body('ne'), faq=QUIZ_NE_FAQ, related=rel('ne', REL_Q_NE) + [(S + '/ne/', 'सबै राष्ट्रिय चिन्हहरू →')], related_p='गाइडहरू पढेर क्विज फेरि खेल्नुहोस्।'),
  ),
 ]
