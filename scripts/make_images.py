@@ -111,7 +111,40 @@ def make_og():
             print('og', slug)
         b.close()
 
+# ---- Nepali (Devanagari) share cards -> photos/og/ne/<slug>.jpg, rendered with Noto Sans Devanagari (OFL, scripts/fonts) ----
+OG_NE = [
+ ('national-parks-of-nepal', 'नेपाल · संरक्षित क्षेत्र', '१३', 'नेपालका राष्ट्रिय निकुञ्ज', 'क्षेत्रफल र स्थापना वर्षसहित पूरा सूची'),
+ ('nepal-tiger-census-2026', 'नेपाल · बाघ गणना २०२६', '४२९', 'नेपालमा बाघ', 'रेकर्ड संख्या, २०२२ भन्दा ७४ ले बढी'),
+ ('national-days-of-nepal', 'नेपाल · पात्रो', '५', 'नेपालका राष्ट्रिय दिवस', 'मिति, महत्त्व र अर्को मिति'),
+ ('nepal-rhino-count', 'नेपाल · गैँडा गणना', '७५२', 'नेपालमा गैँडा', 'निकुञ्ज अनुसार संख्या (२०२१)'),
+ ('nepal-snow-leopard-population', 'नेपाल · हिउँचितुवा सर्वेक्षण', '३९७', 'नेपालमा हिउँचितुवा', 'पहिलो राष्ट्रिय अनुमान (२०२५)'),
+ ('nepal-wildlife-population', 'नेपाल · वन्यजन्तु', '', 'नेपालका वन्यजन्तु', 'बाघ ४२९ · गैँडा ७५२ · हिउँचितुवा ३९७'),
+ ('national-symbols-with-pictures', 'नेपाल · तस्बिर गाइड', '२३', 'राष्ट्रिय चिन्ह तस्बिरसहित', 'नाम र स्थिति: ७ आधिकारिक, बाँकी परम्परागत'),
+ ('world-heritage-sites', 'नेपाल · युनेस्को', '४', 'नेपालका विश्व सम्पदा स्थल', 'प्रकार, वर्ष र के-के समेटिन्छ'),
+ ('national-poet', 'नेपाल · साहित्य', '', 'नेपालका राष्ट्रकवि', 'माधवप्रसाद घिमिरे, राष्ट्रकवि'),
+ ('is-yeti-national-symbol', 'नेपाल · तथ्य जाँच', 'होइन', 'के येती राष्ट्रिय चिन्ह हो?', '२०२४ को नोटको खबर अप्रिल फूलको मजाक थियो'),
+ ('national-day', 'नेपाल · संविधान दिवस', '३ असोज', 'नेपालको राष्ट्रिय दिवस', 'संविधान जारी भएको दिन'),
+]
+_FD = os.path.join(ROOT, 'scripts', 'fonts')
+_ND = (f'<style>@font-face{{font-family:ND;font-weight:400;src:url(file://{_FD}/noto-sans-devanagari-devanagari-400-normal.woff2)}}'
+       f'@font-face{{font-family:ND;font-weight:700;src:url(file://{_FD}/noto-sans-devanagari-devanagari-700-normal.woff2)}}'
+       '.og,.og *:not(.wm){font-family:ND,sans-serif!important;letter-spacing:0!important;line-height:1.35}.og .big{line-height:1.15}</style>')
+def make_og_ne():
+    d = os.path.join(ROOT, 'photos', 'og', 'ne'); os.makedirs(d, exist_ok=True)
+    tmp = os.path.join(ROOT, 'photos', '_og_ne.html')
+    with sync_playwright() as p:
+        b = p.chromium.launch(args=['--allow-file-access-from-files'])
+        for slug, k, big, t, sub in OG_NE:
+            open(tmp, 'w', encoding='utf-8').write('<body style="margin:0">' + _ND + og_html(k, big, t, sub) + '</body>')
+            pg = b.new_page(viewport={'width': 1200, 'height': 630}); pg.goto('file://' + tmp); pg.wait_for_timeout(500)
+            png = pg.screenshot(clip={'x': 0, 'y': 0, 'width': 1200, 'height': 630})
+            Image.open(io.BytesIO(png)).convert('RGB').save(os.path.join(d, slug + '.jpg'), quality=88, optimize=True); print('og-ne', slug)
+        b.close()
+    os.remove(tmp)
+
 if __name__ == '__main__':
+    import sys
+    if len(sys.argv) > 1 and sys.argv[1] == 'ne': make_og_ne(); sys.exit(0)
     with sync_playwright() as p:
         b = p.chromium.launch()
         for name, (html, w, h) in IMAGES.items():
