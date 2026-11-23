@@ -4,7 +4,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://symbols.thenepal.io/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/"/>
@@ -395,6 +395,20 @@
     </image:image>
   </url>
   <url>
+    <loc>https://symbols.thenepal.io/national-symbols-with-pictures/</loc>
+    <lastmod>2026-11-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/national-symbols-with-pictures/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/national-symbols-with-pictures/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/national-symbols-with-pictures/"/>
+    <image:image>
+      <image:loc>https://symbols.thenepal.io/photos/nepal_national_symbols_chart.webp</image:loc>
+      <image:title>National symbols of Nepal with pictures and names</image:title>
+      <image:caption>All 23 national symbols of Nepal</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://symbols.thenepal.io/nepal-wildlife-population/</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
@@ -545,7 +559,7 @@
   </url>
   <url>
     <loc>https://symbols.thenepal.io/ne/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/"/>
@@ -863,6 +877,20 @@
       <image:loc>https://symbols.thenepal.io/photos/nepal_snow_leopard_hero.webp</image:loc>
       <image:title>Snow leopards in Nepal</image:title>
       <image:caption>397 snow leopards estimated</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://symbols.thenepal.io/ne/national-symbols-with-pictures/</loc>
+    <lastmod>2026-11-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbols.thenepal.io/national-symbols-with-pictures/"/>
+    <xhtml:link rel="alternate" hreflang="ne" href="https://symbols.thenepal.io/ne/national-symbols-with-pictures/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbols.thenepal.io/national-symbols-with-pictures/"/>
+    <image:image>
+      <image:loc>https://symbols.thenepal.io/photos/nepal_national_symbols_chart_ne.webp</image:loc>
+      <image:title>National symbols of Nepal with pictures and names</image:title>
+      <image:caption>All 23 national symbols of Nepal</image:caption>
     </image:image>
   </url>
   <url>
