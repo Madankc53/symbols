@@ -596,7 +596,7 @@ const pages = [
     changefreq: 'monthly',
     lastmod: '2026-11-22',
     images: [
-      { loc: '/photos/nepal_national_symbols_chart.webp', title: 'National symbols of Nepal with pictures and names', caption: 'All 23 national symbols of Nepal' }
+      { loc: '/photos/nepal_national_symbols_chart_ne.webp', title: 'National symbols of Nepal with pictures and names', caption: 'All 23 national symbols of Nepal' }
     ]
   },
   {
