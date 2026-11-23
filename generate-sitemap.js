@@ -260,6 +260,15 @@ const pages = [
     ]
   },
   {
+    loc: '/national-symbols-with-pictures/',
+    priority: '0.9',
+    changefreq: 'monthly',
+    lastmod: '2026-11-22',
+    images: [
+      { loc: '/photos/nepal_national_symbols_chart.webp', title: 'National symbols of Nepal with pictures and names', caption: 'All 23 national symbols of Nepal' }
+    ]
+  },
+  {
     loc: '/nepal-wildlife-population/',
     priority: '0.8',
     changefreq: 'monthly',
@@ -579,6 +588,15 @@ const pages = [
     lastmod: '2026-11-20',
     images: [
       { loc: '/photos/nepal_snow_leopard_hero.webp', title: 'Snow leopards in Nepal', caption: '397 snow leopards estimated' }
+    ]
+  },
+  {
+    loc: '/ne/national-symbols-with-pictures/',
+    priority: '0.9',
+    changefreq: 'monthly',
+    lastmod: '2026-11-22',
+    images: [
+      { loc: '/photos/nepal_national_symbols_chart_ne.webp', title: 'National symbols of Nepal with pictures and names', caption: 'All 23 national symbols of Nepal' }
     ]
   },
   {

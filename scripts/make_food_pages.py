@@ -58,7 +58,10 @@ def build(pg, lang):
         _line = '    <p class="updated" style="font-size:.9rem;opacity:.8;margin:0 0 18px">' + _txt + '</p>\n'
         d = dict(d); d['body'] = d['body'].replace('</section>\n', '</section>\n' + _line, 1)
     _og = os.path.join(ROOT, 'photos', 'og', slug + '.jpg')
-    og_img, og_w, og_h = (SITE + '/photos/og/' + slug + '.jpg', 1200, 630) if os.path.exists(_og) else (img, 1600, 900)
+    _ogn = os.path.join(ROOT, 'photos', 'og', 'ne', slug + '.jpg')
+    if lang == 'ne' and os.path.exists(_ogn): _og = _ogn; _ogu = SITE + '/photos/og/ne/' + slug + '.jpg'
+    else: _ogu = SITE + '/photos/og/' + slug + '.jpg'
+    og_img, og_w, og_h = (_ogu, 1200, 630) if os.path.exists(_og) else (img, 1600, 900)
     faq_ld = [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": strip(a)}} for q, a in d['faq']]
     ld = [
      {"@context": "https://schema.org", "@type": "Article", "inLanguage": lang, "dateModified": upd, "headline": d['og_title'], "description": d['ld_desc'],
@@ -197,7 +200,10 @@ if os.path.exists(_ny):
     if os.path.exists(_m2): exec(open(_m2, encoding='utf-8').read())
     _m3 = os.path.join(ROOT, 'scripts', 'morepages3_content.py')
     if os.path.exists(_m3): exec(open(_m3, encoding='utf-8').read())
+    _m4 = os.path.join(ROOT, 'scripts', 'morepages4_content.py')
+    if os.path.exists(_m4): exec(open(_m4, encoding='utf-8').read())
     UPDATED.update({k: '2026-11-20' for k in ('nepal-tiger-census-2026', 'nepal-rhino-count', 'nepal-snow-leopard-population', 'nepal-wildlife-population', 'national-parks-of-nepal', 'national-days-of-nepal')})
+    UPDATED['national-symbols-with-pictures'] = '2026-11-22'
     PAGES = PAGES + EXTRA_PAGES
 
 for pg in PAGES:
