@@ -18,8 +18,8 @@ T = {
             note='शैक्षिक सामग्री — आधिकारिक नेपाल सरकारका स्रोतसँग पुष्टि गर्नुहोस्।', made='© 2026 द नेपाल · symbols.thenepal.io', langname='भाषा छान्नुहोस्', main='मुख्य'),
 }
 GROUP = {'nature': 0, 'culture': 1, 'geography': 2, 'heritage': 2}
-NETWORK = [('TheNepal.io', 'https://thenepal.io/'), ('Madan KC', 'https://madankc.com.np')]
-NETWORK_NE = [('द नेपाल', 'https://thenepal.io/'), ('मदन केसी', 'https://madankc.com.np')]
+NETWORK = [('TheNepal.io', 'https://thenepal.io/'), ('Nepali Converter & File Tools', 'https://converter.thenepal.io/file-tools/'), ('Madan KC', 'https://madankc.com.np')]
+NETWORK_NE = [('द नेपाल', 'https://thenepal.io/'), ('नेपाली कन्भर्टर र फाइल टुल्स', 'https://converter.thenepal.io/file-tools/'), ('मदन केसी', 'https://madankc.com.np')]
 SVG_S = '<svg class="nx-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>'
 SVG_B = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>'
 
